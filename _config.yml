@@ -5,7 +5,7 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 # Site title and description
-title:              Desk
+title:              MATH 1120
 description:        Knowledge base Jekyll theme.
 
 # Site subpath, e.g. /blog
@@ -15,7 +15,7 @@ baseurl:            ""
 permalink:          /:title/
 
 # Site base hostname & protocol, e.g. http://example.com
-url:                "https://desk.jekyll.plus"
+url:                "https://bnlove.github.io"
 
 # Site logo, dark and light depending on page hero text setting dark/light
 logo_image:
@@ -24,10 +24,10 @@ logo_image:
 
 # Author settings, displayed on about page
 author:
-    name:           John Smith
-    email:
+    name:           Betty Love
+    email:          blove@unomaha.edu
     website:
-    facebook:       https://www.facebook.com/
+    facebook:
     flickr:
     dribbble:
     github:
@@ -40,19 +40,19 @@ author:
     youtube:
 
 # Social share buttons
-twitter_username:   ivanchromjak
-github_username:    ivanchromjak
+twitter_username:   bettynlove
+github_username:    bnlove
 
 # Default footer image settings
 footer:
-    copyright:      Made by a <a href="https://ivanchromjak.com/">human</a> somewhere on the planet earth.
+    copyright:     # Made by a <a href="https://ivanchromjak.com/">human</a> somewhere on the planet earth.
 
 # Disqus comments shortname, requires Disqus account https://disqus.com/
 disqus:
     shortname:      # 7865
 
 # Google analytics code, get your code here https://www.google.com/analytics/
-google_analytics:
+google_analytics: UA-NNNNNNNN-N
 
 # Google maps API key, get your key here: https://developers.google.com/maps/documentation/javascript/get-api-key
 google_maps_api_key:
@@ -64,7 +64,7 @@ post_assets:        /assets/posts/
 markdown:           kramdown
 highlighter:        rouge
 
-gems:
+plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-gist
@@ -79,3 +79,7 @@ sass:
 collections:
   faqs:
     output: false
+    
+formspree:
+        email: blove@unomaha.edu
+        redirect: /thanks/

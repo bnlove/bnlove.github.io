@@ -1,10 +1,10 @@
 ---
 layout: help
-title: How Can We Help?
-subtitle: Find advice and answers from our support team fast or get in touch
+title: MATH/STEM 1120
+subtitle: Get started and get help!
 hero:
     background: "#663399"
-    image: header_2.jpg
+    image: header.jpg
     overlay: "linear-gradient(-200deg, rgba(101, 51, 153, 0.9) 0%, rgba(90, 51, 153, 0.9) 53%, rgba(71, 51, 153, 0.9) 100%)"
     align: center
     text: light

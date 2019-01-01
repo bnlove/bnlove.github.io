@@ -1,9 +1,9 @@
 ---
 layout: contact
-title: Got Any Questions
+title: Any Questions
 permalink: /contact/
 formspree:
-    email: my_name@gmail.com
+    email: blove@unomaha.edu
     redirect: /thanks/
 ---
 

@@ -1,244 +1,207 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-27T15:25:04-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Desk</title><subtitle>Knowledge base Jekyll theme.</subtitle><author><name>John Smith</name></author><entry><title type="html">Getting a JavaScript console error</title><link href="http://localhost:4000/post7/" rel="alternate" type="text/html" title="Getting a JavaScript console error" /><published>2017-05-25T00:00:00-05:00</published><updated>2017-05-25T00:00:00-05:00</updated><id>http://localhost:4000/post7</id><content type="html" xml:base="http://localhost:4000/post7/">&lt;h4 class=&quot;no_toc&quot; id=&quot;sections-in-this-article&quot;&gt;Sections in this article&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-01T15:16:58-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>Knowledge base Jekyll theme.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Getting Started with Vitruvia Exercises</title><link href="http://localhost:4000/getting-started-with-vitruvia/" rel="alternate" type="text/html" title="Getting Started with Vitruvia Exercises" /><published>2018-12-29T00:00:00-06:00</published><updated>2018-12-29T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-vitruvia</id><content type="html" xml:base="http://localhost:4000/getting-started-with-vitruvia/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#image-lightbox-example&quot; id=&quot;markdown-toc-image-lightbox-example&quot;&gt;Image Lightbox Example&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#example-of-code-block&quot; id=&quot;markdown-toc-example-of-code-block&quot;&gt;Example Of Code Block&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#text-and-quote&quot; id=&quot;markdown-toc-text-and-quote&quot;&gt;Text and Quote&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#vitruvia-exercises&quot; id=&quot;markdown-toc-vitruvia-exercises&quot;&gt;Vitruvia Exercises&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#choosing-a-brick-color&quot; id=&quot;markdown-toc-choosing-a-brick-color&quot;&gt;Choosing a brick color&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#if-you-put-a-brick-in-the-wrong-place&quot; id=&quot;markdown-toc-if-you-put-a-brick-in-the-wrong-place&quot;&gt;If you put a brick in the wrong place&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#locating-grid-cells&quot; id=&quot;markdown-toc-locating-grid-cells&quot;&gt;Locating grid cells&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#more-help-locating-grid-cells&quot; id=&quot;markdown-toc-more-help-locating-grid-cells&quot;&gt;More help locating grid Cells&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#complete-concept-1-demo-1-exercises&quot; id=&quot;markdown-toc-complete-concept-1-demo-1-exercises&quot;&gt;Complete &lt;em&gt;Concept 1 Demo 1&lt;/em&gt; exercises&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id. Cras fringilla convallis elit, at eleifend mi interam.&lt;/p&gt;
+&lt;p&gt;Vitruvia is a app available at &lt;a href=&quot;https://bricklayer.org/apps/vitruvia_New/main.html#concepts/&quot;&gt;bricklayer.org&lt;/a&gt;. Its purpose is to provide a gentle introduction to bricklayer concepts through a series of automatically-graded interactive exercises.  Vitruvia also has a Test mode which is discussed in another post.&lt;/p&gt;
 
-&lt;p&gt;Nulla non sollicitudin. Morbi sit amet laoreet ipsum, vel pretium mi. Morbi varius, tellus in accumsan blandit, elit ligula eleifend velit, luctus mattis ante nulla condimentum nulla. Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit.&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;h2 id=&quot;image-lightbox-example&quot;&gt;Image Lightbox Example&lt;/h2&gt;
-&lt;p&gt;Nunc porta malesuada porta. Etiam tristique vestibulum dolor at ultricies. Proin hendrerit sapien sed erat fermentum, at commodo velit consectetur.&lt;/p&gt;
+&lt;h3 id=&quot;vitruvia-exercises&quot;&gt;Vitruvia Exercises&lt;/h3&gt;
 
-&lt;figure data-uk-lightbox=&quot;animation: slide&quot;&gt;
-    &lt;a class=&quot;uk-inline&quot; href=&quot;http://localhost:4000/assets/posts/image1.png&quot; caption=&quot;Image in lightbox&quot;&gt;
-        &lt;img src=&quot;http://localhost:4000/assets/posts/image1.png&quot; alt=&quot;Alt for image&quot; /&gt;
-        &lt;div class=&quot;uk-position-center&quot;&gt;
-            &lt;span data-uk-overlay-icon=&quot;&quot;&gt;&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/a&gt;
-    &lt;figcaption data-uk-grid=&quot;&quot; class=&quot;uk-flex-right&quot;&gt;&lt;span class=&quot;uk-width-auto&quot;&gt;Image in lightbox&lt;/span&gt;&lt;/figcaption&gt;
+&lt;p&gt;To work on Vitruvia exercises, go to &lt;a href=&quot;https://bricklayer.org/apps/vitruvia_New/main.html#concepts/&quot;&gt;https://bricklayer.org/apps/vitruvia_New/main.html#concepts/&lt;/a&gt;.  If you are already on the bricklayer web site, from the menu, select&lt;/p&gt;
+&lt;center&gt; Apps -&amp;gt; Vitruvia -&amp;gt; Exercises &lt;/center&gt;
+&lt;p&gt;as shown below:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises01.jpg&quot; alt=&quot;Starting Vitruvia from bricklayer.org menu&quot; /&gt;
+    &lt;figcaption data-uk-grid=&quot;&quot; class=&quot;uk-flex-right&quot;&gt;&lt;span class=&quot;uk-width-auto&quot;&gt;Starting Vitruvia from bricklayer.org menu&lt;/span&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna, et dapibus turpis.&lt;/p&gt;
+&lt;p&gt;This takes you to the &lt;strong&gt;Concept 1 Demo 1&lt;/strong&gt; page. Before we look at that exercise, note the tabs at the top of the page showing &lt;strong&gt;Concepts 1-10&lt;/strong&gt;, &lt;strong&gt;Concepts 11-20&lt;/strong&gt;, and &lt;strong&gt;Concepts 21-24&lt;/strong&gt;.  As you move along through the concepts during the semester, you can pull down the menu for the concept you’re on and start there. For example, if you’ve completed Concepts 1-5, then you can go directly to Concept 6 by selecting&lt;/p&gt;
+&lt;center&gt; Concepts 1-10 -&amp;gt; Concept 6 &lt;/center&gt;
+&lt;p&gt;You can even choose a specific exercise if you’d like.&lt;/p&gt;
 
-&lt;h2 id=&quot;example-of-code-block&quot;&gt;Example Of Code Block&lt;/h2&gt;
-&lt;p&gt;In accumsan lacus ac neque maximus dictum. Phasellus eleifend leo id mattis bibendum. Curabitur et purus turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;http-equiv=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IE=edge&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/css/main.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;shortcut icon&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;image/png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/img/favicon.png&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/js/main.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;choosing-a-brick-color&quot;&gt;Choosing a brick color&lt;/h4&gt;
 
-&lt;h2 id=&quot;text-and-quote&quot;&gt;Text and Quote&lt;/h2&gt;
-&lt;p&gt;Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna turpis.&lt;/p&gt;
+&lt;p&gt;Let’s go back to &lt;strong&gt;Concept 1 Demo 1&lt;/strong&gt; and discuss in general how to complete a Vitruvia exercise. The solution to each Vitruvia exercise is a placement of bricks (or blocks—I’ll use the terms interchangeably) on the grid. To place a brick of a particular color on the grid, first click on the color, then click on the cell in the grid on which you place the brick.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises03.jpg&quot; alt=&quot;Selecting brick color in Vitruvia&quot; /&gt;
+    
+&lt;/figure&gt;
 
-&lt;p&gt;In accumsan lacus ac neque maximus dictum. Phasellus eleifend leo id mattis bibendum. Curabitur et purus turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;&lt;/p&gt;
+&lt;p&gt;When you want to change colors, click the next color you want and then click on cells.&lt;/p&gt;
 
-&lt;p&gt;Etiam in fermentum mi. Sed et tempor felis, eu aliquet nisi. Nam eget ullamcorper arcu. Nunc porttitor nisl a dolor blandit, eget consequat sem maximus. Phasellus lacinia quam porta orci malesuada, vel tincidunt.&lt;/p&gt;</content><author><name>John Black</name></author><category term="featured" /><summary type="html">Sections in this article</summary></entry><entry><title type="html">Getting started with our application</title><link href="http://localhost:4000/post0/" rel="alternate" type="text/html" title="Getting started with our application" /><published>2017-05-25T00:00:00-05:00</published><updated>2017-05-25T00:00:00-05:00</updated><id>http://localhost:4000/post0</id><content type="html" xml:base="http://localhost:4000/post0/">&lt;h4 class=&quot;no_toc&quot; id=&quot;sections-in-this-article&quot;&gt;Sections in this article&lt;/h4&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#image-lightbox-example&quot; id=&quot;markdown-toc-image-lightbox-example&quot;&gt;Image Lightbox Example&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#example-of-code-block&quot; id=&quot;markdown-toc-example-of-code-block&quot;&gt;Example Of Code Block&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#text-and-quote&quot; id=&quot;markdown-toc-text-and-quote&quot;&gt;Text and Quote&lt;/a&gt;&lt;/li&gt;
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;if-you-put-a-brick-in-the-wrong-place&quot;&gt;If you put a brick in the wrong place&lt;/h5&gt;
+
+&lt;p&gt;At some point you’ll click in the wrong cell or have the wrong color selected. There are two approaches to fixing this problem:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Clear all bricks from the grid: Click on the &lt;em&gt;Clear&lt;/em&gt; button above the color list. This is a good option if you just want to start over.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id. Cras fringilla convallis elit, at eleifend mi interam.&lt;/p&gt;
-
-&lt;p&gt;Nulla non sollicitudin. Morbi sit amet laoreet ipsum, vel pretium mi. Morbi varius, tellus in accumsan blandit, elit ligula eleifend velit, luctus mattis ante nulla condimentum nulla. Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit.&lt;/p&gt;
-
-&lt;h2 id=&quot;image-lightbox-example&quot;&gt;Image Lightbox Example&lt;/h2&gt;
-&lt;p&gt;Nunc porta malesuada porta. Etiam tristique vestibulum dolor at ultricies. Proin hendrerit sapien sed erat fermentum, at commodo velit consectetur.&lt;/p&gt;
-
-&lt;figure data-uk-lightbox=&quot;animation: slide&quot;&gt;
-    &lt;a class=&quot;uk-inline&quot; href=&quot;http://localhost:4000/assets/posts/image1.png&quot; caption=&quot;Image in lightbox&quot;&gt;
-        &lt;img src=&quot;http://localhost:4000/assets/posts/image1.png&quot; alt=&quot;Alt for image&quot; /&gt;
-        &lt;div class=&quot;uk-position-center&quot;&gt;
-            &lt;span data-uk-overlay-icon=&quot;&quot;&gt;&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/a&gt;
-    &lt;figcaption data-uk-grid=&quot;&quot; class=&quot;uk-flex-right&quot;&gt;&lt;span class=&quot;uk-width-auto&quot;&gt;Image in lightbox&lt;/span&gt;&lt;/figcaption&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises04.png&quot; alt=&quot;Clear button in Vitruvia&quot; /&gt;
+    
 &lt;/figure&gt;
 
-&lt;p&gt;Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna, et dapibus turpis.&lt;/p&gt;
-
-&lt;h2 id=&quot;example-of-code-block&quot;&gt;Example Of Code Block&lt;/h2&gt;
-&lt;p&gt;In accumsan lacus ac neque maximus dictum. Phasellus eleifend leo id mattis bibendum. Curabitur et purus turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;http-equiv=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IE=edge&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/css/main.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;shortcut icon&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;image/png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/img/favicon.png&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/js/main.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;text-and-quote&quot;&gt;Text and Quote&lt;/h2&gt;
-&lt;p&gt;Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna turpis.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;In accumsan lacus ac neque maximus dictum. Phasellus eleifend leo id mattis bibendum. Curabitur et purus turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;&lt;/p&gt;
-
-&lt;p&gt;Etiam in fermentum mi. Sed et tempor felis, eu aliquet nisi. Nam eget ullamcorper arcu. Nunc porttitor nisl a dolor blandit, eget consequat sem maximus. Phasellus lacinia quam porta orci malesuada, vel tincidunt.&lt;/p&gt;</content><author><name>John Black</name></author><category term="featured" /><summary type="html">Sections in this article</summary></entry><entry><title type="html">Setting up new domain and page</title><link href="http://localhost:4000/post1/" rel="alternate" type="text/html" title="Setting up new domain and page" /><published>2017-05-25T00:00:00-05:00</published><updated>2017-05-25T00:00:00-05:00</updated><id>http://localhost:4000/post1</id><content type="html" xml:base="http://localhost:4000/post1/">&lt;h4 class=&quot;no_toc&quot; id=&quot;sections-in-this-article&quot;&gt;Sections in this article&lt;/h4&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#image-lightbox-example&quot; id=&quot;markdown-toc-image-lightbox-example&quot;&gt;Image Lightbox Example&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#example-of-code-block&quot; id=&quot;markdown-toc-example-of-code-block&quot;&gt;Example Of Code Block&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#text-and-quote&quot; id=&quot;markdown-toc-text-and-quote&quot;&gt;Text and Quote&lt;/a&gt;&lt;/li&gt;
+&lt;ul&gt;
+  &lt;li&gt;Use the &lt;em&gt;EMPTY&lt;/em&gt; brick to remove other bricks: If you have only a few bricks that you’d like to erase/remove, click on the &lt;em&gt;EMPTY&lt;/em&gt; button in the brick color palette, then click on the bricks you want to remove.  When you’re ready to place bricks of another color, just click on that color and continue.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id. Cras fringilla convallis elit, at eleifend mi interam.&lt;/p&gt;
-
-&lt;p&gt;Nulla non sollicitudin. Morbi sit amet laoreet ipsum, vel pretium mi. Morbi varius, tellus in accumsan blandit, elit ligula eleifend velit, luctus mattis ante nulla condimentum nulla. Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit.&lt;/p&gt;
-
-&lt;h2 id=&quot;image-lightbox-example&quot;&gt;Image Lightbox Example&lt;/h2&gt;
-&lt;p&gt;Nunc porta malesuada porta. Etiam tristique vestibulum dolor at ultricies. Proin hendrerit sapien sed erat fermentum, at commodo velit consectetur.&lt;/p&gt;
-
-&lt;figure data-uk-lightbox=&quot;animation: slide&quot;&gt;
-    &lt;a class=&quot;uk-inline&quot; href=&quot;http://localhost:4000/assets/posts/image1.png&quot; caption=&quot;Image in lightbox&quot;&gt;
-        &lt;img src=&quot;http://localhost:4000/assets/posts/image1.png&quot; alt=&quot;Alt for image&quot; /&gt;
-        &lt;div class=&quot;uk-position-center&quot;&gt;
-            &lt;span data-uk-overlay-icon=&quot;&quot;&gt;&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/a&gt;
-    &lt;figcaption data-uk-grid=&quot;&quot; class=&quot;uk-flex-right&quot;&gt;&lt;span class=&quot;uk-width-auto&quot;&gt;Image in lightbox&lt;/span&gt;&lt;/figcaption&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises05.png&quot; alt=&quot;Selecting the EMPTY brick&quot; /&gt;
+    
 &lt;/figure&gt;
 
-&lt;p&gt;Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna, et dapibus turpis.&lt;/p&gt;
+&lt;hr /&gt;
 
-&lt;h2 id=&quot;example-of-code-block&quot;&gt;Example Of Code Block&lt;/h2&gt;
-&lt;p&gt;In accumsan lacus ac neque maximus dictum. Phasellus eleifend leo id mattis bibendum. Curabitur et purus turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;&lt;/p&gt;
+&lt;h4 id=&quot;locating-grid-cells&quot;&gt;Locating grid cells&lt;/h4&gt;
 
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;http-equiv=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IE=edge&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/css/main.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;shortcut icon&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;image/png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/img/favicon.png&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/js/main.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;p&gt;So now we know how to pick a brick color, let’s consider how to know where to put a brick.
+Cells in the grid are represented by two values, called coordinates.  These are also referred to as &lt;em&gt;ordered pairs&lt;/em&gt;. As you may surmise, the &lt;em&gt;order&lt;/em&gt; in which the coordinates are listed is important. The first coordinate refers to the horizontal dimension, i.e., how far &lt;em&gt;over&lt;/em&gt; while the second coordinate refers the the vertical dimension, i.e., how far &lt;em&gt;up&lt;/em&gt;.  For example, cell (2,3) is two blocks over and three blocks up from (0,0), as shown in the grid below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises06.jpg&quot; alt=&quot;Horizontal and vertical coordinates&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Here are a couple more examples.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises07.jpg&quot; alt=&quot;Cell location in Vitruvia - 1&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises08.jpg&quot; alt=&quot;Cell location in Vitruvia - 2&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;more-help-locating-grid-cells&quot;&gt;More help locating grid Cells&lt;/h4&gt;
+
+&lt;p&gt;If you find yourself confused about cell locations, you can use the &lt;em&gt;Display Coordinates&lt;/em&gt; option. This is above the color palette and below the grid. Click the &lt;em&gt;NO&lt;/em&gt; button to see the coordinates as shown below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises09.jpg&quot; alt=&quot;See grid coordinates in Vitruvia&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The &lt;em&gt;NO&lt;/em&gt; button changes (toggles) to &lt;em&gt;YES&lt;/em&gt; and the coordinates of each cell are displayed.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises10.png&quot; alt=&quot;See grid coordinates in Vitruvia&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;To hide the coordinates, click the &lt;em&gt;YES&lt;/em&gt; button. In general you should make the coordinates visible only if you feel you need to. Practice so that you eventually do not need them.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;complete-concept-1-demo-1-exercises&quot;&gt;Complete &lt;em&gt;Concept 1 Demo 1&lt;/em&gt; exercises&lt;/h4&gt;
+
+&lt;p&gt;Now you know how to choose the color that you want and how to locate cell locations.  You’re ready to complete the first exercise. The directions are as follows:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises11.png&quot; alt=&quot;Vitruvia Concept 1 Demo 1&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The steps to do this are:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. Click on the GREEN brick.
+2. Locate cell (0,0) - over 0 and up 0; click on it.
+3. Locate cell (5,1) - over 5 and up 1; click on it.
+4. Locate cell (1,2) - over 1 and up 2; click on it.
+5. Locate cell (4,3) - over 4 and up 3; click on it.
+6. Locate cell (2,4) - over 2 and up 4; click on it.
+7. Locate cell (3,5) - over 3 and up 5; click on it.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;text-and-quote&quot;&gt;Text and Quote&lt;/h2&gt;
-&lt;p&gt;Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna turpis.&lt;/p&gt;
+&lt;p&gt;The grid should look as follows. Click the &lt;em&gt;Submit&lt;/em&gt; button at the bottom to check your answer.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises12.png&quot; alt=&quot;Vitruvia Concept 1 Demo 1 solution&quot; /&gt;
+    
+&lt;/figure&gt;
 
-&lt;p&gt;In accumsan lacus ac neque maximus dictum. Phasellus eleifend leo id mattis bibendum. Curabitur et purus turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;&lt;/p&gt;
+&lt;p&gt;Assuming your solution is correct, fireworks will appear in place of the grid.&lt;/p&gt;
 
-&lt;p&gt;Etiam in fermentum mi. Sed et tempor felis, eu aliquet nisi. Nam eget ullamcorper arcu. Nunc porttitor nisl a dolor blandit, eget consequat sem maximus. Phasellus lacinia quam porta orci malesuada, vel tincidunt.&lt;/p&gt;</content><author><name>John Black</name></author><category term="featured" /><summary type="html">Sections in this article</summary></entry><entry><title type="html">Understanding company billing and accounts</title><link href="http://localhost:4000/post2/" rel="alternate" type="text/html" title="Understanding company billing and accounts" /><published>2017-05-25T00:00:00-05:00</published><updated>2017-05-25T00:00:00-05:00</updated><id>http://localhost:4000/post2</id><content type="html" xml:base="http://localhost:4000/post2/">&lt;h4 class=&quot;no_toc&quot; id=&quot;sections-in-this-article&quot;&gt;Sections in this article&lt;/h4&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises13.png&quot; alt=&quot;Vitruvia fireworks&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;If your solution is incorrect, you will see a &lt;em&gt;Try Again&lt;/em&gt; message. At this point you have two options.  One is to click on the &lt;em&gt;Clear&lt;/em&gt; button to redo the exercise.  The other is to click on the &lt;em&gt;Show Solution&lt;/em&gt; button to see the solution.  Try to avoid showing the solution unless you’ve given the exercise your best shot and don’t understand how to do it.  If you show the solution, spend time studying it to understand why it is correct.&lt;/p&gt;
+
+&lt;p&gt;When you’re ready to go to the next exercise, click on the &lt;em&gt;Next&lt;/em&gt; button.&lt;/p&gt;</content><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with MATH 1120</title><link href="http://localhost:4000/getting-started-with-1120/" rel="alternate" type="text/html" title="Getting Started with MATH 1120" /><published>2018-12-29T00:00:00-06:00</published><updated>2018-12-29T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-1120</id><content type="html" xml:base="http://localhost:4000/getting-started-with-1120/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#image-lightbox-example&quot; id=&quot;markdown-toc-image-lightbox-example&quot;&gt;Image Lightbox Example&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#example-of-code-block&quot; id=&quot;markdown-toc-example-of-code-block&quot;&gt;Example Of Code Block&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#text-and-quote&quot; id=&quot;markdown-toc-text-and-quote&quot;&gt;Text and Quote&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-kind-of-computer-do-i-need&quot; id=&quot;markdown-toc-what-kind-of-computer-do-i-need&quot;&gt;What kind of computer do I need?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-if-i-dont-have-a-computer&quot; id=&quot;markdown-toc-what-if-i-dont-have-a-computer&quot;&gt;What if I don’t have a computer?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#software-needed&quot; id=&quot;markdown-toc-software-needed&quot;&gt;Software needed&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#web-browser&quot; id=&quot;markdown-toc-web-browser&quot;&gt;Web browser&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#the-bricklayer-app&quot; id=&quot;markdown-toc-the-bricklayer-app&quot;&gt;The Bricklayer app&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#accessing-bricklayerorg&quot; id=&quot;markdown-toc-accessing-bricklayerorg&quot;&gt;Accessing bricklayer.org&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id. Cras fringilla convallis elit, at eleifend mi interam.&lt;/p&gt;
+&lt;p&gt;In this class, you will be using a computer a lot!  This page covers some basic skills you need.&lt;/p&gt;
 
-&lt;p&gt;Nulla non sollicitudin. Morbi sit amet laoreet ipsum, vel pretium mi. Morbi varius, tellus in accumsan blandit, elit ligula eleifend velit, luctus mattis ante nulla condimentum nulla. Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit.&lt;/p&gt;
+&lt;h3 id=&quot;what-kind-of-computer-do-i-need&quot;&gt;What kind of computer do I need?&lt;/h3&gt;
+&lt;p&gt;For the first four weeks of the course, all work will be done in a web browser. During this period you could use a computer, tablet, ipad, or Chromebook. In a pinch, you could even use a phone, but the screen is really too small to be able to work effectively.&lt;/p&gt;
 
-&lt;h2 id=&quot;image-lightbox-example&quot;&gt;Image Lightbox Example&lt;/h2&gt;
-&lt;p&gt;Nunc porta malesuada porta. Etiam tristique vestibulum dolor at ultricies. Proin hendrerit sapien sed erat fermentum, at commodo velit consectetur.&lt;/p&gt;
+&lt;p&gt;After week four, you need an actual computer.  You can use either a Mac or PC. Other devices will no longer be sufficient.&lt;/p&gt;
 
-&lt;figure data-uk-lightbox=&quot;animation: slide&quot;&gt;
-    &lt;a class=&quot;uk-inline&quot; href=&quot;http://localhost:4000/assets/posts/image1.png&quot; caption=&quot;Image in lightbox&quot;&gt;
-        &lt;img src=&quot;http://localhost:4000/assets/posts/image1.png&quot; alt=&quot;Alt for image&quot; /&gt;
-        &lt;div class=&quot;uk-position-center&quot;&gt;
-            &lt;span data-uk-overlay-icon=&quot;&quot;&gt;&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/a&gt;
-    &lt;figcaption data-uk-grid=&quot;&quot; class=&quot;uk-flex-right&quot;&gt;&lt;span class=&quot;uk-width-auto&quot;&gt;Image in lightbox&lt;/span&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna, et dapibus turpis.&lt;/p&gt;
-
-&lt;h2 id=&quot;example-of-code-block&quot;&gt;Example Of Code Block&lt;/h2&gt;
-&lt;p&gt;In accumsan lacus ac neque maximus dictum. Phasellus eleifend leo id mattis bibendum. Curabitur et purus turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;http-equiv=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IE=edge&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/css/main.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;shortcut icon&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;image/png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/img/favicon.png&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/js/main.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;text-and-quote&quot;&gt;Text and Quote&lt;/h2&gt;
-&lt;p&gt;Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna turpis.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;In accumsan lacus ac neque maximus dictum. Phasellus eleifend leo id mattis bibendum. Curabitur et purus turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;&lt;/p&gt;
-
-&lt;p&gt;Etiam in fermentum mi. Sed et tempor felis, eu aliquet nisi. Nam eget ullamcorper arcu. Nunc porttitor nisl a dolor blandit, eget consequat sem maximus. Phasellus lacinia quam porta orci malesuada, vel tincidunt.&lt;/p&gt;</content><author><name>John Black</name></author><summary type="html">Sections in this article</summary></entry><entry><title type="html">Updating your billing credit card</title><link href="http://localhost:4000/post3/" rel="alternate" type="text/html" title="Updating your billing credit card" /><published>2017-05-25T00:00:00-05:00</published><updated>2017-05-25T00:00:00-05:00</updated><id>http://localhost:4000/post3</id><content type="html" xml:base="http://localhost:4000/post3/">&lt;h4 class=&quot;no_toc&quot; id=&quot;sections-in-this-article&quot;&gt;Sections in this article&lt;/h4&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#image-lightbox-example&quot; id=&quot;markdown-toc-image-lightbox-example&quot;&gt;Image Lightbox Example&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#example-of-code-block&quot; id=&quot;markdown-toc-example-of-code-block&quot;&gt;Example Of Code Block&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#text-and-quote&quot; id=&quot;markdown-toc-text-and-quote&quot;&gt;Text and Quote&lt;/a&gt;&lt;/li&gt;
+&lt;hr /&gt;
+&lt;h3 id=&quot;what-if-i-dont-have-a-computer&quot;&gt;What if I don’t have a computer?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;In class
+    &lt;ul&gt;
+      &lt;li&gt;Mac laptops will be available for use.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Outside of class
+    &lt;ul&gt;
+      &lt;li&gt;Computer labs on campus
+        &lt;ul&gt;
+          &lt;li&gt;DSC 104 &lt;a href=&quot;https://www.unomaha.edu/information-technology-services/labs-and-classrooms/labs-and-kiosks.php&quot;&gt;Hours&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;Mammel Hall&lt;/li&gt;
+          &lt;li&gt;PKI&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Three-hour laptop checkout available at Criss Library. Go to the circulation desk.&lt;/li&gt;
+      &lt;li&gt;One-week laptop checkout available at Information Services Technical Support in EAB 104. &lt;a href=&quot;https://www.unomaha.edu/information-technology-services/software-and-hardware/checkout/student-checkout.php&quot;&gt;More info&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;If none of these options works for you, email Dr. Love.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id. Cras fringilla convallis elit, at eleifend mi interam.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3 id=&quot;software-needed&quot;&gt;Software needed&lt;/h3&gt;
 
-&lt;p&gt;Nulla non sollicitudin. Morbi sit amet laoreet ipsum, vel pretium mi. Morbi varius, tellus in accumsan blandit, elit ligula eleifend velit, luctus mattis ante nulla condimentum nulla. Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit.&lt;/p&gt;
+&lt;h4 id=&quot;web-browser&quot;&gt;Web browser&lt;/h4&gt;
+&lt;p&gt;Throughout the course we will heavily use the website &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt;. For best results, use the Chrome browser. It should already be installed on the machines on campus. If you need to install it on your computer, go to &lt;a href=&quot;https://www.google.com/chrome/&quot;&gt;https://www.google.com/chrome/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;image-lightbox-example&quot;&gt;Image Lightbox Example&lt;/h2&gt;
-&lt;p&gt;Nunc porta malesuada porta. Etiam tristique vestibulum dolor at ultricies. Proin hendrerit sapien sed erat fermentum, at commodo velit consectetur.&lt;/p&gt;
+&lt;h4 id=&quot;the-bricklayer-app&quot;&gt;The Bricklayer app&lt;/h4&gt;
+&lt;p&gt;This is not needed during the first four weeks of class. More on this later.&lt;/p&gt;
 
-&lt;figure data-uk-lightbox=&quot;animation: slide&quot;&gt;
-    &lt;a class=&quot;uk-inline&quot; href=&quot;http://localhost:4000/assets/posts/image1.png&quot; caption=&quot;Image in lightbox&quot;&gt;
-        &lt;img src=&quot;http://localhost:4000/assets/posts/image1.png&quot; alt=&quot;Alt for image&quot; /&gt;
-        &lt;div class=&quot;uk-position-center&quot;&gt;
-            &lt;span data-uk-overlay-icon=&quot;&quot;&gt;&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/a&gt;
-    &lt;figcaption data-uk-grid=&quot;&quot; class=&quot;uk-flex-right&quot;&gt;&lt;span class=&quot;uk-width-auto&quot;&gt;Image in lightbox&lt;/span&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna, et dapibus turpis.&lt;/p&gt;
-
-&lt;h2 id=&quot;example-of-code-block&quot;&gt;Example Of Code Block&lt;/h2&gt;
-&lt;p&gt;In accumsan lacus ac neque maximus dictum. Phasellus eleifend leo id mattis bibendum. Curabitur et purus turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;http-equiv=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IE=edge&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/css/main.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;shortcut icon&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;image/png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/img/favicon.png&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/js/main.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;text-and-quote&quot;&gt;Text and Quote&lt;/h2&gt;
-&lt;p&gt;Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna turpis.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;In accumsan lacus ac neque maximus dictum. Phasellus eleifend leo id mattis bibendum. Curabitur et purus turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;&lt;/p&gt;
-
-&lt;p&gt;Etiam in fermentum mi. Sed et tempor felis, eu aliquet nisi. Nam eget ullamcorper arcu. Nunc porttitor nisl a dolor blandit, eget consequat sem maximus. Phasellus lacinia quam porta orci malesuada, vel tincidunt.&lt;/p&gt;</content><author><name>John Black</name></author><summary type="html">Sections in this article</summary></entry><entry><title type="html">Cancelling a website subscription</title><link href="http://localhost:4000/post4/" rel="alternate" type="text/html" title="Cancelling a website subscription" /><published>2017-05-25T00:00:00-05:00</published><updated>2017-05-25T00:00:00-05:00</updated><id>http://localhost:4000/post4</id><content type="html" xml:base="http://localhost:4000/post4/">&lt;h4 class=&quot;no_toc&quot; id=&quot;sections-in-this-article&quot;&gt;Sections in this article&lt;/h4&gt;
+&lt;h3 id=&quot;accessing-bricklayerorg&quot;&gt;Accessing &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt;&lt;/h3&gt;</content><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><summary type="html">Topics on this page</summary></entry><entry><title type="html">Betty’s new post page</title><link href="http://localhost:4000/post01/" rel="alternate" type="text/html" title="Betty's new post page" /><published>2018-12-27T00:00:00-06:00</published><updated>2018-12-27T00:00:00-06:00</updated><id>http://localhost:4000/post01</id><content type="html" xml:base="http://localhost:4000/post01/">&lt;p&gt;This is a new post.  I’m putting a bunch of TeX here.  Wonder what will happen???&lt;/p&gt;</content><author><name>Betty Love</name></author><summary type="html">This is a new post. I’m putting a bunch of TeX here. Wonder what will happen???</summary></entry><entry><title type="html">Cancelling a website subscription</title><link href="http://localhost:4000/post4/" rel="alternate" type="text/html" title="Cancelling a website subscription" /><published>2017-05-25T00:00:00-05:00</published><updated>2017-05-25T00:00:00-05:00</updated><id>http://localhost:4000/post4</id><content type="html" xml:base="http://localhost:4000/post4/">&lt;h4 class=&quot;no_toc&quot; id=&quot;sections-in-this-article&quot;&gt;Sections in this article&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#image-lightbox-example&quot; id=&quot;markdown-toc-image-lightbox-example&quot;&gt;Image Lightbox Example&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#example-of-code-block&quot; id=&quot;markdown-toc-example-of-code-block&quot;&gt;Example Of Code Block&lt;/a&gt;&lt;/li&gt;
@@ -431,6 +394,102 @@
 &lt;p&gt;In accumsan lacus ac neque maximus dictum. Phasellus eleifend leo id mattis bibendum. Curabitur et purus turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;&lt;/p&gt;
 
 &lt;p&gt;Etiam in fermentum mi. Sed et tempor felis, eu aliquet nisi. Nam eget ullamcorper arcu. Nunc porttitor nisl a dolor blandit, eget consequat sem maximus. Phasellus lacinia quam porta orci malesuada, vel tincidunt.&lt;/p&gt;</content><author><name>John Black</name></author><summary type="html">Sections in this article</summary></entry><entry><title type="html">Upgrading to paid service</title><link href="http://localhost:4000/post61/" rel="alternate" type="text/html" title="Upgrading to paid service" /><published>2017-05-25T00:00:00-05:00</published><updated>2017-05-25T00:00:00-05:00</updated><id>http://localhost:4000/post61</id><content type="html" xml:base="http://localhost:4000/post61/">&lt;h4 class=&quot;no_toc&quot; id=&quot;sections-in-this-article&quot;&gt;Sections in this article&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#image-lightbox-example&quot; id=&quot;markdown-toc-image-lightbox-example&quot;&gt;Image Lightbox Example&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#example-of-code-block&quot; id=&quot;markdown-toc-example-of-code-block&quot;&gt;Example Of Code Block&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#text-and-quote&quot; id=&quot;markdown-toc-text-and-quote&quot;&gt;Text and Quote&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id. Cras fringilla convallis elit, at eleifend mi interam.&lt;/p&gt;
+
+&lt;p&gt;Nulla non sollicitudin. Morbi sit amet laoreet ipsum, vel pretium mi. Morbi varius, tellus in accumsan blandit, elit ligula eleifend velit, luctus mattis ante nulla condimentum nulla. Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit.&lt;/p&gt;
+
+&lt;h2 id=&quot;image-lightbox-example&quot;&gt;Image Lightbox Example&lt;/h2&gt;
+&lt;p&gt;Nunc porta malesuada porta. Etiam tristique vestibulum dolor at ultricies. Proin hendrerit sapien sed erat fermentum, at commodo velit consectetur.&lt;/p&gt;
+
+&lt;figure data-uk-lightbox=&quot;animation: slide&quot;&gt;
+    &lt;a class=&quot;uk-inline&quot; href=&quot;http://localhost:4000/assets/posts/image1.png&quot; caption=&quot;Image in lightbox&quot;&gt;
+        &lt;img src=&quot;http://localhost:4000/assets/posts/image1.png&quot; alt=&quot;Alt for image&quot; /&gt;
+        &lt;div class=&quot;uk-position-center&quot;&gt;
+            &lt;span data-uk-overlay-icon=&quot;&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+    &lt;figcaption data-uk-grid=&quot;&quot; class=&quot;uk-flex-right&quot;&gt;&lt;span class=&quot;uk-width-auto&quot;&gt;Image in lightbox&lt;/span&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna, et dapibus turpis.&lt;/p&gt;
+
+&lt;h2 id=&quot;example-of-code-block&quot;&gt;Example Of Code Block&lt;/h2&gt;
+&lt;p&gt;In accumsan lacus ac neque maximus dictum. Phasellus eleifend leo id mattis bibendum. Curabitur et purus turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;http-equiv=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IE=edge&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/css/main.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;shortcut icon&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;image/png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/img/favicon.png&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/js/main.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;text-and-quote&quot;&gt;Text and Quote&lt;/h2&gt;
+&lt;p&gt;Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna turpis.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In accumsan lacus ac neque maximus dictum. Phasellus eleifend leo id mattis bibendum. Curabitur et purus turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;&lt;/p&gt;
+
+&lt;p&gt;Etiam in fermentum mi. Sed et tempor felis, eu aliquet nisi. Nam eget ullamcorper arcu. Nunc porttitor nisl a dolor blandit, eget consequat sem maximus. Phasellus lacinia quam porta orci malesuada, vel tincidunt.&lt;/p&gt;</content><author><name>John Black</name></author><summary type="html">Sections in this article</summary></entry><entry><title type="html">Design tips for choosing great images</title><link href="http://localhost:4000/post62/" rel="alternate" type="text/html" title="Design tips for choosing great images" /><published>2017-05-25T00:00:00-05:00</published><updated>2017-05-25T00:00:00-05:00</updated><id>http://localhost:4000/post62</id><content type="html" xml:base="http://localhost:4000/post62/">&lt;h4 class=&quot;no_toc&quot; id=&quot;sections-in-this-article&quot;&gt;Sections in this article&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#image-lightbox-example&quot; id=&quot;markdown-toc-image-lightbox-example&quot;&gt;Image Lightbox Example&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#example-of-code-block&quot; id=&quot;markdown-toc-example-of-code-block&quot;&gt;Example Of Code Block&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#text-and-quote&quot; id=&quot;markdown-toc-text-and-quote&quot;&gt;Text and Quote&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Musce libero nunc, dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id. Cras fringilla convallis elit, at eleifend mi interam.&lt;/p&gt;
+
+&lt;p&gt;Nulla non sollicitudin. Morbi sit amet laoreet ipsum, vel pretium mi. Morbi varius, tellus in accumsan blandit, elit ligula eleifend velit, luctus mattis ante nulla condimentum nulla. Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit.&lt;/p&gt;
+
+&lt;h2 id=&quot;image-lightbox-example&quot;&gt;Image Lightbox Example&lt;/h2&gt;
+&lt;p&gt;Nunc porta malesuada porta. Etiam tristique vestibulum dolor at ultricies. Proin hendrerit sapien sed erat fermentum, at commodo velit consectetur.&lt;/p&gt;
+
+&lt;figure data-uk-lightbox=&quot;animation: slide&quot;&gt;
+    &lt;a class=&quot;uk-inline&quot; href=&quot;http://localhost:4000/assets/posts/image1.png&quot; caption=&quot;Image in lightbox&quot;&gt;
+        &lt;img src=&quot;http://localhost:4000/assets/posts/image1.png&quot; alt=&quot;Alt for image&quot; /&gt;
+        &lt;div class=&quot;uk-position-center&quot;&gt;
+            &lt;span data-uk-overlay-icon=&quot;&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+    &lt;figcaption data-uk-grid=&quot;&quot; class=&quot;uk-flex-right&quot;&gt;&lt;span class=&quot;uk-width-auto&quot;&gt;Image in lightbox&lt;/span&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna, et dapibus turpis.&lt;/p&gt;
+
+&lt;h2 id=&quot;example-of-code-block&quot;&gt;Example Of Code Block&lt;/h2&gt;
+&lt;p&gt;In accumsan lacus ac neque maximus dictum. Phasellus eleifend leo id mattis bibendum. Curabitur et purus turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;http-equiv=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IE=edge&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;viewport&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;content=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width=device-width, initial-scale=1&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/css/main.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;shortcut icon&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;image/png&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/img/favicon.png&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/js/main.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;text-and-quote&quot;&gt;Text and Quote&lt;/h2&gt;
+&lt;p&gt;Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet, tempus metus quis, pharetra turpis. Phasellus at massa sit amet ante semper fermentum sed eget lectus. Quisque id dictum magna turpis.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Etiam vestibulum risus vel arcu elementum eleifend. Cras at dolor eget urna varius faucibus tempus in elit. Cras a dui imperdiet&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In accumsan lacus ac neque maximus dictum. Phasellus eleifend leo id mattis bibendum. Curabitur et purus turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;&lt;/p&gt;
+
+&lt;p&gt;Etiam in fermentum mi. Sed et tempor felis, eu aliquet nisi. Nam eget ullamcorper arcu. Nunc porttitor nisl a dolor blandit, eget consequat sem maximus. Phasellus lacinia quam porta orci malesuada, vel tincidunt.&lt;/p&gt;</content><author><name>John Black</name></author><summary type="html">Sections in this article</summary></entry><entry><title type="html">Selecting the right fonts and colors</title><link href="http://localhost:4000/post63/" rel="alternate" type="text/html" title="Selecting the right fonts and colors" /><published>2017-05-25T00:00:00-05:00</published><updated>2017-05-25T00:00:00-05:00</updated><id>http://localhost:4000/post63</id><content type="html" xml:base="http://localhost:4000/post63/">&lt;h4 class=&quot;no_toc&quot; id=&quot;sections-in-this-article&quot;&gt;Sections in this article&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#image-lightbox-example&quot; id=&quot;markdown-toc-image-lightbox-example&quot;&gt;Image Lightbox Example&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#example-of-code-block&quot; id=&quot;markdown-toc-example-of-code-block&quot;&gt;Example Of Code Block&lt;/a&gt;&lt;/li&gt;

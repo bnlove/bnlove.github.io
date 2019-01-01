@@ -1,6 +1,30 @@
 [
   
     {
+      "title"    : "Getting Started with Vitruvia Exercises",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/getting-started-with-vitruvia/",
+      "date"     : "2018-12-29 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Getting Started with MATH 1120",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/getting-started-with-1120/",
+      "date"     : "2018-12-29 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Betty&#39;s new post page",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/post01/",
+      "date"     : "2018-12-27 00:00:00 -0600"
+    } ,
+  
+    {
       "title"    : "Getting a JavaScript console error",
       "category" : "",
       "tags"     : "featured",
@@ -93,14 +117,6 @@
       "category" : "",
       "tags"     : "featured",
       "url"      : "/post0/",
-      "date"     : "2017-05-25 00:00:00 -0500"
-    } ,
-  
-    {
-      "title"    : "How To Setup Naked Domain SSL With Github Pages",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/post/",
       "date"     : "2017-05-25 00:00:00 -0500"
     } 
   
