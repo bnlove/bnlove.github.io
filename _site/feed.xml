@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-09T11:12:29-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>Knowledge base Jekyll theme.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Getting Started with MATH 1120</title><link href="http://localhost:4000/getting-started-with-1120/" rel="alternate" type="text/html" title="Getting Started with MATH 1120" /><published>2018-12-29T00:00:00-06:00</published><updated>2018-12-29T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-1120</id><content type="html" xml:base="http://localhost:4000/getting-started-with-1120/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-09T11:25:14-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>Knowledge base Jekyll theme.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Getting Started with MATH 1120</title><link href="http://localhost:4000/getting-started-with-1120/" rel="alternate" type="text/html" title="Getting Started with MATH 1120" /><published>2018-12-29T00:00:00-06:00</published><updated>2018-12-29T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-1120</id><content type="html" xml:base="http://localhost:4000/getting-started-with-1120/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#what-kind-of-computer-do-i-need&quot; id=&quot;markdown-toc-what-kind-of-computer-do-i-need&quot;&gt;What kind of computer do I need?&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#what-if-i-dont-have-a-computer&quot; id=&quot;markdown-toc-what-if-i-dont-have-a-computer&quot;&gt;What if I don’t have a computer?&lt;/a&gt;&lt;/li&gt;
@@ -7,15 +7,14 @@
       &lt;li&gt;&lt;a href=&quot;#the-bricklayer-app&quot; id=&quot;markdown-toc-the-bricklayer-app&quot;&gt;The Bricklayer app&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#accessing-bricklayerorg&quot; id=&quot;markdown-toc-accessing-bricklayerorg&quot;&gt;Accessing bricklayer.org&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;In this class, you will be using a computer a lot!  This page covers some basic skills you need.&lt;/p&gt;
 
 &lt;h3 id=&quot;what-kind-of-computer-do-i-need&quot;&gt;What kind of computer do I need?&lt;/h3&gt;
-&lt;p&gt;For the first four weeks of the course, all work will be done in a web browser. During this period you could use a computer, tablet, ipad, or Chromebook. In a pinch, you could even use a phone, but the screen is really too small to be able to work effectively.&lt;/p&gt;
+&lt;p&gt;For the first couple of weeks of the course, all work will be done in a web browser. During this period you could use a computer, tablet, ipad, or Chromebook. In a pinch, you could even use a phone, but the screen is really too small to be able to work effectively.&lt;/p&gt;
 
-&lt;p&gt;After week four, you need an actual computer.  You can use either a Mac or PC. Other devices will no longer be sufficient.&lt;/p&gt;
+&lt;p&gt;Afterward, you need an actual computer.  You can use either a Mac or PC. Other devices will no longer be sufficient.&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;h3 id=&quot;what-if-i-dont-have-a-computer&quot;&gt;What if I don’t have a computer?&lt;/h3&gt;
@@ -48,9 +47,7 @@
 &lt;p&gt;Throughout the course we will heavily use the website &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt;. For best results, use the Chrome browser. It should already be installed on the machines on campus. If you need to install it on your computer, go to &lt;a href=&quot;https://www.google.com/chrome/&quot;&gt;https://www.google.com/chrome/&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;the-bricklayer-app&quot;&gt;The Bricklayer app&lt;/h4&gt;
-&lt;p&gt;This is not needed during the first four weeks of class. More on this later.&lt;/p&gt;
-
-&lt;h3 id=&quot;accessing-bricklayerorg&quot;&gt;Accessing &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt;&lt;/h3&gt;</content><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Vitruvia Exercises</title><link href="http://localhost:4000/getting-started-with-vitruvia/" rel="alternate" type="text/html" title="Getting Started with Vitruvia Exercises" /><published>2018-12-29T00:00:00-06:00</published><updated>2018-12-29T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-vitruvia</id><content type="html" xml:base="http://localhost:4000/getting-started-with-vitruvia/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;p&gt;This is not needed during the first couple of weeks of class. More on this later.&lt;/p&gt;</content><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Vitruvia Exercises</title><link href="http://localhost:4000/getting-started-with-vitruvia/" rel="alternate" type="text/html" title="Getting Started with Vitruvia Exercises" /><published>2018-12-29T00:00:00-06:00</published><updated>2018-12-29T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-vitruvia</id><content type="html" xml:base="http://localhost:4000/getting-started-with-vitruvia/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#vitruvia-exercises&quot; id=&quot;markdown-toc-vitruvia-exercises&quot;&gt;Vitruvia Exercises&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#choosing-a-brick-color&quot; id=&quot;markdown-toc-choosing-a-brick-color&quot;&gt;Choosing a brick color&lt;/a&gt;        &lt;ul&gt;
