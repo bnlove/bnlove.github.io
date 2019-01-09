@@ -1,9 +1,9 @@
 # Navbar menu navigation links
-- title: bacon
+- title: Help
   url: /
 
-- title: Faq
-  url: /faq/
-
-- title: SNOW!!!
-  url: /contact/
+# - title: Faq
+#   url: /faq/
+#
+# - title: SNOW!!!
+#   url: /contact/

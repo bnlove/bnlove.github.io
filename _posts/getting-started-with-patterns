@@ -1,8 +1,7 @@
 ---
 layout: post
-title: Getting Started with Vitruvia Exercises
+title: Getting Started with Patterns
 categories: [Getting Started]
-tags: featured
 author: {{ author }}
 ---
 
@@ -11,8 +10,7 @@ author: {{ author }}
 * TOC
 {:toc}
 
-Vitruvia is a app available at [bricklayer.org](https://bricklayer.org/apps/vitruvia_New/main.html#concepts/). Its purpose is to provide a gentle introduction to bricklayer concepts through a series of automatically-graded interactive exercises.  Vitruvia also has a Test mode which is discussed in another post.
-
+Patterns form the basis for the integration of math, coding, and art. Humans are very good at recognizing patterns they can see visually. For example, take a look at the following
 ***
 
 ### Vitruvia Exercises
@@ -30,7 +28,7 @@ You can even choose a specific exercise if you'd like.
 
 #### Choosing a brick color
 
-Let's go back to **Concept 1 Demo 1** and discuss in general how to complete a Vitruvia exercise. The solution to each Vitruvia exercise is a placement of bricks (or blocks---I'll use the terms interchangeably) on the grid. To place a brick of a particular color on the grid, first click on the color, then click on the cell in the grid on which you place the brick.  
+Let's go back to **Concept 1 Demo 1** and discuss in general how to complete a Vitruvia exercise. The solution to each Vitruvia exercise is a placement of bricks (or blocks---I'll use the terms interchangeably) on the grid. To place a brick of a particular color on the grid, first click on the color, then click on the cell in the grid on which you place the brick.
 {% include image.html img="vitruvia/vitruvia-exercises03.jpg"  alt="Selecting brick color in Vitruvia"  %}
 When you want to change colors, click the next color you want and then click on cells.
 

@@ -10,13 +10,12 @@ hero:
     text: light
     search: true
 category:
-    columns: 3
 featured:
-    title: Featured Articles
+    title: Getting Started
     tag: featured
 cta:
     title: Didn't find an answer to your question?
-    subtitle: Get in touch with us for details on additional services and custom work pricing
-    button_text: Contact Us   
+    subtitle: Email Dr. Love to ask!  This website is a work in progress and your questions will help it better serve students!
+    button_text: Contact Dr. Love   
     button_url: /contact/      
 ---

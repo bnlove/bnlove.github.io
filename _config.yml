@@ -32,11 +32,11 @@ author:
     dribbble:
     github:
     googleplus:
-    instagram:      https://www.instagram.com/
+    instagram:
     linkedin:
     pinterest:
-    twitter:        https://twitter.com/
-    vimeo:          https://vimeo.com/
+    twitter:
+    vimeo:          
     youtube:
 
 # Social share buttons
@@ -79,7 +79,7 @@ sass:
 collections:
   faqs:
     output: false
-    
+
 formspree:
         email: blove@unomaha.edu
         redirect: /thanks/
