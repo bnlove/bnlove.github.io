@@ -11,6 +11,7 @@ author: Betty Love
 * TOC
 {:toc} -->
 
+
 In Vitruvia Concept 1, you are asked to place 1x1 bricks at various locations.  When you get to Concept 3, however, things may seem a little confusing since you are asked to place larger bricks.  For example, Concept 3 Exercise 7 is as follows:
 
 > Put a 4x2 YELLOW brick at location (0,3).
