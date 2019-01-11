@@ -6,7 +6,7 @@
 
 # Site title and description
 title:              MATH 1120
-description:        Knowledge base Jekyll theme.
+description:        A guide for students.
 
 # Site subpath, e.g. /blog
 baseurl:            ""
@@ -36,7 +36,7 @@ author:
     linkedin:
     pinterest:
     twitter:
-    vimeo:          
+    vimeo:
     youtube:
 
 # Social share buttons

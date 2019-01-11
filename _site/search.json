@@ -1,6 +1,22 @@
 [
   
     {
+      "title"    : "Placing blocks that are bigger than 1x1",
+      "category" : "",
+      "tags"     : "featured",
+      "url"      : "/placing-bigger-blocks/",
+      "date"     : "2019-01-11 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "How to take a Vitruvia test",
+      "category" : "",
+      "tags"     : "featured",
+      "url"      : "/vitruvia-tests/",
+      "date"     : "2019-01-09 00:00:00 -0600"
+    } ,
+  
+    {
       "title"    : "Getting Started with Vitruvia Exercises",
       "category" : "",
       "tags"     : "featured",

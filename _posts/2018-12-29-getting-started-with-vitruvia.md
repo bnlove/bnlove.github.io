@@ -3,7 +3,7 @@ layout: post
 title: Getting Started with Vitruvia Exercises
 categories: [Getting Started]
 tags: featured
-author: {{ author }}
+author: Betty Love
 ---
 
 #### Topics on this page
@@ -87,7 +87,7 @@ The steps to do this are:
     4. Locate cell (1,2) - over 1 and up 2; click on it.
     5. Locate cell (4,3) - over 4 and up 3; click on it.
     6. Locate cell (2,4) - over 2 and up 4; click on it.
-    7. Locate cell (3,5) - over 3 and up 5; click on it.
+    7. Locate cell (3,5) - over 3 and up 5; click on it.   
 
 The grid should look as follows. Click the _Submit_ button at the bottom to check your answer.
 

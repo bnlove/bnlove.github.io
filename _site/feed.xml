@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-09T11:52:04-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>Knowledge base Jekyll theme.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Getting Started with MATH 1120</title><link href="http://localhost:4000/getting-started-with-1120/" rel="alternate" type="text/html" title="Getting Started with MATH 1120" /><published>2018-12-29T00:00:00-06:00</published><updated>2018-12-29T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-1120</id><content type="html" xml:base="http://localhost:4000/getting-started-with-1120/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-11T14:20:13-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>Knowledge base Jekyll theme.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Placing blocks that are bigger than 1x1</title><link href="http://localhost:4000/placing-bigger-blocks/" rel="alternate" type="text/html" title="Placing blocks that are bigger than 1x1" /><published>2019-01-11T00:00:00-06:00</published><updated>2019-01-11T00:00:00-06:00</updated><id>http://localhost:4000/placing-bigger-blocks</id><content type="html" xml:base="http://localhost:4000/placing-bigger-blocks/">&lt;!-- #### Topics on this page
+{:.no_toc}
+* TOC
+{:toc} --&gt;
+
+&lt;p&gt;In Vitruvia Concept 1, you are asked to place 1x1 bricks at various locations.  When you get to Concept 3, however, things may seem a little confusing since you are asked to place larger bricks.  For example, Concept 3 Exercise 7 is as follows:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Put a 4x2 YELLOW brick at location (0,3).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Location (0,3) is just one cell, right?  Just one position in the grid.  So how does one put a 4x2 brick there? The answer is that the location given is where the &lt;em&gt;bottom left corner&lt;/em&gt; of the brick goes. This is the way Dr. Winter designed and implemented bricklayer.&lt;/p&gt;
+
+&lt;p&gt;So…to put a 4x2 YELLOW brick at location (0,3), we must first find location (0,3). Remember &lt;em&gt;over and up&lt;/em&gt; or Dr. Winter’s &lt;em&gt;run before you jump&lt;/em&gt; to locate (0,3).&lt;/p&gt;
+
+&lt;p&gt;Actually, we should first click on YELLOW so that when we find location (0,3), we can click on it and put a YELLOW block there.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/concept3-01.jpg&quot; alt=&quot;Vitruvia Concept 3 Exercise 7&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Now we need to figure out what a 4x2 brick looks like.  Basically the question is: is it 4 wide and 2 tall or 4 tall and 2 wide???  The answer is that it follows the same convention as the grid coordinates.  The first number is how far &lt;em&gt;over&lt;/em&gt; (&lt;em&gt;wide&lt;/em&gt;) and the second is how far &lt;em&gt;up&lt;/em&gt; (&lt;em&gt;tall&lt;/em&gt;) as shown in the following figure.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/concept3-02.jpg&quot; alt=&quot;4x2 vs 2x4 brick&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;We go back to our Vitruvia grid and click in positions (1,3), (2,3), (3,3), (4,3), (0,4), (1,4), (2,4), (3,4) to complete the 4x2 brick at location (0,3).&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/concept3-03.png&quot; alt=&quot;Vitruvia Concept 3 Exercise 7 solution&quot; /&gt;
+    
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html"></summary></entry><entry><title type="html">How to take a Vitruvia test</title><link href="http://localhost:4000/vitruvia-tests/" rel="alternate" type="text/html" title="How to take a Vitruvia test" /><published>2019-01-09T00:00:00-06:00</published><updated>2019-01-09T00:00:00-06:00</updated><id>http://localhost:4000/vitruvia-tests</id><content type="html" xml:base="http://localhost:4000/vitruvia-tests/">&lt;ol&gt;
+  &lt;li&gt;From &lt;a href=&quot;https://bricklayer.org&quot;&gt;https://bricklayer.org&lt;/a&gt; select Apps -&amp;gt; Vitruvia -&amp;gt; Tests&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-test01.png&quot; alt=&quot;Starting Vitruvia tests from bricklayer.org menu&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;ol start=&quot;2&quot;&gt;
+  &lt;li&gt;
+    &lt;p&gt;Select the concept(s) you want to be tested on.  Note that you can select any number of concepts. For the first assignment, you should just choose Concept 1.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Select the number of questions you want the test to contain. In the image below, I have chosen 10.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-test01.png&quot; alt=&quot;Setting up Vitruvia test concepts and number of questions&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;ol start=&quot;4&quot;&gt;
+  &lt;li&gt;
+    &lt;p&gt;Answer the questions, clicking “Check” after each answer.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you are doing a test for an Assignment, take a screenshot of the test summary so that you can submit it.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-test03.png&quot; alt=&quot;Screenshot of Vitruvia test results&quot; /&gt;
+    
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">From https://bricklayer.org select Apps -&amp;gt; Vitruvia -&amp;gt; Tests</summary></entry><entry><title type="html">Getting Started with MATH 1120</title><link href="http://localhost:4000/getting-started-with-1120/" rel="alternate" type="text/html" title="Getting Started with MATH 1120" /><published>2018-12-29T00:00:00-06:00</published><updated>2018-12-29T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-1120</id><content type="html" xml:base="http://localhost:4000/getting-started-with-1120/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#what-kind-of-computer-do-i-need&quot; id=&quot;markdown-toc-what-kind-of-computer-do-i-need&quot;&gt;What kind of computer do I need?&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#what-if-i-dont-have-a-computer&quot; id=&quot;markdown-toc-what-if-i-dont-have-a-computer&quot;&gt;What if I don’t have a computer?&lt;/a&gt;&lt;/li&gt;
@@ -47,7 +116,7 @@
 &lt;p&gt;Throughout the course we will heavily use the website &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt;. For best results, use the Chrome browser. It should already be installed on the machines on campus. If you need to install it on your computer, go to &lt;a href=&quot;https://www.google.com/chrome/&quot;&gt;https://www.google.com/chrome/&lt;/a&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;the-bricklayer-app&quot;&gt;The Bricklayer app&lt;/h4&gt;
-&lt;p&gt;This is not needed during the first couple of weeks of class. More on this later.&lt;/p&gt;</content><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Vitruvia Exercises</title><link href="http://localhost:4000/getting-started-with-vitruvia/" rel="alternate" type="text/html" title="Getting Started with Vitruvia Exercises" /><published>2018-12-29T00:00:00-06:00</published><updated>2018-12-29T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-vitruvia</id><content type="html" xml:base="http://localhost:4000/getting-started-with-vitruvia/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;p&gt;This is not needed during the first couple of weeks of class. More on this later.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Vitruvia Exercises</title><link href="http://localhost:4000/getting-started-with-vitruvia/" rel="alternate" type="text/html" title="Getting Started with Vitruvia Exercises" /><published>2018-12-29T00:00:00-06:00</published><updated>2018-12-29T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-vitruvia</id><content type="html" xml:base="http://localhost:4000/getting-started-with-vitruvia/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#vitruvia-exercises&quot; id=&quot;markdown-toc-vitruvia-exercises&quot;&gt;Vitruvia Exercises&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#choosing-a-brick-color&quot; id=&quot;markdown-toc-choosing-a-brick-color&quot;&gt;Choosing a brick color&lt;/a&gt;        &lt;ul&gt;
@@ -179,7 +248,7 @@ Cells in the grid are represented by two values, called coordinates.  These are 
 4. Locate cell (1,2) - over 1 and up 2; click on it.
 5. Locate cell (4,3) - over 4 and up 3; click on it.
 6. Locate cell (2,4) - over 2 and up 4; click on it.
-7. Locate cell (3,5) - over 3 and up 5; click on it.
+7. Locate cell (3,5) - over 3 and up 5; click on it.   
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The grid should look as follows. Click the &lt;em&gt;Submit&lt;/em&gt; button at the bottom to check your answer.&lt;/p&gt;
@@ -198,4 +267,4 @@ Cells in the grid are represented by two values, called coordinates.  These are 
 
 &lt;p&gt;If your solution is incorrect, you will see a &lt;em&gt;Try Again&lt;/em&gt; message. At this point you have two options.  One is to click on the &lt;em&gt;Clear&lt;/em&gt; button to redo the exercise.  The other is to click on the &lt;em&gt;Show Solution&lt;/em&gt; button to see the solution.  Try to avoid showing the solution unless you’ve given the exercise your best shot and don’t understand how to do it.  If you show the solution, spend time studying it to understand why it is correct.&lt;/p&gt;
 
-&lt;p&gt;When you’re ready to go to the next exercise, click on the &lt;em&gt;Next&lt;/em&gt; button.&lt;/p&gt;</content><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><category term="featured" /><summary type="html">Topics on this page</summary></entry></feed>
+&lt;p&gt;When you’re ready to go to the next exercise, click on the &lt;em&gt;Next&lt;/em&gt; button.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry></feed>
