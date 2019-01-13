@@ -1,7 +1,23 @@
 [
   
     {
-      "title"    : "Placing blocks that are bigger than 1x1",
+      "title"    : "Placing multiple blocks (Vitruvia Concept 4)",
+      "category" : "",
+      "tags"     : "featured",
+      "url"      : "/placing-multiple-bricks/",
+      "date"     : "2019-01-13 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Counting items in a list",
+      "category" : "",
+      "tags"     : "featured, counting",
+      "url"      : "/counting-list-items/",
+      "date"     : "2019-01-13 00:00:00 -0600"
+    } ,
+  
+    {
+      "title"    : "Placing blocks that are bigger than 1x1 (Vitruvia Concept 3)",
       "category" : "",
       "tags"     : "featured",
       "url"      : "/placing-bigger-blocks/",
