@@ -59,3 +59,6 @@ Once more!
 Ok, the "2D" piece looks a little out of place, but otherwise, can you see the transformation? If so, congratulations!  You're reading and comprehending bricklayer code!
 
 Bricklayer code can place bricks in a two-dimensional (2D) grid like we've been working on in the Vitruvia exercises, but it can also place bricks in a three-dimensional space (typically what one has in mind when building with LEGO).  Dr. Winter reserved the word "put" for programming 3D objects and uses "put2D" to specify two-dimensional objects.
+
+To review, the general form of the Bricklayer command to place a brick having a given *size* and *color* at a specific *location* is the following.
+{% include image.html img="vitruvia/put2D.png"  alt="Level 1 put2D function" %}
