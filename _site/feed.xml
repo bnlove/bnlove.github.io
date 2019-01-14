@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-13T13:55:15-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Counting items in a list</title><link href="http://localhost:4000/counting-list-items/" rel="alternate" type="text/html" title="Counting items in a list" /><published>2019-01-13T00:00:00-06:00</published><updated>2019-01-13T00:00:00-06:00</updated><id>http://localhost:4000/counting-list-items</id><content type="html" xml:base="http://localhost:4000/counting-list-items/">&lt;!-- #### Topics on this page
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-14T11:01:49-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Bricklayer Level 1 functions (Vitruvia Concept 5)</title><link href="http://localhost:4000/intro-to-level1-functions/" rel="alternate" type="text/html" title="Bricklayer Level 1 functions (Vitruvia Concept 5)" /><published>2019-01-14T00:00:00-06:00</published><updated>2019-01-14T00:00:00-06:00</updated><id>http://localhost:4000/intro-to-level1-functions</id><content type="html" xml:base="http://localhost:4000/intro-to-level1-functions/">&lt;!-- #### Topics on this page
+{:.no_toc}
+* TOC
+{:toc} --&gt;
+
+&lt;p&gt;&lt;a href=&quot;/placing-multiple-bricks&quot;&gt;My post about Vitruvia Concept 4&lt;/a&gt; discussed how to place the following sequnce of bricks.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Put a 1x1 GREEN brick at location (4,3).&lt;/li&gt;
+  &lt;li&gt;Put a 2x1 BLUE brick at location (1,0).&lt;/li&gt;
+  &lt;li&gt;Put a 4x2 YELLOW brick at location (0,3).&lt;/li&gt;
+  &lt;li&gt;Put a 1x2 RED brick at location (3,1).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In this post, we’ll consider how to distill these commands to their essentials and have our first look at functions in bricklayer.&lt;/p&gt;
+
+&lt;p&gt;What if I rewrote the four statements like the following.  Do you still understand what they say?&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Put 1x1 GREEN brick at location (4,3).&lt;/li&gt;
+  &lt;li&gt;Put 2x1 BLUE brick at location (1,0).&lt;/li&gt;
+  &lt;li&gt;Put 4x2 YELLOW brick at location (0,3).&lt;/li&gt;
+  &lt;li&gt;Put 1x2 RED brick at location (3,1).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;How about now?&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Put 1x1 GREEN  at location (4,3).&lt;/li&gt;
+  &lt;li&gt;Put 2x1 BLUE  at location (1,0).&lt;/li&gt;
+  &lt;li&gt;Put 4x2 YELLOW  at location (0,3).&lt;/li&gt;
+  &lt;li&gt;Put 1x2 RED  at location (3,1).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;And now?&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Put 1x1 GREEN  at  (4,3).&lt;/li&gt;
+  &lt;li&gt;Put 2x1 BLUE  at  (1,0).&lt;/li&gt;
+  &lt;li&gt;Put 4x2 YELLOW  at  (0,3).&lt;/li&gt;
+  &lt;li&gt;Put 1x2 RED  at  (3,1).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Now?&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Put 1x1 GREEN  (4,3).&lt;/li&gt;
+  &lt;li&gt;Put 2x1 BLUE  (1,0).&lt;/li&gt;
+  &lt;li&gt;Put 4x2 YELLOW  (0,3).&lt;/li&gt;
+  &lt;li&gt;Put 1x2 RED (3,1).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Once more!&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;put2D_1x1_GREEN(4,3)&lt;/li&gt;
+  &lt;li&gt;put2D_2x1_BLUE(1,0)&lt;/li&gt;
+  &lt;li&gt;put2D_4x2_YELLOW(0,3)&lt;/li&gt;
+  &lt;li&gt;put2D_1x2_RED(3,1)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Ok, the “2D” piece looks a little out of place, but otherwise, can you see the transformation? If so, congratulations!  You’re reading and comprehending bricklayer code!&lt;/p&gt;
+
+&lt;p&gt;Bricklayer code can place bricks in a two-dimensional (2D) grid like we’ve been working on in the Vitruvia exercises, but it can also place bricks in a three-dimensional space (typically what one has in mind when building with LEGO).  Dr. Winter reserved the word “put” for programming 3D objects and uses “put2D” to specify two-dimensional objects.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html"></summary></entry><entry><title type="html">Counting items in a list</title><link href="http://localhost:4000/counting-list-items/" rel="alternate" type="text/html" title="Counting items in a list" /><published>2019-01-13T00:00:00-06:00</published><updated>2019-01-13T00:00:00-06:00</updated><id>http://localhost:4000/counting-list-items</id><content type="html" xml:base="http://localhost:4000/counting-list-items/">&lt;!-- #### Topics on this page
 {:.no_toc}
 * TOC
 {:toc} --&gt;
