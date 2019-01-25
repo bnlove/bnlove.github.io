@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-21T13:42:08-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Overwriting–placing blocks on top of blocks (Vitruvia Concept 7)</title><link href="http://localhost:4000/overwriting-blocks/" rel="alternate" type="text/html" title="Overwriting--placing blocks on top of blocks (Vitruvia Concept 7)" /><published>2019-01-17T00:00:00-06:00</published><updated>2019-01-17T00:00:00-06:00</updated><id>http://localhost:4000/overwriting-blocks</id><content type="html" xml:base="http://localhost:4000/overwriting-blocks/">&lt;p&gt;Thus far our placement of blocks has been analogous to placing physical LEGO blocks on a baseplate. With Vitruvia Concept 7, we diverge from that a bit.  Consider the following bricklayer commands:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-25T07:19:10-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Overwriting–placing blocks on top of blocks (Vitruvia Concept 7)</title><link href="http://localhost:4000/overwriting-blocks/" rel="alternate" type="text/html" title="Overwriting--placing blocks on top of blocks (Vitruvia Concept 7)" /><published>2019-01-17T00:00:00-06:00</published><updated>2019-01-17T00:00:00-06:00</updated><id>http://localhost:4000/overwriting-blocks</id><content type="html" xml:base="http://localhost:4000/overwriting-blocks/">&lt;p&gt;Thus far our placement of blocks has been analogous to placing physical LEGO blocks on a baseplate. With Vitruvia Concept 7, we diverge from that a bit.  Consider the following bricklayer commands:&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;put2D_2x2_RED(0,0)
-put2D_1x1_BLUE(0,0)&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D_2x2_RED(0,0)
+put2D_1x1_BLUE(0,0)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;If we were building with physical LEGO, then these commands would generate a 2x2 red block with a 1x1 blue block on top of it, as in the following image.&lt;/p&gt;
 
@@ -34,23 +33,21 @@ put2D_1x1_BLUE(0,0)&lt;/p&gt;
 
 &lt;p&gt;Without using Bricklayer’s &lt;em&gt;overwriting&lt;/em&gt; feature, we would need at least seven &lt;em&gt;put&lt;/em&gt; commands.  One possibility is the following:&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;put2D_2x1_RED(0,0)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D_2x1_RED(0,0)
 put2D_2x1_RED(2,0)
 put2D_1x2_RED(3,1)
 put2D_2x1_RED(2,3)
 put2D_2x1_RED(0,3)
 put2D_1x2_RED(0,1)
-put2D_2x2_BLACK(1,1)&lt;/p&gt;
-&lt;/blockquote&gt;
+put2D_2x2_BLACK(1,1)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;With overwriting, the same thing can be accomplished much more easily, as follows:&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;put2D_4x2_RED(0,0)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D_4x2_RED(0,0)
 put2D_4x2_RED(0,2)
-put2D_2x2_BLACK(1,1)&lt;/p&gt;
-&lt;/blockquote&gt;
+put2D_2x2_BLACK(1,1)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Clearly the latter way is more clear, easier, and less likely to have errors (as in wrong coordinates).&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Thus far our placement of blocks has been analogous to placing physical LEGO blocks on a baseplate. With Vitruvia Concept 7, we diverge from that a bit. Consider the following bricklayer commands:</summary></entry><entry><title type="html">Bricklayer Level 1 functions (Vitruvia Concept 5)</title><link href="http://localhost:4000/intro-to-level1-functions/" rel="alternate" type="text/html" title="Bricklayer Level 1 functions (Vitruvia Concept 5)" /><published>2019-01-14T00:00:00-06:00</published><updated>2019-01-14T00:00:00-06:00</updated><id>http://localhost:4000/intro-to-level1-functions</id><content type="html" xml:base="http://localhost:4000/intro-to-level1-functions/">&lt;!-- #### Topics on this page
 {:.no_toc}
