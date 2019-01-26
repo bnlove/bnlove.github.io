@@ -1,4 +1,204 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-25T07:19:10-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Overwriting–placing blocks on top of blocks (Vitruvia Concept 7)</title><link href="http://localhost:4000/overwriting-blocks/" rel="alternate" type="text/html" title="Overwriting--placing blocks on top of blocks (Vitruvia Concept 7)" /><published>2019-01-17T00:00:00-06:00</published><updated>2019-01-17T00:00:00-06:00</updated><id>http://localhost:4000/overwriting-blocks</id><content type="html" xml:base="http://localhost:4000/overwriting-blocks/">&lt;p&gt;Thus far our placement of blocks has been analogous to placing physical LEGO blocks on a baseplate. With Vitruvia Concept 7, we diverge from that a bit.  Consider the following bricklayer commands:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-26T14:40:13-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Getting Started with Bricklayer-Lite</title><link href="http://localhost:4000/getting-started-with-bricklayer-lite-level-1/" rel="alternate" type="text/html" title="Getting Started with Bricklayer-Lite" /><published>2019-01-26T00:00:00-06:00</published><updated>2019-01-26T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-bricklayer-lite-level-1</id><content type="html" xml:base="http://localhost:4000/getting-started-with-bricklayer-lite-level-1/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#getting-started-with-bricklayer-lite-level_1-programming&quot; id=&quot;markdown-toc-getting-started-with-bricklayer-lite-level_1-programming&quot;&gt;Getting Started with Bricklayer-Lite Level_1 programming&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#three-elements-of-every-bricklayer-and-bricklayer-lite-program&quot; id=&quot;markdown-toc-three-elements-of-every-bricklayer-and-bricklayer-lite-program&quot;&gt;Three elements of every Bricklayer and Bricklayer-Lite Program&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#semicolons&quot; id=&quot;markdown-toc-semicolons&quot;&gt;Semicolons&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#adding-put2d-function-calls&quot; id=&quot;markdown-toc-adding-put2d-function-calls&quot;&gt;Adding put2D function calls&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#running-your-bricklayer-lite-program&quot; id=&quot;markdown-toc-running-your-bricklayer-lite-program&quot;&gt;Running your Bricklayer-Lite program&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bricklayer-code-generation&quot; id=&quot;markdown-toc-bricklayer-code-generation&quot;&gt;Bricklayer code generation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#output-format&quot; id=&quot;markdown-toc-output-format&quot;&gt;Output format&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#if-you-forget&quot; id=&quot;markdown-toc-if-you-forget&quot;&gt;If you forget…&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#more-information&quot; id=&quot;markdown-toc-more-information&quot;&gt;More information&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bricklayer-Lite is a app available at &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt;. Its purpose is to provide a gentle introduction to bricklayer programming. Programs are created by interactively selecting puzzle pieces that represent program elements and connecting them. This is all done in a browser window; hence no software download is required.  Only two-dimensional artifacts can be created with Bricklayer-Lite.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;getting-started-with-bricklayer-lite-level_1-programming&quot;&gt;Getting Started with Bricklayer-Lite Level_1 programming&lt;/h3&gt;
+
+&lt;p&gt;Go to &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt; and choose Apps -&amp;gt; Bricklayer-Lite. Take a few minutes to familiarize yourself with the contents of this page.  When you’re ready to start creating your Level_1 program, click on “Level_1”.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite01.png&quot; alt=&quot;Starting Bricklayer-Lite Level_1&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;three-elements-of-every-bricklayer-and-bricklayer-lite-program&quot;&gt;Three elements of every Bricklayer and Bricklayer-Lite Program&lt;/h3&gt;
+
+&lt;p&gt;Every Bricklayer and Bricklayer-Lite program contains the following three commands (lines of code / puzzle pieces)&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;em&gt;open&lt;/em&gt; statement - when you are getting started, the commands you use will be from Bricklayer Level_1; as you learn more, you’ll start using functions from higher levels.  Currently, there are five levels of Bricklayer functions.  To open Level_1 in Bricklayer-Lite, first click on &lt;em&gt;open level&lt;/em&gt;, then drag the &lt;em&gt;open Level_1&lt;/em&gt; puzzle piece into the white part of the window pane, as shown below.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite02.png&quot; alt=&quot;Bricklayer-Lite Level_1 open block&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;ol start=&quot;2&quot;&gt;
+  &lt;li&gt;&lt;em&gt;build2D&lt;/em&gt; statement - this command tells Bricklayer the dimensions of the virtual space you want to work in.  It should be at least as large as the artifact you plan to build.  Click on &lt;em&gt;build base plate&lt;/em&gt; and then click on and drag the &lt;em&gt;build2D&lt;/em&gt; puzzle piece into the area under the &lt;em&gt;open&lt;/em&gt; puzzle piece.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite03.png&quot; alt=&quot;Bricklayer-Lite Level_1 build2D block&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Either at the same time you drag the &lt;em&gt;build2D&lt;/em&gt; piece out or afterward, you want to connect it to the &lt;em&gt;open&lt;/em&gt; piece as shown below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite05.png&quot; alt=&quot;Connect build piece to open piece&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;ol start=&quot;3&quot;&gt;
+  &lt;li&gt;&lt;em&gt;show2D&lt;/em&gt; statement - the third command that is in every Bricklayer-Lite program is the &lt;em&gt;show2D&lt;/em&gt; command.  It is also the last command/statement. In Bricklayer-Lite click on and drag the &lt;em&gt;show2D&lt;/em&gt; puzzle piece out, but don’t hook it up yet.  We’ll do that when we’re done with the rest of the program.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite04.png&quot; alt=&quot;Bricklayer-Lite Level_1 show2D block&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The &lt;em&gt;“thing”&lt;/em&gt; part of the show2D command is a way for you to name the artifact that you’re creating. You can replace &lt;em&gt;thing&lt;/em&gt; with any sequence of characters that you choose (or you can just leave it alone).  Note that you must keep the quotes around this sequence of characters. The name you choose has no effect on how the program runs or the artifact that it generates.&lt;/p&gt;
+
+&lt;h3 id=&quot;semicolons&quot;&gt;Semicolons&lt;/h3&gt;
+
+&lt;p&gt;Almost every Bricklayer command (line of code) should end with a semicolon.  There are some exceptions, but we will not consider those at this time. A semicolon tells the computer that the current command (or line of code) is done. In Bricklayer-Lite we must drag the semicolon puzzle piece from the &lt;em&gt;symbols&lt;/em&gt; section and connect one to the end of each command.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite06.png&quot; alt=&quot;Bricklayer-Lite Semicolon&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;After adding a semicolon to the end of each puzzle piece, your program should look like the following.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite07.png&quot; alt=&quot;Bricklayer-Lite 3-line program&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Selecting the semicolon puzzle piece for each statement can become tedious quickly.  It’s possible to &lt;em&gt;duplicate&lt;/em&gt; any puzzle piece by right-clicking on that piece and choosing &lt;em&gt;Duplicate&lt;/em&gt;. If you have a mouse with two buttons, then right-clicking just means to click on the right button.  If you are using a Mac, then to right click on something you do a &lt;em&gt;Control-click&lt;/em&gt;, which means you hold down the &lt;em&gt;Control&lt;/em&gt; button and click. If you need more help on how to right-click on your machine, try google.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite08.png&quot; alt=&quot;Bricklayer-Lite duplicate block&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;adding-put2d-function-calls&quot;&gt;Adding put2D function calls&lt;/h3&gt;
+
+&lt;p&gt;Now we are ready to actually build our artifact.  In Level_1, the bricks available to us are as follows.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sizes: 1×1, 1×2, 2×1, 2×2, 2×3, 3×2, 2×4, 4×2&lt;/li&gt;
+  &lt;li&gt;Colors: BLUE, GRAY, BLACK, GREEN, RED, WHITE, YELLOW, EMPTY&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The official documentation on Bricklayer Level_1 can be found at &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt; by choosing &lt;em&gt;Apps -&amp;gt; Bricklayer -&amp;gt; Level 1 - Document&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;For each size/color combination (how many of these are there?) a corresponding puzzle piece is available in the &lt;em&gt;function calls&lt;/em&gt; section of the Bricklayer-Lite window.  The following image shows all the options for red bricks.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite09.png&quot; alt=&quot;Bricklayer-Lite Level 1 red bricks&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;To put a 2x2 red brick at (0,0), drag the 2x2 red brick puzzle piece in to the pane with the other puzzle pieces.  Add a semicolon to it and connect the pieces as shown below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite10.png&quot; alt=&quot;Bricklayer-Lite program&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;running-your-bricklayer-lite-program&quot;&gt;Running your Bricklayer-Lite program&lt;/h3&gt;
+
+&lt;p&gt;At this point you are ready to run (execute) your program. So far you’ve just been building your program and the computer has not tried to execute any of the commands.  Now that we have a complete program, we need to tell the computer we’re ready to run it.  To do this, click the &lt;em&gt;Run&lt;/em&gt; button at the top of the white pane.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite11.png&quot; alt=&quot;Run a Bricklayer-Lite program&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;If your program has no errors, output will appear in another pane on the same page. After running our sample program, I see the following.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite12.png&quot; alt=&quot;Output from running sample Bricklayer-Lite program&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;This output is correct since we placed a 2x2 red brick at (0,0).  Since we set our &lt;em&gt;build2D&lt;/em&gt; space to (2,2), our 2x2 red brick takes up the entire space.  Let’s make our build space larger to get better perspective. The size area in the &lt;em&gt;build2D&lt;/em&gt; puzzle piece is a dropdown menu. Click on it and choose (4,4) as shown below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite13.png&quot; alt=&quot;Change build space size&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Now click on &lt;em&gt;Run&lt;/em&gt; again.  The output should be as follows.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite14.png&quot; alt=&quot;Output from running sample Bricklayer-Lite program&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;bricklayer-code-generation&quot;&gt;Bricklayer code generation&lt;/h3&gt;
+
+&lt;p&gt;One final note.  A little later on, you will graduate to writing Bricklayer programs in the Bricklayer app (an app you must download and install on your computer).  In it you type your commands as opposed to dragging and connecting puzzle pieces.  To help you get started understanding how your Bricklayer-Lite program corresponds to a Bricklayer program, when you run a Bricklayer-Lite program, the corresponding Bricklayer program is generated in the pane at the bottom of the Bricklayer-Lite page.  For our example, the Bricklayer program is as follows.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_1;
+
+build2D (4,4);
+
+put2D_2x2_RED(0,0);
+
+show2D &quot;thing&quot;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;Output format&lt;/h3&gt;
+
+&lt;p&gt;One option in Bricklayer-Lite is the output format. The default is set to &lt;em&gt;PLAIN&lt;/em&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite17.png&quot; alt=&quot;Bricklayer-Lite plain output format&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The other option is &lt;em&gt;LEGO&lt;/em&gt; which can be selected from the drop-down menu.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite18.png&quot; alt=&quot;Bricklayer-Lite LEGO output format&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;When we run our program with &lt;em&gt;LEGO&lt;/em&gt; output format selected, we get the following.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite19.png&quot; alt=&quot;Bricklayer-Lite example with LEGO output&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;if-you-forget&quot;&gt;If you forget…&lt;/h3&gt;
+
+&lt;p&gt;If you forget how to write a Bricklayer-Lite program, a quick way to refresh your memory is to look at an example. You can get to a Level_1 example quickly by clicking on &lt;em&gt;here&lt;/em&gt; in the sentence at the top of the Bricklayer-Lite page.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite15.png&quot; alt=&quot;Bricklayer-Lite examples&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Now click on &lt;em&gt;Flag of Denmark&lt;/em&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite16.png&quot; alt=&quot;Flag of Denmark example&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;This will open up a Bricklayer-Lite program that generates the flag of Denmark.&lt;/p&gt;
+
+&lt;h3 id=&quot;more-information&quot;&gt;More information&lt;/h3&gt;
+
+&lt;p&gt;For more information on Bricklayer Level_1 see &lt;a href=&quot;/intro-to-level1-functions&quot;&gt;this post&lt;/a&gt;.  For more informaiton on both Bricklayer Level_1 and and programming in Bricklayer-Lite, see &lt;a href=&quot;https://bricklayer.org/level-1/&quot;&gt;https://bricklayer.org/level-1/&lt;/a&gt;.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Overwriting–placing blocks on top of blocks (Vitruvia Concept 7)</title><link href="http://localhost:4000/overwriting-blocks/" rel="alternate" type="text/html" title="Overwriting--placing blocks on top of blocks (Vitruvia Concept 7)" /><published>2019-01-17T00:00:00-06:00</published><updated>2019-01-17T00:00:00-06:00</updated><id>http://localhost:4000/overwriting-blocks</id><content type="html" xml:base="http://localhost:4000/overwriting-blocks/">&lt;p&gt;Thus far our placement of blocks has been analogous to placing physical LEGO blocks on a baseplate. With Vitruvia Concept 7, we diverge from that a bit.  Consider the following bricklayer commands:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D_2x2_RED(0,0)
 put2D_1x1_BLUE(0,0)
@@ -373,7 +573,56 @@ put2D_2x2_BLACK(1,1)
 &lt;figure&gt;
     &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-test03.png&quot; alt=&quot;Screenshot of Vitruvia test results&quot; /&gt;
     
-&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">From https://bricklayer.org select Apps -&amp;gt; Vitruvia -&amp;gt; Tests</summary></entry><entry><title type="html">Getting Started with Vitruvia Exercises</title><link href="http://localhost:4000/getting-started-with-vitruvia/" rel="alternate" type="text/html" title="Getting Started with Vitruvia Exercises" /><published>2018-12-29T00:00:00-06:00</published><updated>2018-12-29T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-vitruvia</id><content type="html" xml:base="http://localhost:4000/getting-started-with-vitruvia/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">From https://bricklayer.org select Apps -&amp;gt; Vitruvia -&amp;gt; Tests</summary></entry><entry><title type="html">Getting Started with MATH 1120</title><link href="http://localhost:4000/getting-started-with-1120/" rel="alternate" type="text/html" title="Getting Started with MATH 1120" /><published>2018-12-29T00:00:00-06:00</published><updated>2018-12-29T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-1120</id><content type="html" xml:base="http://localhost:4000/getting-started-with-1120/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-kind-of-computer-do-i-need&quot; id=&quot;markdown-toc-what-kind-of-computer-do-i-need&quot;&gt;What kind of computer do I need?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-if-i-dont-have-a-computer&quot; id=&quot;markdown-toc-what-if-i-dont-have-a-computer&quot;&gt;What if I don’t have a computer?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#software-needed&quot; id=&quot;markdown-toc-software-needed&quot;&gt;Software needed&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#web-browser&quot; id=&quot;markdown-toc-web-browser&quot;&gt;Web browser&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#the-bricklayer-app&quot; id=&quot;markdown-toc-the-bricklayer-app&quot;&gt;The Bricklayer app&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this class, you will be using a computer a lot!  This page covers some basic skills you need.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-kind-of-computer-do-i-need&quot;&gt;What kind of computer do I need?&lt;/h3&gt;
+&lt;p&gt;For the first couple of weeks of the course, all work will be done in a web browser. During this period you could use a computer, tablet, ipad, or Chromebook. In a pinch, you could even use a phone, but the screen is really too small to be able to work effectively.&lt;/p&gt;
+
+&lt;p&gt;Afterward, you need an actual computer.  You can use either a Mac or PC. Other devices will no longer be sufficient.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;what-if-i-dont-have-a-computer&quot;&gt;What if I don’t have a computer?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;In class
+    &lt;ul&gt;
+      &lt;li&gt;Mac laptops will be available for use.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Outside of class
+    &lt;ul&gt;
+      &lt;li&gt;Computer labs on campus
+        &lt;ul&gt;
+          &lt;li&gt;DSC 104 &lt;a href=&quot;https://www.unomaha.edu/information-technology-services/labs-and-classrooms/labs-and-kiosks.php&quot;&gt;Hours&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;Mammel Hall&lt;/li&gt;
+          &lt;li&gt;PKI&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Three-hour laptop checkout available at Criss Library. Go to the circulation desk.&lt;/li&gt;
+      &lt;li&gt;One-week laptop checkout available at Information Services Technical Support in EAB 104. &lt;a href=&quot;https://www.unomaha.edu/information-technology-services/software-and-hardware/checkout/student-checkout.php&quot;&gt;More info&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;If none of these options works for you, email Dr. Love.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;software-needed&quot;&gt;Software needed&lt;/h3&gt;
+
+&lt;h4 id=&quot;web-browser&quot;&gt;Web browser&lt;/h4&gt;
+&lt;p&gt;Throughout the course we will heavily use the website &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt;. For best results, use the Chrome browser. It should already be installed on the machines on campus. If you need to install it on your computer, go to &lt;a href=&quot;https://www.google.com/chrome/&quot;&gt;https://www.google.com/chrome/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;the-bricklayer-app&quot;&gt;The Bricklayer app&lt;/h4&gt;
+&lt;p&gt;This is not needed during the first couple of weeks of class. More on this later.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Vitruvia Exercises</title><link href="http://localhost:4000/getting-started-with-vitruvia/" rel="alternate" type="text/html" title="Getting Started with Vitruvia Exercises" /><published>2018-12-29T00:00:00-06:00</published><updated>2018-12-29T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-vitruvia</id><content type="html" xml:base="http://localhost:4000/getting-started-with-vitruvia/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#vitruvia-exercises&quot; id=&quot;markdown-toc-vitruvia-exercises&quot;&gt;Vitruvia Exercises&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#choosing-a-brick-color&quot; id=&quot;markdown-toc-choosing-a-brick-color&quot;&gt;Choosing a brick color&lt;/a&gt;        &lt;ul&gt;
@@ -524,53 +773,4 @@ Cells in the grid are represented by two values, called coordinates.  These are 
 
 &lt;p&gt;If your solution is incorrect, you will see a &lt;em&gt;Try Again&lt;/em&gt; message. At this point you have two options.  One is to click on the &lt;em&gt;Clear&lt;/em&gt; button to redo the exercise.  The other is to click on the &lt;em&gt;Show Solution&lt;/em&gt; button to see the solution.  Try to avoid showing the solution unless you’ve given the exercise your best shot and don’t understand how to do it.  If you show the solution, spend time studying it to understand why it is correct.&lt;/p&gt;
 
-&lt;p&gt;When you’re ready to go to the next exercise, click on the &lt;em&gt;Next&lt;/em&gt; button.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with MATH 1120</title><link href="http://localhost:4000/getting-started-with-1120/" rel="alternate" type="text/html" title="Getting Started with MATH 1120" /><published>2018-12-29T00:00:00-06:00</published><updated>2018-12-29T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-1120</id><content type="html" xml:base="http://localhost:4000/getting-started-with-1120/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#what-kind-of-computer-do-i-need&quot; id=&quot;markdown-toc-what-kind-of-computer-do-i-need&quot;&gt;What kind of computer do I need?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#what-if-i-dont-have-a-computer&quot; id=&quot;markdown-toc-what-if-i-dont-have-a-computer&quot;&gt;What if I don’t have a computer?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#software-needed&quot; id=&quot;markdown-toc-software-needed&quot;&gt;Software needed&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#web-browser&quot; id=&quot;markdown-toc-web-browser&quot;&gt;Web browser&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#the-bricklayer-app&quot; id=&quot;markdown-toc-the-bricklayer-app&quot;&gt;The Bricklayer app&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In this class, you will be using a computer a lot!  This page covers some basic skills you need.&lt;/p&gt;
-
-&lt;h3 id=&quot;what-kind-of-computer-do-i-need&quot;&gt;What kind of computer do I need?&lt;/h3&gt;
-&lt;p&gt;For the first couple of weeks of the course, all work will be done in a web browser. During this period you could use a computer, tablet, ipad, or Chromebook. In a pinch, you could even use a phone, but the screen is really too small to be able to work effectively.&lt;/p&gt;
-
-&lt;p&gt;Afterward, you need an actual computer.  You can use either a Mac or PC. Other devices will no longer be sufficient.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;h3 id=&quot;what-if-i-dont-have-a-computer&quot;&gt;What if I don’t have a computer?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;In class
-    &lt;ul&gt;
-      &lt;li&gt;Mac laptops will be available for use.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Outside of class
-    &lt;ul&gt;
-      &lt;li&gt;Computer labs on campus
-        &lt;ul&gt;
-          &lt;li&gt;DSC 104 &lt;a href=&quot;https://www.unomaha.edu/information-technology-services/labs-and-classrooms/labs-and-kiosks.php&quot;&gt;Hours&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;Mammel Hall&lt;/li&gt;
-          &lt;li&gt;PKI&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Three-hour laptop checkout available at Criss Library. Go to the circulation desk.&lt;/li&gt;
-      &lt;li&gt;One-week laptop checkout available at Information Services Technical Support in EAB 104. &lt;a href=&quot;https://www.unomaha.edu/information-technology-services/software-and-hardware/checkout/student-checkout.php&quot;&gt;More info&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;If none of these options works for you, email Dr. Love.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;h3 id=&quot;software-needed&quot;&gt;Software needed&lt;/h3&gt;
-
-&lt;h4 id=&quot;web-browser&quot;&gt;Web browser&lt;/h4&gt;
-&lt;p&gt;Throughout the course we will heavily use the website &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt;. For best results, use the Chrome browser. It should already be installed on the machines on campus. If you need to install it on your computer, go to &lt;a href=&quot;https://www.google.com/chrome/&quot;&gt;https://www.google.com/chrome/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;the-bricklayer-app&quot;&gt;The Bricklayer app&lt;/h4&gt;
-&lt;p&gt;This is not needed during the first couple of weeks of class. More on this later.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry></feed>
+&lt;p&gt;When you’re ready to go to the next exercise, click on the &lt;em&gt;Next&lt;/em&gt; button.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry></feed>
