@@ -12,7 +12,7 @@ author: Betty Love
 {:toc} -->
 
 
-[My post about Vitruvia Concept 4](/placing-multiple-bricks) discussed how to place the following sequnce of bricks.
+[My post about Vitruvia Concept 4](/placing-multiple-bricks) discussed how to place the following sequence of bricks.
 
 1. Put a 1x1 GREEN brick at location (4,3).
 2. Put a 2x1 BLUE brick at location (1,0).

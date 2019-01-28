@@ -1,4 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-26T14:40:13-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Getting Started with Bricklayer-Lite</title><link href="http://localhost:4000/getting-started-with-bricklayer-lite-level-1/" rel="alternate" type="text/html" title="Getting Started with Bricklayer-Lite" /><published>2019-01-26T00:00:00-06:00</published><updated>2019-01-26T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-bricklayer-lite-level-1</id><content type="html" xml:base="http://localhost:4000/getting-started-with-bricklayer-lite-level-1/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-27T23:04:12-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Bricklayer-Lite Level_1 Examples</title><link href="http://localhost:4000/bricklayer-lite-level-1-examples/" rel="alternate" type="text/html" title="Bricklayer-Lite Level_1 Examples" /><published>2019-01-26T00:00:00-06:00</published><updated>2019-01-26T00:00:00-06:00</updated><id>http://localhost:4000/bricklayer-lite-level-1-examples</id><content type="html" xml:base="http://localhost:4000/bricklayer-lite-level-1-examples/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#getting-started-with-bricklayer-lite-level_1-programming&quot; id=&quot;markdown-toc-getting-started-with-bricklayer-lite-level_1-programming&quot;&gt;Getting Started with Bricklayer-Lite Level_1 programming&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you are just getting started writing programs in Bricklayer-Lite, you should start with &lt;a href=&quot;/getting-started-with-bricklayer-lite-level-1&quot;&gt;this post&lt;/a&gt;.  One this page are a few additional examples of Level_1 Bricklayer-Lite programs and a few tips about editing in Bricklayer-Lite.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;getting-started-with-bricklayer-lite-level_1-programming&quot;&gt;Getting Started with Bricklayer-Lite Level_1 programming&lt;/h3&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Bricklayer-Lite</title><link href="http://localhost:4000/getting-started-with-bricklayer-lite-level-1/" rel="alternate" type="text/html" title="Getting Started with Bricklayer-Lite" /><published>2019-01-26T00:00:00-06:00</published><updated>2019-01-26T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-bricklayer-lite-level-1</id><content type="html" xml:base="http://localhost:4000/getting-started-with-bricklayer-lite-level-1/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#getting-started-with-bricklayer-lite-level_1-programming&quot; id=&quot;markdown-toc-getting-started-with-bricklayer-lite-level_1-programming&quot;&gt;Getting Started with Bricklayer-Lite Level_1 programming&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#three-elements-of-every-bricklayer-and-bricklayer-lite-program&quot; id=&quot;markdown-toc-three-elements-of-every-bricklayer-and-bricklayer-lite-program&quot;&gt;Three elements of every Bricklayer and Bricklayer-Lite Program&lt;/a&gt;&lt;/li&gt;
@@ -254,7 +263,7 @@ put2D_2x2_BLACK(1,1)
 * TOC
 {:toc} --&gt;
 
-&lt;p&gt;&lt;a href=&quot;/placing-multiple-bricks&quot;&gt;My post about Vitruvia Concept 4&lt;/a&gt; discussed how to place the following sequnce of bricks.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/placing-multiple-bricks&quot;&gt;My post about Vitruvia Concept 4&lt;/a&gt; discussed how to place the following sequence of bricks.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Put a 1x1 GREEN brick at location (4,3).&lt;/li&gt;
@@ -573,56 +582,7 @@ put2D_2x2_BLACK(1,1)
 &lt;figure&gt;
     &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-test03.png&quot; alt=&quot;Screenshot of Vitruvia test results&quot; /&gt;
     
-&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">From https://bricklayer.org select Apps -&amp;gt; Vitruvia -&amp;gt; Tests</summary></entry><entry><title type="html">Getting Started with MATH 1120</title><link href="http://localhost:4000/getting-started-with-1120/" rel="alternate" type="text/html" title="Getting Started with MATH 1120" /><published>2018-12-29T00:00:00-06:00</published><updated>2018-12-29T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-1120</id><content type="html" xml:base="http://localhost:4000/getting-started-with-1120/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#what-kind-of-computer-do-i-need&quot; id=&quot;markdown-toc-what-kind-of-computer-do-i-need&quot;&gt;What kind of computer do I need?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#what-if-i-dont-have-a-computer&quot; id=&quot;markdown-toc-what-if-i-dont-have-a-computer&quot;&gt;What if I don’t have a computer?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#software-needed&quot; id=&quot;markdown-toc-software-needed&quot;&gt;Software needed&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#web-browser&quot; id=&quot;markdown-toc-web-browser&quot;&gt;Web browser&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#the-bricklayer-app&quot; id=&quot;markdown-toc-the-bricklayer-app&quot;&gt;The Bricklayer app&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In this class, you will be using a computer a lot!  This page covers some basic skills you need.&lt;/p&gt;
-
-&lt;h3 id=&quot;what-kind-of-computer-do-i-need&quot;&gt;What kind of computer do I need?&lt;/h3&gt;
-&lt;p&gt;For the first couple of weeks of the course, all work will be done in a web browser. During this period you could use a computer, tablet, ipad, or Chromebook. In a pinch, you could even use a phone, but the screen is really too small to be able to work effectively.&lt;/p&gt;
-
-&lt;p&gt;Afterward, you need an actual computer.  You can use either a Mac or PC. Other devices will no longer be sufficient.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;h3 id=&quot;what-if-i-dont-have-a-computer&quot;&gt;What if I don’t have a computer?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;In class
-    &lt;ul&gt;
-      &lt;li&gt;Mac laptops will be available for use.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Outside of class
-    &lt;ul&gt;
-      &lt;li&gt;Computer labs on campus
-        &lt;ul&gt;
-          &lt;li&gt;DSC 104 &lt;a href=&quot;https://www.unomaha.edu/information-technology-services/labs-and-classrooms/labs-and-kiosks.php&quot;&gt;Hours&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;Mammel Hall&lt;/li&gt;
-          &lt;li&gt;PKI&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Three-hour laptop checkout available at Criss Library. Go to the circulation desk.&lt;/li&gt;
-      &lt;li&gt;One-week laptop checkout available at Information Services Technical Support in EAB 104. &lt;a href=&quot;https://www.unomaha.edu/information-technology-services/software-and-hardware/checkout/student-checkout.php&quot;&gt;More info&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;If none of these options works for you, email Dr. Love.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;h3 id=&quot;software-needed&quot;&gt;Software needed&lt;/h3&gt;
-
-&lt;h4 id=&quot;web-browser&quot;&gt;Web browser&lt;/h4&gt;
-&lt;p&gt;Throughout the course we will heavily use the website &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt;. For best results, use the Chrome browser. It should already be installed on the machines on campus. If you need to install it on your computer, go to &lt;a href=&quot;https://www.google.com/chrome/&quot;&gt;https://www.google.com/chrome/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;the-bricklayer-app&quot;&gt;The Bricklayer app&lt;/h4&gt;
-&lt;p&gt;This is not needed during the first couple of weeks of class. More on this later.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Vitruvia Exercises</title><link href="http://localhost:4000/getting-started-with-vitruvia/" rel="alternate" type="text/html" title="Getting Started with Vitruvia Exercises" /><published>2018-12-29T00:00:00-06:00</published><updated>2018-12-29T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-vitruvia</id><content type="html" xml:base="http://localhost:4000/getting-started-with-vitruvia/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">From https://bricklayer.org select Apps -&amp;gt; Vitruvia -&amp;gt; Tests</summary></entry><entry><title type="html">Getting Started with Vitruvia Exercises</title><link href="http://localhost:4000/getting-started-with-vitruvia/" rel="alternate" type="text/html" title="Getting Started with Vitruvia Exercises" /><published>2018-12-29T00:00:00-06:00</published><updated>2018-12-29T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-vitruvia</id><content type="html" xml:base="http://localhost:4000/getting-started-with-vitruvia/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#vitruvia-exercises&quot; id=&quot;markdown-toc-vitruvia-exercises&quot;&gt;Vitruvia Exercises&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#choosing-a-brick-color&quot; id=&quot;markdown-toc-choosing-a-brick-color&quot;&gt;Choosing a brick color&lt;/a&gt;        &lt;ul&gt;
@@ -773,4 +733,53 @@ Cells in the grid are represented by two values, called coordinates.  These are 
 
 &lt;p&gt;If your solution is incorrect, you will see a &lt;em&gt;Try Again&lt;/em&gt; message. At this point you have two options.  One is to click on the &lt;em&gt;Clear&lt;/em&gt; button to redo the exercise.  The other is to click on the &lt;em&gt;Show Solution&lt;/em&gt; button to see the solution.  Try to avoid showing the solution unless you’ve given the exercise your best shot and don’t understand how to do it.  If you show the solution, spend time studying it to understand why it is correct.&lt;/p&gt;
 
-&lt;p&gt;When you’re ready to go to the next exercise, click on the &lt;em&gt;Next&lt;/em&gt; button.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry></feed>
+&lt;p&gt;When you’re ready to go to the next exercise, click on the &lt;em&gt;Next&lt;/em&gt; button.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with MATH 1120</title><link href="http://localhost:4000/getting-started-with-1120/" rel="alternate" type="text/html" title="Getting Started with MATH 1120" /><published>2018-12-29T00:00:00-06:00</published><updated>2018-12-29T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-1120</id><content type="html" xml:base="http://localhost:4000/getting-started-with-1120/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-kind-of-computer-do-i-need&quot; id=&quot;markdown-toc-what-kind-of-computer-do-i-need&quot;&gt;What kind of computer do I need?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-if-i-dont-have-a-computer&quot; id=&quot;markdown-toc-what-if-i-dont-have-a-computer&quot;&gt;What if I don’t have a computer?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#software-needed&quot; id=&quot;markdown-toc-software-needed&quot;&gt;Software needed&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#web-browser&quot; id=&quot;markdown-toc-web-browser&quot;&gt;Web browser&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#the-bricklayer-app&quot; id=&quot;markdown-toc-the-bricklayer-app&quot;&gt;The Bricklayer app&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this class, you will be using a computer a lot!  This page covers some basic skills you need.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-kind-of-computer-do-i-need&quot;&gt;What kind of computer do I need?&lt;/h3&gt;
+&lt;p&gt;For the first couple of weeks of the course, all work will be done in a web browser. During this period you could use a computer, tablet, ipad, or Chromebook. In a pinch, you could even use a phone, but the screen is really too small to be able to work effectively.&lt;/p&gt;
+
+&lt;p&gt;Afterward, you need an actual computer.  You can use either a Mac or PC. Other devices will no longer be sufficient.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;what-if-i-dont-have-a-computer&quot;&gt;What if I don’t have a computer?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;In class
+    &lt;ul&gt;
+      &lt;li&gt;Mac laptops will be available for use.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Outside of class
+    &lt;ul&gt;
+      &lt;li&gt;Computer labs on campus
+        &lt;ul&gt;
+          &lt;li&gt;DSC 104 &lt;a href=&quot;https://www.unomaha.edu/information-technology-services/labs-and-classrooms/labs-and-kiosks.php&quot;&gt;Hours&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;Mammel Hall&lt;/li&gt;
+          &lt;li&gt;PKI&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Three-hour laptop checkout available at Criss Library. Go to the circulation desk.&lt;/li&gt;
+      &lt;li&gt;One-week laptop checkout available at Information Services Technical Support in EAB 104. &lt;a href=&quot;https://www.unomaha.edu/information-technology-services/software-and-hardware/checkout/student-checkout.php&quot;&gt;More info&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;If none of these options works for you, email Dr. Love.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;software-needed&quot;&gt;Software needed&lt;/h3&gt;
+
+&lt;h4 id=&quot;web-browser&quot;&gt;Web browser&lt;/h4&gt;
+&lt;p&gt;Throughout the course we will heavily use the website &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt;. For best results, use the Chrome browser. It should already be installed on the machines on campus. If you need to install it on your computer, go to &lt;a href=&quot;https://www.google.com/chrome/&quot;&gt;https://www.google.com/chrome/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;the-bricklayer-app&quot;&gt;The Bricklayer app&lt;/h4&gt;
+&lt;p&gt;This is not needed during the first couple of weeks of class. More on this later.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry></feed>
