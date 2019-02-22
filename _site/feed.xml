@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-21T17:11:41-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Getting Started with Programming in the Bricklayer App</title><link href="http://localhost:4000/getting-started-with-bricklayer/" rel="alternate" type="text/html" title="Getting Started with Programming in the Bricklayer App" /><published>2019-02-21T00:00:00-06:00</published><updated>2019-02-21T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-bricklayer</id><content type="html" xml:base="http://localhost:4000/getting-started-with-bricklayer/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-21T18:30:10-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Getting Started with Bricklayer Level 4</title><link href="http://localhost:4000/getting-started-with-level4/" rel="alternate" type="text/html" title="Getting Started with Bricklayer Level 4" /><published>2019-02-21T00:00:00-06:00</published><updated>2019-02-21T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-level4</id><content type="html" xml:base="http://localhost:4000/getting-started-with-level4/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#coordinates-in-3d-space&quot; id=&quot;markdown-toc-coordinates-in-3d-space&quot;&gt;Coordinates in 3D space&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Level 4 in Bricklayer opens up the world of 3D artifacts!  To create and run a Level_4 program, you must use the Bricklayer app (not Bricklayer-Lite).  For an introduction to programming in the Bricklayer app, check out &lt;a href=&quot;/getting-started-with-bricklayer&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;coordinates-in-3d-space&quot;&gt;Coordinates in 3D space&lt;/h3&gt;
+
+&lt;p&gt;Let’s start with a review of 2D coordinates in Bricklayer.  When programming in 2D, artifacts are placed in the x-z plane.  The point (x,z) is x units in the horizontal direction from 0 and z units in the vertical direction from 0.  Consider the figure below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-01.jpg&quot; alt=&quot;Horizontal and vertical coordinates&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;As we move to 3D, we (visually) lay the x-z plane flat, so the above artifact would be viewed as follows.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-02.jpg&quot; alt=&quot;x-z plane laid flat&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;We think of x as the &lt;em&gt;width&lt;/em&gt; of the artifact and z as the &lt;em&gt;depth&lt;/em&gt;.  The third dimension, which we’ll label as &lt;em&gt;y&lt;/em&gt;, is the height.  In the artifact above, the height is one.  Below is the same artifact with second layer the same size as the first added.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-03.jpg&quot; alt=&quot;3D artifact&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The code to create this artifact is shown below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-04.png&quot; alt=&quot;Code for 3D artifact&quot; /&gt;
+    
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Programming in the Bricklayer App</title><link href="http://localhost:4000/getting-started-with-bricklayer/" rel="alternate" type="text/html" title="Getting Started with Programming in the Bricklayer App" /><published>2019-02-21T00:00:00-06:00</published><updated>2019-02-21T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-bricklayer</id><content type="html" xml:base="http://localhost:4000/getting-started-with-bricklayer/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#installing-the-bricklayer-app-and-an-artifact-viewer&quot; id=&quot;markdown-toc-installing-the-bricklayer-app-and-an-artifact-viewer&quot;&gt;Installing the Bricklayer App and an Artifact Viewer&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#bricklayer-app-environment&quot; id=&quot;markdown-toc-bricklayer-app-environment&quot;&gt;Bricklayer app environment&lt;/a&gt;&lt;/li&gt;
@@ -482,7 +519,47 @@ put2D_2x2_BLACK(1,1)
 &lt;figure&gt;
     &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/put2D.png&quot; alt=&quot;Level 1 put2D function&quot; /&gt;
     
-&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html"></summary></entry><entry><title type="html">Placing multiple blocks (Vitruvia Concept 4)</title><link href="http://localhost:4000/placing-multiple-bricks/" rel="alternate" type="text/html" title="Placing multiple blocks (Vitruvia Concept 4)" /><published>2019-01-13T00:00:00-06:00</published><updated>2019-01-13T00:00:00-06:00</updated><id>http://localhost:4000/placing-multiple-bricks</id><content type="html" xml:base="http://localhost:4000/placing-multiple-bricks/">&lt;!-- #### Topics on this page
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html"></summary></entry><entry><title type="html">Counting items in a list</title><link href="http://localhost:4000/counting-list-items/" rel="alternate" type="text/html" title="Counting items in a list" /><published>2019-01-13T00:00:00-06:00</published><updated>2019-01-13T00:00:00-06:00</updated><id>http://localhost:4000/counting-list-items</id><content type="html" xml:base="http://localhost:4000/counting-list-items/">&lt;!-- #### Topics on this page
+{:.no_toc}
+* TOC
+{:toc} --&gt;
+
+&lt;p&gt;We all know how to count, right?  Seems obvious.  Sometimes, however, it’s not so obvious. Suppose there are 20 people in our class and each is assigned a number between 1 and 20.  I then say I want people with numbers 5 through 12 to stand up.  How many people will stand up?&lt;/p&gt;
+
+&lt;p&gt;Many people automatically subtract 5 from 12 and say 7.  But is this correct?  (Probably not or I wouldn’t be going on about this!) The best way to figure this out is to actually count the people with numbers 5 through 12, or equivalently, to count the numbers 5 through 12.  See the figure below for this.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/counting/counting-list01.png&quot; alt=&quot;Counting elements of a list&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;As you see, there are &lt;em&gt;8&lt;/em&gt; people with number between 5 and 12.  So one more than the 7 that many people assumed at first.  This is a very common error!&lt;/p&gt;
+
+&lt;p&gt;Let’s try another one. Take a look at the figure below. I have blue blocks in positions3 through 15.  How many blue blocks are there?&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/counting/blue-blocks.png&quot; alt=&quot;Counting blue blocks&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Again, your first try might be to subtract 3 from 15 and say 12.  But maybe you’re thinking that that strategy didn’t work well in our first example.  So maybe we should count.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/counting/blue-blocks02-600.png&quot; alt=&quot;Counting blue blocks again&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;So we get 13 instead of 12.  Hmm…I’m starting to see a pattern here.  If we just subtract the smaller number from the larger, we’re one off every time.  Actually we’re one short.  So maybe we should still do the subtraction, but then add one.  If we took this approach,  we would count the people with numbers 5 through 12 as follows:&lt;/p&gt;
+
+&lt;p&gt;12 - 5 + 1 = 8&lt;/p&gt;
+
+&lt;p&gt;And we’d count the blue blocks like this:&lt;/p&gt;
+
+&lt;p&gt;15 - 3 + 1 = 13&lt;/p&gt;
+
+&lt;p&gt;So if we wanted to come up with a formula for counting the number of items in a list between a starting point (I’ll call &lt;em&gt;start&lt;/em&gt;) and a stopping point (I’ll call &lt;em&gt;stop&lt;/em&gt;), it would be the following:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;stop - start + 1&lt;/em&gt;&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><category term="counting" /><summary type="html"></summary></entry><entry><title type="html">Placing multiple blocks (Vitruvia Concept 4)</title><link href="http://localhost:4000/placing-multiple-bricks/" rel="alternate" type="text/html" title="Placing multiple blocks (Vitruvia Concept 4)" /><published>2019-01-13T00:00:00-06:00</published><updated>2019-01-13T00:00:00-06:00</updated><id>http://localhost:4000/placing-multiple-bricks</id><content type="html" xml:base="http://localhost:4000/placing-multiple-bricks/">&lt;!-- #### Topics on this page
 {:.no_toc}
 * TOC
 {:toc} --&gt;
@@ -587,47 +664,7 @@ put2D_2x2_BLACK(1,1)
     
 &lt;/figure&gt;
 
-&lt;p&gt;Thinking ahead….what happens if we place a brick in a position that is already covered by another brick???&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html"></summary></entry><entry><title type="html">Counting items in a list</title><link href="http://localhost:4000/counting-list-items/" rel="alternate" type="text/html" title="Counting items in a list" /><published>2019-01-13T00:00:00-06:00</published><updated>2019-01-13T00:00:00-06:00</updated><id>http://localhost:4000/counting-list-items</id><content type="html" xml:base="http://localhost:4000/counting-list-items/">&lt;!-- #### Topics on this page
-{:.no_toc}
-* TOC
-{:toc} --&gt;
-
-&lt;p&gt;We all know how to count, right?  Seems obvious.  Sometimes, however, it’s not so obvious. Suppose there are 20 people in our class and each is assigned a number between 1 and 20.  I then say I want people with numbers 5 through 12 to stand up.  How many people will stand up?&lt;/p&gt;
-
-&lt;p&gt;Many people automatically subtract 5 from 12 and say 7.  But is this correct?  (Probably not or I wouldn’t be going on about this!) The best way to figure this out is to actually count the people with numbers 5 through 12, or equivalently, to count the numbers 5 through 12.  See the figure below for this.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/counting/counting-list01.png&quot; alt=&quot;Counting elements of a list&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;As you see, there are &lt;em&gt;8&lt;/em&gt; people with number between 5 and 12.  So one more than the 7 that many people assumed at first.  This is a very common error!&lt;/p&gt;
-
-&lt;p&gt;Let’s try another one. Take a look at the figure below. I have blue blocks in positions3 through 15.  How many blue blocks are there?&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/counting/blue-blocks.png&quot; alt=&quot;Counting blue blocks&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Again, your first try might be to subtract 3 from 15 and say 12.  But maybe you’re thinking that that strategy didn’t work well in our first example.  So maybe we should count.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/counting/blue-blocks02-600.png&quot; alt=&quot;Counting blue blocks again&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;So we get 13 instead of 12.  Hmm…I’m starting to see a pattern here.  If we just subtract the smaller number from the larger, we’re one off every time.  Actually we’re one short.  So maybe we should still do the subtraction, but then add one.  If we took this approach,  we would count the people with numbers 5 through 12 as follows:&lt;/p&gt;
-
-&lt;p&gt;12 - 5 + 1 = 8&lt;/p&gt;
-
-&lt;p&gt;And we’d count the blue blocks like this:&lt;/p&gt;
-
-&lt;p&gt;15 - 3 + 1 = 13&lt;/p&gt;
-
-&lt;p&gt;So if we wanted to come up with a formula for counting the number of items in a list between a starting point (I’ll call &lt;em&gt;start&lt;/em&gt;) and a stopping point (I’ll call &lt;em&gt;stop&lt;/em&gt;), it would be the following:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;stop - start + 1&lt;/em&gt;&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><category term="counting" /><summary type="html"></summary></entry><entry><title type="html">Placing blocks that are bigger than 1x1 (Vitruvia Concept 3)</title><link href="http://localhost:4000/placing-bigger-blocks/" rel="alternate" type="text/html" title="Placing blocks that are bigger than 1x1 (Vitruvia Concept 3)" /><published>2019-01-11T00:00:00-06:00</published><updated>2019-01-11T00:00:00-06:00</updated><id>http://localhost:4000/placing-bigger-blocks</id><content type="html" xml:base="http://localhost:4000/placing-bigger-blocks/">&lt;!-- #### Topics on this page
+&lt;p&gt;Thinking ahead….what happens if we place a brick in a position that is already covered by another brick???&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html"></summary></entry><entry><title type="html">Placing blocks that are bigger than 1x1 (Vitruvia Concept 3)</title><link href="http://localhost:4000/placing-bigger-blocks/" rel="alternate" type="text/html" title="Placing blocks that are bigger than 1x1 (Vitruvia Concept 3)" /><published>2019-01-11T00:00:00-06:00</published><updated>2019-01-11T00:00:00-06:00</updated><id>http://localhost:4000/placing-bigger-blocks</id><content type="html" xml:base="http://localhost:4000/placing-bigger-blocks/">&lt;!-- #### Topics on this page
 {:.no_toc}
 * TOC
 {:toc} --&gt;
@@ -887,53 +924,4 @@ Cells in the grid are represented by two values, called coordinates.  These are 
 
 &lt;p&gt;If your solution is incorrect, you will see a &lt;em&gt;Try Again&lt;/em&gt; message. At this point you have two options.  One is to click on the &lt;em&gt;Clear&lt;/em&gt; button to redo the exercise.  The other is to click on the &lt;em&gt;Show Solution&lt;/em&gt; button to see the solution.  Try to avoid showing the solution unless you’ve given the exercise your best shot and don’t understand how to do it.  If you show the solution, spend time studying it to understand why it is correct.&lt;/p&gt;
 
-&lt;p&gt;When you’re ready to go to the next exercise, click on the &lt;em&gt;Next&lt;/em&gt; button.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with MATH 1120</title><link href="http://localhost:4000/getting-started-with-1120/" rel="alternate" type="text/html" title="Getting Started with MATH 1120" /><published>2018-12-29T00:00:00-06:00</published><updated>2018-12-29T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-1120</id><content type="html" xml:base="http://localhost:4000/getting-started-with-1120/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#what-kind-of-computer-do-i-need&quot; id=&quot;markdown-toc-what-kind-of-computer-do-i-need&quot;&gt;What kind of computer do I need?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#what-if-i-dont-have-a-computer&quot; id=&quot;markdown-toc-what-if-i-dont-have-a-computer&quot;&gt;What if I don’t have a computer?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#software-needed&quot; id=&quot;markdown-toc-software-needed&quot;&gt;Software needed&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#web-browser&quot; id=&quot;markdown-toc-web-browser&quot;&gt;Web browser&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#the-bricklayer-app&quot; id=&quot;markdown-toc-the-bricklayer-app&quot;&gt;The Bricklayer app&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In this class, you will be using a computer a lot!  This page covers some basic skills you need.&lt;/p&gt;
-
-&lt;h3 id=&quot;what-kind-of-computer-do-i-need&quot;&gt;What kind of computer do I need?&lt;/h3&gt;
-&lt;p&gt;For the first couple of weeks of the course, all work will be done in a web browser. During this period you could use a computer, tablet, ipad, or Chromebook. In a pinch, you could even use a phone, but the screen is really too small to be able to work effectively.&lt;/p&gt;
-
-&lt;p&gt;Afterward, you need an actual computer.  You can use either a Mac or PC. Other devices will no longer be sufficient.&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;h3 id=&quot;what-if-i-dont-have-a-computer&quot;&gt;What if I don’t have a computer?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;In class
-    &lt;ul&gt;
-      &lt;li&gt;Mac laptops will be available for use.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Outside of class
-    &lt;ul&gt;
-      &lt;li&gt;Computer labs on campus
-        &lt;ul&gt;
-          &lt;li&gt;DSC 104 &lt;a href=&quot;https://www.unomaha.edu/information-technology-services/labs-and-classrooms/labs-and-kiosks.php&quot;&gt;Hours&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;Mammel Hall&lt;/li&gt;
-          &lt;li&gt;PKI&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Three-hour laptop checkout available at Criss Library. Go to the circulation desk.&lt;/li&gt;
-      &lt;li&gt;One-week laptop checkout available at Information Services Technical Support in EAB 104. &lt;a href=&quot;https://www.unomaha.edu/information-technology-services/software-and-hardware/checkout/student-checkout.php&quot;&gt;More info&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;If none of these options works for you, email Dr. Love.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;h3 id=&quot;software-needed&quot;&gt;Software needed&lt;/h3&gt;
-
-&lt;h4 id=&quot;web-browser&quot;&gt;Web browser&lt;/h4&gt;
-&lt;p&gt;Throughout the course we will heavily use the website &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt;. For best results, use the Chrome browser. It should already be installed on the machines on campus. If you need to install it on your computer, go to &lt;a href=&quot;https://www.google.com/chrome/&quot;&gt;https://www.google.com/chrome/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;the-bricklayer-app&quot;&gt;The Bricklayer app&lt;/h4&gt;
-&lt;p&gt;This is not needed during the first couple of weeks of class. More on this later.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry></feed>
+&lt;p&gt;When you’re ready to go to the next exercise, click on the &lt;em&gt;Next&lt;/em&gt; button.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry></feed>
