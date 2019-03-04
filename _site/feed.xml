@@ -1,41 +1,165 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-21T18:30:10-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Getting Started with Bricklayer Level 4</title><link href="http://localhost:4000/getting-started-with-level4/" rel="alternate" type="text/html" title="Getting Started with Bricklayer Level 4" /><published>2019-02-21T00:00:00-06:00</published><updated>2019-02-21T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-level4</id><content type="html" xml:base="http://localhost:4000/getting-started-with-level4/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-03T19:43:33-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Spheres in Bricklayer</title><link href="http://localhost:4000/spheres/" rel="alternate" type="text/html" title="Spheres in Bricklayer" /><published>2019-03-01T00:00:00-06:00</published><updated>2019-03-01T00:00:00-06:00</updated><id>http://localhost:4000/spheres</id><content type="html" xml:base="http://localhost:4000/spheres/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#coordinates-in-3d-space&quot; id=&quot;markdown-toc-coordinates-in-3d-space&quot;&gt;Coordinates in 3D space&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#sphere-functions-in-bricklayer-level-4&quot; id=&quot;markdown-toc-sphere-functions-in-bricklayer-level-4&quot;&gt;Sphere functions in Bricklayer Level 4&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#bricklayer-sphere-function&quot; id=&quot;markdown-toc-bricklayer-sphere-function&quot;&gt;Bricklayer &lt;em&gt;sphere&lt;/em&gt; function&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-colors&quot; id=&quot;markdown-toc-list-of-colors&quot;&gt;List of colors?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#bricklayer-hollowsphere-function&quot; id=&quot;markdown-toc-bricklayer-hollowsphere-function&quot;&gt;Bricklayer &lt;em&gt;hollowSphere&lt;/em&gt; function&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Level 4 in Bricklayer opens up the world of 3D artifacts!  To create and run a Level_4 program, you must use the Bricklayer app (not Bricklayer-Lite).  For an introduction to programming in the Bricklayer app, check out &lt;a href=&quot;/getting-started-with-bricklayer&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In this post we’ll explore spheres in Bricklayer Level 4.  For an introduction to programming in the  Level 4, check out &lt;a href=&quot;/getting-started-with-level4&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Where you see this icon,&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl icon&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;click on it to download the associated bricklayer program.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;coordinates-in-3d-space&quot;&gt;Coordinates in 3D space&lt;/h3&gt;
+&lt;h3 id=&quot;sphere-functions-in-bricklayer-level-4&quot;&gt;Sphere functions in Bricklayer Level 4&lt;/h3&gt;
 
-&lt;p&gt;Let’s start with a review of 2D coordinates in Bricklayer.  When programming in 2D, artifacts are placed in the x-z plane.  The point (x,z) is x units in the horizontal direction from 0 and z units in the vertical direction from 0.  Consider the figure below.&lt;/p&gt;
+&lt;p&gt;Bricklayer has two sphere functions: &lt;em&gt;sphere&lt;/em&gt; and &lt;em&gt;hollowSphere&lt;/em&gt;. Official documentation on these and other Level-4 functions is available at &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt; (Apps -&amp;gt; Bricklayer -&amp;gt; Level 4 - Document).  In this post, we’ll start with the &lt;em&gt;sphere&lt;/em&gt; function.&lt;/p&gt;
+
+&lt;h4 id=&quot;bricklayer-sphere-function&quot;&gt;Bricklayer &lt;em&gt;sphere&lt;/em&gt; function&lt;/h4&gt;
+
+&lt;p&gt;The &lt;em&gt;sphere&lt;/em&gt; function produces a sphere (duh!), i.e., a ball.  This is a 3D artifact. To create a sphere, we need to know three things:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;how big it should be&lt;/li&gt;
+  &lt;li&gt;what color(s) it should be&lt;/li&gt;
+  &lt;li&gt;where it should be&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These three things define the parameters for the &lt;em&gt;sphere&lt;/em&gt; function. Specifically, the parameters are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;radius&lt;/li&gt;
+  &lt;li&gt;a list of colors, written as [color1,color2,etc]&lt;/li&gt;
+  &lt;li&gt;the center, written as a location in 3D space&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The &lt;em&gt;sphere&lt;/em&gt; command looks like:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere radius [color1,color2,etc] (x,y,z)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The following command creates a blue sphere with radius 10 with center (15,15,15):
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere01.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10 [BLUE] (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-01.jpg&quot; alt=&quot;Horizontal and vertical coordinates&quot; /&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere01.png&quot; alt=&quot;Blue sphere&quot; /&gt;
     
 &lt;/figure&gt;
 
-&lt;p&gt;As we move to 3D, we (visually) lay the x-z plane flat, so the above artifact would be viewed as follows.&lt;/p&gt;
+&lt;p&gt;Let’s put three side-by-side (radii 5, 10, and 15) for perspective.
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere02.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 5  [BLUE] (10,20,20);
+sphere 10 [BLUE] (30,20,20);
+sphere 15 [BLUE] (60,20,20);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-02.jpg&quot; alt=&quot;x-z plane laid flat&quot; /&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere02.png&quot; alt=&quot;Three blue spheres&quot; /&gt;
     
 &lt;/figure&gt;
 
-&lt;p&gt;We think of x as the &lt;em&gt;width&lt;/em&gt; of the artifact and z as the &lt;em&gt;depth&lt;/em&gt;.  The third dimension, which we’ll label as &lt;em&gt;y&lt;/em&gt;, is the height.  In the artifact above, the height is one.  Below is the same artifact with second layer the same size as the first added.&lt;/p&gt;
+&lt;h4 id=&quot;list-of-colors&quot;&gt;List of colors?&lt;/h4&gt;
+&lt;p&gt;Let’s explore what happens when we have more than one color in our list of colors. I’ll change up our three spheres as follows. &lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere03.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 5  [BLUE,YELLOW] (10,20,20);
+sphere 10 [RED, GREEN] (30,20,20);
+sphere 15 [PINK, VIOLET] (60,20,20);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-03.jpg&quot; alt=&quot;3D artifact&quot; /&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere03.png&quot; alt=&quot;Three bi-color spheres&quot; /&gt;
     
 &lt;/figure&gt;
 
-&lt;p&gt;The code to create this artifact is shown below.&lt;/p&gt;
+&lt;p&gt;But we’re not limited to just two colors.  You can include as many as you’d like.  Here’s one with three colors. &lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere04.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10 [RED,ORANGE,YELLOW] (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-04.png&quot; alt=&quot;Code for 3D artifact&quot; /&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere04.png&quot; alt=&quot;A red, orange, and yellow sphere&quot; /&gt;
     
-&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Programming in the Bricklayer App</title><link href="http://localhost:4000/getting-started-with-bricklayer/" rel="alternate" type="text/html" title="Getting Started with Programming in the Bricklayer App" /><published>2019-02-21T00:00:00-06:00</published><updated>2019-02-21T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-bricklayer</id><content type="html" xml:base="http://localhost:4000/getting-started-with-bricklayer/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;At this point if you’ve been running the .bl files yourself, you may have noticed that as your artifacts include more bricks, it can take longer for your computer to display them. It is easy to generate a lot of bricks when creating spheres.  In fact, we can look at the output in the bricklayer console window to see how many bricks are in an artifact.  The screenshot below shows how to look for this (first scroll to the bottom of the console window, then up until you see this part).  Notice that our red, orange, and yellow sphere is made up of 4,945 bricks!&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere05.png&quot; alt=&quot;A red, orange, and yellow sphere&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;bricklayer-hollowsphere-function&quot;&gt;Bricklayer &lt;em&gt;hollowSphere&lt;/em&gt; function&lt;/h4&gt;
+&lt;p&gt;The &lt;em&gt;hollowSphere&lt;/em&gt; function provides a way to create the same look as the &lt;em&gt;sphere&lt;/em&gt; command without all the inner bricks that one cannot see.  The parameters are the same except for one additional parameter for &lt;em&gt;hollowSphere&lt;/em&gt; to indicate the thickness of the surface of the sphere.  The maximum value for this is 10 and it yields a sphere that looks exactly like the output from the &lt;em&gt;sphere&lt;/em&gt; command, but with the unseen bricks deleted.  This allows us to create larger spheres without slowing down the computer too much.&lt;/p&gt;
+
+&lt;p&gt;The general form of the &lt;em&gt;hollowSphere&lt;/em&gt; command is:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollowSphere radius thickness [colors] location;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;I’ll create a sphere that looks like the previous one using &lt;em&gt;hollowSphere&lt;/em&gt; with a thickness of 10. 
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere05.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollowSphere 10 10 [RED,ORANGE,YELLOW] (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere06.png&quot; alt=&quot;Hollow sphere with thickness 10&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Now let’s check the bricklayer console to see how many bricks are in this one.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere07.png&quot; alt=&quot;A red, orange, and yellow sphere&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;2392 bricks in the hollow sphere vs. 4945 in the solid sphere.  Using &lt;em&gt;hollowSphere&lt;/em&gt; allows us to create larger spheres with no change in appearance from the outside of the sphere.&lt;/p&gt;
+
+&lt;p&gt;What if we used a smaller value for the thickness?  Let’s try 5! &lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere06.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollowSphere 10 5 [RED,ORANGE,YELLOW] (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere08.png&quot; alt=&quot;Hollow sphere with thickness 5&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The outside of the sphere is not solid now.  Let’s try thickness = 1. 
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere07.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollowSphere 10 1 [RED,ORANGE,YELLOW] (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere09.png&quot; alt=&quot;Hollow sphere with thickness 5&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;As the thickness decreases, the number of visible bricks on the outside of the sphere also decreases.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D," /><category term="sphere" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Programming in the Bricklayer App</title><link href="http://localhost:4000/getting-started-with-bricklayer/" rel="alternate" type="text/html" title="Getting Started with Programming in the Bricklayer App" /><published>2019-02-21T00:00:00-06:00</published><updated>2019-02-21T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-bricklayer</id><content type="html" xml:base="http://localhost:4000/getting-started-with-bricklayer/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#installing-the-bricklayer-app-and-an-artifact-viewer&quot; id=&quot;markdown-toc-installing-the-bricklayer-app-and-an-artifact-viewer&quot;&gt;Installing the Bricklayer App and an Artifact Viewer&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#bricklayer-app-environment&quot; id=&quot;markdown-toc-bricklayer-app-environment&quot;&gt;Bricklayer app environment&lt;/a&gt;&lt;/li&gt;
@@ -198,7 +322,44 @@
 &lt;figure&gt;
     &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-app/bricklayer-app10.jpg&quot; alt=&quot;Bricklayer Console Error Message&quot; /&gt;
     
-&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Bricklayer-Lite</title><link href="http://localhost:4000/getting-started-with-bricklayer-lite-level-1/" rel="alternate" type="text/html" title="Getting Started with Bricklayer-Lite" /><published>2019-01-26T00:00:00-06:00</published><updated>2019-01-26T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-bricklayer-lite-level-1</id><content type="html" xml:base="http://localhost:4000/getting-started-with-bricklayer-lite-level-1/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Bricklayer Level 4</title><link href="http://localhost:4000/getting-started-with-level4/" rel="alternate" type="text/html" title="Getting Started with Bricklayer Level 4" /><published>2019-02-21T00:00:00-06:00</published><updated>2019-02-21T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-level4</id><content type="html" xml:base="http://localhost:4000/getting-started-with-level4/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#coordinates-in-3d-space&quot; id=&quot;markdown-toc-coordinates-in-3d-space&quot;&gt;Coordinates in 3D space&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Level 4 in Bricklayer opens up the world of 3D artifacts!  To create and run a Level_4 program, you must use the Bricklayer app (not Bricklayer-Lite).  For an introduction to programming in the Bricklayer app, check out &lt;a href=&quot;/getting-started-with-bricklayer&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;coordinates-in-3d-space&quot;&gt;Coordinates in 3D space&lt;/h3&gt;
+
+&lt;p&gt;Let’s start with a review of 2D coordinates in Bricklayer.  When programming in 2D, artifacts are placed in the x-z plane.  The point (x,z) is x units in the horizontal direction from 0 and z units in the vertical direction from 0.  Consider the figure below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-01.jpg&quot; alt=&quot;Horizontal and vertical coordinates&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;As we move to 3D, we (visually) lay the x-z plane flat, so the above artifact would be viewed as follows.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-02.jpg&quot; alt=&quot;x-z plane laid flat&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;We think of x as the &lt;em&gt;width&lt;/em&gt; of the artifact and z as the &lt;em&gt;depth&lt;/em&gt;.  The third dimension, which we’ll label as &lt;em&gt;y&lt;/em&gt;, is the height.  In the artifact above, the height is one.  Below is the same artifact with second layer the same size as the first added.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-03.jpg&quot; alt=&quot;3D artifact&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The code to create this artifact is shown below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-04.png&quot; alt=&quot;Code for 3D artifact&quot; /&gt;
+    
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Bricklayer-Lite</title><link href="http://localhost:4000/getting-started-with-bricklayer-lite-level-1/" rel="alternate" type="text/html" title="Getting Started with Bricklayer-Lite" /><published>2019-01-26T00:00:00-06:00</published><updated>2019-01-26T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-bricklayer-lite-level-1</id><content type="html" xml:base="http://localhost:4000/getting-started-with-bricklayer-lite-level-1/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#getting-started-with-bricklayer-lite-level_1-programming&quot; id=&quot;markdown-toc-getting-started-with-bricklayer-lite-level_1-programming&quot;&gt;Getting Started with Bricklayer-Lite Level_1 programming&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#three-elements-of-every-bricklayer-and-bricklayer-lite-program&quot; id=&quot;markdown-toc-three-elements-of-every-bricklayer-and-bricklayer-lite-program&quot;&gt;Three elements of every Bricklayer and Bricklayer-Lite Program&lt;/a&gt;&lt;/li&gt;
@@ -773,155 +934,4 @@ put2D_2x2_BLACK(1,1)
 &lt;figure&gt;
     &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-test03.png&quot; alt=&quot;Screenshot of Vitruvia test results&quot; /&gt;
     
-&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">From https://bricklayer.org select Apps -&amp;gt; Vitruvia -&amp;gt; Tests</summary></entry><entry><title type="html">Getting Started with Vitruvia Exercises</title><link href="http://localhost:4000/getting-started-with-vitruvia/" rel="alternate" type="text/html" title="Getting Started with Vitruvia Exercises" /><published>2018-12-29T00:00:00-06:00</published><updated>2018-12-29T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-vitruvia</id><content type="html" xml:base="http://localhost:4000/getting-started-with-vitruvia/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#vitruvia-exercises&quot; id=&quot;markdown-toc-vitruvia-exercises&quot;&gt;Vitruvia Exercises&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#choosing-a-brick-color&quot; id=&quot;markdown-toc-choosing-a-brick-color&quot;&gt;Choosing a brick color&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#if-you-put-a-brick-in-the-wrong-place&quot; id=&quot;markdown-toc-if-you-put-a-brick-in-the-wrong-place&quot;&gt;If you put a brick in the wrong place&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#locating-grid-cells&quot; id=&quot;markdown-toc-locating-grid-cells&quot;&gt;Locating grid cells&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#more-help-locating-grid-cells&quot; id=&quot;markdown-toc-more-help-locating-grid-cells&quot;&gt;More help locating grid Cells&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#complete-concept-1-demo-1-exercise&quot; id=&quot;markdown-toc-complete-concept-1-demo-1-exercise&quot;&gt;Complete &lt;em&gt;Concept 1 Demo 1&lt;/em&gt; exercise&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Vitruvia is a app available at &lt;a href=&quot;https://bricklayer.org/apps/vitruvia_New/main.html#concepts/&quot;&gt;bricklayer.org&lt;/a&gt;. Its purpose is to provide a gentle introduction to bricklayer concepts through a series of automatically-graded interactive exercises.  Vitruvia also has a Test mode which is discussed in another post.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;vitruvia-exercises&quot;&gt;Vitruvia Exercises&lt;/h3&gt;
-
-&lt;p&gt;To work on Vitruvia exercises, go to &lt;a href=&quot;https://bricklayer.org/apps/vitruvia_New/main.html#concepts/&quot;&gt;https://bricklayer.org/apps/vitruvia_New/main.html#concepts/&lt;/a&gt;.  If you are already on the bricklayer web site, from the menu, select&lt;/p&gt;
-&lt;center&gt; Apps -&amp;gt; Vitruvia -&amp;gt; Exercises &lt;/center&gt;
-&lt;p&gt;as shown below:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises01.jpg&quot; alt=&quot;Starting Vitruvia from bricklayer.org menu&quot; /&gt;
-    &lt;figcaption data-uk-grid=&quot;&quot; class=&quot;uk-flex-right&quot;&gt;&lt;span class=&quot;uk-width-auto&quot;&gt;Starting Vitruvia from bricklayer.org menu&lt;/span&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;This takes you to the &lt;strong&gt;Concept 1 Demo 1&lt;/strong&gt; page. Before we look at that exercise, note the tabs at the top of the page showing &lt;strong&gt;Concepts 1-10&lt;/strong&gt;, &lt;strong&gt;Concepts 11-20&lt;/strong&gt;, and &lt;strong&gt;Concepts 21-24&lt;/strong&gt;.  As you move along through the concepts during the semester, you can pull down the menu for the concept you’re on and start there. For example, if you’ve completed Concepts 1-5, then you can go directly to Concept 6 by selecting&lt;/p&gt;
-&lt;center&gt; Concepts 1-10 -&amp;gt; Concept 6 &lt;/center&gt;
-&lt;p&gt;You can even choose a specific exercise if you’d like.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;choosing-a-brick-color&quot;&gt;Choosing a brick color&lt;/h4&gt;
-
-&lt;p&gt;Let’s go back to &lt;strong&gt;Concept 1 Demo 1&lt;/strong&gt; and discuss in general how to complete a Vitruvia exercise. The solution to each Vitruvia exercise is a placement of bricks (or blocks—I’ll use the terms interchangeably) on the grid. To place a brick of a particular color on the grid, first click on the color, then click on the cell in the grid on which you place the brick.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises03.jpg&quot; alt=&quot;Selecting brick color in Vitruvia&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;When you want to change colors, click the next color you want and then click on cells.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h5 id=&quot;if-you-put-a-brick-in-the-wrong-place&quot;&gt;If you put a brick in the wrong place&lt;/h5&gt;
-
-&lt;p&gt;At some point you’ll click in the wrong cell or have the wrong color selected. There are two approaches to fixing this problem:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Clear all bricks from the grid: Click on the &lt;em&gt;Clear&lt;/em&gt; button above the color list. This is a good option if you just want to start over.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises04.png&quot; alt=&quot;Clear button in Vitruvia&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Use the &lt;em&gt;EMPTY&lt;/em&gt; brick to remove other bricks: If you have only a few bricks that you’d like to erase/remove, click on the &lt;em&gt;EMPTY&lt;/em&gt; button in the brick color palette, then click on the bricks you want to remove.  When you’re ready to place bricks of another color, just click on that color and continue.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises05.png&quot; alt=&quot;Selecting the EMPTY brick&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;locating-grid-cells&quot;&gt;Locating grid cells&lt;/h4&gt;
-
-&lt;p&gt;So now we know how to pick a brick color, let’s consider how to know where to put a brick.
-Cells in the grid are represented by two values, called coordinates.  These are also referred to as &lt;em&gt;ordered pairs&lt;/em&gt;. As you may surmise, the &lt;em&gt;order&lt;/em&gt; in which the coordinates are listed is important. The first coordinate refers to the horizontal dimension, i.e., how far &lt;em&gt;over&lt;/em&gt; while the second coordinate refers the the vertical dimension, i.e., how far &lt;em&gt;up&lt;/em&gt;.  For example, cell (2,3) is two blocks over and three blocks up from (0,0), as shown in the grid below.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises06.jpg&quot; alt=&quot;Horizontal and vertical coordinates&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Here are a couple more examples.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises07.jpg&quot; alt=&quot;Cell location in Vitruvia - 1&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises08.jpg&quot; alt=&quot;Cell location in Vitruvia - 2&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;more-help-locating-grid-cells&quot;&gt;More help locating grid Cells&lt;/h4&gt;
-
-&lt;p&gt;If you find yourself confused about cell locations, you can use the &lt;em&gt;Display Coordinates&lt;/em&gt; option. This is above the color palette and below the grid. Click the &lt;em&gt;NO&lt;/em&gt; button to see the coordinates as shown below.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises09.jpg&quot; alt=&quot;See grid coordinates in Vitruvia&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;The &lt;em&gt;NO&lt;/em&gt; button changes (toggles) to &lt;em&gt;YES&lt;/em&gt; and the coordinates of each cell are displayed.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises10.png&quot; alt=&quot;See grid coordinates in Vitruvia&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;To hide the coordinates, click the &lt;em&gt;YES&lt;/em&gt; button. In general you should make the coordinates visible only if you feel you need to. Practice so that you eventually do not need them.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;complete-concept-1-demo-1-exercise&quot;&gt;Complete &lt;em&gt;Concept 1 Demo 1&lt;/em&gt; exercise&lt;/h4&gt;
-
-&lt;p&gt;Now you know how to choose the color that you want and how to locate cell locations.  You’re ready to complete the first exercise. The directions are as follows:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises11.png&quot; alt=&quot;Vitruvia Concept 1 Demo 1&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;The steps to do this are:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. Click on the GREEN brick.
-2. Locate cell (0,0) - over 0 and up 0; click on it.
-3. Locate cell (5,1) - over 5 and up 1; click on it.
-4. Locate cell (1,2) - over 1 and up 2; click on it.
-5. Locate cell (4,3) - over 4 and up 3; click on it.
-6. Locate cell (2,4) - over 2 and up 4; click on it.
-7. Locate cell (3,5) - over 3 and up 5; click on it.   
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The grid should look as follows. Click the &lt;em&gt;Submit&lt;/em&gt; button at the bottom to check your answer.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises12.png&quot; alt=&quot;Vitruvia Concept 1 Demo 1 solution&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Assuming your solution is correct, fireworks will appear in place of the grid.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-exercises13.png&quot; alt=&quot;Vitruvia fireworks&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;If your solution is incorrect, you will see a &lt;em&gt;Try Again&lt;/em&gt; message. At this point you have two options.  One is to click on the &lt;em&gt;Clear&lt;/em&gt; button to redo the exercise.  The other is to click on the &lt;em&gt;Show Solution&lt;/em&gt; button to see the solution.  Try to avoid showing the solution unless you’ve given the exercise your best shot and don’t understand how to do it.  If you show the solution, spend time studying it to understand why it is correct.&lt;/p&gt;
-
-&lt;p&gt;When you’re ready to go to the next exercise, click on the &lt;em&gt;Next&lt;/em&gt; button.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry></feed>
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">From https://bricklayer.org select Apps -&amp;gt; Vitruvia -&amp;gt; Tests</summary></entry></feed>

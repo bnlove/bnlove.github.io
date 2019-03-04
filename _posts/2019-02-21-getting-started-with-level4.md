@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Getting Started with Bricklayer Level 4
-categories: [Getting Started]
-tags: featured
+categories: [Programming 3D Artifacts]
+tags: level4, 3D
 author: Betty Love
 ---
 

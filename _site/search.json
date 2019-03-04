@@ -1,9 +1,17 @@
 [
   
     {
+      "title"    : "Spheres in Bricklayer",
+      "category" : "",
+      "tags"     : "level4,, 3D,, sphere",
+      "url"      : "/spheres/",
+      "date"     : "2019-03-01 00:00:00 -0600"
+    } ,
+  
+    {
       "title"    : "Getting Started with Bricklayer Level 4",
       "category" : "",
-      "tags"     : "featured",
+      "tags"     : "level4,, 3D",
       "url"      : "/getting-started-with-level4/",
       "date"     : "2019-02-21 00:00:00 -0600"
     } ,

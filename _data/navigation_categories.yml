@@ -1,15 +1,15 @@
 # Categories home page navigation
 
-# - heading: Browse All Topics
-  # categories:
-  #   - title: Getting Started
-      # desc: Get your account up and running in just few easy steps
-      # icon: settings
-    #
-    # - title: Account and Billing
-    #   desc: Managing your account, creating new users and exporting data
-    #   icon: credit-card
-    #
+- heading: Browse All Topics
+  categories:
+    - title: Getting Started
+      desc: Bricklayer Basics
+      icon: grid
+    
+    - title: Programming 3D Artifacts
+      desc: Bricklayer Level 4
+      icon: star 
+    
     # - title: Troubleshooting
     #   desc: Answers to most common configuration issues
     #   icon: cog
