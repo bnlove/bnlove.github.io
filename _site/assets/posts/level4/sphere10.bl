@@ -1,11 +1,14 @@
-open Level_4;
+open Level_3;
 
-build (30,30,30);
+build2D (30,30);
 
-sphere 10 [BLUE]  (15,15,15);
-sphere 7  [WHITE] (15,15,15);
+put2D (23,23) YELLOW (4,4);
+put2D (21,21) EMPTY  (5,5);
 
-(* Put an EMPTY block over half so we can see the middle! *)
-put (15,15,15) EMPTY (0,0,0);
+circleXZ 10  BLUE  (15,15);
+circleXZ  6  RED   (15,15);
 
-show "sphere"
+put2D (1,1)   BLACK (15,15);
+put2D (10,1)  WHITE (16,15);
+
+show2D "sphere cross-section"

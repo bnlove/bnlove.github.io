@@ -1,4 +1,277 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-03T19:43:33-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Spheres in Bricklayer</title><link href="http://localhost:4000/spheres/" rel="alternate" type="text/html" title="Spheres in Bricklayer" /><published>2019-03-01T00:00:00-06:00</published><updated>2019-03-01T00:00:00-06:00</updated><id>http://localhost:4000/spheres</id><content type="html" xml:base="http://localhost:4000/spheres/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-07T15:22:40-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Slicing Spheres in Bricklayer to See Inside!</title><link href="http://localhost:4000/slicing-spheres/" rel="alternate" type="text/html" title="Slicing Spheres in Bricklayer to See Inside!" /><published>2019-03-01T00:00:00-06:00</published><updated>2019-03-01T00:00:00-06:00</updated><id>http://localhost:4000/slicing-spheres</id><content type="html" xml:base="http://localhost:4000/slicing-spheres/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#spheres-inside-spheres&quot; id=&quot;markdown-toc-spheres-inside-spheres&quot;&gt;Spheres inside spheres&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#circles-inside-circles&quot; id=&quot;markdown-toc-circles-inside-circles&quot;&gt;Circles inside circles&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#back-to-spheres-inside-spheres&quot; id=&quot;markdown-toc-back-to-spheres-inside-spheres&quot;&gt;Back to spheres inside spheres&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#slice-horizontally-perpendicular-to-y-axis&quot; id=&quot;markdown-toc-slice-horizontally-perpendicular-to-y-axis&quot;&gt;Slice horizontally (perpendicular to &lt;em&gt;y&lt;/em&gt; axis)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#slice-perpendicular-to-the-z-axis&quot; id=&quot;markdown-toc-slice-perpendicular-to-the-z-axis&quot;&gt;Slice perpendicular to the &lt;em&gt;z&lt;/em&gt; axis&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this post we’ll explore slicing spheres in order to see inside them.  For an introduction to spheres, check out &lt;a href=&quot;/spheres&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Where you see this icon,&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl icon&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;click on it to download the associated bricklayer program.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;spheres-inside-spheres&quot;&gt;Spheres inside spheres&lt;/h3&gt;
+
+&lt;p&gt;What happens if we create a sphere inside a sphere in bricklayer?  Well, let’s find out!
+Let’s start with a single sphere with radius 10.
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere08.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10 [BLUE] (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere10.png&quot; alt=&quot;Blue sphere with radius 10&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Now let’s put a smaller sphere at the same location (having the same center).  I’ll give this one a radius of 7 and make it red.
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere09.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10 [BLUE]  (15,15,15);
+sphere  7 [RED]  (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere10.png&quot; alt=&quot;Blue sphere with radius 10&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Hmmm…where’s the white sphere???&lt;/p&gt;
+
+&lt;h3 id=&quot;circles-inside-circles&quot;&gt;Circles inside circles&lt;/h3&gt;
+
+&lt;p&gt;We can’t see it because it’s inside the blue sphere.  I’m going to slice this artifact in half so we can see the middle.  How can I do that? First we need to understand the location of the boundaries of the sphere. The image below shows a cross section of the sphere at its center. I created this in the bricklayer &lt;a href=&quot;https://bricklayer.org/apps/grid_lite/grid.html&quot;&gt;Grid app&lt;/a&gt;, then marked it up on my ipad.  (I highly recommend using the Grid app to map out artifacts.) I did this analysis so that I could  come up with the coordinates of the yellow bounding square (which we’ll use to create a yellow bounding box).  Note that I could have used trial and error, but some times it’s difficult to know if you cut off part of a circle.  I also wanted to demonstrate this process.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere11.jpg&quot; alt=&quot;Blue sphere with radius 10&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Based on these calculations, we can write a Level_3 bricklayer program to create this.  You should look at each of the following commands and make sure you understand how to come up with the parameters used in each.
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere10.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (23,23) YELLOW (4,4);
+put2D (21,21) EMPTY  (5,5);
+
+circleXZ 10  BLUE  (15,15);
+circleXZ  6  RED   (15,15);
+
+put2D (1,1)   BLACK (15,15);
+put2D (10,1)  WHITE (16,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here’s a look at the real artifact.  I put the white blocks in so that it’s easier to confirm that the radius of the blue circle is 10 and the red circle is 6.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere12.jpg&quot; alt=&quot;Blue sphere with radius 10&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;If I wanted to slice the circle in half and only see half of it, say the right half, then I can place a big empty block to cover the part that I don’t want to be visible.  There’s a bit of a problem with slicing the circle in &lt;em&gt;half&lt;/em&gt;.  Can you think about what that problem is?  Hint: is the diameter of a circle even or odd?&lt;/p&gt;
+
+&lt;p&gt;Take a closer look at our artifact.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere13.jpg&quot; alt=&quot;Radius 10, diameter 21&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Our blue circle has radius 10, but its diameter is 21 because of the center block.  In general, we have the following relationship between the radius and diameter of a circle artifact:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;diameter = (2 x radius) + 1&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Since 2 times any number is always even, adding 1 makes it odd, so the diameter of a circle in bricklayer is always odd.  What is half an odd number?  Not a whole number!  So what does half a circle mean?  One half will include the center point and one half will not.  For our purposes, I’ll leave the center point in the half that will be displayed.&lt;/p&gt;
+
+&lt;p&gt;The following image shows my calculations for what size EMPTY block I need and where it needs to go.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere14.jpg&quot; alt=&quot;Calculate dimensions and location of EMPTY block&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;I’ll edit the code to remove the yellow frame and the left “half” of the circle. 
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere11.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;circleXZ 10  BLUE  (15,15);
+circleXZ  6  RED   (15,15);
+
+put2D (1,1)   BLACK (15,15);
+put2D (10,1)  WHITE (16,15);
+
+put2D (10,21) EMPTY (5,5);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here’s the artifact produced by this code.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere15.png&quot; alt=&quot;Half a circle&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;back-to-spheres-inside-spheres&quot;&gt;Back to spheres inside spheres&lt;/h3&gt;
+
+&lt;p&gt;Now that we understand slicing a circle, we can extend that knowledge to slicing a sphere.  Let’s go back to our red sphere inside a blue sphere. I’m going to add a set of axes to our artifact so that it’s easier to get our bearings.  The following code generates the axes and our red sphere inside a blue sphere.&lt;br /&gt;
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere12.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put (30,1,1) WHITE  (0,0,0);   (* x axis *)
+put (1,30,1) PINK   (0,0,0);   (* y axis *)
+put (1,1,30) BLACK  (0,0,0);   (* z axis *)
+put (1,1,1)  YELLOW (0,0,0);   (* origin *)
+
+
+sphere 10  [BLUE]  (15,15,15);
+sphere  7  [RED]   (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The resulting artifact is the following.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere16.png&quot; alt=&quot;3D axes and spheres&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;There are many ways that we could slice the sphere in (almost) half (recall that the diameter of a sphere, just like that of a circle, is an odd number, so half of it is not a whole number). Let’s first figure out how to chop off the left side. You can envision this as a knife slicing through the middle of the sphere from &lt;em&gt;z=0&lt;/em&gt; to &lt;em&gt;z=30&lt;/em&gt;.  Although our sphere is not that big, we won’t worry about that right now.  We’ll just slice through some air!! The following image illustrates this idea.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere17.jpg&quot; alt=&quot;Slice sphere&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Our approach will be to place a giant EMPTY block on the left side.  The center of the sphere in the &lt;em&gt;x&lt;/em&gt; direction (white axis) is at &lt;em&gt;x=15&lt;/em&gt;. We need to back up one unit so that we don’t chop off the layer of the sphere here.  Since our sphere is the only artifact we’re working with, we don’t have to be precise in determining the size of the EMPTY block.  The easy way is to locate the block at (0,0,0) and make it go to the build-space size in the &lt;em&gt;y&lt;/em&gt; and &lt;em&gt;z&lt;/em&gt; directions.  The only hard part is to figure out how far to go in the &lt;em&gt;x&lt;/em&gt; direction. Given our analysis above, we want to zap through &lt;em&gt;x=14&lt;/em&gt; which means our EMPTY block should be of size 15 in the &lt;em&gt;x&lt;/em&gt; direction.  Following is code that puts a giant YELLOW block there instead of EMPTY just to give a visual on what this block really looks like. 
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere13.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10  [BLUE]  (15,15,15);
+sphere  7  [RED]   (15,15,15);
+
+put (15,30,30) YELLOW (0,0,0);  (* giant yellow block *)
+
+(* place axes last *)
+put (30,1,1) WHITE  (0,0,0);   (* x axis *)
+put (1,30,1) PINK   (0,0,0);   (* y axis *)
+put (1,1,30) BLACK  (0,0,0);   (* z axis *)
+put (1,1,1)  YELLOW (0,0,0);   (* origin *)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The output is shown in the following image.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere18.jpg&quot; alt=&quot;Slice sphere with giant yellow block&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Note that we sliced it correctly since the sphere has radius 10 and we can see the 10 layers plus the center layer.  So now…let’s put an EMPTY block there instead of YELLOW.  I also put a 1x1x1 white block at the center of the sphere just to make sure I wasn’t chopping that layer off. 
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere14.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10  [BLUE]  (15,15,15);
+sphere  7  [RED]   (15,15,15);
+
+put (1,1,1) WHITE (15,15,15);  (* white block at center *)
+
+put (15,30,30) EMPTY (0,0,0);  (* giant empty block *)
+
+(* place axes last *)
+put (30,1,1) WHITE  (0,0,0);   (* x axis *)
+put (1,30,1) PINK   (0,0,0);   (* y axis *)
+put (1,1,30) BLACK  (0,0,0);   (* z axis *)
+put (1,1,1)  YELLOW (0,0,0);   (* origin *)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The output is shown in the following image where we can see the cross-section of the red sphere inside the blue one as well as the white center block.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere19.png&quot; alt=&quot;Slice sphere with giant empty block&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;slice-horizontally-perpendicular-to-y-axis&quot;&gt;Slice horizontally (perpendicular to &lt;em&gt;y&lt;/em&gt; axis)&lt;/h3&gt;
+
+&lt;p&gt;Suppose that instead of slicing vertically across the &lt;em&gt;x&lt;/em&gt; axis as we just did, we want to slice horizontally so that we can look down into the remaining “half”.  Let’s think about how to do that.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere20.jpg&quot; alt=&quot;Slice sphere perpendicular to y axis&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;As the figure above shows, we want to empty out everything above the &lt;em&gt;y=15&lt;/em&gt; plane, i.e., everything above and including the &lt;em&gt;y=16&lt;/em&gt; plane. This means we need an EMPTY block that is size &lt;em&gt;(30,14,30)&lt;/em&gt; to go at location &lt;em&gt;(0,16,0)&lt;/em&gt;.  Let’s think about these values.  As shown in the image, we start the EMPTY block at &lt;em&gt;y=16&lt;/em&gt; and if we extend it to the maximum value of &lt;em&gt;y&lt;/em&gt;, which is 29, then the EMPTY block needs to have height &lt;em&gt;14 = 29-16+1&lt;/em&gt;.  The code is as follows. 
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere15.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10  [BLUE]  (15,15,15);
+sphere  7  [RED]   (15,15,15);
+
+put (1,1,1) WHITE (15,15,15);  (* white block at center *)
+
+put (30,314,30) EMPTY (0,16,0);  (* giant empty block *)
+
+(* place axes last *)
+put (30,1,1) WHITE  (0,0,0);   (* x axis *)
+put (1,30,1) PINK   (0,0,0);   (* y axis *)
+put (1,1,30) BLACK  (0,0,0);   (* z axis *)
+put (1,1,1)  YELLOW (0,0,0);   (* origin *)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The resulting artifact follows.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere21.png&quot; alt=&quot;Sliced sphere perpendicular to y axis&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;slice-perpendicular-to-the-z-axis&quot;&gt;Slice perpendicular to the &lt;em&gt;z&lt;/em&gt; axis&lt;/h3&gt;
+&lt;p&gt;Now suppose we want to slice the sphere so that we can see the center when looking from the front (across the &lt;em&gt;x&lt;/em&gt; axis).  Consider the following image and think about what the size and location of the EMPTY block should be.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere22.jpg&quot; alt=&quot;How to slic perpendicular to z axis&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;This is analogous to our first slice which took away the left part of the sphere when viewing from across the &lt;em&gt;x&lt;/em&gt; axis.  The code is as follows (compare it to the first slice).
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere16.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10  [BLUE]  (15,15,15);
+sphere  7  [RED]   (15,15,15);
+
+put (1,1,1) WHITE (15,15,15);  (* white block at center *)
+
+put (30,30,15) EMPTY (0,0,0);  (* giant empty block *)
+
+(* place axes last *)
+put (30,1,1) WHITE  (0,0,0);   (* x axis *)
+put (1,30,1) PINK   (0,0,0);   (* y axis *)
+put (1,1,30) BLACK  (0,0,0);   (* z axis *)
+put (1,1,1)  YELLOW (0,0,0);   (* origin *)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The artifact produced is as follows.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere23.png&quot; alt=&quot;Sliced sphere perpendicular to z axis&quot; /&gt;
+    
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D," /><category term="sphere" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Spheres in Bricklayer</title><link href="http://localhost:4000/spheres/" rel="alternate" type="text/html" title="Spheres in Bricklayer" /><published>2019-03-01T00:00:00-06:00</published><updated>2019-03-01T00:00:00-06:00</updated><id>http://localhost:4000/spheres</id><content type="html" xml:base="http://localhost:4000/spheres/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#sphere-functions-in-bricklayer-level-4&quot; id=&quot;markdown-toc-sphere-functions-in-bricklayer-level-4&quot;&gt;Sphere functions in Bricklayer Level 4&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#bricklayer-sphere-function&quot; id=&quot;markdown-toc-bricklayer-sphere-function&quot;&gt;Bricklayer &lt;em&gt;sphere&lt;/em&gt; function&lt;/a&gt;&lt;/li&gt;
@@ -159,7 +432,44 @@ sphere 15 [PINK, VIOLET] (60,20,20);
     
 &lt;/figure&gt;
 
-&lt;p&gt;As the thickness decreases, the number of visible bricks on the outside of the sphere also decreases.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D," /><category term="sphere" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Programming in the Bricklayer App</title><link href="http://localhost:4000/getting-started-with-bricklayer/" rel="alternate" type="text/html" title="Getting Started with Programming in the Bricklayer App" /><published>2019-02-21T00:00:00-06:00</published><updated>2019-02-21T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-bricklayer</id><content type="html" xml:base="http://localhost:4000/getting-started-with-bricklayer/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;p&gt;As the thickness decreases, the number of visible bricks on the outside of the sphere also decreases.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D," /><category term="sphere" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Bricklayer Level 4</title><link href="http://localhost:4000/getting-started-with-level4/" rel="alternate" type="text/html" title="Getting Started with Bricklayer Level 4" /><published>2019-02-21T00:00:00-06:00</published><updated>2019-02-21T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-level4</id><content type="html" xml:base="http://localhost:4000/getting-started-with-level4/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#coordinates-in-3d-space&quot; id=&quot;markdown-toc-coordinates-in-3d-space&quot;&gt;Coordinates in 3D space&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Level 4 in Bricklayer opens up the world of 3D artifacts!  To create and run a Level_4 program, you must use the Bricklayer app (not Bricklayer-Lite).  For an introduction to programming in the Bricklayer app, check out &lt;a href=&quot;/getting-started-with-bricklayer&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;coordinates-in-3d-space&quot;&gt;Coordinates in 3D space&lt;/h3&gt;
+
+&lt;p&gt;Let’s start with a review of 2D coordinates in Bricklayer.  When programming in 2D, artifacts are placed in the x-z plane.  The point (x,z) is x units in the horizontal direction from 0 and z units in the vertical direction from 0.  Consider the figure below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-01.jpg&quot; alt=&quot;Horizontal and vertical coordinates&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;As we move to 3D, we (visually) lay the x-z plane flat, so the above artifact would be viewed as follows.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-02.jpg&quot; alt=&quot;x-z plane laid flat&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;We think of x as the &lt;em&gt;width&lt;/em&gt; of the artifact and z as the &lt;em&gt;depth&lt;/em&gt;.  The third dimension, which we’ll label as &lt;em&gt;y&lt;/em&gt;, is the height.  In the artifact above, the height is one.  Below is the same artifact with second layer the same size as the first added.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-03.jpg&quot; alt=&quot;3D artifact&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The code to create this artifact is shown below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-04.png&quot; alt=&quot;Code for 3D artifact&quot; /&gt;
+    
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Programming in the Bricklayer App</title><link href="http://localhost:4000/getting-started-with-bricklayer/" rel="alternate" type="text/html" title="Getting Started with Programming in the Bricklayer App" /><published>2019-02-21T00:00:00-06:00</published><updated>2019-02-21T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-bricklayer</id><content type="html" xml:base="http://localhost:4000/getting-started-with-bricklayer/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#installing-the-bricklayer-app-and-an-artifact-viewer&quot; id=&quot;markdown-toc-installing-the-bricklayer-app-and-an-artifact-viewer&quot;&gt;Installing the Bricklayer App and an Artifact Viewer&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#bricklayer-app-environment&quot; id=&quot;markdown-toc-bricklayer-app-environment&quot;&gt;Bricklayer app environment&lt;/a&gt;&lt;/li&gt;
@@ -322,44 +632,7 @@ sphere 15 [PINK, VIOLET] (60,20,20);
 &lt;figure&gt;
     &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-app/bricklayer-app10.jpg&quot; alt=&quot;Bricklayer Console Error Message&quot; /&gt;
     
-&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Bricklayer Level 4</title><link href="http://localhost:4000/getting-started-with-level4/" rel="alternate" type="text/html" title="Getting Started with Bricklayer Level 4" /><published>2019-02-21T00:00:00-06:00</published><updated>2019-02-21T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-level4</id><content type="html" xml:base="http://localhost:4000/getting-started-with-level4/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#coordinates-in-3d-space&quot; id=&quot;markdown-toc-coordinates-in-3d-space&quot;&gt;Coordinates in 3D space&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Level 4 in Bricklayer opens up the world of 3D artifacts!  To create and run a Level_4 program, you must use the Bricklayer app (not Bricklayer-Lite).  For an introduction to programming in the Bricklayer app, check out &lt;a href=&quot;/getting-started-with-bricklayer&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;coordinates-in-3d-space&quot;&gt;Coordinates in 3D space&lt;/h3&gt;
-
-&lt;p&gt;Let’s start with a review of 2D coordinates in Bricklayer.  When programming in 2D, artifacts are placed in the x-z plane.  The point (x,z) is x units in the horizontal direction from 0 and z units in the vertical direction from 0.  Consider the figure below.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-01.jpg&quot; alt=&quot;Horizontal and vertical coordinates&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;As we move to 3D, we (visually) lay the x-z plane flat, so the above artifact would be viewed as follows.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-02.jpg&quot; alt=&quot;x-z plane laid flat&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;We think of x as the &lt;em&gt;width&lt;/em&gt; of the artifact and z as the &lt;em&gt;depth&lt;/em&gt;.  The third dimension, which we’ll label as &lt;em&gt;y&lt;/em&gt;, is the height.  In the artifact above, the height is one.  Below is the same artifact with second layer the same size as the first added.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-03.jpg&quot; alt=&quot;3D artifact&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;The code to create this artifact is shown below.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-04.png&quot; alt=&quot;Code for 3D artifact&quot; /&gt;
-    
-&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Bricklayer-Lite</title><link href="http://localhost:4000/getting-started-with-bricklayer-lite-level-1/" rel="alternate" type="text/html" title="Getting Started with Bricklayer-Lite" /><published>2019-01-26T00:00:00-06:00</published><updated>2019-01-26T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-bricklayer-lite-level-1</id><content type="html" xml:base="http://localhost:4000/getting-started-with-bricklayer-lite-level-1/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Bricklayer-Lite</title><link href="http://localhost:4000/getting-started-with-bricklayer-lite-level-1/" rel="alternate" type="text/html" title="Getting Started with Bricklayer-Lite" /><published>2019-01-26T00:00:00-06:00</published><updated>2019-01-26T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-bricklayer-lite-level-1</id><content type="html" xml:base="http://localhost:4000/getting-started-with-bricklayer-lite-level-1/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#getting-started-with-bricklayer-lite-level_1-programming&quot; id=&quot;markdown-toc-getting-started-with-bricklayer-lite-level_1-programming&quot;&gt;Getting Started with Bricklayer-Lite Level_1 programming&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#three-elements-of-every-bricklayer-and-bricklayer-lite-program&quot; id=&quot;markdown-toc-three-elements-of-every-bricklayer-and-bricklayer-lite-program&quot;&gt;Three elements of every Bricklayer and Bricklayer-Lite Program&lt;/a&gt;&lt;/li&gt;
@@ -899,39 +1172,4 @@ put2D_2x2_BLACK(1,1)
 &lt;figure&gt;
     &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/2x3red-at1-0.png&quot; alt=&quot;2x3 red at (1,0)&quot; /&gt;
     
-&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html"></summary></entry><entry><title type="html">How to take a Vitruvia test</title><link href="http://localhost:4000/vitruvia-tests/" rel="alternate" type="text/html" title="How to take a Vitruvia test" /><published>2019-01-09T00:00:00-06:00</published><updated>2019-01-09T00:00:00-06:00</updated><id>http://localhost:4000/vitruvia-tests</id><content type="html" xml:base="http://localhost:4000/vitruvia-tests/">&lt;ol&gt;
-  &lt;li&gt;From &lt;a href=&quot;https://bricklayer.org&quot;&gt;https://bricklayer.org&lt;/a&gt; select Apps -&amp;gt; Vitruvia -&amp;gt; Tests&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-test01.png&quot; alt=&quot;Starting Vitruvia tests from bricklayer.org menu&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;ol start=&quot;2&quot;&gt;
-  &lt;li&gt;
-    &lt;p&gt;Select the concept(s) you want to be tested on.  Note that you can select any number of concepts. For the first assignment, you should just choose Concept 1.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Select the number of questions you want the test to contain. In the image below, I have chosen 10.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-test01.png&quot; alt=&quot;Setting up Vitruvia test concepts and number of questions&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;ol start=&quot;4&quot;&gt;
-  &lt;li&gt;
-    &lt;p&gt;Answer the questions, clicking “Check” after each answer.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;If you are doing a test for an Assignment, take a screenshot of the test summary so that you can submit it.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/vitruvia-test03.png&quot; alt=&quot;Screenshot of Vitruvia test results&quot; /&gt;
-    
-&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">From https://bricklayer.org select Apps -&amp;gt; Vitruvia -&amp;gt; Tests</summary></entry></feed>
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html"></summary></entry></feed>
