@@ -1,0 +1,22 @@
+open Level_4;
+
+build (30,30,30);
+
+put (23,1,1) REDROUND (4,4,4);
+put (1,23,1) GREENROUND  (4,4,4);
+put (1,1,23) BLUEROUND (4,4,4);
+
+(*
+sphere 10  [BLUE]  (15,15,15);
+sphere  7  [RED]   (15,15,15);
+*)
+
+hollowSphere 10 3 [CLEAR] (15,15,15);
+
+put (1,1,1) BLACK  (15,15,15);
+
+put (10,1,1) WHITE (16,15,15);
+put (1,10,1) GREEN (15,16,15);
+put (1,1,10) PINK  (15,15,16);
+
+show "sphere"

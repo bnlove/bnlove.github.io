@@ -1,0 +1,8 @@
+open Level_4;
+
+build (30,30,30);
+
+sphere 10  [BLUE]  (15,15,15);
+sphere  7  [RED]   (15,15,15);
+
+show "sphere"

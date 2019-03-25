@@ -1,0 +1,13 @@
+open Level_3;
+
+build2D (30,30);
+
+circleXZ 10  BLUE  (15,15);
+circleXZ  6  RED   (15,15);
+
+put2D (1,1)   BLACK (15,15);
+put2D (10,1)  WHITE (16,15);
+
+put2D (10,21) EMPTY (5,5);
+
+show2D "sphere cross-section"

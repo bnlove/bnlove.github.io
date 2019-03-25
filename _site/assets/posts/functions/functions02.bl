@@ -1,0 +1,41 @@
+open Level_3;
+
+build2D (30,30);
+
+(* Artifact at (0,0) *)
+put2D  (2,4)  BLUE    (  0 ,  0 );
+put2D  (3,3)  RED     (  2 ,  0 );
+put2D  (2,3)  YELLOW  (  0 ,  4 );
+put2D  (3,4)  GREEN   (  2 ,  3 );
+
+(* Artifact at (14,0) *)
+put2D  (2,4)  BLUE    ( 14 ,  0 );
+put2D  (3,3)  RED     ( 16 ,  0 );
+put2D  (2,3)  YELLOW  ( 14 ,  4 );
+put2D  (3,4)  GREEN   ( 16 ,  3 );
+
+(* Artifact at (7,6) *)
+put2D  (2,4)  BLUE    (  7 ,  6 );
+put2D  (3,3)  RED     (  9 ,  6 );
+put2D  (2,3)  YELLOW  (  7 , 10 );
+put2D  (3,4)  GREEN   (  9 ,  9 );
+
+(* Artifact at (4,15) *)
+put2D  (2,4)  BLUE    (  4 , 15 );
+put2D  (3,3)  RED     (  6 , 15 );
+put2D  (2,3)  YELLOW  (  4 , 19 );
+put2D  (3,4)  GREEN   (  6 , 18 );
+
+(* Artifact at (13,13) *)
+put2D  (2,4)  BLUE    ( 13 , 13 );
+put2D  (3,3)  RED     ( 15 , 13 );
+put2D  (2,3)  YELLOW  ( 13 , 17 );
+put2D  (3,4)  GREEN   ( 15 , 16 );
+
+(* Artifact at (20,11) *)
+put2D  (2,4)  BLUE    ( 20 , 11 );
+put2D  (3,3)  RED     ( 22 , 11 );
+put2D  (2,3)  YELLOW  ( 20 , 15 );
+put2D  (3,4)  GREEN   ( 22 , 14 );
+
+show2D ""
