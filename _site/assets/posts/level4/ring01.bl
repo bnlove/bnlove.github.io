@@ -1,0 +1,10 @@
+open Level_3;
+
+build2D (100,100);
+
+(* ringXZ radius thinkness color location *)
+ringXZ 10  1  BLUE  (15,25);
+ringXZ 10  4  RED   (40,25);
+ringXZ 20 10  GREEN (75,25);
+
+show2D "rings"

@@ -1,4 +1,203 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-07T15:22:40-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Slicing Spheres in Bricklayer to See Inside!</title><link href="http://localhost:4000/slicing-spheres/" rel="alternate" type="text/html" title="Slicing Spheres in Bricklayer to See Inside!" /><published>2019-03-01T00:00:00-06:00</published><updated>2019-03-01T00:00:00-06:00</updated><id>http://localhost:4000/slicing-spheres</id><content type="html" xml:base="http://localhost:4000/slicing-spheres/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-11T10:55:16-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Rings and Cylinders</title><link href="http://localhost:4000/rings-cylinders/" rel="alternate" type="text/html" title="Rings and Cylinders" /><published>2019-03-11T00:00:00-05:00</published><updated>2019-03-11T00:00:00-05:00</updated><id>http://localhost:4000/rings-cylinders</id><content type="html" xml:base="http://localhost:4000/rings-cylinders/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#level_4-documentation&quot; id=&quot;markdown-toc-level_4-documentation&quot;&gt;Level_4 Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#rings&quot; id=&quot;markdown-toc-rings&quot;&gt;Rings&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this post we’ll investigate how to create rings and cylinders in Bricklayer Level_4.  For an introduction to Level_4 programming, check out &lt;a href=&quot;/getting-started-with-level4&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Where you see this icon,&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl icon&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;click on it to download the associated bricklayer program.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;level_4-documentation&quot;&gt;Level_4 Documentation&lt;/h3&gt;
+
+&lt;p&gt;The official documentation for Level_4 functions is found on the &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer website&lt;/a&gt; by selecting Apps -&amp;gt; Bricklayer -&amp;gt; Level 4 Document or through this &lt;a href=&quot;https://bricklayer.org/level-4-document/&quot;&gt;direct link&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;rings&quot;&gt;Rings&lt;/h3&gt;
+&lt;p&gt;Before discussing 3D rings, let’s review the idea of a ring in 2D.  Consider the following code in Level_3 and its output.
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/ringX01.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(* ringXZ radius thickness color location *)
+ringXZ 10  1  BLUE  (15,25);
+ringXZ 10  4  RED   (40,25);
+ringXZ 20 10  GREEN (75,25);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/ring01.png&quot; alt=&quot;Rings in Level_3&quot; /&gt;
+    
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D," /><category term="cylinder," /><category term="ring," /><category term="ringX," /><category term="ringY," /><category term="ringZ," /><category term="level" /><category term="4," /><category term="level_4," /><category term="hollowCylinder" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Spheres in Bricklayer</title><link href="http://localhost:4000/spheres/" rel="alternate" type="text/html" title="Spheres in Bricklayer" /><published>2019-03-01T00:00:00-06:00</published><updated>2019-03-01T00:00:00-06:00</updated><id>http://localhost:4000/spheres</id><content type="html" xml:base="http://localhost:4000/spheres/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#sphere-functions-in-bricklayer-level-4&quot; id=&quot;markdown-toc-sphere-functions-in-bricklayer-level-4&quot;&gt;Sphere functions in Bricklayer Level 4&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#bricklayer-sphere-function&quot; id=&quot;markdown-toc-bricklayer-sphere-function&quot;&gt;Bricklayer &lt;em&gt;sphere&lt;/em&gt; function&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-colors&quot; id=&quot;markdown-toc-list-of-colors&quot;&gt;List of colors?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#bricklayer-hollowsphere-function&quot; id=&quot;markdown-toc-bricklayer-hollowsphere-function&quot;&gt;Bricklayer &lt;em&gt;hollowSphere&lt;/em&gt; function&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this post we’ll explore spheres in Bricklayer Level 4.  For an introduction to programming in the  Level 4, check out &lt;a href=&quot;/getting-started-with-level4&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Where you see this icon,&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl icon&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;click on it to download the associated bricklayer program.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;sphere-functions-in-bricklayer-level-4&quot;&gt;Sphere functions in Bricklayer Level 4&lt;/h3&gt;
+
+&lt;p&gt;Bricklayer has two sphere functions: &lt;em&gt;sphere&lt;/em&gt; and &lt;em&gt;hollowSphere&lt;/em&gt;. Official documentation on these and other Level-4 functions is available at &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt; (Apps -&amp;gt; Bricklayer -&amp;gt; Level 4 - Document).  In this post, we’ll start with the &lt;em&gt;sphere&lt;/em&gt; function.&lt;/p&gt;
+
+&lt;h4 id=&quot;bricklayer-sphere-function&quot;&gt;Bricklayer &lt;em&gt;sphere&lt;/em&gt; function&lt;/h4&gt;
+
+&lt;p&gt;The &lt;em&gt;sphere&lt;/em&gt; function produces a sphere (duh!), i.e., a ball.  This is a 3D artifact. To create a sphere, we need to know three things:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;how big it should be&lt;/li&gt;
+  &lt;li&gt;what color(s) it should be&lt;/li&gt;
+  &lt;li&gt;where it should be&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These three things define the parameters for the &lt;em&gt;sphere&lt;/em&gt; function. Specifically, the parameters are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;radius&lt;/li&gt;
+  &lt;li&gt;a list of colors, written as [color1,color2,etc]&lt;/li&gt;
+  &lt;li&gt;the center, written as a location in 3D space&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The &lt;em&gt;sphere&lt;/em&gt; command looks like:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere radius [color1,color2,etc] (x,y,z)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The following command creates a blue sphere with radius 10 with center (15,15,15):
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere01.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10 [BLUE] (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere01.png&quot; alt=&quot;Blue sphere&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Let’s put three side-by-side (radii 5, 10, and 15) for perspective.
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere02.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 5  [BLUE] (10,20,20);
+sphere 10 [BLUE] (30,20,20);
+sphere 15 [BLUE] (60,20,20);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere02.png&quot; alt=&quot;Three blue spheres&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;list-of-colors&quot;&gt;List of colors?&lt;/h4&gt;
+&lt;p&gt;Let’s explore what happens when we have more than one color in our list of colors. I’ll change up our three spheres as follows. &lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere03.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 5  [BLUE,YELLOW] (10,20,20);
+sphere 10 [RED, GREEN] (30,20,20);
+sphere 15 [PINK, VIOLET] (60,20,20);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere03.png&quot; alt=&quot;Three bi-color spheres&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;But we’re not limited to just two colors.  You can include as many as you’d like.  Here’s one with three colors. &lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere04.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10 [RED,ORANGE,YELLOW] (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere04.png&quot; alt=&quot;A red, orange, and yellow sphere&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;At this point if you’ve been running the .bl files yourself, you may have noticed that as your artifacts include more bricks, it can take longer for your computer to display them. It is easy to generate a lot of bricks when creating spheres.  In fact, we can look at the output in the bricklayer console window to see how many bricks are in an artifact.  The screenshot below shows how to look for this (first scroll to the bottom of the console window, then up until you see this part).  Notice that our red, orange, and yellow sphere is made up of 4,945 bricks!&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere05.png&quot; alt=&quot;A red, orange, and yellow sphere&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;bricklayer-hollowsphere-function&quot;&gt;Bricklayer &lt;em&gt;hollowSphere&lt;/em&gt; function&lt;/h4&gt;
+&lt;p&gt;The &lt;em&gt;hollowSphere&lt;/em&gt; function provides a way to create the same look as the &lt;em&gt;sphere&lt;/em&gt; command without all the inner bricks that one cannot see.  The parameters are the same except for one additional parameter for &lt;em&gt;hollowSphere&lt;/em&gt; to indicate the thickness of the surface of the sphere.  The maximum value for this is 10 and it yields a sphere that looks exactly like the output from the &lt;em&gt;sphere&lt;/em&gt; command, but with the unseen bricks deleted.  This allows us to create larger spheres without slowing down the computer too much.&lt;/p&gt;
+
+&lt;p&gt;The general form of the &lt;em&gt;hollowSphere&lt;/em&gt; command is:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollowSphere radius thickness [colors] location;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;I’ll create a sphere that looks like the previous one using &lt;em&gt;hollowSphere&lt;/em&gt; with a thickness of 10. 
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere05.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollowSphere 10 10 [RED,ORANGE,YELLOW] (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere06.png&quot; alt=&quot;Hollow sphere with thickness 10&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Now let’s check the bricklayer console to see how many bricks are in this one.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere07.png&quot; alt=&quot;A red, orange, and yellow sphere&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;2392 bricks in the hollow sphere vs. 4945 in the solid sphere.  Using &lt;em&gt;hollowSphere&lt;/em&gt; allows us to create larger spheres with no change in appearance from the outside of the sphere.&lt;/p&gt;
+
+&lt;p&gt;What if we used a smaller value for the thickness?  Let’s try 5! &lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere06.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollowSphere 10 5 [RED,ORANGE,YELLOW] (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere08.png&quot; alt=&quot;Hollow sphere with thickness 5&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The outside of the sphere is not solid now.  Let’s try thickness = 1. 
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere07.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollowSphere 10 1 [RED,ORANGE,YELLOW] (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere09.png&quot; alt=&quot;Hollow sphere with thickness 5&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;As the thickness decreases, the number of visible bricks on the outside of the sphere also decreases.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D," /><category term="sphere" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Slicing Spheres in Bricklayer to See Inside!</title><link href="http://localhost:4000/slicing-spheres/" rel="alternate" type="text/html" title="Slicing Spheres in Bricklayer to See Inside!" /><published>2019-03-01T00:00:00-06:00</published><updated>2019-03-01T00:00:00-06:00</updated><id>http://localhost:4000/slicing-spheres</id><content type="html" xml:base="http://localhost:4000/slicing-spheres/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#spheres-inside-spheres&quot; id=&quot;markdown-toc-spheres-inside-spheres&quot;&gt;Spheres inside spheres&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#circles-inside-circles&quot; id=&quot;markdown-toc-circles-inside-circles&quot;&gt;Circles inside circles&lt;/a&gt;&lt;/li&gt;
@@ -224,7 +423,7 @@ sphere  7  [RED]   (15,15,15);
 
 put (1,1,1) WHITE (15,15,15);  (* white block at center *)
 
-put (30,314,30) EMPTY (0,16,0);  (* giant empty block *)
+put (30,14,30) EMPTY (0,16,0);  (* giant empty block *)
 
 (* place axes last *)
 put (30,1,1) WHITE  (0,0,0);   (* x axis *)
@@ -271,168 +470,7 @@ put (1,1,1)  YELLOW (0,0,0);   (* origin *)
 &lt;figure&gt;
     &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere23.png&quot; alt=&quot;Sliced sphere perpendicular to z axis&quot; /&gt;
     
-&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D," /><category term="sphere" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Spheres in Bricklayer</title><link href="http://localhost:4000/spheres/" rel="alternate" type="text/html" title="Spheres in Bricklayer" /><published>2019-03-01T00:00:00-06:00</published><updated>2019-03-01T00:00:00-06:00</updated><id>http://localhost:4000/spheres</id><content type="html" xml:base="http://localhost:4000/spheres/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#sphere-functions-in-bricklayer-level-4&quot; id=&quot;markdown-toc-sphere-functions-in-bricklayer-level-4&quot;&gt;Sphere functions in Bricklayer Level 4&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#bricklayer-sphere-function&quot; id=&quot;markdown-toc-bricklayer-sphere-function&quot;&gt;Bricklayer &lt;em&gt;sphere&lt;/em&gt; function&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#list-of-colors&quot; id=&quot;markdown-toc-list-of-colors&quot;&gt;List of colors?&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#bricklayer-hollowsphere-function&quot; id=&quot;markdown-toc-bricklayer-hollowsphere-function&quot;&gt;Bricklayer &lt;em&gt;hollowSphere&lt;/em&gt; function&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In this post we’ll explore spheres in Bricklayer Level 4.  For an introduction to programming in the  Level 4, check out &lt;a href=&quot;/getting-started-with-level4&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Where you see this icon,&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl icon&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;click on it to download the associated bricklayer program.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;sphere-functions-in-bricklayer-level-4&quot;&gt;Sphere functions in Bricklayer Level 4&lt;/h3&gt;
-
-&lt;p&gt;Bricklayer has two sphere functions: &lt;em&gt;sphere&lt;/em&gt; and &lt;em&gt;hollowSphere&lt;/em&gt;. Official documentation on these and other Level-4 functions is available at &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt; (Apps -&amp;gt; Bricklayer -&amp;gt; Level 4 - Document).  In this post, we’ll start with the &lt;em&gt;sphere&lt;/em&gt; function.&lt;/p&gt;
-
-&lt;h4 id=&quot;bricklayer-sphere-function&quot;&gt;Bricklayer &lt;em&gt;sphere&lt;/em&gt; function&lt;/h4&gt;
-
-&lt;p&gt;The &lt;em&gt;sphere&lt;/em&gt; function produces a sphere (duh!), i.e., a ball.  This is a 3D artifact. To create a sphere, we need to know three things:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;how big it should be&lt;/li&gt;
-  &lt;li&gt;what color(s) it should be&lt;/li&gt;
-  &lt;li&gt;where it should be&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;These three things define the parameters for the &lt;em&gt;sphere&lt;/em&gt; function. Specifically, the parameters are:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;radius&lt;/li&gt;
-  &lt;li&gt;a list of colors, written as [color1,color2,etc]&lt;/li&gt;
-  &lt;li&gt;the center, written as a location in 3D space&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The &lt;em&gt;sphere&lt;/em&gt; command looks like:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere radius [color1,color2,etc] (x,y,z)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The following command creates a blue sphere with radius 10 with center (15,15,15):
-&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere01.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10 [BLUE] (15,15,15);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere01.png&quot; alt=&quot;Blue sphere&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Let’s put three side-by-side (radii 5, 10, and 15) for perspective.
-&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere02.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 5  [BLUE] (10,20,20);
-sphere 10 [BLUE] (30,20,20);
-sphere 15 [BLUE] (60,20,20);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere02.png&quot; alt=&quot;Three blue spheres&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;h4 id=&quot;list-of-colors&quot;&gt;List of colors?&lt;/h4&gt;
-&lt;p&gt;Let’s explore what happens when we have more than one color in our list of colors. I’ll change up our three spheres as follows. &lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere03.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 5  [BLUE,YELLOW] (10,20,20);
-sphere 10 [RED, GREEN] (30,20,20);
-sphere 15 [PINK, VIOLET] (60,20,20);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere03.png&quot; alt=&quot;Three bi-color spheres&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;But we’re not limited to just two colors.  You can include as many as you’d like.  Here’s one with three colors. &lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere04.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10 [RED,ORANGE,YELLOW] (15,15,15);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere04.png&quot; alt=&quot;A red, orange, and yellow sphere&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;At this point if you’ve been running the .bl files yourself, you may have noticed that as your artifacts include more bricks, it can take longer for your computer to display them. It is easy to generate a lot of bricks when creating spheres.  In fact, we can look at the output in the bricklayer console window to see how many bricks are in an artifact.  The screenshot below shows how to look for this (first scroll to the bottom of the console window, then up until you see this part).  Notice that our red, orange, and yellow sphere is made up of 4,945 bricks!&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere05.png&quot; alt=&quot;A red, orange, and yellow sphere&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;h4 id=&quot;bricklayer-hollowsphere-function&quot;&gt;Bricklayer &lt;em&gt;hollowSphere&lt;/em&gt; function&lt;/h4&gt;
-&lt;p&gt;The &lt;em&gt;hollowSphere&lt;/em&gt; function provides a way to create the same look as the &lt;em&gt;sphere&lt;/em&gt; command without all the inner bricks that one cannot see.  The parameters are the same except for one additional parameter for &lt;em&gt;hollowSphere&lt;/em&gt; to indicate the thickness of the surface of the sphere.  The maximum value for this is 10 and it yields a sphere that looks exactly like the output from the &lt;em&gt;sphere&lt;/em&gt; command, but with the unseen bricks deleted.  This allows us to create larger spheres without slowing down the computer too much.&lt;/p&gt;
-
-&lt;p&gt;The general form of the &lt;em&gt;hollowSphere&lt;/em&gt; command is:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollowSphere radius thickness [colors] location;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;I’ll create a sphere that looks like the previous one using &lt;em&gt;hollowSphere&lt;/em&gt; with a thickness of 10. 
-&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere05.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollowSphere 10 10 [RED,ORANGE,YELLOW] (15,15,15);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere06.png&quot; alt=&quot;Hollow sphere with thickness 10&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Now let’s check the bricklayer console to see how many bricks are in this one.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere07.png&quot; alt=&quot;A red, orange, and yellow sphere&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;2392 bricks in the hollow sphere vs. 4945 in the solid sphere.  Using &lt;em&gt;hollowSphere&lt;/em&gt; allows us to create larger spheres with no change in appearance from the outside of the sphere.&lt;/p&gt;
-
-&lt;p&gt;What if we used a smaller value for the thickness?  Let’s try 5! &lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere06.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollowSphere 10 5 [RED,ORANGE,YELLOW] (15,15,15);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere08.png&quot; alt=&quot;Hollow sphere with thickness 5&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;The outside of the sphere is not solid now.  Let’s try thickness = 1. 
-&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere07.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollowSphere 10 1 [RED,ORANGE,YELLOW] (15,15,15);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere09.png&quot; alt=&quot;Hollow sphere with thickness 5&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;As the thickness decreases, the number of visible bricks on the outside of the sphere also decreases.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D," /><category term="sphere" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Bricklayer Level 4</title><link href="http://localhost:4000/getting-started-with-level4/" rel="alternate" type="text/html" title="Getting Started with Bricklayer Level 4" /><published>2019-02-21T00:00:00-06:00</published><updated>2019-02-21T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-level4</id><content type="html" xml:base="http://localhost:4000/getting-started-with-level4/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D," /><category term="sphere" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Bricklayer Level 4</title><link href="http://localhost:4000/getting-started-with-level4/" rel="alternate" type="text/html" title="Getting Started with Bricklayer Level 4" /><published>2019-02-21T00:00:00-06:00</published><updated>2019-02-21T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-level4</id><content type="html" xml:base="http://localhost:4000/getting-started-with-level4/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#coordinates-in-3d-space&quot; id=&quot;markdown-toc-coordinates-in-3d-space&quot;&gt;Coordinates in 3D space&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -1098,78 +1136,4 @@ put2D_2x2_BLACK(1,1)
     
 &lt;/figure&gt;
 
-&lt;p&gt;Thinking ahead….what happens if we place a brick in a position that is already covered by another brick???&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html"></summary></entry><entry><title type="html">Placing blocks that are bigger than 1x1 (Vitruvia Concept 3)</title><link href="http://localhost:4000/placing-bigger-blocks/" rel="alternate" type="text/html" title="Placing blocks that are bigger than 1x1 (Vitruvia Concept 3)" /><published>2019-01-11T00:00:00-06:00</published><updated>2019-01-11T00:00:00-06:00</updated><id>http://localhost:4000/placing-bigger-blocks</id><content type="html" xml:base="http://localhost:4000/placing-bigger-blocks/">&lt;!-- #### Topics on this page
-{:.no_toc}
-* TOC
-{:toc} --&gt;
-
-&lt;p&gt;In Vitruvia Concept 1, you are asked to place 1x1 bricks at various locations.  When you get to Concept 3, however, things may seem a little confusing since you are asked to place larger bricks.  For example, Concept 3 Exercise 7 is as follows:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Put a 4x2 YELLOW brick at location (0,3).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Location (0,3) is just one cell, right?  Just one position in the grid.  So how does one put a 4x2 brick there? The answer is that the location given is where the &lt;em&gt;bottom left corner&lt;/em&gt; of the brick goes. This is the way Dr. Winter designed and implemented bricklayer.&lt;/p&gt;
-
-&lt;p&gt;So…to put a 4x2 YELLOW brick at location (0,3), we must first find location (0,3). Remember &lt;em&gt;over and up&lt;/em&gt; or Dr. Winter’s &lt;em&gt;run before you jump&lt;/em&gt; to locate (0,3).&lt;/p&gt;
-
-&lt;p&gt;Actually, we should first click on YELLOW so that when we find location (0,3), we can click on it and put a YELLOW block there.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/concept3-01.jpg&quot; alt=&quot;Vitruvia Concept 3 Exercise 7&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Now we need to figure out what a 4x2 brick looks like.  Basically the question is: is it 4 wide and 2 tall or 4 tall and 2 wide???  The answer is that it follows the same convention as the grid coordinates.  The first number is how far &lt;em&gt;over&lt;/em&gt; (&lt;em&gt;wide&lt;/em&gt;) and the second is how far &lt;em&gt;up&lt;/em&gt; (&lt;em&gt;tall&lt;/em&gt;) as shown in the following figure.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/concept3-02.jpg&quot; alt=&quot;4x2 vs 2x4 brick&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;We go back to our Vitruvia grid and click in positions (1,3), (2,3), (3,3), (4,3), (0,4), (1,4), (2,4), (3,4) to complete the 4x2 brick at location (0,3).&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/concept3-03.png&quot; alt=&quot;Vitruvia Concept 3 Exercise 7 solution&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;another-example&quot;&gt;Another example&lt;/h3&gt;
-
-&lt;p&gt;Suppose we are asked to place a 2x3 RED block at (1,0).  Following are the steps to go through to accomplish this.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Click on the RED brick to select RED as the color.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/select-red.png&quot; alt=&quot;Vitruvia select red as color&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;ol start=&quot;2&quot;&gt;
-  &lt;li&gt;Click on location (1,0).  Recall that this will be the &lt;em&gt;lower left corner of the brick we’re placing&lt;/em&gt;. Also remember &lt;em&gt;over and up&lt;/em&gt;, so go over 1 and up 0 to get to location (1,0).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/whereis1-0.jpg&quot; alt=&quot;Where is (1,0)&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;ol start=&quot;3&quot;&gt;
-  &lt;li&gt;We are to place a 2x3 block.  Again remembering &lt;em&gt;over and up&lt;/em&gt;, this block will be 2 &lt;em&gt;over&lt;/em&gt; (&lt;em&gt;wide&lt;/em&gt;) and 3 &lt;em&gt;up&lt;/em&gt; (&lt;em&gt;tall&lt;/em&gt;).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/2-3or3-2.jpg&quot; alt=&quot;2x3 or 3x2&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Using the brick we’ve already placed in location (1,0) as the lower left corner, we click on cells (2,0), (1,1), (2,1), (1,2), and (2,2) to complete the 2x3 red brick.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/2x3red-at1-0.png&quot; alt=&quot;2x3 red at (1,0)&quot; /&gt;
-    
-&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;Thinking ahead….what happens if we place a brick in a position that is already covered by another brick???&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html"></summary></entry></feed>

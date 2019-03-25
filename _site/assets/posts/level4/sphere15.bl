@@ -7,7 +7,7 @@ sphere  7  [RED]   (15,15,15);
 
 put (1,1,1) WHITE (15,15,15);  (* white block at center *)
 
-put (30,314,30) EMPTY (0,16,0);  (* giant empty block *)
+put (30,14,30) EMPTY (0,16,0);  (* giant empty block *)
 
 (* place axes last *)
 put (30,1,1) WHITE  (0,0,0);   (* x axis *)
