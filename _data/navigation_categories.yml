@@ -9,7 +9,14 @@
     - title: Programming 3D Artifacts
       desc: Bricklayer Level 4
       icon: star 
+
     
+    - title: Functions
+      desc: Writing User-Defined Bricklayer Functions
+      icon: pencil 
+
+# icons at bnlove.github.io/node_modules/uikit/src/images/icons/
+
     # - title: Troubleshooting
     #   desc: Answers to most common configuration issues
     #   icon: cog

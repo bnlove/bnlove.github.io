@@ -1,0 +1,12 @@
+open Level_3;
+
+build2D (20,20);
+
+put2D  (2,4)  BLUE    ( 0 , 0 );
+put2D  (3,3)  RED     ( 2 , 0 );
+put2D  (2,3)  YELLOW  ( 0 , 4 );
+put2D  (3,4)  GREEN   ( 2 , 3 );
+
+
+
+show2D ""
