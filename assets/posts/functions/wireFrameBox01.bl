@@ -1,0 +1,17 @@
+open Level_4;
+
+fun wireFrameBox (xSize,ySize,zSize,x,y,z,color) = 
+(
+    put (xSize,ySize,zSize) color (x,y,z);
+
+    put (1,1,1) RED    (x,y,z);
+    put (1,1,1) YELLOW (x+xSize-1,y+ySize-1,z+zSize-1)
+);
+
+build (100,100,100);
+
+wireFrameBox (14, 5, 10, 0, 0, 0, BLUE);
+
+
+
+show ""

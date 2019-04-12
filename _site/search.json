@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "A function to create a wire-frame box",
+      "category" : "",
+      "tags"     : "level4,, functions",
+      "url"      : "/wire-frame-box/",
+      "date"     : "2019-04-12 00:00:00 -0500"
+    } ,
+  
+    {
       "title"    : "Getting Started with Functions",
       "category" : "",
       "tags"     : "functions",

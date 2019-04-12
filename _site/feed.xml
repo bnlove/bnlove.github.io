@@ -1,4 +1,187 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-03-25T11:27:25-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Getting Started with Functions</title><link href="http://localhost:4000/intro-to-functions/" rel="alternate" type="text/html" title="Getting Started with Functions" /><published>2019-03-25T00:00:00-05:00</published><updated>2019-03-25T00:00:00-05:00</updated><id>http://localhost:4000/intro-to-functions</id><content type="html" xml:base="http://localhost:4000/intro-to-functions/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-04-12T15:51:36-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">A function to create a wire-frame box</title><link href="http://localhost:4000/wire-frame-box/" rel="alternate" type="text/html" title="A function to create a wire-frame box" /><published>2019-04-12T00:00:00-05:00</published><updated>2019-04-12T00:00:00-05:00</updated><id>http://localhost:4000/wire-frame-box</id><content type="html" xml:base="http://localhost:4000/wire-frame-box/">&lt;h4 class=&quot;notoc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#topics-on-this-page&quot; id=&quot;markdown-toc-topics-on-this-page&quot;&gt;Topics on this page&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#wire-frame-box-function&quot; id=&quot;markdown-toc-wire-frame-box-function&quot;&gt;Wire-frame box function&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#step-1-make-solid-box&quot; id=&quot;markdown-toc-step-1-make-solid-box&quot;&gt;Step 1: make solid box&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#step-2-empty-box-from-front-to-back&quot; id=&quot;markdown-toc-step-2-empty-box-from-front-to-back&quot;&gt;Step 2: empty box from front to back&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#step-3-empty-box-from-left-to-right&quot; id=&quot;markdown-toc-step-3-empty-box-from-left-to-right&quot;&gt;Step 3: empty box from left to right&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#step-4-empty-box-from-bottom-to-top&quot; id=&quot;markdown-toc-step-4-empty-box-from-bottom-to-top&quot;&gt;Step 4: empty box from bottom to top&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#patterns-and-symmetry-in-the-put-calls&quot; id=&quot;markdown-toc-patterns-and-symmetry-in-the-put-calls&quot;&gt;Patterns and symmetry in the &lt;em&gt;put&lt;/em&gt; calls&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this post we’ll create a function for creating a wire-frame box like this one.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/wireFrameBox08.png&quot; alt=&quot;Wire-frame box&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Where you see this icon,&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl icon&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;click on it to download the associated bricklayer program.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;wire-frame-box-function&quot;&gt;Wire-frame box function&lt;/h3&gt;
+
+&lt;p&gt;Our function will include the following parameters to control the size of the box (&lt;em&gt;xSize&lt;/em&gt;,&lt;em&gt;ySize&lt;/em&gt;,&lt;em&gt;zSize&lt;/em&gt;), the color of the box (&lt;em&gt;color&lt;/em&gt;), and the location of the box (&lt;em&gt;x&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;z&lt;/em&gt;).  To create our wire-frame box, we will first create a solid box, then use &lt;em&gt;EMPTY&lt;/em&gt; blocks to hollow out what we don’t want to keep.  Our progression will be as shown in the following figure.  The red and yellow blocks are added to provide reference points.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/wireFrameBox07.png&quot; alt=&quot;Wire-frame box sequence&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Only four &lt;em&gt;put&lt;/em&gt; function calls are needed to create a wire-frame box.  The general form of the function is as follows:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun wireFrameBox (xSize,ySize,zSize,x,y,z,color) = 
+(
+(*
+    put ...  &amp;lt;--- create solid box 
+    put ...  &amp;lt;--- empty box from front to back 
+    put ...  &amp;lt;--- empty box from left to right 
+    put ...  &amp;lt;--- empty box vertically
+*)
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The following code to place the red and yellow bricks for reference will also be included in the function, but will not be displayed henceforth in order to not detract from the main four &lt;em&gt;put&lt;/em&gt; calls.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(* Place red and yellow bricks for reference *)
+    put (1,1,1) RED    (x,y,z);
+    put (1,1,1) YELLOW (x+xSize-1,y+ySize-1,z+zSize-1)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;step-1-make-solid-box&quot;&gt;Step 1: make solid box&lt;/h4&gt;
+
+&lt;p&gt;Creating the initial solid box is the easiest step since we are given all the parameters we need for the corresponding &lt;em&gt;put&lt;/em&gt; function call. 
+&lt;a href=&quot; http://localhost:4000/assets/posts/functions/wireFrameBox01.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun wireFrameBox (xSize,ySize,zSize,x,y,z,color) = 
+(
+    put (xSize,ySize,zSize) color (x,y,z);
+(*
+    put ...  &amp;lt;--- empty box from front to back 
+    put ...  &amp;lt;--- empty box from left to right 
+    put ...  &amp;lt;--- empty box vertically
+*)
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The function call&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wireFrameBox (14, 5, 10, 0, 0, 0, BLUE);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;produces the following artifact.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/wireFrameBox01.png&quot; alt=&quot;Solid block&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;step-2-empty-box-from-front-to-back&quot;&gt;Step 2: empty box from front to back&lt;/h4&gt;
+
+&lt;p&gt;In this step we will determine the dimensions and location of the &lt;em&gt;put EMPTY&lt;/em&gt; call we need in order to empty the box from front to back.  Consider the figure below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/wireFrameBox03.jpg&quot; alt=&quot;Empty front to back&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The green rectangle marks the area  of the box that we want to remove all the way from front to back.  Since we want to leave the left and right sides of the box, the &lt;em&gt;x-dimension&lt;/em&gt; of the section to remove is &lt;em&gt;xSize-2&lt;/em&gt;.  Similarly, since we want to leave the top and bottom of the box, the &lt;em&gt;y-dimension&lt;/em&gt; of the section to remove is &lt;em&gt;ySize-2&lt;/em&gt;. And finally, since we want to remove this section from the front of the box to the back, the &lt;em&gt;z-dimension&lt;/em&gt; of the section to remove is the full &lt;em&gt;zSize&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;So at this point we know the code we need looks like the following:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put (xSize-2,ySize-2,zSize) EMPTY (?, ?, ?)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;We need to figure out the reference point (location) of this EMPTY block. As is shown in the figure above, the lower left corner of the green rectangle is one over and one up from the red block while the &lt;em&gt;z&lt;/em&gt; coordinate is the same as that of the red block.  Adding this to our &lt;em&gt;put&lt;/em&gt; call and inserting it into the function gives us this:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun wireFrameBox (xSize,ySize,zSize,x,y,z,color) = 
+(
+    put (xSize,ySize,zSize) color (x,y,z);
+    put (xSize-2,ySize-2,zSize) EMPTY (x+1,y+1,z)
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The function call&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wireFrameBox (14, 5, 10, 0, 0, 0, BLUE);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;produces the following artifact.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/wireFrameBox04.png&quot; alt=&quot;Emptied front to back&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;step-3-empty-box-from-left-to-right&quot;&gt;Step 3: empty box from left to right&lt;/h4&gt;
+
+&lt;p&gt;In this step we will determine the dimensions and location of the &lt;em&gt;put EMPTY&lt;/em&gt; call we need in order to empty the box from left to right.  Consider the figure below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/wireFrameBox08.jpg&quot; alt=&quot;Empty left to right&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The green rectangle marks the area  of the box that we want to remove all the way from left to right.  Since we want to leave the front and back frames of the box, the &lt;em&gt;z-dimension&lt;/em&gt; of the section to remove is &lt;em&gt;zSize-2&lt;/em&gt;.  Similarly, since we want to leave the top and bottom of the box, the &lt;em&gt;y-dimension&lt;/em&gt; of the section to remove is &lt;em&gt;ySize-2&lt;/em&gt;. And finally, since we want to remove this section from the left of the box to the right, the &lt;em&gt;x-dimension&lt;/em&gt; of the section to remove is the full &lt;em&gt;xSize&lt;/em&gt;. (Note that most of what we’re talking about removing has already been removed.   We could focus just on removing parts of the left and right sides of the box.  But that would take two &lt;em&gt;put&lt;/em&gt; calls and double the calculations that we need to do.  Therefore it’s simplest to approach it the same way we did the previous step.)&lt;/p&gt;
+
+&lt;p&gt;So at this point we know the code we need looks like the following:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put (xSize,ySize-2,zSize-2) EMPTY (?, ?, ?)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;We need to figure out the reference point (location) of this EMPTY block. As is shown in the figure above, the reference point is one back and one up from the red block while the &lt;em&gt;x&lt;/em&gt; coordinate is the same as that of the red block.  Adding this to our &lt;em&gt;put&lt;/em&gt; call and inserting it into the function gives us this:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun wireFrameBox (xSize,ySize,zSize,x,y,z,color) = 
+(
+    put (xSize,ySize,zSize) color (x,y,z);
+    put (xSize-2,ySize-2,zSize  ) EMPTY (x+1,y+1,z  )
+    put (xSize  ,ySize-2,zSize-2) EMPTY (x,  y+1,z+1)
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The function call&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wireFrameBox (14, 5, 10, 0, 0, 0, BLUE);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;produces the following artifact.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/wireFrameBox05.png&quot; alt=&quot;Emptied left to right&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;step-4-empty-box-from-bottom-to-top&quot;&gt;Step 4: empty box from bottom to top&lt;/h4&gt;
+
+&lt;p&gt;The analysis for this step is the same as the previous two. The figure below illustrates the size and location of the EMPTY block that should be placed to clear the top and bottom of the box.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/wireFrameBox10.jpg&quot; alt=&quot;Empty vertically&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The following completed wireFrameBox function is as follows. 
+&lt;a href=&quot; http://localhost:4000/assets/posts/functions/wireFrameBox04.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun wireFrameBox (xSize,ySize,zSize,x,y,z,color) = 
+(
+    put (xSize,ySize,zSize) color (x,y,z);
+    put (xSize-2,ySize-2,zSize  ) EMPTY (x+1,y+1,z  );
+    put (xSize  ,ySize-2,zSize-2) EMPTY (x,  y+1,z+1);
+    put (xSize-2,ySize  ,zSize-2) EMPTY (x+1,y,  z+1)
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The function call&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wireFrameBox (14, 5, 10, 0, 0, 0, BLUE);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;produces the following artifact.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/wireFrameBox06.png&quot; alt=&quot;Wire frame box&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;patterns-and-symmetry-in-the-put-calls&quot;&gt;Patterns and symmetry in the &lt;em&gt;put&lt;/em&gt; calls&lt;/h3&gt;
+
+&lt;p&gt;Spend a few minutes studying the final version of the function.  Pay particular attention to the patterns that you see in both the size and the locations of the EMPTY blocks.  For example, each horizontal &lt;em&gt;size&lt;/em&gt; parameter is either &lt;em&gt;xSize&lt;/em&gt; or &lt;em&gt;xSize-2&lt;/em&gt; (same for the other two &lt;em&gt;size&lt;/em&gt; parameters).  Each horizontal location coordinate is either &lt;em&gt;x&lt;/em&gt; or &lt;em&gt;x+1&lt;/em&gt; (and same for the other two location parameters).  Many times you can eliminate a little of the work in writing a function like this simply by taking note of such patterns.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="functions" /><summary type="html">Topics on this page Topics on this page</summary></entry><entry><title type="html">Getting Started with Functions</title><link href="http://localhost:4000/intro-to-functions/" rel="alternate" type="text/html" title="Getting Started with Functions" /><published>2019-03-25T00:00:00-05:00</published><updated>2019-03-25T00:00:00-05:00</updated><id>http://localhost:4000/intro-to-functions</id><content type="html" xml:base="http://localhost:4000/intro-to-functions/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#placing-the-same-artifact-in-multiple-locations&quot; id=&quot;markdown-toc-placing-the-same-artifact-in-multiple-locations&quot;&gt;Placing the same artifact in multiple locations&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -1107,109 +1290,4 @@ put2D_2x2_BLACK(1,1)
 &lt;figure&gt;
     &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/put2D.png&quot; alt=&quot;Level 1 put2D function&quot; /&gt;
     
-&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html"></summary></entry><entry><title type="html">Placing multiple blocks (Vitruvia Concept 4)</title><link href="http://localhost:4000/placing-multiple-bricks/" rel="alternate" type="text/html" title="Placing multiple blocks (Vitruvia Concept 4)" /><published>2019-01-13T00:00:00-06:00</published><updated>2019-01-13T00:00:00-06:00</updated><id>http://localhost:4000/placing-multiple-bricks</id><content type="html" xml:base="http://localhost:4000/placing-multiple-bricks/">&lt;!-- #### Topics on this page
-{:.no_toc}
-* TOC
-{:toc} --&gt;
-
-&lt;p&gt;In Vitruvia Concept 4, you are asked to place a sequence of bricks in various locations.  For example, consider these instructions:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Put a 1x1 GREEN brick at location (4,3).&lt;/li&gt;
-  &lt;li&gt;Put a 2x1 BLUE brick at location (1,0).&lt;/li&gt;
-  &lt;li&gt;Put a 4x2 YELLOW brick at location (0,3).&lt;/li&gt;
-  &lt;li&gt;Put a 1x2 RED brick at (3,1).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;For each of these brick placements, you follow the same squence of steps:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Click on the color you want.&lt;/li&gt;
-  &lt;li&gt;Click on the location given (&lt;em&gt;over&lt;/em&gt; and &lt;em&gt;up&lt;/em&gt;).&lt;/li&gt;
-  &lt;li&gt;Click on other cells to create the right-sized brick, remembering that the block you place in step 2 is the lower left corner of the whole brick.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Let’s go through the sequence.&lt;/p&gt;
-
-&lt;h4 id=&quot;put-a-1x1-green-brick-at-location-43&quot;&gt;Put a 1x1 GREEN brick at location (4,3).&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Click on GREEN.&lt;/li&gt;
-  &lt;li&gt;Click on (4,3) — (over 4 and up 3)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/concept4-01.png&quot; alt=&quot;Vitruvia Concept 4-01&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;ol start=&quot;3&quot;&gt;
-  &lt;li&gt;Since we’re only placing a 1x1 brick, we’re done with this one.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4 id=&quot;put-a-2x1-blue-brick-at-location-10&quot;&gt;Put a 2x1 BLUE brick at location (1,0).&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Click on BLUE.&lt;/li&gt;
-  &lt;li&gt;Click on (1,0)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/concept4-02.png&quot; alt=&quot;Vitruvia Concept 4-02&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;ol start=&quot;3&quot;&gt;
-  &lt;li&gt;We need to place a 2x1 brick, so we have more work to do.  First, let’s remember what a 2x1 brick looks like.  Remember  (&lt;em&gt;over&lt;/em&gt; and &lt;em&gt;up&lt;/em&gt;), so 2 &lt;em&gt;over/wide&lt;/em&gt; and 1 &lt;em&gt;up/tall&lt;/em&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/concept4-03.jpg&quot; alt=&quot;Vitruvia Concept 4-03&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;So we click in cell (2,0) to create the 2x1 blue brick with lower left corner at (1,0).&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/concept4-04.png&quot; alt=&quot;Vitruvia Concept 4-04&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;h4 id=&quot;put-a-4x2-yellow-brick-at-location-03&quot;&gt;Put a 4x2 YELLOW brick at location (0,3).&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Click on YELLOW.&lt;/li&gt;
-  &lt;li&gt;Click on (0,3).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/concept4-05.png&quot; alt=&quot;Vitruvia Concept 4-05&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;ol start=&quot;3&quot;&gt;
-  &lt;li&gt;This time we’re placing a 4x2 brick, so we have more to do. A 4x2 brick is 4 &lt;em&gt;wide&lt;/em&gt; and 2 &lt;em&gt;tall&lt;/em&gt;, so we click on cells (1,3), (2,3), (3,3), (0,4), (1,4), (2,4), and (3,4) to create the 4x2 brick.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/concept4-06.png&quot; alt=&quot;Vitruvia Concept 4-06&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;h4 id=&quot;put-a-1x2-red-brick-at-31&quot;&gt;Put a 1x2 RED brick at (3,1).&lt;/h4&gt;
-&lt;ol&gt;
-  &lt;li&gt;Click on RED.&lt;/li&gt;
-  &lt;li&gt;Click on (3,1).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/concept4-07.png&quot; alt=&quot;Vitruvia Concept 4-07&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;ol start=&quot;3&quot;&gt;
-  &lt;li&gt;This time we’re placing a 1x2 brick which is 1 &lt;em&gt;wide&lt;/em&gt; and 2 &lt;em&gt;tall&lt;/em&gt;, so we click on cell (3,2) to create the 1x2 brick.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/concept4-08.png&quot; alt=&quot;Vitruvia Concept 4-08&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Thinking ahead….what happens if we place a brick in a position that is already covered by another brick???&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html"></summary></entry></feed>
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html"></summary></entry></feed>
