@@ -1,0 +1,9 @@
+open Level_3;
+
+build2D (50,50);
+
+put2D (10,10) BLUE (0,0);
+lineXZ (0,0) (9,9) YELLOW;
+lineXZ (0,9) (9,0) YELLOW;
+
+show2D ""

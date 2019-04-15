@@ -1,0 +1,15 @@
+open Level_3;
+
+fun crissCrossSquare (xLoc,zLoc,squareColor,lineColor) = 
+(
+    put2D (10,10) squareColor (0+xLoc,0+zLoc);
+    lineXZ (0+xLoc,0+zLoc) (9+xLoc,9+zLoc) lineColor;
+    lineXZ (0+xLoc,9+zLoc) (9+xLoc,0+zLoc) lineColor
+);
+
+build2D (50,50);
+
+crissCrossSquare (0,0,BLUE,YELLOW);
+crissCrossSquare (13,5,PINK,VIOLET);
+
+show2D ""
