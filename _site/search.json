@@ -5,7 +5,7 @@
       "category" : "",
       "tags"     : "functions",
       "url"      : "/intro-to-functions/",
-      "date"     : "2019-03-25 00:00:00 -0500"
+      "date"     : "2019-03-25 00:00:00 -0400"
     } ,
   
     {
@@ -13,7 +13,7 @@
       "category" : "",
       "tags"     : "level4,, 3D,, cylinder,, ring,, ringX,, ringY,, ringZ,, level, 4,, level_4,, hollowCylinder",
       "url"      : "/rings-cylinders/",
-      "date"     : "2019-03-11 00:00:00 -0500"
+      "date"     : "2019-03-11 00:00:00 -0400"
     } ,
   
     {
@@ -21,7 +21,7 @@
       "category" : "",
       "tags"     : "level4,, 3D,, sphere",
       "url"      : "/spheres/",
-      "date"     : "2019-03-01 00:00:00 -0600"
+      "date"     : "2019-03-01 00:00:00 -0500"
     } ,
   
     {
@@ -29,7 +29,7 @@
       "category" : "",
       "tags"     : "level4,, 3D,, sphere",
       "url"      : "/slicing-spheres/",
-      "date"     : "2019-03-01 00:00:00 -0600"
+      "date"     : "2019-03-01 00:00:00 -0500"
     } ,
   
     {
@@ -37,7 +37,7 @@
       "category" : "",
       "tags"     : "level4,, 3D",
       "url"      : "/getting-started-with-level4/",
-      "date"     : "2019-02-21 00:00:00 -0600"
+      "date"     : "2019-02-21 00:00:00 -0500"
     } ,
   
     {
@@ -45,7 +45,7 @@
       "category" : "",
       "tags"     : "featured",
       "url"      : "/getting-started-with-bricklayer/",
-      "date"     : "2019-02-21 00:00:00 -0600"
+      "date"     : "2019-02-21 00:00:00 -0500"
     } ,
   
     {
@@ -53,7 +53,7 @@
       "category" : "",
       "tags"     : "featured",
       "url"      : "/getting-started-with-bricklayer-lite-level-1/",
-      "date"     : "2019-01-26 00:00:00 -0600"
+      "date"     : "2019-01-26 00:00:00 -0500"
     } ,
   
     {
@@ -61,7 +61,7 @@
       "category" : "",
       "tags"     : "featured",
       "url"      : "/overwriting-blocks/",
-      "date"     : "2019-01-17 00:00:00 -0600"
+      "date"     : "2019-01-17 00:00:00 -0500"
     } ,
   
     {
@@ -69,7 +69,7 @@
       "category" : "",
       "tags"     : "featured",
       "url"      : "/intro-to-level1-functions/",
-      "date"     : "2019-01-14 00:00:00 -0600"
+      "date"     : "2019-01-14 00:00:00 -0500"
     } ,
   
     {
@@ -77,7 +77,7 @@
       "category" : "",
       "tags"     : "featured",
       "url"      : "/placing-multiple-bricks/",
-      "date"     : "2019-01-13 00:00:00 -0600"
+      "date"     : "2019-01-13 00:00:00 -0500"
     } ,
   
     {
@@ -85,7 +85,7 @@
       "category" : "",
       "tags"     : "featured, counting",
       "url"      : "/counting-list-items/",
-      "date"     : "2019-01-13 00:00:00 -0600"
+      "date"     : "2019-01-13 00:00:00 -0500"
     } ,
   
     {
@@ -93,7 +93,7 @@
       "category" : "",
       "tags"     : "featured",
       "url"      : "/placing-bigger-blocks/",
-      "date"     : "2019-01-11 00:00:00 -0600"
+      "date"     : "2019-01-11 00:00:00 -0500"
     } ,
   
     {
@@ -101,7 +101,7 @@
       "category" : "",
       "tags"     : "featured",
       "url"      : "/vitruvia-tests/",
-      "date"     : "2019-01-09 00:00:00 -0600"
+      "date"     : "2019-01-09 00:00:00 -0500"
     } ,
   
     {
@@ -109,7 +109,7 @@
       "category" : "",
       "tags"     : "featured",
       "url"      : "/getting-started-with-vitruvia/",
-      "date"     : "2018-12-29 00:00:00 -0600"
+      "date"     : "2018-12-29 00:00:00 -0500"
     } ,
   
     {
@@ -117,7 +117,7 @@
       "category" : "",
       "tags"     : "featured",
       "url"      : "/getting-started-with-1120/",
-      "date"     : "2018-12-29 00:00:00 -0600"
+      "date"     : "2018-12-29 00:00:00 -0500"
     } 
   
 ]
