@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>User-Defined Function Example | MATH 1120</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="User-Defined Function Example" />
+<meta name="author" content="Betty Love" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Topics on this page Topics on this page" />
+<meta property="og:description" content="Topics on this page Topics on this page" />
+<link rel="canonical" href="http://localhost:4000/function-example-01/" />
+<meta property="og:url" content="http://localhost:4000/function-example-01/" />
+<meta property="og:site_name" content="MATH 1120" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-04-14T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"Topics on this page Topics on this page","author":{"@type":"Person","name":"Betty Love"},"@type":"BlogPosting","url":"http://localhost:4000/function-example-01/","headline":"User-Defined Function Example","dateModified":"2019-04-14T00:00:00-05:00","datePublished":"2019-04-14T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/function-example-01/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta property="og:image" content="http://localhost:4000/assets/posts/"/>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" >
+  <link rel="alternate" type="application/rss+xml" title="MATH 1120" href="/feed.xml">
+  <script src="/assets/js/main.js"></script>
+  
+</head>
+
+    <body>
+
+    
+        <header class="uk-background-secondary">
+    <div data-uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky" class="uk-sticky uk-sticky-fixed" style="position: fixed; top: 0px; width: 1904px;">
+        <nav class="uk-navbar-container">
+            <div class="uk-container">
+    <div data-uk-navbar>
+        <div class="uk-navbar-left">
+
+          <a class="uk-navbar-item uk-logo" href="/">
+
+            
+              
+                <img class="uk-logo-inverse" src="http://localhost:4000/assets/posts/logo-light.svg" alt="MATH 1120">
+              
+              
+                <img src="http://localhost:4000/assets/posts/logo-dark.svg" alt="MATH 1120">
+              
+            
+
+          </a>
+
+        </div>
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@m">
+                
+                    
+                    
+                    
+                        <li><a href="/" >Help</a></li>
+                    
+                
+            </ul>
+
+            
+            <div>
+                <a class="uk-navbar-toggle" data-uk-search-icon href="#"></a>
+                <div class="uk-drop uk-background-default uk-border-rounded" data-uk-drop="mode: click; pos: left-center; offset: 0">
+                    <form class="uk-search uk-search-navbar uk-width-1-1" onsubmit="return false;">
+                        <input id="navbar-search" class="uk-search-input" type="search" placeholder="Search..." autofocus>
+                    </form>
+                    <ul id="navbar-search-results" class="uk-position-absolute uk-width-1-1 uk-list"></ul>
+                </div>
+            </div>
+            <script>
+            SimpleJekyllSearch({
+                searchInput: document.getElementById('navbar-search'),
+                resultsContainer: document.getElementById('navbar-search-results'),
+                noResultsText: '<li>No results found</li>',
+                searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+                json: '/search.json'
+            });
+            </script>
+            
+
+            <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-navbar-toggle-icon data-uk-toggle></a>
+
+        </div>
+    </div>
+</div>
+
+        </nav>
+    </div>
+</header>
+
+    
+
+    <main aria-label="Content">
+    <div class="uk-section">
+    <div class="uk-container uk-container-small">
+        <article class="uk-article">
+
+            <h1 class="uk-article-title">User-Defined Function Example</h1>
+
+            <div class="share-side uk-visible@m" data-uk-scrollspy="cls: uk-animation-fade; target: .share; repeat: true">
+                <div class="share" data-uk-sticky="offset: 150; bottom: .uk-article-content;"><div class="share">
+    <a href="https://twitter.com/intent/tweet?text=User-Defined Function Example&url=http://localhost:4000/function-example-01/&via=bettynlove&related=bettynlove" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span class="twitter"><svg class="svgIcon-use" width="40" height="40" viewBox="0 0 29 29"><path d="M21.967 11.8c.018 5.93-4.607 11.18-11.177 11.18-2.172 0-4.25-.62-6.047-1.76l-.268.422-.038.5.186.013.168.012c.3.02.44.032.6.046 2.06-.026 3.95-.686 5.49-1.86l1.12-.85-1.4-.048c-1.57-.055-2.92-1.08-3.36-2.51l-.48.146-.05.5c.22.03.48.05.75.08.48-.02.87-.07 1.25-.15l2.33-.49-2.32-.49c-1.68-.35-2.91-1.83-2.91-3.55 0-.05 0-.01-.01.03l-.49-.1-.25.44c.63.36 1.35.57 2.07.58l1.7.04L7.4 13c-.978-.662-1.59-1.79-1.618-3.047a4.08 4.08 0 0 1 .524-1.8l-.825.07a12.188 12.188 0 0 0 8.81 4.515l.59.033-.06-.59v-.02c-.05-.43-.06-.63-.06-.87a3.617 3.617 0 0 1 6.27-2.45l.2.21.28-.06c1.01-.22 1.94-.59 2.73-1.09l-.75-.56c-.1.36-.04.89.12 1.36.23.68.58 1.13 1.17.85l-.21-.45-.42-.27c-.52.8-1.17 1.48-1.92 2L22 11l.016.28c.013.2.014.35 0 .52v.04zm.998.038c.018-.22.017-.417 0-.66l-.498.034.284.41a8.183 8.183 0 0 0 2.2-2.267l.97-1.48-1.6.755c.17-.08.3-.02.34.03a.914.914 0 0 1-.13-.292c-.1-.297-.13-.64-.1-.766l.36-1.254-1.1.695c-.69.438-1.51.764-2.41.963l.48.15a4.574 4.574 0 0 0-3.38-1.484 4.616 4.616 0 0 0-4.61 4.613c0 .29.02.51.08.984l.01.02.5-.06.03-.5c-3.17-.18-6.1-1.7-8.08-4.15l-.48-.56-.36.64c-.39.69-.62 1.48-.65 2.28.04 1.61.81 3.04 2.06 3.88l.3-.92c-.55-.02-1.11-.17-1.6-.45l-.59-.34-.14.67c-.02.08-.02.16 0 .24-.01 2.12 1.55 4.01 3.69 4.46l.1-.49-.1-.49c-.33.07-.67.12-1.03.14-.18-.02-.43-.05-.64-.07l-.76-.09.23.73c.57 1.84 2.29 3.14 4.28 3.21l-.28-.89a8.252 8.252 0 0 1-4.85 1.66c-.12-.01-.26-.02-.56-.05l-.17-.01-.18-.01L2.53 21l1.694 1.07a12.233 12.233 0 0 0 6.58 1.917c7.156 0 12.2-5.73 12.18-12.18l-.002.04z"></path></svg>
+</span></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Ffunction-example-01%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span class="facebook"><svg class="svgIcon-use" width="40" height="40" viewBox="0 0 29 29"><path d="M16.39 23.61v-5.808h1.846a.55.55 0 0 0 .546-.48l.36-2.797a.551.551 0 0 0-.547-.62H16.39V12.67c0-.67.12-.813.828-.813h1.474a.55.55 0 0 0 .55-.55V8.803a.55.55 0 0 0-.477-.545c-.436-.06-1.36-.116-2.22-.116-2.5 0-4.13 1.62-4.13 4.248v1.513H10.56a.551.551 0 0 0-.55.55v2.797c0 .304.248.55.55.55h1.855v5.76c-4.172-.96-7.215-4.7-7.215-9.1 0-5.17 4.17-9.36 9.31-9.36 5.14 0 9.31 4.19 9.31 9.36 0 4.48-3.155 8.27-7.43 9.15M14.51 4C8.76 4 4.1 8.684 4.1 14.46c0 5.162 3.75 9.523 8.778 10.32a.55.55 0 0 0 .637-.543v-6.985a.551.551 0 0 0-.55-.55H11.11v-1.697h1.855a.55.55 0 0 0 .55-.55v-2.063c0-2.02 1.136-3.148 3.03-3.148.567 0 1.156.027 1.597.06v1.453h-.924c-1.363 0-1.93.675-1.93 1.912v1.78c0 .3.247.55.55.55h2.132l-.218 1.69H15.84c-.305 0-.55.24-.55.55v7.02c0 .33.293.59.623.54 5.135-.7 9.007-5.11 9.007-10.36C24.92 8.68 20.26 4 14.51 4"></path></svg>
+</span></a>
+</div>
+</div>
+            </div>
+
+            <div class="uk-article-content">
+                <h4 class="notoc" id="topics-on-this-page">Topics on this page</h4>
+<ul id="markdown-toc">
+  <li><a href="#topics-on-this-page" id="markdown-toc-topics-on-this-page">Topics on this page</a></li>
+  <li><a href="#step-1---code-to-create-one-artifact-at-00" id="markdown-toc-step-1---code-to-create-one-artifact-at-00">Step 1 - code to create one artifact at (0,0)</a></li>
+  <li><a href="#step-2---code-to-create-one-artifact-at-an-arbitrary-location" id="markdown-toc-step-2---code-to-create-one-artifact-at-an-arbitrary-location">Step 2 - code to create one artifact at an arbitrary location</a></li>
+  <li><a href="#step-3---add-parameters-for-colors" id="markdown-toc-step-3---add-parameters-for-colors">Step 3 - add parameters for colors</a></li>
+  <li><a href="#step-4---add-parameters-for-size" id="markdown-toc-step-4---add-parameters-for-size">Step 4 - add parameters for size</a></li>
+</ul>
+
+<hr />
+
+<p>In this post we’ll write a function for creating an artifact like the one below.</p>
+
+<figure>
+    <img src="http://localhost:4000/assets/posts/functions/crissCrossSquare01.png" alt="Criss-cross square " />
+    
+</figure>
+
+<p>It will be based on parameters to define the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- location
+- size 
+- colors
+</code></pre></div></div>
+
+<h3 id="step-1---code-to-create-one-artifact-at-00">Step 1 - code to create one artifact at (0,0)</h3>
+
+<p>To make this step easier, let’s start with the prototype created in the bricklayer.org Grid app:</p>
+
+<figure>
+    <img src="http://localhost:4000/assets/posts/functions/crissCrossSquare02.png" alt="Criss-cross square on grid" />
+    
+</figure>
+
+<p>The following code will create this artifact.
+<a href=" http://localhost:4000/assets/posts/functions/crissCrossSquare01.bl ">
+<img src="http://localhost:4000/assets/posts/dot-bl.png" alt=".bl file" />
+</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>put2D (10,10) BLUE (0,0);
+lineXZ (0,0) (9,9) YELLOW;
+lineXZ (0,9) (9,0) YELLOW;
+</code></pre></div></div>
+
+<h3 id="step-2---code-to-create-one-artifact-at-an-arbitrary-location">Step 2 - code to create one artifact at an arbitrary location</h3>
+
+<p>Let’s start by writing the code to create the artifact at (6,3).  The animation below illustrates how the coordinates of the artifact change as it moves from (0,0) to (6,3).</p>
+
+<figure>
+    <img src="http://localhost:4000/assets/posts/functions/crissCrossSquare04.gif" alt="Criss-cross square animation" />
+    
+</figure>
+
+<p>Consider what is happening to the <em>x-coordinates</em> of each of the blocks in the artifact as it is moved.  For example, the lower-left corner of the square starts at (0,0) and moves to the right until it gets to (6,0).  Along the way, it passed through (1,0), (2,0), (3,0), etc.  And what happens to the <em>z-coordinates</em>?  They all stay the same until the artifact starts to move upward.  The lower-left corner goes from (6,0) to (6,1), (6,2), and then to (6,3).</p>
+
+<p>Let’s look at a different block, say, the upper right one that starts at (9,9). As the artifact moves the right, this block goes to (10,9), (11,9), (12,9), etc until it gets to (15,9).  Then it starts to move upward and goes to (15,10), (15,11), and finally (15,12).</p>
+
+<p>By moving the artifact from (0,0), to (6,3), we are <em>translating</em> each block to the right by 6 and up by 3.  This means that if the coordinates of a block in the initial artifact were <em>(a,b)</em>, in the new position, that block will be at <em>(a+6,b+3)</em>.  Some examples:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- (0,0) moved to (0+6,0+3) = (6,3)
+- (9,9) moved to (9_6,9+3) = (15,12)
+- (2,5) moved to (2+6,5+3) = (8,8)
+</code></pre></div></div>
+
+<p>If I want to move the artifact to an arbitrary location, say, (xLoc,zLoc), I need to add <em>xLoc</em> to the first coordinate of each block and <em>zLoc</em> to the second coordinate of each block.  Examples:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- (0,0) moves to (0+xLoc,0+zLoc)
+- (9,9) moves to (9+xLoc,9+zLoc)
+- (2,5) moves to (2+xLoc,5+zLoc)
+</code></pre></div></div>
+
+<p>Therefore my function to place a copy of the artifact at (xLoc,zLoc) would be as follows.
+<a href=" http://localhost:4000/assets/posts/functions/crissCrossSquare02.bl ">
+<img src="http://localhost:4000/assets/posts/dot-bl.png" alt=".bl file" />
+</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fun crissCrossSquare (xLoc,zLoc) = 
+(
+    put2D (10,10) BLUE (0+xLoc,0+zLoc);
+    lineXZ (0+xLoc,0+zLoc) (9+xLoc,9+zLoc) YELLOW;
+    lineXZ (0+xLoc,9+zLoc) (9+xLoc,0+zLoc) YELLOW
+);
+</code></pre></div></div>
+<p>To place a copy at (6,3), use the function call:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crissCrossSquare (6,3);
+</code></pre></div></div>
+<p>The output is as follows (red brick placed at (0,0) for reference)</p>
+
+<figure>
+    <img src="http://localhost:4000/assets/posts/functions/crissCrossSquare07.png" alt="Criss-cross square at (6,3)" />
+    
+</figure>
+
+<h3 id="step-3---add-parameters-for-colors">Step 3 - add parameters for colors</h3>
+
+<p>Now suppose we’d like to create the criss-cross square artifact in different colors.  We need to specify a color for the square and a color for the lines.  Let’s call the color for the square <em>squareColor</em> and the color for the lines <em>lineColor</em>.  We’ll add these parameters to our function and substitute <em>squareColor</em> for BLUE and <em>lineColor</em> for YELLOW.  Now our function is as follows.
+<a href=" http://localhost:4000/assets/posts/functions/crissCrossSquare03.bl ">
+<img src="http://localhost:4000/assets/posts/dot-bl.png" alt=".bl file" />
+</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fun crissCrossSquare (xLoc,zLoc,squareColor,lineColor) = 
+(
+    put2D (10,10) squareColor (0+xLoc,0+zLoc);
+    lineXZ (0+xLoc,0+zLoc) (9+xLoc,9+zLoc) lineColor;
+    lineXZ (0+xLoc,9+zLoc) (9+xLoc,0+zLoc) lineColor
+);
+</code></pre></div></div>
+<p>The following code places a blue and yellow copy at (0,0) and a pink and violet copy at (13,5)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crissCrossSquare (0,0,BLUE,YELLOW);
+crissCrossSquare (13,5,PINK,VIOLET);
+</code></pre></div></div>
+
+<figure>
+    <img src="http://localhost:4000/assets/posts/functions/crissCrossSquare09.png" alt="Criss-cross squares" />
+    
+</figure>
+
+<h3 id="step-4---add-parameters-for-size">Step 4 - add parameters for size</h3>
+
+<p>Now consider how we could modify our function so that we can create a copy of the artifact of an arbitrary size.  First let’s think about what that means.  Let’s go back to the initial code to create a criss-cross square at (0,0) and examine which parts of it relate to size. In the figure below, we see that clearly the size of the square depends on the size of the artifact.  Does anything else?</p>
+
+<figure>
+    <img src="http://localhost:4000/assets/posts/functions/crissCrossSquare11.jpg" alt="Criss-cross square code" />
+    
+</figure>
+
+<p>Yes!  The endpoints of the two lines are the corners of the square, so they will depend on the size of the square.
+For a square of size 10 placed at (0,0), the endpoints of the two lines are:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  - (0,0) and (9,9)
+  - (0,9) and (9,0)
+</code></pre></div></div>
+
+<p>How can we represent (9,9), (0,9) and (9,0) in terms of the size of the square (10 in this case)? How about the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  - (0,0) and (10-1,10-1)
+  - (0,10-1) and (10-1,0)
+</code></pre></div></div>
+
+<p>So in general, for a square of size <em>squareSize</em> placed at (0,0), the endpoints of the two lines would be:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  - (0,0)            and (squareSize-1,squareSize-1)
+  - (0,squareSize-1) and (squareSize-1,0)
+</code></pre></div></div>
+
+<p>Now we just need to <em>translate</em> those coordinates to (<em>xLoc</em>,<em>zLoc</em>) as we did in Step 2 above.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  - (  0         ,   0        ) moves to (     0       + xLoc,      0       + zLoc)
+  - (squareSize-1,squareSize-1) moves to (squareSize-1 + xLoc, squareSize-1 + zLoc)
+  - (  0         ,squareSize-1) moves to (     0       + xLoc, squareSize-1 + zLoc)
+  - (squareSize-1,   0        ) moves to (squareSize-1 + xLoc,      0       + zLoc)
+</code></pre></div></div>
+
+<p>Incorporating this into our function with a new parameter <em>squareSize</em> yields the following.
+<a href=" http://localhost:4000/assets/posts/functions/crissCrossSquare03.bl ">
+<img src="http://localhost:4000/assets/posts/dot-bl.png" alt=".bl file" />
+</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fun crissCrossSquare (xLoc,zLoc,squareColor,lineColor,squareSize) = 
+(
+    put2D (squareSize,squareSize) squareColor (0+xLoc,0+zLoc);
+    lineXZ ( 0 + xLoc,      0       + zLoc) (squareSize-1 + xLoc, squareSize-1 + zLoc) lineColor;
+    lineXZ ( 0 + xLoc, squareSize-1 + zLoc) (squareSize-1 + xLoc,      0       + zLoc) lineColor
+);
+</code></pre></div></div>
+
+<p>The following code places a blue and yellow copy of size 10 at (0,0), a pink and violet copy of size 15 at (13,5), and a red and white copy of size 7 at (2,12).</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crissCrossSquare ( 0,  0, BLUE, YELLOW, 10);
+crissCrossSquare (13,  5, PINK, VIOLET, 15);
+crissCrossSquare ( 2, 12, RED , WHITE ,  7);
+</code></pre></div></div>
+
+<figure>
+    <img src="http://localhost:4000/assets/posts/functions/crissCrossSquare13.png" alt="Criss-cross squares" />
+    
+</figure>
+
+
+                <div class="share uk-hidden@m uk-text-center uk-margin-large-top"><div class="share">
+    <a href="https://twitter.com/intent/tweet?text=User-Defined Function Example&url=http://localhost:4000/function-example-01/&via=bettynlove&related=bettynlove" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span class="twitter"><svg class="svgIcon-use" width="40" height="40" viewBox="0 0 29 29"><path d="M21.967 11.8c.018 5.93-4.607 11.18-11.177 11.18-2.172 0-4.25-.62-6.047-1.76l-.268.422-.038.5.186.013.168.012c.3.02.44.032.6.046 2.06-.026 3.95-.686 5.49-1.86l1.12-.85-1.4-.048c-1.57-.055-2.92-1.08-3.36-2.51l-.48.146-.05.5c.22.03.48.05.75.08.48-.02.87-.07 1.25-.15l2.33-.49-2.32-.49c-1.68-.35-2.91-1.83-2.91-3.55 0-.05 0-.01-.01.03l-.49-.1-.25.44c.63.36 1.35.57 2.07.58l1.7.04L7.4 13c-.978-.662-1.59-1.79-1.618-3.047a4.08 4.08 0 0 1 .524-1.8l-.825.07a12.188 12.188 0 0 0 8.81 4.515l.59.033-.06-.59v-.02c-.05-.43-.06-.63-.06-.87a3.617 3.617 0 0 1 6.27-2.45l.2.21.28-.06c1.01-.22 1.94-.59 2.73-1.09l-.75-.56c-.1.36-.04.89.12 1.36.23.68.58 1.13 1.17.85l-.21-.45-.42-.27c-.52.8-1.17 1.48-1.92 2L22 11l.016.28c.013.2.014.35 0 .52v.04zm.998.038c.018-.22.017-.417 0-.66l-.498.034.284.41a8.183 8.183 0 0 0 2.2-2.267l.97-1.48-1.6.755c.17-.08.3-.02.34.03a.914.914 0 0 1-.13-.292c-.1-.297-.13-.64-.1-.766l.36-1.254-1.1.695c-.69.438-1.51.764-2.41.963l.48.15a4.574 4.574 0 0 0-3.38-1.484 4.616 4.616 0 0 0-4.61 4.613c0 .29.02.51.08.984l.01.02.5-.06.03-.5c-3.17-.18-6.1-1.7-8.08-4.15l-.48-.56-.36.64c-.39.69-.62 1.48-.65 2.28.04 1.61.81 3.04 2.06 3.88l.3-.92c-.55-.02-1.11-.17-1.6-.45l-.59-.34-.14.67c-.02.08-.02.16 0 .24-.01 2.12 1.55 4.01 3.69 4.46l.1-.49-.1-.49c-.33.07-.67.12-1.03.14-.18-.02-.43-.05-.64-.07l-.76-.09.23.73c.57 1.84 2.29 3.14 4.28 3.21l-.28-.89a8.252 8.252 0 0 1-4.85 1.66c-.12-.01-.26-.02-.56-.05l-.17-.01-.18-.01L2.53 21l1.694 1.07a12.233 12.233 0 0 0 6.58 1.917c7.156 0 12.2-5.73 12.18-12.18l-.002.04z"></path></svg>
+</span></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Ffunction-example-01%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span class="facebook"><svg class="svgIcon-use" width="40" height="40" viewBox="0 0 29 29"><path d="M16.39 23.61v-5.808h1.846a.55.55 0 0 0 .546-.48l.36-2.797a.551.551 0 0 0-.547-.62H16.39V12.67c0-.67.12-.813.828-.813h1.474a.55.55 0 0 0 .55-.55V8.803a.55.55 0 0 0-.477-.545c-.436-.06-1.36-.116-2.22-.116-2.5 0-4.13 1.62-4.13 4.248v1.513H10.56a.551.551 0 0 0-.55.55v2.797c0 .304.248.55.55.55h1.855v5.76c-4.172-.96-7.215-4.7-7.215-9.1 0-5.17 4.17-9.36 9.31-9.36 5.14 0 9.31 4.19 9.31 9.36 0 4.48-3.155 8.27-7.43 9.15M14.51 4C8.76 4 4.1 8.684 4.1 14.46c0 5.162 3.75 9.523 8.778 10.32a.55.55 0 0 0 .637-.543v-6.985a.551.551 0 0 0-.55-.55H11.11v-1.697h1.855a.55.55 0 0 0 .55-.55v-2.063c0-2.02 1.136-3.148 3.03-3.148.567 0 1.156.027 1.597.06v1.453h-.924c-1.363 0-1.93.675-1.93 1.912v1.78c0 .3.247.55.55.55h2.132l-.218 1.69H15.84c-.305 0-.55.24-.55.55v7.02c0 .33.293.59.623.54 5.135-.7 9.007-5.11 9.007-10.36C24.92 8.68 20.26 4 14.51 4"></path></svg>
+</span></a>
+</div>
+</div>
+            </div>
+
+
+            <p class="uk-article-meta">
+              <time datetime="2019-04-14T00:00:00-05:00" itemprop="datePublished">
+                
+                Apr 14, 2019
+              </time>
+              
+              by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Betty Love</span></span>
+            </p>
+
+            <div class="uk-margin-large-top">
+    <h3>Related Articles</h3>
+
+    
+    
+    
+
+    <ul class="uk-list uk-list-large link-icon-right">
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+        <li><a href="/wire-frame-box/">A function to create a wire-frame box</a></li>
+        
+        
+    
+
+    
+
+    
+    
+
+    
+
+    
+        <li><a href="/intro-to-functions/">Getting Started with Functions</a></li>
+        
+        
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+    </ul>
+</div>
+
+
+            
+        </article>
+
+        <script>
+            // Table of contents scroll to
+            UIkit.scroll('#markdown-toc a', {
+                duration: 400,
+                offset: 135
+            });
+        </script>
+
+    </div>
+</div>
+
+    </main>
+
+    <footer class="uk-section uk-section-muted uk-text-center uk-text-muted uk-link-muted">
+    <div class="uk-container uk-container-small">
+
+        <div>
+            <ul class="uk-subnav uk-flex-center">
+                
+                    
+                    
+                    
+                        <li><a href="/" >Help</a></li>
+                    
+                
+            </ul>
+        </div>
+        <div class="uk-margin-medium">
+            <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid">
+                
+
+
+
+
+
+
+
+
+
+
+
+<div>
+    <a href="blove@unomaha.edu" data-uk-icon="icon: mail" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+            </div>
+        </div>
+        <div class="uk-margin-medium uk-text-small copyright"></div>
+
+    </div>
+</footer>
+
+
+    <div id="offcanvas" data-uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" data-uk-close></button>
+
+        <ul class="uk-nav uk-nav-default">
+            <li><a class="uk-logo uk-margin-small-bottom" href="/"></a></li>
+            
+                
+            <li><a href="http://localhost:4000/" >Help</a></li>
+            
+        </ul>
+
+        <div class="uk-margin-small-top uk-text-center uk-text-muted uk-link-muted">
+            <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid">
+                
+
+
+
+
+
+
+
+
+
+
+
+<div>
+    <a href="blove@unomaha.edu" data-uk-icon="icon: mail" class="uk-icon-link uk-icon" target="_blank"></a>
+</div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    </body>
+
+
+</html>

@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "User-Defined Function Example",
+      "category" : "",
+      "tags"     : "functions",
+      "url"      : "/function-example-01/",
+      "date"     : "2019-04-14 00:00:00 -0500"
+    } ,
+  
+    {
       "title"    : "A function to create a wire-frame box",
       "category" : "",
       "tags"     : "level4,, functions",

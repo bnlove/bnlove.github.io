@@ -11,7 +11,7 @@ author: Betty Love
 * TOC
 {:toc}
 
-In this post we'll create a function for creating a wire-frame box like this one.
+In this post we'll write a function for creating a wire-frame box like this one.
 {% include image.html img="functions/wireFrameBox08.png"  alt="Wire-frame box"  %}
 
 Where you see this icon,
@@ -22,7 +22,7 @@ click on it to download the associated bricklayer program.
 
 ### Wire-frame box function
 
-Our function will include the following parameters to control the size of the box (_xSize_,_ySize_,_zSize_), the color of the box (_color_), and the location of the box (_x_,_y_,_z_).  To create our wire-frame box, we will first create a solid box, then use _EMPTY_ blocks to hollow out what we don't want to keep.  Our progression will be as shown in the following figure.  The red and yellow blocks are added to provide reference points. 
+Our function will include parameters to control the size of the box (_xSize_,_ySize_,_zSize_), the color of the box (_color_), and the location of the box (_x_,_y_,_z_).  To create our wire-frame box, we will first create a solid box, then use _EMPTY_ blocks to hollow out what we don't want to keep.  Our progression will be as shown in the following figure.  The red and yellow blocks are added to provide reference points. 
 
 {% include image.html img="functions/wireFrameBox07.png"  alt="Wire-frame box sequence"  %}
 

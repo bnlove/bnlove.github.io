@@ -1,4 +1,179 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-04-12T15:51:36-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">A function to create a wire-frame box</title><link href="http://localhost:4000/wire-frame-box/" rel="alternate" type="text/html" title="A function to create a wire-frame box" /><published>2019-04-12T00:00:00-05:00</published><updated>2019-04-12T00:00:00-05:00</updated><id>http://localhost:4000/wire-frame-box</id><content type="html" xml:base="http://localhost:4000/wire-frame-box/">&lt;h4 class=&quot;notoc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-04-14T23:02:04-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">User-Defined Function Example</title><link href="http://localhost:4000/function-example-01/" rel="alternate" type="text/html" title="User-Defined Function Example" /><published>2019-04-14T00:00:00-05:00</published><updated>2019-04-14T00:00:00-05:00</updated><id>http://localhost:4000/function-example-01</id><content type="html" xml:base="http://localhost:4000/function-example-01/">&lt;h4 class=&quot;notoc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#topics-on-this-page&quot; id=&quot;markdown-toc-topics-on-this-page&quot;&gt;Topics on this page&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#step-1---code-to-create-one-artifact-at-00&quot; id=&quot;markdown-toc-step-1---code-to-create-one-artifact-at-00&quot;&gt;Step 1 - code to create one artifact at (0,0)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#step-2---code-to-create-one-artifact-at-an-arbitrary-location&quot; id=&quot;markdown-toc-step-2---code-to-create-one-artifact-at-an-arbitrary-location&quot;&gt;Step 2 - code to create one artifact at an arbitrary location&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#step-3---add-parameters-for-colors&quot; id=&quot;markdown-toc-step-3---add-parameters-for-colors&quot;&gt;Step 3 - add parameters for colors&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#step-4---add-parameters-for-size&quot; id=&quot;markdown-toc-step-4---add-parameters-for-size&quot;&gt;Step 4 - add parameters for size&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;In this post we’ll write a function for creating an artifact like the one below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/crissCrossSquare01.png&quot; alt=&quot;Criss-cross square &quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;It will be based on parameters to define the following:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- location
+- size 
+- colors
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;step-1---code-to-create-one-artifact-at-00&quot;&gt;Step 1 - code to create one artifact at (0,0)&lt;/h3&gt;
+
+&lt;p&gt;To make this step easier, let’s start with the prototype created in the bricklayer.org Grid app:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/crissCrossSquare02.png&quot; alt=&quot;Criss-cross square on grid&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The following code will create this artifact.
+&lt;a href=&quot; http://localhost:4000/assets/posts/functions/crissCrossSquare01.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (10,10) BLUE (0,0);
+lineXZ (0,0) (9,9) YELLOW;
+lineXZ (0,9) (9,0) YELLOW;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;step-2---code-to-create-one-artifact-at-an-arbitrary-location&quot;&gt;Step 2 - code to create one artifact at an arbitrary location&lt;/h3&gt;
+
+&lt;p&gt;Let’s start by writing the code to create the artifact at (6,3).  The animation below illustrates how the coordinates of the artifact change as it moves from (0,0) to (6,3).&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/crissCrossSquare04.gif&quot; alt=&quot;Criss-cross square animation&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Consider what is happening to the &lt;em&gt;x-coordinates&lt;/em&gt; of each of the blocks in the artifact as it is moved.  For example, the lower-left corner of the square starts at (0,0) and moves to the right until it gets to (6,0).  Along the way, it passed through (1,0), (2,0), (3,0), etc.  And what happens to the &lt;em&gt;z-coordinates&lt;/em&gt;?  They all stay the same until the artifact starts to move upward.  The lower-left corner goes from (6,0) to (6,1), (6,2), and then to (6,3).&lt;/p&gt;
+
+&lt;p&gt;Let’s look at a different block, say, the upper right one that starts at (9,9). As the artifact moves the right, this block goes to (10,9), (11,9), (12,9), etc until it gets to (15,9).  Then it starts to move upward and goes to (15,10), (15,11), and finally (15,12).&lt;/p&gt;
+
+&lt;p&gt;By moving the artifact from (0,0), to (6,3), we are &lt;em&gt;translating&lt;/em&gt; each block to the right by 6 and up by 3.  This means that if the coordinates of a block in the initial artifact were &lt;em&gt;(a,b)&lt;/em&gt;, in the new position, that block will be at &lt;em&gt;(a+6,b+3)&lt;/em&gt;.  Some examples:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (0,0) moved to (0+6,0+3) = (6,3)
+- (9,9) moved to (9_6,9+3) = (15,12)
+- (2,5) moved to (2+6,5+3) = (8,8)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If I want to move the artifact to an arbitrary location, say, (xLoc,zLoc), I need to add &lt;em&gt;xLoc&lt;/em&gt; to the first coordinate of each block and &lt;em&gt;zLoc&lt;/em&gt; to the second coordinate of each block.  Examples:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (0,0) moves to (0+xLoc,0+zLoc)
+- (9,9) moves to (9+xLoc,9+zLoc)
+- (2,5) moves to (2+xLoc,5+zLoc)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Therefore my function to place a copy of the artifact at (xLoc,zLoc) would be as follows.
+&lt;a href=&quot; http://localhost:4000/assets/posts/functions/crissCrossSquare02.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun crissCrossSquare (xLoc,zLoc) = 
+(
+    put2D (10,10) BLUE (0+xLoc,0+zLoc);
+    lineXZ (0+xLoc,0+zLoc) (9+xLoc,9+zLoc) YELLOW;
+    lineXZ (0+xLoc,9+zLoc) (9+xLoc,0+zLoc) YELLOW
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;To place a copy at (6,3), use the function call:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;crissCrossSquare (6,3);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The output is as follows (red brick placed at (0,0) for reference)&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/crissCrossSquare07.png&quot; alt=&quot;Criss-cross square at (6,3)&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;step-3---add-parameters-for-colors&quot;&gt;Step 3 - add parameters for colors&lt;/h3&gt;
+
+&lt;p&gt;Now suppose we’d like to create the criss-cross square artifact in different colors.  We need to specify a color for the square and a color for the lines.  Let’s call the color for the square &lt;em&gt;squareColor&lt;/em&gt; and the color for the lines &lt;em&gt;lineColor&lt;/em&gt;.  We’ll add these parameters to our function and substitute &lt;em&gt;squareColor&lt;/em&gt; for BLUE and &lt;em&gt;lineColor&lt;/em&gt; for YELLOW.  Now our function is as follows.
+&lt;a href=&quot; http://localhost:4000/assets/posts/functions/crissCrossSquare03.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun crissCrossSquare (xLoc,zLoc,squareColor,lineColor) = 
+(
+    put2D (10,10) squareColor (0+xLoc,0+zLoc);
+    lineXZ (0+xLoc,0+zLoc) (9+xLoc,9+zLoc) lineColor;
+    lineXZ (0+xLoc,9+zLoc) (9+xLoc,0+zLoc) lineColor
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The following code places a blue and yellow copy at (0,0) and a pink and violet copy at (13,5)&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;crissCrossSquare (0,0,BLUE,YELLOW);
+crissCrossSquare (13,5,PINK,VIOLET);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/crissCrossSquare09.png&quot; alt=&quot;Criss-cross squares&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;step-4---add-parameters-for-size&quot;&gt;Step 4 - add parameters for size&lt;/h3&gt;
+
+&lt;p&gt;Now consider how we could modify our function so that we can create a copy of the artifact of an arbitrary size.  First let’s think about what that means.  Let’s go back to the initial code to create a criss-cross square at (0,0) and examine which parts of it relate to size. In the figure below, we see that clearly the size of the square depends on the size of the artifact.  Does anything else?&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/crissCrossSquare11.jpg&quot; alt=&quot;Criss-cross square code&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Yes!  The endpoints of the two lines are the corners of the square, so they will depend on the size of the square.
+For a square of size 10 placed at (0,0), the endpoints of the two lines are:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  - (0,0) and (9,9)
+  - (0,9) and (9,0)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;How can we represent (9,9), (0,9) and (9,0) in terms of the size of the square (10 in this case)? How about the following:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  - (0,0) and (10-1,10-1)
+  - (0,10-1) and (10-1,0)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;So in general, for a square of size &lt;em&gt;squareSize&lt;/em&gt; placed at (0,0), the endpoints of the two lines would be:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  - (0,0)            and (squareSize-1,squareSize-1)
+  - (0,squareSize-1) and (squareSize-1,0)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now we just need to &lt;em&gt;translate&lt;/em&gt; those coordinates to (&lt;em&gt;xLoc&lt;/em&gt;,&lt;em&gt;zLoc&lt;/em&gt;) as we did in Step 2 above.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  - (  0         ,   0        ) moves to (     0       + xLoc,      0       + zLoc)
+  - (squareSize-1,squareSize-1) moves to (squareSize-1 + xLoc, squareSize-1 + zLoc)
+  - (  0         ,squareSize-1) moves to (     0       + xLoc, squareSize-1 + zLoc)
+  - (squareSize-1,   0        ) moves to (squareSize-1 + xLoc,      0       + zLoc)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Incorporating this into our function with a new parameter &lt;em&gt;squareSize&lt;/em&gt; yields the following.
+&lt;a href=&quot; http://localhost:4000/assets/posts/functions/crissCrossSquare03.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun crissCrossSquare (xLoc,zLoc,squareColor,lineColor,squareSize) = 
+(
+    put2D (squareSize,squareSize) squareColor (0+xLoc,0+zLoc);
+    lineXZ ( 0 + xLoc,      0       + zLoc) (squareSize-1 + xLoc, squareSize-1 + zLoc) lineColor;
+    lineXZ ( 0 + xLoc, squareSize-1 + zLoc) (squareSize-1 + xLoc,      0       + zLoc) lineColor
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The following code places a blue and yellow copy of size 10 at (0,0), a pink and violet copy of size 15 at (13,5), and a red and white copy of size 7 at (2,12).&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;crissCrossSquare ( 0,  0, BLUE, YELLOW, 10);
+crissCrossSquare (13,  5, PINK, VIOLET, 15);
+crissCrossSquare ( 2, 12, RED , WHITE ,  7);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/crissCrossSquare13.png&quot; alt=&quot;Criss-cross squares&quot; /&gt;
+    
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="functions" /><summary type="html">Topics on this page Topics on this page</summary></entry><entry><title type="html">A function to create a wire-frame box</title><link href="http://localhost:4000/wire-frame-box/" rel="alternate" type="text/html" title="A function to create a wire-frame box" /><published>2019-04-12T00:00:00-05:00</published><updated>2019-04-12T00:00:00-05:00</updated><id>http://localhost:4000/wire-frame-box</id><content type="html" xml:base="http://localhost:4000/wire-frame-box/">&lt;h4 class=&quot;notoc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#topics-on-this-page&quot; id=&quot;markdown-toc-topics-on-this-page&quot;&gt;Topics on this page&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#wire-frame-box-function&quot; id=&quot;markdown-toc-wire-frame-box-function&quot;&gt;Wire-frame box function&lt;/a&gt;    &lt;ul&gt;
@@ -11,7 +186,7 @@
   &lt;li&gt;&lt;a href=&quot;#patterns-and-symmetry-in-the-put-calls&quot; id=&quot;markdown-toc-patterns-and-symmetry-in-the-put-calls&quot;&gt;Patterns and symmetry in the &lt;em&gt;put&lt;/em&gt; calls&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;In this post we’ll create a function for creating a wire-frame box like this one.&lt;/p&gt;
+&lt;p&gt;In this post we’ll write a function for creating a wire-frame box like this one.&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;img src=&quot;http://localhost:4000/assets/posts/functions/wireFrameBox08.png&quot; alt=&quot;Wire-frame box&quot; /&gt;
@@ -31,7 +206,7 @@
 
 &lt;h3 id=&quot;wire-frame-box-function&quot;&gt;Wire-frame box function&lt;/h3&gt;
 
-&lt;p&gt;Our function will include the following parameters to control the size of the box (&lt;em&gt;xSize&lt;/em&gt;,&lt;em&gt;ySize&lt;/em&gt;,&lt;em&gt;zSize&lt;/em&gt;), the color of the box (&lt;em&gt;color&lt;/em&gt;), and the location of the box (&lt;em&gt;x&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;z&lt;/em&gt;).  To create our wire-frame box, we will first create a solid box, then use &lt;em&gt;EMPTY&lt;/em&gt; blocks to hollow out what we don’t want to keep.  Our progression will be as shown in the following figure.  The red and yellow blocks are added to provide reference points.&lt;/p&gt;
+&lt;p&gt;Our function will include parameters to control the size of the box (&lt;em&gt;xSize&lt;/em&gt;,&lt;em&gt;ySize&lt;/em&gt;,&lt;em&gt;zSize&lt;/em&gt;), the color of the box (&lt;em&gt;color&lt;/em&gt;), and the location of the box (&lt;em&gt;x&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;z&lt;/em&gt;).  To create our wire-frame box, we will first create a solid box, then use &lt;em&gt;EMPTY&lt;/em&gt; blocks to hollow out what we don’t want to keep.  Our progression will be as shown in the following figure.  The red and yellow blocks are added to provide reference points.&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;img src=&quot;http://localhost:4000/assets/posts/functions/wireFrameBox07.png&quot; alt=&quot;Wire-frame box sequence&quot; /&gt;
@@ -1220,74 +1395,4 @@ put2D_4x2_RED(0,2)
 put2D_2x2_BLACK(1,1)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Clearly the latter way is more clear, easier, and less likely to have errors (as in wrong coordinates).&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Thus far our placement of blocks has been analogous to placing physical LEGO blocks on a baseplate. With Vitruvia Concept 7, we diverge from that a bit. Consider the following bricklayer commands:</summary></entry><entry><title type="html">Bricklayer Level 1 functions (Vitruvia Concept 5)</title><link href="http://localhost:4000/intro-to-level1-functions/" rel="alternate" type="text/html" title="Bricklayer Level 1 functions (Vitruvia Concept 5)" /><published>2019-01-14T00:00:00-06:00</published><updated>2019-01-14T00:00:00-06:00</updated><id>http://localhost:4000/intro-to-level1-functions</id><content type="html" xml:base="http://localhost:4000/intro-to-level1-functions/">&lt;!-- #### Topics on this page
-{:.no_toc}
-* TOC
-{:toc} --&gt;
-
-&lt;p&gt;&lt;a href=&quot;/placing-multiple-bricks&quot;&gt;My post about Vitruvia Concept 4&lt;/a&gt; discussed how to place the following sequence of bricks.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Put a 1x1 GREEN brick at location (4,3).&lt;/li&gt;
-  &lt;li&gt;Put a 2x1 BLUE brick at location (1,0).&lt;/li&gt;
-  &lt;li&gt;Put a 4x2 YELLOW brick at location (0,3).&lt;/li&gt;
-  &lt;li&gt;Put a 1x2 RED brick at location (3,1).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;In this post, we’ll consider how to distill these commands to their essentials and have our first look at functions in bricklayer.&lt;/p&gt;
-
-&lt;p&gt;What if I rewrote the four statements like the following.  Do you still understand what they say?&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Put 1x1 GREEN brick at location (4,3).&lt;/li&gt;
-  &lt;li&gt;Put 2x1 BLUE brick at location (1,0).&lt;/li&gt;
-  &lt;li&gt;Put 4x2 YELLOW brick at location (0,3).&lt;/li&gt;
-  &lt;li&gt;Put 1x2 RED brick at location (3,1).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;How about now?&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Put 1x1 GREEN  at location (4,3).&lt;/li&gt;
-  &lt;li&gt;Put 2x1 BLUE  at location (1,0).&lt;/li&gt;
-  &lt;li&gt;Put 4x2 YELLOW  at location (0,3).&lt;/li&gt;
-  &lt;li&gt;Put 1x2 RED  at location (3,1).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;And now?&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Put 1x1 GREEN  at  (4,3).&lt;/li&gt;
-  &lt;li&gt;Put 2x1 BLUE  at  (1,0).&lt;/li&gt;
-  &lt;li&gt;Put 4x2 YELLOW  at  (0,3).&lt;/li&gt;
-  &lt;li&gt;Put 1x2 RED  at  (3,1).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Now?&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Put 1x1 GREEN  (4,3).&lt;/li&gt;
-  &lt;li&gt;Put 2x1 BLUE  (1,0).&lt;/li&gt;
-  &lt;li&gt;Put 4x2 YELLOW  (0,3).&lt;/li&gt;
-  &lt;li&gt;Put 1x2 RED (3,1).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Once more!&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;put2D_1x1_GREEN(4,3)&lt;/li&gt;
-  &lt;li&gt;put2D_2x1_BLUE(1,0)&lt;/li&gt;
-  &lt;li&gt;put2D_4x2_YELLOW(0,3)&lt;/li&gt;
-  &lt;li&gt;put2D_1x2_RED(3,1)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Ok, the “2D” piece looks a little out of place, but otherwise, can you see the transformation? If so, congratulations!  You’re reading and comprehending bricklayer code!&lt;/p&gt;
-
-&lt;p&gt;Bricklayer code can place bricks in a two-dimensional (2D) grid like we’ve been working on in the Vitruvia exercises, but it can also place bricks in a three-dimensional space (typically what one has in mind when building with LEGO).  Dr. Winter reserved the word “put” for programming 3D objects and uses “put2D” to specify two-dimensional objects.&lt;/p&gt;
-
-&lt;p&gt;To review, the general form of the Bricklayer command to place a brick having a given &lt;em&gt;size&lt;/em&gt; and &lt;em&gt;color&lt;/em&gt; at a specific &lt;em&gt;location&lt;/em&gt; is the following.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/put2D.png&quot; alt=&quot;Level 1 put2D function&quot; /&gt;
-    
-&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;Clearly the latter way is more clear, easier, and less likely to have errors (as in wrong coordinates).&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Thus far our placement of blocks has been analogous to placing physical LEGO blocks on a baseplate. With Vitruvia Concept 7, we diverge from that a bit. Consider the following bricklayer commands:</summary></entry></feed>
