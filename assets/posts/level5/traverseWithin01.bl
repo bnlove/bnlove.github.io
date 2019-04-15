@@ -1,0 +1,10 @@
+open Level_5;
+
+fun xLessThan2 (x, y, z) =
+    if x < 2 then GREEN else YELLOW;
+
+build (5,1,5);
+
+traverseWithin (0,0,0)  (4,0,4)  xLessThan2;
+
+show ""

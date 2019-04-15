@@ -1,4 +1,164 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-04-14T23:02:04-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">User-Defined Function Example</title><link href="http://localhost:4000/function-example-01/" rel="alternate" type="text/html" title="User-Defined Function Example" /><published>2019-04-14T00:00:00-05:00</published><updated>2019-04-14T00:00:00-05:00</updated><id>http://localhost:4000/function-example-01</id><content type="html" xml:base="http://localhost:4000/function-example-01/">&lt;h4 class=&quot;notoc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-04-15T11:28:39-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">The traverseWithin function</title><link href="http://localhost:4000/getting-started-with-traverseWithin/" rel="alternate" type="text/html" title="The traverseWithin function" /><published>2019-04-15T00:00:00-05:00</published><updated>2019-04-15T00:00:00-05:00</updated><id>http://localhost:4000/getting-started-with-traverseWithin</id><content type="html" xml:base="http://localhost:4000/getting-started-with-traverseWithin/">&lt;h4 class=&quot;notoc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#topics-on-this-page&quot; id=&quot;markdown-toc-topics-on-this-page&quot;&gt;Topics on this page&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#example-1&quot; id=&quot;markdown-toc-example-1&quot;&gt;Example 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#example-2&quot; id=&quot;markdown-toc-example-2&quot;&gt;Example 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#one-more-examplemake-our-own-circle-function&quot; id=&quot;markdown-toc-one-more-examplemake-our-own-circle-function&quot;&gt;One more example—make our own circle function!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;In this post we’ll investigate the &lt;em&gt;traverseWithin&lt;/em&gt; function from Level_5.&lt;/p&gt;
+
+&lt;h3 id=&quot;example-1&quot;&gt;Example 1&lt;/h3&gt;
+
+&lt;p&gt;Let’s start with a small example.  Consider the program below.
+&lt;a href=&quot; http://localhost:4000/assets/posts/level5/traverseWithin01.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_5;
+
+fun xLessThan2 (x, y, z) =
+    if x &amp;lt; 2 then GREEN else YELLOW;
+
+build (5,1,5);
+
+traverseWithin (0,0,0)  (4,0,4)  xLessThan2;
+
+show &quot;&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The output is as follows.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level5/traverseWithin01a.png&quot; alt=&quot;Artifact &quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;So…how does this work?&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;traverseWithin&lt;/em&gt; function is a very powerful function, unlike any we’ve seen before.  Let’s look at its parameters.  The general form is:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;traverseWithin   startLocation    endLocation    someFunction;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The function &lt;em&gt;someFunction&lt;/em&gt; will be applied to every location between (and including) &lt;em&gt;startLocation&lt;/em&gt; and &lt;em&gt;endLocation&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;In our example, the &lt;em&gt;startLocation&lt;/em&gt; is (0,0,0) and the &lt;em&gt;endLocation&lt;/em&gt; is (4,0,4).  Let’s start by figuring out which locations are defined by these parameters.  We’ll look at each coordinate:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  * x goes 0 to 4: 0,1,2,3,4
+  * y goes 0 to 0: 0
+  * z goes 0 to 4: 0,1,2,3,4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We can list all the locations as follows:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level5/traverseWithin03.png&quot; alt=&quot;traverseWithin space&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Another way to think about the set of locations is graphically.  We want all locations where &lt;em&gt;x&lt;/em&gt; is between 0 and 4, &lt;em&gt;y&lt;/em&gt; is 0, and &lt;em&gt;z&lt;/em&gt; is between 0 and 4.  Here is that space in the &lt;em&gt;x-z&lt;/em&gt; plane.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level5/traverseWithin02.jpg&quot; alt=&quot;traverseWithin space&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;So now that we know what space we’re working with, let’s turn our attention to the third parameter of the &lt;em&gt;traverseWithin&lt;/em&gt; function which is the name of another function.  In our example, this function is &lt;em&gt;xLessThan2&lt;/em&gt;. The function call:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;traverseWithin (0,0,0)  (4,0,4)  xLessThan2;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;tells the computer to apply &lt;em&gt;xLessThan2&lt;/em&gt; to each location defined by the starting point (0,0,0) and the ending point (4,0,4).  We can go down our list of locations and see what the results are.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level5/traverseWithin04.png&quot; alt=&quot;traverseWithin space&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;We can also look at this graphically.  The condition &lt;em&gt;x&amp;lt;2&lt;/em&gt; is evaluated for each cell in the grid.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level5/traverseWithin05.png&quot; alt=&quot;traverseWithin space&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;example-2&quot;&gt;Example 2&lt;/h3&gt;
+
+&lt;p&gt;Let’s look at another example using the same starting and ending locations, but with a different function.  Specifically, take a look at the code below.
+&lt;a href=&quot; http://localhost:4000/assets/posts/level5/traverseWithin02.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_5;
+
+fun aLine (x, y, z) =
+    if x = z then RED else BLACK;
+
+build (5,1,5);
+
+traverseWithin (0,0,0)  (4,0,4)  aLine;
+
+show &quot;&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Since the set of locations that we’re traversing is the same as before, we can focus on the  function that will be applied to the coordinates of each location, &lt;em&gt;aLine&lt;/em&gt;. The function call:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;traverseWithin (0,0,0)  (4,0,4)  aLine;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;tells the computer to apply &lt;em&gt;aLine&lt;/em&gt; to each location defined by the starting point (0,0,0) and the ending point (4,0,4).  We can go down our list of locations and see what the results are.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level5/traverseWithin07.png&quot; alt=&quot;traverseWithin space&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Again, we can also look at this graphically.  The condition &lt;em&gt;x=z&lt;/em&gt; is evaluated for each cell in the grid.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level5/traverseWithin08.png&quot; alt=&quot;traverseWithin space&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;one-more-examplemake-our-own-circle-function&quot;&gt;One more example—make our own circle function!&lt;/h3&gt;
+
+&lt;p&gt;Just to get a little crazy, let’s try to make our own circle function using &lt;em&gt;traverseWithin&lt;/em&gt;.  First, we have to know how to describe a circle mathematically.  See the figure below which includes information from &lt;a href=&quot;https://www.wolframalpha.com/input/?i=circle&quot;&gt;WolframAlpha&lt;/a&gt; and my annotations.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level5/traverseWithin09.jpg&quot; alt=&quot;circle specifications&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Our circle function will be very basic.  It will create a blue circle of radius 10 with center (12,15).  The part of the region outside circle will be yellow. 
+&lt;a href=&quot; http://localhost:4000/assets/posts/level5/traverseWithin03.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_5;
+
+fun myBasicCircle (x, y, z) =
+    if ((x-12)*(x-12) + (z-15)*(z-15) &amp;lt;= 10*10) then BLUE else YELLOW;
+
+build (30,1,30);
+
+traverseWithin (0,0,0)  (29,0,29)  myBasicCircle;
+
+show &quot;&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The following figure shows the locations processed by the &lt;em&gt;traverseWithin&lt;/em&gt; function and the corresponding values.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level5/traverseWithin10.jpg&quot; alt=&quot;circle specifications&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Output from running the code is shown in the following figure.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level5/traverseWithin11.png&quot; alt=&quot;circle specifications&quot; /&gt;
+    
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="functions," /><category term="level5" /><summary type="html">Topics on this page Topics on this page</summary></entry><entry><title type="html">User-Defined Function Example</title><link href="http://localhost:4000/function-example-01/" rel="alternate" type="text/html" title="User-Defined Function Example" /><published>2019-04-14T00:00:00-05:00</published><updated>2019-04-14T00:00:00-05:00</updated><id>http://localhost:4000/function-example-01</id><content type="html" xml:base="http://localhost:4000/function-example-01/">&lt;h4 class=&quot;notoc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#topics-on-this-page&quot; id=&quot;markdown-toc-topics-on-this-page&quot;&gt;Topics on this page&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#step-1---code-to-create-one-artifact-at-00&quot; id=&quot;markdown-toc-step-1---code-to-create-one-artifact-at-00&quot;&gt;Step 1 - code to create one artifact at (0,0)&lt;/a&gt;&lt;/li&gt;
@@ -1344,55 +1504,4 @@ show2D &quot;thing&quot;;
 
 &lt;h3 id=&quot;more-information&quot;&gt;More information&lt;/h3&gt;
 
-&lt;p&gt;For more information on Bricklayer Level_1 see &lt;a href=&quot;/intro-to-level1-functions&quot;&gt;this post&lt;/a&gt;.  For more informaiton on both Bricklayer Level_1 and and programming in Bricklayer-Lite, see &lt;a href=&quot;https://bricklayer.org/level-1/&quot;&gt;https://bricklayer.org/level-1/&lt;/a&gt;.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Overwriting–placing blocks on top of blocks (Vitruvia Concept 7)</title><link href="http://localhost:4000/overwriting-blocks/" rel="alternate" type="text/html" title="Overwriting--placing blocks on top of blocks (Vitruvia Concept 7)" /><published>2019-01-17T00:00:00-06:00</published><updated>2019-01-17T00:00:00-06:00</updated><id>http://localhost:4000/overwriting-blocks</id><content type="html" xml:base="http://localhost:4000/overwriting-blocks/">&lt;p&gt;Thus far our placement of blocks has been analogous to placing physical LEGO blocks on a baseplate. With Vitruvia Concept 7, we diverge from that a bit.  Consider the following bricklayer commands:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D_2x2_RED(0,0)
-put2D_1x1_BLUE(0,0)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If we were building with physical LEGO, then these commands would generate a 2x2 red block with a 1x1 blue block on top of it, as in the following image.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/concept7-01.png&quot; alt=&quot;blue on top of red blocks&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Since we’re building with virtual LEGO, when one brick is placed in the same position as another brick, the latter one &lt;em&gt;overwrites&lt;/em&gt; the first. In this case the commands produced the following artifact.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/concept7-02.png&quot; alt=&quot;blue overwrites red block&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;The Bricklayer rule is:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;For a given location, the brick placed there last is the one that is visible.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This feature can frequently be used to our advantage.  Suppose I want to create the following artifact.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/vitruvia/concept7-03.png&quot; alt=&quot;red and black blocks&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Without using Bricklayer’s &lt;em&gt;overwriting&lt;/em&gt; feature, we would need at least seven &lt;em&gt;put&lt;/em&gt; commands.  One possibility is the following:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D_2x1_RED(0,0)
-put2D_2x1_RED(2,0)
-put2D_1x2_RED(3,1)
-put2D_2x1_RED(2,3)
-put2D_2x1_RED(0,3)
-put2D_1x2_RED(0,1)
-put2D_2x2_BLACK(1,1)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;With overwriting, the same thing can be accomplished much more easily, as follows:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D_4x2_RED(0,0)
-put2D_4x2_RED(0,2)
-put2D_2x2_BLACK(1,1)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Clearly the latter way is more clear, easier, and less likely to have errors (as in wrong coordinates).&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Thus far our placement of blocks has been analogous to placing physical LEGO blocks on a baseplate. With Vitruvia Concept 7, we diverge from that a bit. Consider the following bricklayer commands:</summary></entry></feed>
+&lt;p&gt;For more information on Bricklayer Level_1 see &lt;a href=&quot;/intro-to-level1-functions&quot;&gt;this post&lt;/a&gt;.  For more informaiton on both Bricklayer Level_1 and and programming in Bricklayer-Lite, see &lt;a href=&quot;https://bricklayer.org/level-1/&quot;&gt;https://bricklayer.org/level-1/&lt;/a&gt;.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry></feed>

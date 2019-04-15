@@ -1,0 +1,10 @@
+open Level_5;
+
+fun aLine (x, y, z) =
+    if x = z then RED else BLACK;
+
+build (5,1,5);
+
+traverseWithin (0,0,0)  (4,0,4)  aLine;
+
+show ""

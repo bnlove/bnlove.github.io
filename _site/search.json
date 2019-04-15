@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "The traverseWithin function",
+      "category" : "",
+      "tags"     : "functions,, level5",
+      "url"      : "/getting-started-with-traverseWithin/",
+      "date"     : "2019-04-15 00:00:00 -0500"
+    } ,
+  
+    {
       "title"    : "User-Defined Function Example",
       "category" : "",
       "tags"     : "functions",
