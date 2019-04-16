@@ -115,7 +115,7 @@ show ""
 ```
 
 The following figure shows the locations processed by the _traverseWithin_ function and the corresponding values. 
-{% include image.html img="level5/traverseWithin10.jpg"  alt="circle specifications"  %}
+{% include image.html img="level5/traverseWithin10.png"  alt="circle specifications"  %}
 
 Output from running the code is shown in the following figure.
 {% include image.html img="level5/traverseWithin11.png"  alt="circle specifications"  %}

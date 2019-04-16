@@ -1,0 +1,1507 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-04-16T09:13:01-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">The traverseWithin function</title><link href="http://localhost:4000/getting-started-with-traverseWithin/" rel="alternate" type="text/html" title="The traverseWithin function" /><published>2019-04-15T00:00:00-05:00</published><updated>2019-04-15T00:00:00-05:00</updated><id>http://localhost:4000/getting-started-with-traverseWithin</id><content type="html" xml:base="http://localhost:4000/getting-started-with-traverseWithin/">&lt;h4 class=&quot;notoc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#topics-on-this-page&quot; id=&quot;markdown-toc-topics-on-this-page&quot;&gt;Topics on this page&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#example-1&quot; id=&quot;markdown-toc-example-1&quot;&gt;Example 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#example-2&quot; id=&quot;markdown-toc-example-2&quot;&gt;Example 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#one-more-examplemake-our-own-circle-function&quot; id=&quot;markdown-toc-one-more-examplemake-our-own-circle-function&quot;&gt;One more example—make our own circle function!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;In this post we’ll investigate the &lt;em&gt;traverseWithin&lt;/em&gt; function from Level_5.&lt;/p&gt;
+
+&lt;h3 id=&quot;example-1&quot;&gt;Example 1&lt;/h3&gt;
+
+&lt;p&gt;Let’s start with a small example.  Consider the program below.
+&lt;a href=&quot; http://localhost:4000/assets/posts/level5/traverseWithin01.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_5;
+
+fun xLessThan2 (x, y, z) =
+    if x &amp;lt; 2 then GREEN else YELLOW;
+
+build (5,1,5);
+
+traverseWithin (0,0,0)  (4,0,4)  xLessThan2;
+
+show &quot;&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The output is as follows.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level5/traverseWithin01a.png&quot; alt=&quot;Artifact &quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;So…how does this work?&lt;/p&gt;
+
+&lt;p&gt;The &lt;em&gt;traverseWithin&lt;/em&gt; function is a very powerful function, unlike any we’ve seen before.  Let’s look at its parameters.  The general form is:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;traverseWithin   startLocation    endLocation    someFunction;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The function &lt;em&gt;someFunction&lt;/em&gt; will be applied to every location between (and including) &lt;em&gt;startLocation&lt;/em&gt; and &lt;em&gt;endLocation&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;In our example, the &lt;em&gt;startLocation&lt;/em&gt; is (0,0,0) and the &lt;em&gt;endLocation&lt;/em&gt; is (4,0,4).  Let’s start by figuring out which locations are defined by these parameters.  We’ll look at each coordinate:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  * x goes 0 to 4: 0,1,2,3,4
+  * y goes 0 to 0: 0
+  * z goes 0 to 4: 0,1,2,3,4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We can list all the locations as follows:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level5/traverseWithin03.png&quot; alt=&quot;traverseWithin space&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Another way to think about the set of locations is graphically.  We want all locations where &lt;em&gt;x&lt;/em&gt; is between 0 and 4, &lt;em&gt;y&lt;/em&gt; is 0, and &lt;em&gt;z&lt;/em&gt; is between 0 and 4.  Here is that space in the &lt;em&gt;x-z&lt;/em&gt; plane.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level5/traverseWithin02.jpg&quot; alt=&quot;traverseWithin space&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;So now that we know what space we’re working with, let’s turn our attention to the third parameter of the &lt;em&gt;traverseWithin&lt;/em&gt; function which is the name of another function.  In our example, this function is &lt;em&gt;xLessThan2&lt;/em&gt;. The function call:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;traverseWithin (0,0,0)  (4,0,4)  xLessThan2;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;tells the computer to apply &lt;em&gt;xLessThan2&lt;/em&gt; to each location defined by the starting point (0,0,0) and the ending point (4,0,4).  We can go down our list of locations and see what the results are.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level5/traverseWithin04.png&quot; alt=&quot;traverseWithin space&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;We can also look at this graphically.  The condition &lt;em&gt;x&amp;lt;2&lt;/em&gt; is evaluated for each cell in the grid.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level5/traverseWithin05.png&quot; alt=&quot;traverseWithin space&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;example-2&quot;&gt;Example 2&lt;/h3&gt;
+
+&lt;p&gt;Let’s look at another example using the same starting and ending locations, but with a different function.  Specifically, take a look at the code below.
+&lt;a href=&quot; http://localhost:4000/assets/posts/level5/traverseWithin02.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_5;
+
+fun aLine (x, y, z) =
+    if x = z then RED else BLACK;
+
+build (5,1,5);
+
+traverseWithin (0,0,0)  (4,0,4)  aLine;
+
+show &quot;&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Since the set of locations that we’re traversing is the same as before, we can focus on the  function that will be applied to the coordinates of each location, &lt;em&gt;aLine&lt;/em&gt;. The function call:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;traverseWithin (0,0,0)  (4,0,4)  aLine;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;tells the computer to apply &lt;em&gt;aLine&lt;/em&gt; to each location defined by the starting point (0,0,0) and the ending point (4,0,4).  We can go down our list of locations and see what the results are.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level5/traverseWithin07.png&quot; alt=&quot;traverseWithin space&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Again, we can also look at this graphically.  The condition &lt;em&gt;x=z&lt;/em&gt; is evaluated for each cell in the grid.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level5/traverseWithin08.png&quot; alt=&quot;traverseWithin space&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;one-more-examplemake-our-own-circle-function&quot;&gt;One more example—make our own circle function!&lt;/h3&gt;
+
+&lt;p&gt;Just to get a little crazy, let’s try to make our own circle function using &lt;em&gt;traverseWithin&lt;/em&gt;.  First, we have to know how to describe a circle mathematically.  See the figure below which includes information from &lt;a href=&quot;https://www.wolframalpha.com/input/?i=circle&quot;&gt;WolframAlpha&lt;/a&gt; and my annotations.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level5/traverseWithin09.jpg&quot; alt=&quot;circle specifications&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Our circle function will be very basic.  It will create a blue circle of radius 10 with center (12,15).  The part of the region outside circle will be yellow. 
+&lt;a href=&quot; http://localhost:4000/assets/posts/level5/traverseWithin03.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_5;
+
+fun myBasicCircle (x, y, z) =
+    if ((x-12)*(x-12) + (z-15)*(z-15) &amp;lt;= 10*10) then BLUE else YELLOW;
+
+build (30,1,30);
+
+traverseWithin (0,0,0)  (29,0,29)  myBasicCircle;
+
+show &quot;&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The following figure shows the locations processed by the &lt;em&gt;traverseWithin&lt;/em&gt; function and the corresponding values.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level5/traverseWithin10.png&quot; alt=&quot;circle specifications&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Output from running the code is shown in the following figure.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level5/traverseWithin11.png&quot; alt=&quot;circle specifications&quot; /&gt;
+    
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="functions," /><category term="level5" /><summary type="html">Topics on this page Topics on this page</summary></entry><entry><title type="html">User-Defined Function Example</title><link href="http://localhost:4000/function-example-01/" rel="alternate" type="text/html" title="User-Defined Function Example" /><published>2019-04-14T00:00:00-05:00</published><updated>2019-04-14T00:00:00-05:00</updated><id>http://localhost:4000/function-example-01</id><content type="html" xml:base="http://localhost:4000/function-example-01/">&lt;h4 class=&quot;notoc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#topics-on-this-page&quot; id=&quot;markdown-toc-topics-on-this-page&quot;&gt;Topics on this page&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#step-1---code-to-create-one-artifact-at-00&quot; id=&quot;markdown-toc-step-1---code-to-create-one-artifact-at-00&quot;&gt;Step 1 - code to create one artifact at (0,0)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#step-2---code-to-create-one-artifact-at-an-arbitrary-location&quot; id=&quot;markdown-toc-step-2---code-to-create-one-artifact-at-an-arbitrary-location&quot;&gt;Step 2 - code to create one artifact at an arbitrary location&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#step-3---add-parameters-for-colors&quot; id=&quot;markdown-toc-step-3---add-parameters-for-colors&quot;&gt;Step 3 - add parameters for colors&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#step-4---add-parameters-for-size&quot; id=&quot;markdown-toc-step-4---add-parameters-for-size&quot;&gt;Step 4 - add parameters for size&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;In this post we’ll write a function for creating an artifact like the one below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/crissCrossSquare01.png&quot; alt=&quot;Criss-cross square &quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;It will be based on parameters to define the following:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- location
+- size 
+- colors
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;step-1---code-to-create-one-artifact-at-00&quot;&gt;Step 1 - code to create one artifact at (0,0)&lt;/h3&gt;
+
+&lt;p&gt;To make this step easier, let’s start with the prototype created in the bricklayer.org Grid app:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/crissCrossSquare02.png&quot; alt=&quot;Criss-cross square on grid&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The following code will create this artifact.
+&lt;a href=&quot; http://localhost:4000/assets/posts/functions/crissCrossSquare01.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (10,10) BLUE (0,0);
+lineXZ (0,0) (9,9) YELLOW;
+lineXZ (0,9) (9,0) YELLOW;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;step-2---code-to-create-one-artifact-at-an-arbitrary-location&quot;&gt;Step 2 - code to create one artifact at an arbitrary location&lt;/h3&gt;
+
+&lt;p&gt;Let’s start by writing the code to create the artifact at (6,3).  The animation below illustrates how the coordinates of the artifact change as it moves from (0,0) to (6,3).&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/crissCrossSquare04.gif&quot; alt=&quot;Criss-cross square animation&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Consider what is happening to the &lt;em&gt;x-coordinates&lt;/em&gt; of each of the blocks in the artifact as it is moved.  For example, the lower-left corner of the square starts at (0,0) and moves to the right until it gets to (6,0).  Along the way, it passed through (1,0), (2,0), (3,0), etc.  And what happens to the &lt;em&gt;z-coordinates&lt;/em&gt;?  They all stay the same until the artifact starts to move upward.  The lower-left corner goes from (6,0) to (6,1), (6,2), and then to (6,3).&lt;/p&gt;
+
+&lt;p&gt;Let’s look at a different block, say, the upper right one that starts at (9,9). As the artifact moves the right, this block goes to (10,9), (11,9), (12,9), etc until it gets to (15,9).  Then it starts to move upward and goes to (15,10), (15,11), and finally (15,12).&lt;/p&gt;
+
+&lt;p&gt;By moving the artifact from (0,0), to (6,3), we are &lt;em&gt;translating&lt;/em&gt; each block to the right by 6 and up by 3.  This means that if the coordinates of a block in the initial artifact were &lt;em&gt;(a,b)&lt;/em&gt;, in the new position, that block will be at &lt;em&gt;(a+6,b+3)&lt;/em&gt;.  Some examples:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (0,0) moved to (0+6,0+3) = (6,3)
+- (9,9) moved to (9_6,9+3) = (15,12)
+- (2,5) moved to (2+6,5+3) = (8,8)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If I want to move the artifact to an arbitrary location, say, (xLoc,zLoc), I need to add &lt;em&gt;xLoc&lt;/em&gt; to the first coordinate of each block and &lt;em&gt;zLoc&lt;/em&gt; to the second coordinate of each block.  Examples:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- (0,0) moves to (0+xLoc,0+zLoc)
+- (9,9) moves to (9+xLoc,9+zLoc)
+- (2,5) moves to (2+xLoc,5+zLoc)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Therefore my function to place a copy of the artifact at (xLoc,zLoc) would be as follows.
+&lt;a href=&quot; http://localhost:4000/assets/posts/functions/crissCrossSquare02.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun crissCrossSquare (xLoc,zLoc) = 
+(
+    put2D (10,10) BLUE (0+xLoc,0+zLoc);
+    lineXZ (0+xLoc,0+zLoc) (9+xLoc,9+zLoc) YELLOW;
+    lineXZ (0+xLoc,9+zLoc) (9+xLoc,0+zLoc) YELLOW
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;To place a copy at (6,3), use the function call:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;crissCrossSquare (6,3);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The output is as follows (red brick placed at (0,0) for reference)&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/crissCrossSquare07.png&quot; alt=&quot;Criss-cross square at (6,3)&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;step-3---add-parameters-for-colors&quot;&gt;Step 3 - add parameters for colors&lt;/h3&gt;
+
+&lt;p&gt;Now suppose we’d like to create the criss-cross square artifact in different colors.  We need to specify a color for the square and a color for the lines.  Let’s call the color for the square &lt;em&gt;squareColor&lt;/em&gt; and the color for the lines &lt;em&gt;lineColor&lt;/em&gt;.  We’ll add these parameters to our function and substitute &lt;em&gt;squareColor&lt;/em&gt; for BLUE and &lt;em&gt;lineColor&lt;/em&gt; for YELLOW.  Now our function is as follows.
+&lt;a href=&quot; http://localhost:4000/assets/posts/functions/crissCrossSquare03.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun crissCrossSquare (xLoc,zLoc,squareColor,lineColor) = 
+(
+    put2D (10,10) squareColor (0+xLoc,0+zLoc);
+    lineXZ (0+xLoc,0+zLoc) (9+xLoc,9+zLoc) lineColor;
+    lineXZ (0+xLoc,9+zLoc) (9+xLoc,0+zLoc) lineColor
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The following code places a blue and yellow copy at (0,0) and a pink and violet copy at (13,5)&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;crissCrossSquare (0,0,BLUE,YELLOW);
+crissCrossSquare (13,5,PINK,VIOLET);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/crissCrossSquare09.png&quot; alt=&quot;Criss-cross squares&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;step-4---add-parameters-for-size&quot;&gt;Step 4 - add parameters for size&lt;/h3&gt;
+
+&lt;p&gt;Now consider how we could modify our function so that we can create a copy of the artifact of an arbitrary size.  First let’s think about what that means.  Let’s go back to the initial code to create a criss-cross square at (0,0) and examine which parts of it relate to size. In the figure below, we see that clearly the size of the square depends on the size of the artifact.  Does anything else?&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/crissCrossSquare11.jpg&quot; alt=&quot;Criss-cross square code&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Yes!  The endpoints of the two lines are the corners of the square, so they will depend on the size of the square.
+For a square of size 10 placed at (0,0), the endpoints of the two lines are:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  - (0,0) and (9,9)
+  - (0,9) and (9,0)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;How can we represent (9,9), (0,9) and (9,0) in terms of the size of the square (10 in this case)? How about the following:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  - (0,0) and (10-1,10-1)
+  - (0,10-1) and (10-1,0)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;So in general, for a square of size &lt;em&gt;squareSize&lt;/em&gt; placed at (0,0), the endpoints of the two lines would be:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  - (0,0)            and (squareSize-1,squareSize-1)
+  - (0,squareSize-1) and (squareSize-1,0)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now we just need to &lt;em&gt;translate&lt;/em&gt; those coordinates to (&lt;em&gt;xLoc&lt;/em&gt;,&lt;em&gt;zLoc&lt;/em&gt;) as we did in Step 2 above.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  - (  0         ,   0        ) moves to (     0       + xLoc,      0       + zLoc)
+  - (squareSize-1,squareSize-1) moves to (squareSize-1 + xLoc, squareSize-1 + zLoc)
+  - (  0         ,squareSize-1) moves to (     0       + xLoc, squareSize-1 + zLoc)
+  - (squareSize-1,   0        ) moves to (squareSize-1 + xLoc,      0       + zLoc)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Incorporating this into our function with a new parameter &lt;em&gt;squareSize&lt;/em&gt; yields the following.
+&lt;a href=&quot; http://localhost:4000/assets/posts/functions/crissCrossSquare03.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun crissCrossSquare (xLoc,zLoc,squareColor,lineColor,squareSize) = 
+(
+    put2D (squareSize,squareSize) squareColor (0+xLoc,0+zLoc);
+    lineXZ ( 0 + xLoc,      0       + zLoc) (squareSize-1 + xLoc, squareSize-1 + zLoc) lineColor;
+    lineXZ ( 0 + xLoc, squareSize-1 + zLoc) (squareSize-1 + xLoc,      0       + zLoc) lineColor
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The following code places a blue and yellow copy of size 10 at (0,0), a pink and violet copy of size 15 at (13,5), and a red and white copy of size 7 at (2,12).&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;crissCrossSquare ( 0,  0, BLUE, YELLOW, 10);
+crissCrossSquare (13,  5, PINK, VIOLET, 15);
+crissCrossSquare ( 2, 12, RED , WHITE ,  7);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/crissCrossSquare13.png&quot; alt=&quot;Criss-cross squares&quot; /&gt;
+    
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="functions" /><summary type="html">Topics on this page Topics on this page</summary></entry><entry><title type="html">A function to create a wire-frame box</title><link href="http://localhost:4000/wire-frame-box/" rel="alternate" type="text/html" title="A function to create a wire-frame box" /><published>2019-04-12T00:00:00-05:00</published><updated>2019-04-12T00:00:00-05:00</updated><id>http://localhost:4000/wire-frame-box</id><content type="html" xml:base="http://localhost:4000/wire-frame-box/">&lt;h4 class=&quot;notoc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#topics-on-this-page&quot; id=&quot;markdown-toc-topics-on-this-page&quot;&gt;Topics on this page&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#wire-frame-box-function&quot; id=&quot;markdown-toc-wire-frame-box-function&quot;&gt;Wire-frame box function&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#step-1-make-solid-box&quot; id=&quot;markdown-toc-step-1-make-solid-box&quot;&gt;Step 1: make solid box&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#step-2-empty-box-from-front-to-back&quot; id=&quot;markdown-toc-step-2-empty-box-from-front-to-back&quot;&gt;Step 2: empty box from front to back&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#step-3-empty-box-from-left-to-right&quot; id=&quot;markdown-toc-step-3-empty-box-from-left-to-right&quot;&gt;Step 3: empty box from left to right&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#step-4-empty-box-from-bottom-to-top&quot; id=&quot;markdown-toc-step-4-empty-box-from-bottom-to-top&quot;&gt;Step 4: empty box from bottom to top&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#patterns-and-symmetry-in-the-put-calls&quot; id=&quot;markdown-toc-patterns-and-symmetry-in-the-put-calls&quot;&gt;Patterns and symmetry in the &lt;em&gt;put&lt;/em&gt; calls&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this post we’ll write a function for creating a wire-frame box like this one.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/wireFrameBox08.png&quot; alt=&quot;Wire-frame box&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Where you see this icon,&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl icon&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;click on it to download the associated bricklayer program.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;wire-frame-box-function&quot;&gt;Wire-frame box function&lt;/h3&gt;
+
+&lt;p&gt;Our function will include parameters to control the size of the box (&lt;em&gt;xSize&lt;/em&gt;,&lt;em&gt;ySize&lt;/em&gt;,&lt;em&gt;zSize&lt;/em&gt;), the color of the box (&lt;em&gt;color&lt;/em&gt;), and the location of the box (&lt;em&gt;x&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;z&lt;/em&gt;).  To create our wire-frame box, we will first create a solid box, then use &lt;em&gt;EMPTY&lt;/em&gt; blocks to hollow out what we don’t want to keep.  Our progression will be as shown in the following figure.  The red and yellow blocks are added to provide reference points.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/wireFrameBox07.png&quot; alt=&quot;Wire-frame box sequence&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Only four &lt;em&gt;put&lt;/em&gt; function calls are needed to create a wire-frame box.  The general form of the function is as follows:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun wireFrameBox (xSize,ySize,zSize,x,y,z,color) = 
+(
+(*
+    put ...  &amp;lt;--- create solid box 
+    put ...  &amp;lt;--- empty box from front to back 
+    put ...  &amp;lt;--- empty box from left to right 
+    put ...  &amp;lt;--- empty box vertically
+*)
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The following code to place the red and yellow bricks for reference will also be included in the function, but will not be displayed henceforth in order to not detract from the main four &lt;em&gt;put&lt;/em&gt; calls.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(* Place red and yellow bricks for reference *)
+    put (1,1,1) RED    (x,y,z);
+    put (1,1,1) YELLOW (x+xSize-1,y+ySize-1,z+zSize-1)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;step-1-make-solid-box&quot;&gt;Step 1: make solid box&lt;/h4&gt;
+
+&lt;p&gt;Creating the initial solid box is the easiest step since we are given all the parameters we need for the corresponding &lt;em&gt;put&lt;/em&gt; function call. 
+&lt;a href=&quot; http://localhost:4000/assets/posts/functions/wireFrameBox01.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun wireFrameBox (xSize,ySize,zSize,x,y,z,color) = 
+(
+    put (xSize,ySize,zSize) color (x,y,z);
+(*
+    put ...  &amp;lt;--- empty box from front to back 
+    put ...  &amp;lt;--- empty box from left to right 
+    put ...  &amp;lt;--- empty box vertically
+*)
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The function call&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wireFrameBox (14, 5, 10, 0, 0, 0, BLUE);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;produces the following artifact.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/wireFrameBox01.png&quot; alt=&quot;Solid block&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;step-2-empty-box-from-front-to-back&quot;&gt;Step 2: empty box from front to back&lt;/h4&gt;
+
+&lt;p&gt;In this step we will determine the dimensions and location of the &lt;em&gt;put EMPTY&lt;/em&gt; call we need in order to empty the box from front to back.  Consider the figure below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/wireFrameBox03.jpg&quot; alt=&quot;Empty front to back&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The green rectangle marks the area  of the box that we want to remove all the way from front to back.  Since we want to leave the left and right sides of the box, the &lt;em&gt;x-dimension&lt;/em&gt; of the section to remove is &lt;em&gt;xSize-2&lt;/em&gt;.  Similarly, since we want to leave the top and bottom of the box, the &lt;em&gt;y-dimension&lt;/em&gt; of the section to remove is &lt;em&gt;ySize-2&lt;/em&gt;. And finally, since we want to remove this section from the front of the box to the back, the &lt;em&gt;z-dimension&lt;/em&gt; of the section to remove is the full &lt;em&gt;zSize&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;So at this point we know the code we need looks like the following:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put (xSize-2,ySize-2,zSize) EMPTY (?, ?, ?)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;We need to figure out the reference point (location) of this EMPTY block. As is shown in the figure above, the lower left corner of the green rectangle is one over and one up from the red block while the &lt;em&gt;z&lt;/em&gt; coordinate is the same as that of the red block.  Adding this to our &lt;em&gt;put&lt;/em&gt; call and inserting it into the function gives us this:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun wireFrameBox (xSize,ySize,zSize,x,y,z,color) = 
+(
+    put (xSize,ySize,zSize) color (x,y,z);
+    put (xSize-2,ySize-2,zSize) EMPTY (x+1,y+1,z)
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The function call&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wireFrameBox (14, 5, 10, 0, 0, 0, BLUE);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;produces the following artifact.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/wireFrameBox04.png&quot; alt=&quot;Emptied front to back&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;step-3-empty-box-from-left-to-right&quot;&gt;Step 3: empty box from left to right&lt;/h4&gt;
+
+&lt;p&gt;In this step we will determine the dimensions and location of the &lt;em&gt;put EMPTY&lt;/em&gt; call we need in order to empty the box from left to right.  Consider the figure below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/wireFrameBox08.jpg&quot; alt=&quot;Empty left to right&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The green rectangle marks the area  of the box that we want to remove all the way from left to right.  Since we want to leave the front and back frames of the box, the &lt;em&gt;z-dimension&lt;/em&gt; of the section to remove is &lt;em&gt;zSize-2&lt;/em&gt;.  Similarly, since we want to leave the top and bottom of the box, the &lt;em&gt;y-dimension&lt;/em&gt; of the section to remove is &lt;em&gt;ySize-2&lt;/em&gt;. And finally, since we want to remove this section from the left of the box to the right, the &lt;em&gt;x-dimension&lt;/em&gt; of the section to remove is the full &lt;em&gt;xSize&lt;/em&gt;. (Note that most of what we’re talking about removing has already been removed.   We could focus just on removing parts of the left and right sides of the box.  But that would take two &lt;em&gt;put&lt;/em&gt; calls and double the calculations that we need to do.  Therefore it’s simplest to approach it the same way we did the previous step.)&lt;/p&gt;
+
+&lt;p&gt;So at this point we know the code we need looks like the following:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put (xSize,ySize-2,zSize-2) EMPTY (?, ?, ?)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;We need to figure out the reference point (location) of this EMPTY block. As is shown in the figure above, the reference point is one back and one up from the red block while the &lt;em&gt;x&lt;/em&gt; coordinate is the same as that of the red block.  Adding this to our &lt;em&gt;put&lt;/em&gt; call and inserting it into the function gives us this:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun wireFrameBox (xSize,ySize,zSize,x,y,z,color) = 
+(
+    put (xSize,ySize,zSize) color (x,y,z);
+    put (xSize-2,ySize-2,zSize  ) EMPTY (x+1,y+1,z  )
+    put (xSize  ,ySize-2,zSize-2) EMPTY (x,  y+1,z+1)
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The function call&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wireFrameBox (14, 5, 10, 0, 0, 0, BLUE);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;produces the following artifact.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/wireFrameBox05.png&quot; alt=&quot;Emptied left to right&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;step-4-empty-box-from-bottom-to-top&quot;&gt;Step 4: empty box from bottom to top&lt;/h4&gt;
+
+&lt;p&gt;The analysis for this step is the same as the previous two. The figure below illustrates the size and location of the EMPTY block that should be placed to clear the top and bottom of the box.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/wireFrameBox10.jpg&quot; alt=&quot;Empty vertically&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The following completed wireFrameBox function is as follows. 
+&lt;a href=&quot; http://localhost:4000/assets/posts/functions/wireFrameBox04.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun wireFrameBox (xSize,ySize,zSize,x,y,z,color) = 
+(
+    put (xSize,ySize,zSize) color (x,y,z);
+    put (xSize-2,ySize-2,zSize  ) EMPTY (x+1,y+1,z  );
+    put (xSize  ,ySize-2,zSize-2) EMPTY (x,  y+1,z+1);
+    put (xSize-2,ySize  ,zSize-2) EMPTY (x+1,y,  z+1)
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The function call&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wireFrameBox (14, 5, 10, 0, 0, 0, BLUE);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;produces the following artifact.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/wireFrameBox06.png&quot; alt=&quot;Wire frame box&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;patterns-and-symmetry-in-the-put-calls&quot;&gt;Patterns and symmetry in the &lt;em&gt;put&lt;/em&gt; calls&lt;/h3&gt;
+
+&lt;p&gt;Spend a few minutes studying the final version of the function.  Pay particular attention to the patterns that you see in both the size and the locations of the EMPTY blocks.  For example, each horizontal &lt;em&gt;size&lt;/em&gt; parameter is either &lt;em&gt;xSize&lt;/em&gt; or &lt;em&gt;xSize-2&lt;/em&gt; (same for the other two &lt;em&gt;size&lt;/em&gt; parameters).  Each horizontal location coordinate is either &lt;em&gt;x&lt;/em&gt; or &lt;em&gt;x+1&lt;/em&gt; (and same for the other two location parameters).  Many times you can eliminate a little of the work in writing a function like this simply by taking note of such patterns.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="functions" /><summary type="html">Topics on this page Topics on this page</summary></entry><entry><title type="html">Getting Started with Functions</title><link href="http://localhost:4000/intro-to-functions/" rel="alternate" type="text/html" title="Getting Started with Functions" /><published>2019-03-25T00:00:00-05:00</published><updated>2019-03-25T00:00:00-05:00</updated><id>http://localhost:4000/intro-to-functions</id><content type="html" xml:base="http://localhost:4000/intro-to-functions/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#placing-the-same-artifact-in-multiple-locations&quot; id=&quot;markdown-toc-placing-the-same-artifact-in-multiple-locations&quot;&gt;Placing the same artifact in multiple locations&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this post we’ll explore how to create our own functions. So far we’ve used functions that come with Bricklayer.  These include &lt;em&gt;put2D&lt;/em&gt;, &lt;em&gt;put&lt;/em&gt;, &lt;em&gt;lineXZ&lt;/em&gt;, &lt;em&gt;circleXZ&lt;/em&gt;, and &lt;em&gt;sphere&lt;/em&gt;. These are referred to as &lt;em&gt;built-in&lt;/em&gt; functions.  We’ll learn how to create our own functions which are known as &lt;em&gt;user-defined&lt;/em&gt; functions (we are &lt;em&gt;users&lt;/em&gt; and &lt;em&gt;defining&lt;/em&gt; our own functions).&lt;/p&gt;
+
+&lt;p&gt;The primary reason to create your own functions is so that you can use that code multiple times without having to rewrite it each time.  Suppose there was no &lt;em&gt;circleXZ&lt;/em&gt; function. To create a circle, you’d have to write a lot of &lt;em&gt;put&lt;/em&gt; function calls and it would get complicated quickly. We should stop now and say a &lt;em&gt;thank you&lt;/em&gt; to Dr. Winter for writing all the bricklayer built-in functions!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;placing-the-same-artifact-in-multiple-locations&quot;&gt;Placing the same artifact in multiple locations&lt;/h3&gt;
+
+&lt;p&gt;Suppose we want to write a bricklayer program to create the following artifact.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/functions01.png&quot; alt=&quot;Functions01&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The Level_3 code to create the artifact at (0,0) is as follows.
+&lt;a href=&quot; http://localhost:4000/assets/posts/functions/functions01.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D  (2,4)  BLUE    (0,0);
+put2D  (3,3)  RED     (2,0);
+put2D  (2,3)  YELLOW  (0,4);
+put2D  (3,4)  GREEN   (2,3);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now let’s write the code to place the other artifacts.  One way to do this is to look at the grid and use the labels on the rows and columns to get the coordinates for each of the blue, red, yellow, and green blocks.  For the artifact at (14,0), the blue one is at (14,0), the red at (16,0), yellow at (14,4), and green at (16,3). For the artifact at (7,6), the blue one is at (7,6), the red at (9,6), yellow at (7,10), and green at (9,9).  We could do this for each of the artifacts.  Following is the code to create all six artifacts.
+ &lt;a href=&quot; http://localhost:4000/assets/posts/functions/functions02.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(* Artifact at (0,0) *)
+put2D  (2,4)  BLUE    (  0 ,  0 );
+put2D  (3,3)  RED     (  2 ,  0 );
+put2D  (2,3)  YELLOW  (  0 ,  4 );
+put2D  (3,4)  GREEN   (  2 ,  3 );
+
+(* Artifact at (14,0) *)
+put2D  (2,4)  BLUE    ( 14 ,  0 );
+put2D  (3,3)  RED     ( 16 ,  0 );
+put2D  (2,3)  YELLOW  ( 14 ,  4 );
+put2D  (3,4)  GREEN   ( 16 ,  3 );
+
+(* Artifact at (7,6) *)
+put2D  (2,4)  BLUE    (  7 ,  6 );
+put2D  (3,3)  RED     (  9 ,  6 );
+put2D  (2,3)  YELLOW  (  7 , 10 );
+put2D  (3,4)  GREEN   (  9 ,  9 );
+
+(* Artifact at (4,15) *)
+put2D  (2,4)  BLUE    (  4 , 15 );
+put2D  (3,3)  RED     (  6 , 15 );
+put2D  (2,3)  YELLOW  (  4 , 19 );
+put2D  (3,4)  GREEN   (  6 , 18 );
+
+(* Artifact at (13,13) *)
+put2D  (2,4)  BLUE    ( 13 , 13 );
+put2D  (3,3)  RED     ( 15 , 13 );
+put2D  (2,3)  YELLOW  ( 13 , 17 );
+put2D  (3,4)  GREEN   ( 15 , 16 );
+
+(* Artifact at (20,11) *)
+put2D  (2,4)  BLUE    ( 20 , 11 );
+put2D  (3,3)  RED     ( 22 , 11 );
+put2D  (2,3)  YELLOW  ( 20 , 15 );
+put2D  (3,4)  GREEN   ( 22 , 14 );
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;That gets tedious fast!  Suppose that instead of six of these artifacts, you wanted to place 20? Or 100? You’d want an easier way!  The key is to notice that the relative position of the red block to the blue block and the green block to the blue block, etc. does not change.  So if the blue block moves over 4 and up 15, so does the red block and the green block and the yellow block.  So whatever we add to the coordinates of the blue block, we do the same to the coordinates of the other blocks.  Take a look at the following graphic to understand this better.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/functions02.jpg&quot; alt=&quot;Functions02&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Based on this analysis, we can rewrite our program as follows (yes, it looks even more tedious, but it will be worth it!).&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/functions03.png&quot; alt=&quot;Functions03&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Now that we can see the patterns in the code, we can create a function that does the work for us.  The following function places a copy of the artifact at location (x,z).
+ &lt;a href=&quot; http://localhost:4000/assets/posts/functions/functions03.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_3;
+
+fun myArtifact ( x, z ) =
+(
+    put2D  (2,4)  BLUE    (  x + 0,  z + 0 );
+    put2D  (3,3)  RED     (  x + 2,  z + 0 );
+    put2D  (2,3)  YELLOW  (  x + 0,  z + 4 );
+    put2D  (3,4)  GREEN   (  x + 2,  z + 3 )
+);
+ 
+build2D (30,30);
+
+myArtifact ( 0,  0);      (* Artifact at ( 0,  0) *)
+myArtifact (14,  0);      (* Artifact at (14,  0) *)
+myArtifact ( 7,  6);      (* Artifact at ( 7,  6) *)
+myArtifact ( 4, 15);      (* Artifact at ( 4, 15) *)
+myArtifact (13, 13);      (* Artifact at (13, 13) *)
+myArtifact (20, 11);      (* Artifact at (20, 11) *)
+
+show2D &quot;my blocks&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Betty Love</name></author><category term="functions" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Rings and Cylinders</title><link href="http://localhost:4000/rings-cylinders/" rel="alternate" type="text/html" title="Rings and Cylinders" /><published>2019-03-11T00:00:00-05:00</published><updated>2019-03-11T00:00:00-05:00</updated><id>http://localhost:4000/rings-cylinders</id><content type="html" xml:base="http://localhost:4000/rings-cylinders/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#level_4-documentation&quot; id=&quot;markdown-toc-level_4-documentation&quot;&gt;Level_4 Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#rings-in-2d&quot; id=&quot;markdown-toc-rings-in-2d&quot;&gt;Rings in 2D&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#rings-in-3d&quot; id=&quot;markdown-toc-rings-in-3d&quot;&gt;Rings in 3D&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this post we’ll investigate how to create rings and cylinders in Bricklayer Level_4.  For an introduction to Level_4 programming, check out &lt;a href=&quot;/getting-started-with-level4&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Where you see this icon,&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl icon&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;click on it to download the associated bricklayer program.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;level_4-documentation&quot;&gt;Level_4 Documentation&lt;/h3&gt;
+
+&lt;p&gt;The official documentation for Level_4 functions is found on the &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer website&lt;/a&gt; by selecting Apps -&amp;gt; Bricklayer -&amp;gt; Level 4 Document or through this &lt;a href=&quot;https://bricklayer.org/level-4-document/&quot;&gt;direct link&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;rings-in-2d&quot;&gt;Rings in 2D&lt;/h3&gt;
+&lt;p&gt;Before discussing 3D rings, let’s review the idea of a ring in 2D. A ring is defined by its radius, thickness, color, and location.  These are the parameters for the &lt;em&gt;ringXZ&lt;/em&gt; function. Consider the following code in Level_3 and its output.
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/ringX01.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(* ringXZ radius thickness color location *)
+ringXZ 10  1  BLUE  (15,25);
+ringXZ 10  4  RED   (40,25);
+ringXZ 20 10  GREEN (75,25);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/ring01.png&quot; alt=&quot;Rings in Level_3&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;rings-in-3d&quot;&gt;Rings in 3D&lt;/h3&gt;
+&lt;p&gt;Rings in 3D are analogous to rings in 2D with one exception: the length of the ring.  Essentially rings in 3D are cylinders.  To create a cylinder, we need to know its radius, thickness (of its walls), color, and location.  But we also need to know its orientation: is it standing up?  laying down? laying down front to back or side to side?&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D," /><category term="cylinder," /><category term="ring," /><category term="ringX," /><category term="ringY," /><category term="ringZ," /><category term="level" /><category term="4," /><category term="level_4," /><category term="hollowCylinder" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Spheres in Bricklayer</title><link href="http://localhost:4000/spheres/" rel="alternate" type="text/html" title="Spheres in Bricklayer" /><published>2019-03-01T00:00:00-06:00</published><updated>2019-03-01T00:00:00-06:00</updated><id>http://localhost:4000/spheres</id><content type="html" xml:base="http://localhost:4000/spheres/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#sphere-functions-in-bricklayer-level-4&quot; id=&quot;markdown-toc-sphere-functions-in-bricklayer-level-4&quot;&gt;Sphere functions in Bricklayer Level 4&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#bricklayer-sphere-function&quot; id=&quot;markdown-toc-bricklayer-sphere-function&quot;&gt;Bricklayer &lt;em&gt;sphere&lt;/em&gt; function&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#list-of-colors&quot; id=&quot;markdown-toc-list-of-colors&quot;&gt;List of colors?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#bricklayer-hollowsphere-function&quot; id=&quot;markdown-toc-bricklayer-hollowsphere-function&quot;&gt;Bricklayer &lt;em&gt;hollowSphere&lt;/em&gt; function&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this post we’ll explore spheres in Bricklayer Level 4.  For an introduction to programming in the  Level 4, check out &lt;a href=&quot;/getting-started-with-level4&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Where you see this icon,&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl icon&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;click on it to download the associated bricklayer program.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;sphere-functions-in-bricklayer-level-4&quot;&gt;Sphere functions in Bricklayer Level 4&lt;/h3&gt;
+
+&lt;p&gt;Bricklayer has two sphere functions: &lt;em&gt;sphere&lt;/em&gt; and &lt;em&gt;hollowSphere&lt;/em&gt;. Official documentation on these and other Level-4 functions is available at &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt; (Apps -&amp;gt; Bricklayer -&amp;gt; Level 4 - Document).  In this post, we’ll start with the &lt;em&gt;sphere&lt;/em&gt; function.&lt;/p&gt;
+
+&lt;h4 id=&quot;bricklayer-sphere-function&quot;&gt;Bricklayer &lt;em&gt;sphere&lt;/em&gt; function&lt;/h4&gt;
+
+&lt;p&gt;The &lt;em&gt;sphere&lt;/em&gt; function produces a sphere (duh!), i.e., a ball.  This is a 3D artifact. To create a sphere, we need to know three things:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;how big it should be&lt;/li&gt;
+  &lt;li&gt;what color(s) it should be&lt;/li&gt;
+  &lt;li&gt;where it should be&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These three things define the parameters for the &lt;em&gt;sphere&lt;/em&gt; function. Specifically, the parameters are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;radius&lt;/li&gt;
+  &lt;li&gt;a list of colors, written as [color1,color2,etc]&lt;/li&gt;
+  &lt;li&gt;the center, written as a location in 3D space&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The &lt;em&gt;sphere&lt;/em&gt; command looks like:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere radius [color1,color2,etc] (x,y,z)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The following command creates a blue sphere with radius 10 with center (15,15,15):
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere01.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10 [BLUE] (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere01.png&quot; alt=&quot;Blue sphere&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Let’s put three side-by-side (radii 5, 10, and 15) for perspective.
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere02.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 5  [BLUE] (10,20,20);
+sphere 10 [BLUE] (30,20,20);
+sphere 15 [BLUE] (60,20,20);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere02.png&quot; alt=&quot;Three blue spheres&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;list-of-colors&quot;&gt;List of colors?&lt;/h4&gt;
+&lt;p&gt;Let’s explore what happens when we have more than one color in our list of colors. I’ll change up our three spheres as follows. &lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere03.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 5  [BLUE,YELLOW] (10,20,20);
+sphere 10 [RED, GREEN] (30,20,20);
+sphere 15 [PINK, VIOLET] (60,20,20);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere03.png&quot; alt=&quot;Three bi-color spheres&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;But we’re not limited to just two colors.  You can include as many as you’d like.  Here’s one with three colors. &lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere04.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10 [RED,ORANGE,YELLOW] (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere04.png&quot; alt=&quot;A red, orange, and yellow sphere&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;At this point if you’ve been running the .bl files yourself, you may have noticed that as your artifacts include more bricks, it can take longer for your computer to display them. It is easy to generate a lot of bricks when creating spheres.  In fact, we can look at the output in the bricklayer console window to see how many bricks are in an artifact.  The screenshot below shows how to look for this (first scroll to the bottom of the console window, then up until you see this part).  Notice that our red, orange, and yellow sphere is made up of 4,945 bricks!&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere05.png&quot; alt=&quot;A red, orange, and yellow sphere&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h4 id=&quot;bricklayer-hollowsphere-function&quot;&gt;Bricklayer &lt;em&gt;hollowSphere&lt;/em&gt; function&lt;/h4&gt;
+&lt;p&gt;The &lt;em&gt;hollowSphere&lt;/em&gt; function provides a way to create the same look as the &lt;em&gt;sphere&lt;/em&gt; command without all the inner bricks that one cannot see.  The parameters are the same except for one additional parameter for &lt;em&gt;hollowSphere&lt;/em&gt; to indicate the thickness of the surface of the sphere.  The maximum value for this is 10 and it yields a sphere that looks exactly like the output from the &lt;em&gt;sphere&lt;/em&gt; command, but with the unseen bricks deleted.  This allows us to create larger spheres without slowing down the computer too much.&lt;/p&gt;
+
+&lt;p&gt;The general form of the &lt;em&gt;hollowSphere&lt;/em&gt; command is:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollowSphere radius thickness [colors] location;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;I’ll create a sphere that looks like the previous one using &lt;em&gt;hollowSphere&lt;/em&gt; with a thickness of 10. 
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere05.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollowSphere 10 10 [RED,ORANGE,YELLOW] (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere06.png&quot; alt=&quot;Hollow sphere with thickness 10&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Now let’s check the bricklayer console to see how many bricks are in this one.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere07.png&quot; alt=&quot;A red, orange, and yellow sphere&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;2392 bricks in the hollow sphere vs. 4945 in the solid sphere.  Using &lt;em&gt;hollowSphere&lt;/em&gt; allows us to create larger spheres with no change in appearance from the outside of the sphere.&lt;/p&gt;
+
+&lt;p&gt;What if we used a smaller value for the thickness?  Let’s try 5! &lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere06.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollowSphere 10 5 [RED,ORANGE,YELLOW] (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere08.png&quot; alt=&quot;Hollow sphere with thickness 5&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The outside of the sphere is not solid now.  Let’s try thickness = 1. 
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere07.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollowSphere 10 1 [RED,ORANGE,YELLOW] (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere09.png&quot; alt=&quot;Hollow sphere with thickness 5&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;As the thickness decreases, the number of visible bricks on the outside of the sphere also decreases.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D," /><category term="sphere" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Slicing Spheres in Bricklayer to See Inside!</title><link href="http://localhost:4000/slicing-spheres/" rel="alternate" type="text/html" title="Slicing Spheres in Bricklayer to See Inside!" /><published>2019-03-01T00:00:00-06:00</published><updated>2019-03-01T00:00:00-06:00</updated><id>http://localhost:4000/slicing-spheres</id><content type="html" xml:base="http://localhost:4000/slicing-spheres/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#spheres-inside-spheres&quot; id=&quot;markdown-toc-spheres-inside-spheres&quot;&gt;Spheres inside spheres&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#circles-inside-circles&quot; id=&quot;markdown-toc-circles-inside-circles&quot;&gt;Circles inside circles&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#back-to-spheres-inside-spheres&quot; id=&quot;markdown-toc-back-to-spheres-inside-spheres&quot;&gt;Back to spheres inside spheres&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#slice-horizontally-perpendicular-to-y-axis&quot; id=&quot;markdown-toc-slice-horizontally-perpendicular-to-y-axis&quot;&gt;Slice horizontally (perpendicular to &lt;em&gt;y&lt;/em&gt; axis)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#slice-perpendicular-to-the-z-axis&quot; id=&quot;markdown-toc-slice-perpendicular-to-the-z-axis&quot;&gt;Slice perpendicular to the &lt;em&gt;z&lt;/em&gt; axis&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this post we’ll explore slicing spheres in order to see inside them.  For an introduction to spheres, check out &lt;a href=&quot;/spheres&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Where you see this icon,&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl icon&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;click on it to download the associated bricklayer program.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;spheres-inside-spheres&quot;&gt;Spheres inside spheres&lt;/h3&gt;
+
+&lt;p&gt;What happens if we create a sphere inside a sphere in bricklayer?  Well, let’s find out!
+Let’s start with a single sphere with radius 10.
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere08.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10 [BLUE] (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere10.png&quot; alt=&quot;Blue sphere with radius 10&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Now let’s put a smaller sphere at the same location (having the same center).  I’ll give this one a radius of 7 and make it red.
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere09.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10 [BLUE]  (15,15,15);
+sphere  7 [RED]  (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere10.png&quot; alt=&quot;Blue sphere with radius 10&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Hmmm…where’s the white sphere???&lt;/p&gt;
+
+&lt;h3 id=&quot;circles-inside-circles&quot;&gt;Circles inside circles&lt;/h3&gt;
+
+&lt;p&gt;We can’t see it because it’s inside the blue sphere.  I’m going to slice this artifact in half so we can see the middle.  How can I do that? First we need to understand the location of the boundaries of the sphere. The image below shows a cross section of the sphere at its center. I created this in the bricklayer &lt;a href=&quot;https://bricklayer.org/apps/grid_lite/grid.html&quot;&gt;Grid app&lt;/a&gt;, then marked it up on my ipad.  (I highly recommend using the Grid app to map out artifacts.) I did this analysis so that I could  come up with the coordinates of the yellow bounding square (which we’ll use to create a yellow bounding box).  Note that I could have used trial and error, but some times it’s difficult to know if you cut off part of a circle.  I also wanted to demonstrate this process.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere11.jpg&quot; alt=&quot;Blue sphere with radius 10&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Based on these calculations, we can write a Level_3 bricklayer program to create this.  You should look at each of the following commands and make sure you understand how to come up with the parameters used in each.
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere10.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (23,23) YELLOW (4,4);
+put2D (21,21) EMPTY  (5,5);
+
+circleXZ 10  BLUE  (15,15);
+circleXZ  6  RED   (15,15);
+
+put2D (1,1)   BLACK (15,15);
+put2D (10,1)  WHITE (16,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here’s a look at the real artifact.  I put the white blocks in so that it’s easier to confirm that the radius of the blue circle is 10 and the red circle is 6.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere12.jpg&quot; alt=&quot;Blue sphere with radius 10&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;If I wanted to slice the circle in half and only see half of it, say the right half, then I can place a big empty block to cover the part that I don’t want to be visible.  There’s a bit of a problem with slicing the circle in &lt;em&gt;half&lt;/em&gt;.  Can you think about what that problem is?  Hint: is the diameter of a circle even or odd?&lt;/p&gt;
+
+&lt;p&gt;Take a closer look at our artifact.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere13.jpg&quot; alt=&quot;Radius 10, diameter 21&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Our blue circle has radius 10, but its diameter is 21 because of the center block.  In general, we have the following relationship between the radius and diameter of a circle artifact:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;diameter = (2 x radius) + 1&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Since 2 times any number is always even, adding 1 makes it odd, so the diameter of a circle in bricklayer is always odd.  What is half an odd number?  Not a whole number!  So what does half a circle mean?  One half will include the center point and one half will not.  For our purposes, I’ll leave the center point in the half that will be displayed.&lt;/p&gt;
+
+&lt;p&gt;The following image shows my calculations for what size EMPTY block I need and where it needs to go.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere14.jpg&quot; alt=&quot;Calculate dimensions and location of EMPTY block&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;I’ll edit the code to remove the yellow frame and the left “half” of the circle. 
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere11.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;circleXZ 10  BLUE  (15,15);
+circleXZ  6  RED   (15,15);
+
+put2D (1,1)   BLACK (15,15);
+put2D (10,1)  WHITE (16,15);
+
+put2D (10,21) EMPTY (5,5);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here’s the artifact produced by this code.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere15.png&quot; alt=&quot;Half a circle&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;back-to-spheres-inside-spheres&quot;&gt;Back to spheres inside spheres&lt;/h3&gt;
+
+&lt;p&gt;Now that we understand slicing a circle, we can extend that knowledge to slicing a sphere.  Let’s go back to our red sphere inside a blue sphere. I’m going to add a set of axes to our artifact so that it’s easier to get our bearings.  The following code generates the axes and our red sphere inside a blue sphere.&lt;br /&gt;
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere12.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put (30,1,1) WHITE  (0,0,0);   (* x axis *)
+put (1,30,1) PINK   (0,0,0);   (* y axis *)
+put (1,1,30) BLACK  (0,0,0);   (* z axis *)
+put (1,1,1)  YELLOW (0,0,0);   (* origin *)
+
+
+sphere 10  [BLUE]  (15,15,15);
+sphere  7  [RED]   (15,15,15);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The resulting artifact is the following.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere16.png&quot; alt=&quot;3D axes and spheres&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;There are many ways that we could slice the sphere in (almost) half (recall that the diameter of a sphere, just like that of a circle, is an odd number, so half of it is not a whole number). Let’s first figure out how to chop off the left side. You can envision this as a knife slicing through the middle of the sphere from &lt;em&gt;z=0&lt;/em&gt; to &lt;em&gt;z=30&lt;/em&gt;.  Although our sphere is not that big, we won’t worry about that right now.  We’ll just slice through some air!! The following image illustrates this idea.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere17.jpg&quot; alt=&quot;Slice sphere&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Our approach will be to place a giant EMPTY block on the left side.  The center of the sphere in the &lt;em&gt;x&lt;/em&gt; direction (white axis) is at &lt;em&gt;x=15&lt;/em&gt;. We need to back up one unit so that we don’t chop off the layer of the sphere here.  Since our sphere is the only artifact we’re working with, we don’t have to be precise in determining the size of the EMPTY block.  The easy way is to locate the block at (0,0,0) and make it go to the build-space size in the &lt;em&gt;y&lt;/em&gt; and &lt;em&gt;z&lt;/em&gt; directions.  The only hard part is to figure out how far to go in the &lt;em&gt;x&lt;/em&gt; direction. Given our analysis above, we want to zap through &lt;em&gt;x=14&lt;/em&gt; which means our EMPTY block should be of size 15 in the &lt;em&gt;x&lt;/em&gt; direction.  Following is code that puts a giant YELLOW block there instead of EMPTY just to give a visual on what this block really looks like. 
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere13.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10  [BLUE]  (15,15,15);
+sphere  7  [RED]   (15,15,15);
+
+put (15,30,30) YELLOW (0,0,0);  (* giant yellow block *)
+
+(* place axes last *)
+put (30,1,1) WHITE  (0,0,0);   (* x axis *)
+put (1,30,1) PINK   (0,0,0);   (* y axis *)
+put (1,1,30) BLACK  (0,0,0);   (* z axis *)
+put (1,1,1)  YELLOW (0,0,0);   (* origin *)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The output is shown in the following image.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere18.jpg&quot; alt=&quot;Slice sphere with giant yellow block&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Note that we sliced it correctly since the sphere has radius 10 and we can see the 10 layers plus the center layer.  So now…let’s put an EMPTY block there instead of YELLOW.  I also put a 1x1x1 white block at the center of the sphere just to make sure I wasn’t chopping that layer off. 
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere14.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10  [BLUE]  (15,15,15);
+sphere  7  [RED]   (15,15,15);
+
+put (1,1,1) WHITE (15,15,15);  (* white block at center *)
+
+put (15,30,30) EMPTY (0,0,0);  (* giant empty block *)
+
+(* place axes last *)
+put (30,1,1) WHITE  (0,0,0);   (* x axis *)
+put (1,30,1) PINK   (0,0,0);   (* y axis *)
+put (1,1,30) BLACK  (0,0,0);   (* z axis *)
+put (1,1,1)  YELLOW (0,0,0);   (* origin *)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The output is shown in the following image where we can see the cross-section of the red sphere inside the blue one as well as the white center block.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere19.png&quot; alt=&quot;Slice sphere with giant empty block&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;slice-horizontally-perpendicular-to-y-axis&quot;&gt;Slice horizontally (perpendicular to &lt;em&gt;y&lt;/em&gt; axis)&lt;/h3&gt;
+
+&lt;p&gt;Suppose that instead of slicing vertically across the &lt;em&gt;x&lt;/em&gt; axis as we just did, we want to slice horizontally so that we can look down into the remaining “half”.  Let’s think about how to do that.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere20.jpg&quot; alt=&quot;Slice sphere perpendicular to y axis&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;As the figure above shows, we want to empty out everything above the &lt;em&gt;y=15&lt;/em&gt; plane, i.e., everything above and including the &lt;em&gt;y=16&lt;/em&gt; plane. This means we need an EMPTY block that is size &lt;em&gt;(30,14,30)&lt;/em&gt; to go at location &lt;em&gt;(0,16,0)&lt;/em&gt;.  Let’s think about these values.  As shown in the image, we start the EMPTY block at &lt;em&gt;y=16&lt;/em&gt; and if we extend it to the maximum value of &lt;em&gt;y&lt;/em&gt;, which is 29, then the EMPTY block needs to have height &lt;em&gt;14 = 29-16+1&lt;/em&gt;.  The code is as follows. 
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere15.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10  [BLUE]  (15,15,15);
+sphere  7  [RED]   (15,15,15);
+
+put (1,1,1) WHITE (15,15,15);  (* white block at center *)
+
+put (30,14,30) EMPTY (0,16,0);  (* giant empty block *)
+
+(* place axes last *)
+put (30,1,1) WHITE  (0,0,0);   (* x axis *)
+put (1,30,1) PINK   (0,0,0);   (* y axis *)
+put (1,1,30) BLACK  (0,0,0);   (* z axis *)
+put (1,1,1)  YELLOW (0,0,0);   (* origin *)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The resulting artifact follows.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere21.png&quot; alt=&quot;Sliced sphere perpendicular to y axis&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;slice-perpendicular-to-the-z-axis&quot;&gt;Slice perpendicular to the &lt;em&gt;z&lt;/em&gt; axis&lt;/h3&gt;
+&lt;p&gt;Now suppose we want to slice the sphere so that we can see the center when looking from the front (across the &lt;em&gt;x&lt;/em&gt; axis).  Consider the following image and think about what the size and location of the EMPTY block should be.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere22.jpg&quot; alt=&quot;How to slic perpendicular to z axis&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;This is analogous to our first slice which took away the left part of the sphere when viewing from across the &lt;em&gt;x&lt;/em&gt; axis.  The code is as follows (compare it to the first slice).
+&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere16.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10  [BLUE]  (15,15,15);
+sphere  7  [RED]   (15,15,15);
+
+put (1,1,1) WHITE (15,15,15);  (* white block at center *)
+
+put (30,30,15) EMPTY (0,0,0);  (* giant empty block *)
+
+(* place axes last *)
+put (30,1,1) WHITE  (0,0,0);   (* x axis *)
+put (1,30,1) PINK   (0,0,0);   (* y axis *)
+put (1,1,30) BLACK  (0,0,0);   (* z axis *)
+put (1,1,1)  YELLOW (0,0,0);   (* origin *)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The artifact produced is as follows.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere23.png&quot; alt=&quot;Sliced sphere perpendicular to z axis&quot; /&gt;
+    
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D," /><category term="sphere" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Bricklayer Level 4</title><link href="http://localhost:4000/getting-started-with-level4/" rel="alternate" type="text/html" title="Getting Started with Bricklayer Level 4" /><published>2019-02-21T00:00:00-06:00</published><updated>2019-02-21T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-level4</id><content type="html" xml:base="http://localhost:4000/getting-started-with-level4/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#coordinates-in-3d-space&quot; id=&quot;markdown-toc-coordinates-in-3d-space&quot;&gt;Coordinates in 3D space&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Level 4 in Bricklayer opens up the world of 3D artifacts!  To create and run a Level_4 program, you must use the Bricklayer app (not Bricklayer-Lite).  For an introduction to programming in the Bricklayer app, check out &lt;a href=&quot;/getting-started-with-bricklayer&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;coordinates-in-3d-space&quot;&gt;Coordinates in 3D space&lt;/h3&gt;
+
+&lt;p&gt;Let’s start with a review of 2D coordinates in Bricklayer.  When programming in 2D, artifacts are placed in the x-z plane.  The point (x,z) is x units in the horizontal direction from 0 and z units in the vertical direction from 0.  Consider the figure below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-01.jpg&quot; alt=&quot;Horizontal and vertical coordinates&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;As we move to 3D, we (visually) lay the x-z plane flat, so the above artifact would be viewed as follows.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-02.jpg&quot; alt=&quot;x-z plane laid flat&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;We think of x as the &lt;em&gt;width&lt;/em&gt; of the artifact and z as the &lt;em&gt;depth&lt;/em&gt;.  The third dimension, which we’ll label as &lt;em&gt;y&lt;/em&gt;, is the height.  In the artifact above, the height is one.  Below is the same artifact with second layer the same size as the first added.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-03.jpg&quot; alt=&quot;3D artifact&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The code to create this artifact is shown below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-04.png&quot; alt=&quot;Code for 3D artifact&quot; /&gt;
+    
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Programming in the Bricklayer App</title><link href="http://localhost:4000/getting-started-with-bricklayer/" rel="alternate" type="text/html" title="Getting Started with Programming in the Bricklayer App" /><published>2019-02-21T00:00:00-06:00</published><updated>2019-02-21T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-bricklayer</id><content type="html" xml:base="http://localhost:4000/getting-started-with-bricklayer/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#installing-the-bricklayer-app-and-an-artifact-viewer&quot; id=&quot;markdown-toc-installing-the-bricklayer-app-and-an-artifact-viewer&quot;&gt;Installing the Bricklayer App and an Artifact Viewer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bricklayer-app-environment&quot; id=&quot;markdown-toc-bricklayer-app-environment&quot;&gt;Bricklayer app environment&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#three-elements-of-every-bricklayer&quot; id=&quot;markdown-toc-three-elements-of-every-bricklayer&quot;&gt;Three elements of every Bricklayer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#save-your-program&quot; id=&quot;markdown-toc-save-your-program&quot;&gt;Save your program!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#semicolons&quot; id=&quot;markdown-toc-semicolons&quot;&gt;Semicolons!!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#adding-function-calls&quot; id=&quot;markdown-toc-adding-function-calls&quot;&gt;Adding function calls&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#running-your-bricklayer-lite-program&quot; id=&quot;markdown-toc-running-your-bricklayer-lite-program&quot;&gt;Running your Bricklayer-Lite program&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#errorsthey-are-unavoidable&quot; id=&quot;markdown-toc-errorsthey-are-unavoidable&quot;&gt;Errors—they are unavoidable!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;One can write Bricklayer programs in one of two ways:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Bricklayer-Lite is a web app available at &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt; that provides a gentle introduction to bricklayer programming. Programs are created by interactively selecting puzzle pieces that represent program elements and connecting them. This is all done in a browser window; hence no software download is required.  Only two-dimensional artifacts can be created with Bricklayer-Lite. &lt;a href=&quot;/getting-started-with-bricklayer-lite&quot;&gt;This post&lt;/a&gt; discusses how to get started with Bricklayer-Lite.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The Bricklayer app is a text-based programming environment and any Bricklayer program can be created and run in the Bricklayer app.  The app must be downloaded and installed on your computer. Versions are available for mac and windows. This post will focus on getting started with programming in the Bricklayer app.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;installing-the-bricklayer-app-and-an-artifact-viewer&quot;&gt;Installing the Bricklayer App and an Artifact Viewer&lt;/h3&gt;
+
+&lt;p&gt;Go to &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt; and choose Apps -&amp;gt; Bricklayer -&amp;gt; Windows Download (or Mac OS Download).&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-app/bricklayer-app01.png&quot; alt=&quot;Download Bricklayer&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;You will need to download and install the Bricklayer IDE as well as either LDD (LEGO Digital Designer) or LDraw.  The latter two are apps that Bricklayer uses to display artifacts created in a Bricklayer program. You will most likely need administrator access to install LDD or LDraw.&lt;/p&gt;
+
+&lt;p&gt;We recommend adding the Bricklayer app icon to your dock for easy access.&lt;/p&gt;
+
+&lt;h3 id=&quot;bricklayer-app-environment&quot;&gt;Bricklayer app environment&lt;/h3&gt;
+
+&lt;p&gt;The Bricklayer app window consists of two panes: one for your bricklayer program and one to view system (console) output when you execute your program.  You’ll spend 99% of your time in the programming pane.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-app/bricklayer-app02.png&quot; alt=&quot;Bricklayer Window&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;You are ready to start typing your program.&lt;/p&gt;
+
+&lt;h3 id=&quot;three-elements-of-every-bricklayer&quot;&gt;Three elements of every Bricklayer&lt;/h3&gt;
+
+&lt;p&gt;Every Bricklayer program contains the following three elements:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;em&gt;open Level_n&lt;/em&gt; statement - the “n” should be replaced with a level number. The number you choose depends on the Bricklayer functions you’d like to use in your program and what level they are in. Documentation for each of the five levels is available at &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt;.  Select Apps -&amp;gt; Bricklayer -&amp;gt; “Level n - Document” for Level x documentation.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-app/bricklayer-app03.png&quot; alt=&quot;Bricklayer documentation&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;For this example, I will use Level 3 functions, so will start my bricklayer program with the statement;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   open Level_3;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Note that Bricklayer distinguishes between upper and lower case characters.  So if you type&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   Open Level_3;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;or&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   open level_3;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;your program will not run.  Also note the semicolon at the end of the statement.  You must include this or, again, your program will not run.&lt;/p&gt;
+
+&lt;ol start=&quot;2&quot;&gt;
+  &lt;li&gt;&lt;em&gt;build2D (m,n)&lt;/em&gt; statement - this command tells Bricklayer the dimensions of the virtual space you want to work in; m is the number of rows and n is the number of columns.  It should be at least as large as the artifact you plan to build.  I want to build a 32x32 work space, so will add the following statement to my program:
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   build2D (32,32);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;Again note that case is important. Both&lt;/p&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   Build2D (32,32);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;and&lt;/p&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   build2d (32,32);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;will cause errors and your program will not run.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ol start=&quot;3&quot;&gt;
+  &lt;li&gt;&lt;em&gt;show2D “whatever”&lt;/em&gt; statement - the third command that is in every Bricklayer program in Levels 1 through 3 is the &lt;em&gt;show2D&lt;/em&gt; command.  It is also the last command/statement.  “whatever” is a name that you make up for the artifact that you’re creating. You can place any sequence of characters that you choose between the double quote marks.  Note that you must keep the quotes around this sequence of characters. The name you choose has no effect on how the program runs or the artifact that it generates.  I’ll use “demo” for this program, so will add the following line to my file:
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   show2D &quot;demo&quot;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;save-your-program&quot;&gt;Save your program!&lt;/h3&gt;
+&lt;p&gt;You should save your program often so that you don’t lose your work in case the power goes out or your computer decides to be weird.  You want to save your bricklayer code with a &lt;em&gt;.bl&lt;/em&gt; extension.  The .bl tells your computer that this file is a bricklayer file.  Choose File -&amp;gt; Save from the Bricklayer menu or use your computer’s shortcut key combination (Command + s for mac; Control + s for windows).  It’s a good idea to stick with alphabetic and numeric characters in your file name.  Avoid spaces.  The hyphen or underscore characters are good choices too to help make the file name easily readable if it’s long.  I’ve saved my file as &lt;em&gt;demo.bl&lt;/em&gt;. Following is a snippet from the Bricklayer window.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-app/bricklayer-app04.png&quot; alt=&quot;Bricklayer Program 0&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Note that the blank lines are unnecessary, but are used to make code more easily readable.  The large number of lines between the build2D and show2D commands just indicate that I’m going to add more code there.&lt;/p&gt;
+
+&lt;h3 id=&quot;semicolons&quot;&gt;Semicolons!!&lt;/h3&gt;
+
+&lt;p&gt;Almost every Bricklayer command (line of code) should end with a semicolon.  There are some exceptions, but we will not consider those at this time. A semicolon tells the computer that the current command (or line of code) is done.&lt;/p&gt;
+
+&lt;h3 id=&quot;adding-function-calls&quot;&gt;Adding function calls&lt;/h3&gt;
+
+&lt;p&gt;Following is the artifact that we will create with our Bricklayer program.  It is annotated to show the command needed for each of the blue, yellow, and green blocks.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-app/bricklayer-app05.jpg&quot; alt=&quot;Level 3 Artifact&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;In general the command&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (a,b) COLOR (x,z)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;places a brick of color COLOR and size a x b at location (x,z).  So the commands&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (5,2) BLUE (0,0)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;places a 5x2 blue block at location (0,0).&lt;/p&gt;
+
+&lt;p&gt;Our complete program is shown below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-app/bricklayer-app06.png&quot; alt=&quot;Bricklayer Program 01&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;running-your-bricklayer-lite-program&quot;&gt;Running your Bricklayer-Lite program&lt;/h3&gt;
+
+&lt;p&gt;At this point we are ready to run (execute) our program. First let’s save it.  Now click the &lt;em&gt;Run&lt;/em&gt; button at the bottom of the Bricklayer window.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-app/bricklayer-app07.png&quot; alt=&quot;Bricklayer Run Button&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;If your program has no errors and you have LDD (LEGO Digital Designer) installed properly, your artifact will open in LDD. Below is a screenshot from LDD (after some work to center and resize the artifact).&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-app/bricklayer-app08.png&quot; alt=&quot;LDD screenshot&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;errorsthey-are-unavoidable&quot;&gt;Errors—they are unavoidable!&lt;/h3&gt;
+
+&lt;p&gt;Suppose that the following was the program I ran.  Challenge for you—can you find the error in it?&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-app/bricklayer-app09.png&quot; alt=&quot;Bricklayer program with error&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;After running this version of the program, LDD did not open.  Uh oh. Now my Bricklayer program has a ominous-looking green arrowhead surrounded by red at line 10.  This tells me my program has an error on or near line 10.  To learn more, I look at the console pane at the bottom of the window.  It tells me there is an “Error: unclosed string”.  If you look carefully at line 10, you’ll see that I did not close the quotes around the word “demo”.  This is my problem.  Sometimes identifying the error is not so clear; Bricklayer’s console provides more information for us.  See the image below for the sequence of steps I could have gone through to identify my error.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-app/bricklayer-app10.jpg&quot; alt=&quot;Bricklayer Console Error Message&quot; /&gt;
+    
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Bricklayer-Lite</title><link href="http://localhost:4000/getting-started-with-bricklayer-lite-level-1/" rel="alternate" type="text/html" title="Getting Started with Bricklayer-Lite" /><published>2019-01-26T00:00:00-06:00</published><updated>2019-01-26T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-bricklayer-lite-level-1</id><content type="html" xml:base="http://localhost:4000/getting-started-with-bricklayer-lite-level-1/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#getting-started-with-bricklayer-lite-level_1-programming&quot; id=&quot;markdown-toc-getting-started-with-bricklayer-lite-level_1-programming&quot;&gt;Getting Started with Bricklayer-Lite Level_1 programming&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#three-elements-of-every-bricklayer-and-bricklayer-lite-program&quot; id=&quot;markdown-toc-three-elements-of-every-bricklayer-and-bricklayer-lite-program&quot;&gt;Three elements of every Bricklayer and Bricklayer-Lite Program&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#semicolons&quot; id=&quot;markdown-toc-semicolons&quot;&gt;Semicolons&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#adding-put2d-function-calls&quot; id=&quot;markdown-toc-adding-put2d-function-calls&quot;&gt;Adding put2D function calls&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#running-your-bricklayer-lite-program&quot; id=&quot;markdown-toc-running-your-bricklayer-lite-program&quot;&gt;Running your Bricklayer-Lite program&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bricklayer-code-generation&quot; id=&quot;markdown-toc-bricklayer-code-generation&quot;&gt;Bricklayer code generation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#output-format&quot; id=&quot;markdown-toc-output-format&quot;&gt;Output format&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#if-you-forget&quot; id=&quot;markdown-toc-if-you-forget&quot;&gt;If you forget…&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#more-information&quot; id=&quot;markdown-toc-more-information&quot;&gt;More information&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bricklayer-Lite is a app available at &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt;. Its purpose is to provide a gentle introduction to bricklayer programming. Programs are created by interactively selecting puzzle pieces that represent program elements and connecting them. This is all done in a browser window; hence no software download is required.  Only two-dimensional artifacts can be created with Bricklayer-Lite.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;getting-started-with-bricklayer-lite-level_1-programming&quot;&gt;Getting Started with Bricklayer-Lite Level_1 programming&lt;/h3&gt;
+
+&lt;p&gt;Go to &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt; and choose Apps -&amp;gt; Bricklayer-Lite. Take a few minutes to familiarize yourself with the contents of this page.  When you’re ready to start creating your Level_1 program, click on “Level_1”.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite01.png&quot; alt=&quot;Starting Bricklayer-Lite Level_1&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;three-elements-of-every-bricklayer-and-bricklayer-lite-program&quot;&gt;Three elements of every Bricklayer and Bricklayer-Lite Program&lt;/h3&gt;
+
+&lt;p&gt;Every Bricklayer and Bricklayer-Lite program contains the following three commands (lines of code / puzzle pieces)&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;em&gt;open&lt;/em&gt; statement - when you are getting started, the commands you use will be from Bricklayer Level_1; as you learn more, you’ll start using functions from higher levels.  Currently, there are five levels of Bricklayer functions.  To open Level_1 in Bricklayer-Lite, first click on &lt;em&gt;open level&lt;/em&gt;, then drag the &lt;em&gt;open Level_1&lt;/em&gt; puzzle piece into the white part of the window pane, as shown below.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite02.png&quot; alt=&quot;Bricklayer-Lite Level_1 open block&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;ol start=&quot;2&quot;&gt;
+  &lt;li&gt;&lt;em&gt;build2D&lt;/em&gt; statement - this command tells Bricklayer the dimensions of the virtual space you want to work in.  It should be at least as large as the artifact you plan to build.  Click on &lt;em&gt;build base plate&lt;/em&gt; and then click on and drag the &lt;em&gt;build2D&lt;/em&gt; puzzle piece into the area under the &lt;em&gt;open&lt;/em&gt; puzzle piece.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite03.png&quot; alt=&quot;Bricklayer-Lite Level_1 build2D block&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Either at the same time you drag the &lt;em&gt;build2D&lt;/em&gt; piece out or afterward, you want to connect it to the &lt;em&gt;open&lt;/em&gt; piece as shown below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite05.png&quot; alt=&quot;Connect build piece to open piece&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;ol start=&quot;3&quot;&gt;
+  &lt;li&gt;&lt;em&gt;show2D&lt;/em&gt; statement - the third command that is in every Bricklayer-Lite program is the &lt;em&gt;show2D&lt;/em&gt; command.  It is also the last command/statement. In Bricklayer-Lite click on and drag the &lt;em&gt;show2D&lt;/em&gt; puzzle piece out, but don’t hook it up yet.  We’ll do that when we’re done with the rest of the program.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite04.png&quot; alt=&quot;Bricklayer-Lite Level_1 show2D block&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The &lt;em&gt;“thing”&lt;/em&gt; part of the show2D command is a way for you to name the artifact that you’re creating. You can replace &lt;em&gt;thing&lt;/em&gt; with any sequence of characters that you choose (or you can just leave it alone).  Note that you must keep the quotes around this sequence of characters. The name you choose has no effect on how the program runs or the artifact that it generates.&lt;/p&gt;
+
+&lt;h3 id=&quot;semicolons&quot;&gt;Semicolons&lt;/h3&gt;
+
+&lt;p&gt;Almost every Bricklayer command (line of code) should end with a semicolon.  There are some exceptions, but we will not consider those at this time. A semicolon tells the computer that the current command (or line of code) is done. In Bricklayer-Lite we must drag the semicolon puzzle piece from the &lt;em&gt;symbols&lt;/em&gt; section and connect one to the end of each command.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite06.png&quot; alt=&quot;Bricklayer-Lite Semicolon&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;After adding a semicolon to the end of each puzzle piece, your program should look like the following.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite07.png&quot; alt=&quot;Bricklayer-Lite 3-line program&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Selecting the semicolon puzzle piece for each statement can become tedious quickly.  It’s possible to &lt;em&gt;duplicate&lt;/em&gt; any puzzle piece by right-clicking on that piece and choosing &lt;em&gt;Duplicate&lt;/em&gt;. If you have a mouse with two buttons, then right-clicking just means to click on the right button.  If you are using a Mac, then to right click on something you do a &lt;em&gt;Control-click&lt;/em&gt;, which means you hold down the &lt;em&gt;Control&lt;/em&gt; button and click. If you need more help on how to right-click on your machine, try google.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite08.png&quot; alt=&quot;Bricklayer-Lite duplicate block&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;adding-put2d-function-calls&quot;&gt;Adding put2D function calls&lt;/h3&gt;
+
+&lt;p&gt;Now we are ready to actually build our artifact.  In Level_1, the bricks available to us are as follows.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sizes: 1×1, 1×2, 2×1, 2×2, 2×3, 3×2, 2×4, 4×2&lt;/li&gt;
+  &lt;li&gt;Colors: BLUE, GRAY, BLACK, GREEN, RED, WHITE, YELLOW, EMPTY&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The official documentation on Bricklayer Level_1 can be found at &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt; by choosing &lt;em&gt;Apps -&amp;gt; Bricklayer -&amp;gt; Level 1 - Document&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;For each size/color combination (how many of these are there?) a corresponding puzzle piece is available in the &lt;em&gt;function calls&lt;/em&gt; section of the Bricklayer-Lite window.  The following image shows all the options for red bricks.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite09.png&quot; alt=&quot;Bricklayer-Lite Level 1 red bricks&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;To put a 2x2 red brick at (0,0), drag the 2x2 red brick puzzle piece in to the pane with the other puzzle pieces.  Add a semicolon to it and connect the pieces as shown below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite10.png&quot; alt=&quot;Bricklayer-Lite program&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;running-your-bricklayer-lite-program&quot;&gt;Running your Bricklayer-Lite program&lt;/h3&gt;
+
+&lt;p&gt;At this point you are ready to run (execute) your program. So far you’ve just been building your program and the computer has not tried to execute any of the commands.  Now that we have a complete program, we need to tell the computer we’re ready to run it.  To do this, click the &lt;em&gt;Run&lt;/em&gt; button at the top of the white pane.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite11.png&quot; alt=&quot;Run a Bricklayer-Lite program&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;If your program has no errors, output will appear in another pane on the same page. After running our sample program, I see the following.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite12.png&quot; alt=&quot;Output from running sample Bricklayer-Lite program&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;This output is correct since we placed a 2x2 red brick at (0,0).  Since we set our &lt;em&gt;build2D&lt;/em&gt; space to (2,2), our 2x2 red brick takes up the entire space.  Let’s make our build space larger to get better perspective. The size area in the &lt;em&gt;build2D&lt;/em&gt; puzzle piece is a dropdown menu. Click on it and choose (4,4) as shown below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite13.png&quot; alt=&quot;Change build space size&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Now click on &lt;em&gt;Run&lt;/em&gt; again.  The output should be as follows.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite14.png&quot; alt=&quot;Output from running sample Bricklayer-Lite program&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;bricklayer-code-generation&quot;&gt;Bricklayer code generation&lt;/h3&gt;
+
+&lt;p&gt;One final note.  A little later on, you will graduate to writing Bricklayer programs in the Bricklayer app (an app you must download and install on your computer).  In it you type your commands as opposed to dragging and connecting puzzle pieces.  To help you get started understanding how your Bricklayer-Lite program corresponds to a Bricklayer program, when you run a Bricklayer-Lite program, the corresponding Bricklayer program is generated in the pane at the bottom of the Bricklayer-Lite page.  For our example, the Bricklayer program is as follows.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_1;
+
+build2D (4,4);
+
+put2D_2x2_RED(0,0);
+
+show2D &quot;thing&quot;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;output-format&quot;&gt;Output format&lt;/h3&gt;
+
+&lt;p&gt;One option in Bricklayer-Lite is the output format. The default is set to &lt;em&gt;PLAIN&lt;/em&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite17.png&quot; alt=&quot;Bricklayer-Lite plain output format&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The other option is &lt;em&gt;LEGO&lt;/em&gt; which can be selected from the drop-down menu.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite18.png&quot; alt=&quot;Bricklayer-Lite LEGO output format&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;When we run our program with &lt;em&gt;LEGO&lt;/em&gt; output format selected, we get the following.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite19.png&quot; alt=&quot;Bricklayer-Lite example with LEGO output&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;if-you-forget&quot;&gt;If you forget…&lt;/h3&gt;
+
+&lt;p&gt;If you forget how to write a Bricklayer-Lite program, a quick way to refresh your memory is to look at an example. You can get to a Level_1 example quickly by clicking on &lt;em&gt;here&lt;/em&gt; in the sentence at the top of the Bricklayer-Lite page.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite15.png&quot; alt=&quot;Bricklayer-Lite examples&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Now click on &lt;em&gt;Flag of Denmark&lt;/em&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/bricklayer-lite/bricklayer-lite16.png&quot; alt=&quot;Flag of Denmark example&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;This will open up a Bricklayer-Lite program that generates the flag of Denmark.&lt;/p&gt;
+
+&lt;h3 id=&quot;more-information&quot;&gt;More information&lt;/h3&gt;
+
+&lt;p&gt;For more information on Bricklayer Level_1 see &lt;a href=&quot;/intro-to-level1-functions&quot;&gt;this post&lt;/a&gt;.  For more informaiton on both Bricklayer Level_1 and and programming in Bricklayer-Lite, see &lt;a href=&quot;https://bricklayer.org/level-1/&quot;&gt;https://bricklayer.org/level-1/&lt;/a&gt;.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="featured" /><summary type="html">Topics on this page</summary></entry></feed>
