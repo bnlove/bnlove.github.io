@@ -38,4 +38,8 @@ Afterward, you need an actual computer.  You can use either a Mac or PC. Other d
 Throughout the course we will heavily use the website [bricklayer.org](https://bricklayer.org). For best results, use the Chrome browser. It should already be installed on the machines on campus. If you need to install it on your computer, go to [https://www.google.com/chrome/](https://www.google.com/chrome/)
 
 #### The Bricklayer app
-This is not needed during the first couple of weeks of class. More on this later.
+If you're using your own computer, you'll need to install the Bricklayer app.  Following are links to go to to download it. If you need help with installation, email Dr. Love.
+
+- Mac:  [Bricklayer IDE](https://bricklayer.org/mac-os-download/)
+- Windows: [Bricklayer IDE](https://bricklayer.org/windows-download/) (either .exe or .zip)
+

@@ -17,7 +17,7 @@ Vitruvia is a app available at [bricklayer.org](https://bricklayer.org/apps/vitr
 
 ### Vitruvia Exercises
 
-To work on Vitruvia exercises, go to [https://bricklayer.org/apps/vitruvia_New/main.html#concepts/](https://bricklayer.org/apps/vitruvia_New/main.html#concepts/).  If you are already on the bricklayer web site, from the menu, select
+To work on Vitruvia exercises, go to [https://bricklayer.org/apps/vitruvia_New/main.html#concepts/](https://bricklayer.org/apps/vitruvia_New/main.html#concepts/).  If you are already on the bricklayer web site, click on "learn" at the top right, then from the menu, select
 <center> Apps -> Vitruvia -> Exercises </center>
 as shown below:
 {% include image.html img="vitruvia/vitruvia-exercises01.jpg"  alt="Starting Vitruvia from bricklayer.org menu" caption="Starting Vitruvia from bricklayer.org menu" %}
