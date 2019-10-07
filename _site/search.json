@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Creating an arbitrary element of a visual sequence",
+      "category" : "",
+      "tags"     : "functions",
+      "url"      : "/val-sequences01/",
+      "date"     : "2019-10-07 00:00:00 -0500"
+    } ,
+  
+    {
       "title"    : "The traverseWithin function",
       "category" : "",
       "tags"     : "functions,, level5",
