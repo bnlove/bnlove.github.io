@@ -17,7 +17,7 @@
 <meta property="og:url" content="http://localhost:4000/drafts/post-ideas" />
 <meta property="og:site_name" content="MATH 1120" />
 <script type="application/ld+json">
-{"description":"A guide for students.","author":{"@type":"Person","name":"Betty Love"},"@type":"WebPage","url":"http://localhost:4000/drafts/post-ideas","headline":"Getting Started with Patterns","@context":"http://schema.org"}</script>
+{"description":"A guide for students.","headline":"Getting Started with Patterns","@type":"WebPage","url":"http://localhost:4000/drafts/post-ideas","author":{"@type":"Person","name":"Betty Love"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="http://localhost:4000/assets/posts/"/>
@@ -315,6 +315,19 @@ When you're ready to go to the next exercise, click on the _Next_ button.
     
 
     
+        <li><a href="/intro-to-variables/">Getting Started with Variables</a></li>
+        
+        
+    
+
+    
+
+    
+    
+
+    
+
+    
 
     
 
@@ -414,19 +427,6 @@ When you're ready to go to the next exercise, click on the _Next_ button.
 
     
         <li><a href="/getting-started-with-bricklayer-lite-level-1/">Getting Started with Bricklayer-Lite</a></li>
-        
-        
-    
-
-    
-
-    
-    
-
-    
-
-    
-        <li><a href="/overwriting-blocks/">Overwriting--placing blocks on top of blocks (Vitruvia Concept 7)</a></li>
         
         
             

@@ -1,0 +1,41 @@
+open Level_3;
+
+build2D (20,20);
+
+val frameColor  = RED;
+val paneColor   = WHITE;
+val letterColor = BLACK;
+
+(* Outline *)
+put2D (17, 19)  frameColor    ( 0,  0);
+
+(* Four panes background *)
+put2D ( 7,  8)  paneColor  ( 1,  1);
+put2D ( 7,  8)  paneColor  ( 9,  1);
+put2D ( 7,  8)  paneColor  ( 1, 10);
+put2D ( 7,  8)  paneColor  ( 9, 10);
+
+(* L *)
+put2D ( 5,  1)  letterColor  ( 2, 11);
+put2D ( 1,  6)  letterColor  ( 2, 11);
+
+(* O *)
+put2D ( 3,  1)  letterColor  (11, 11);
+put2D ( 3,  1)  letterColor  (11, 16);
+put2D ( 1,  4)  letterColor  (10, 12);
+put2D ( 1,  4)  letterColor  (14, 12);
+
+(* V *)
+put2D ( 1,  3)  letterColor  ( 2,  5);
+put2D ( 1,  3)  letterColor  ( 3,  3);
+put2D ( 1,  2)  letterColor  ( 4,  2);
+put2D ( 1,  3)  letterColor  ( 5,  3);
+put2D ( 1,  3)  letterColor  ( 6,  5);
+
+(* E *)
+put2D ( 5,  1)  letterColor  (10,  2);
+put2D ( 5,  1)  letterColor  (10,  7);
+put2D ( 3,  1)  letterColor  (10,  5);
+put2D ( 1,  6)  letterColor  (10,  2);
+
+show ""
