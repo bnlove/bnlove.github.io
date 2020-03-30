@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Variables
+title: Getting Started with Variables to Represent Colors
 categories: [Getting Started, Functions]
 tags: functions
 author: Betty Love

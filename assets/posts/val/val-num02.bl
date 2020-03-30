@@ -1,0 +1,30 @@
+open Level_3;
+
+build2D (20,20);
+
+(* Figure at (5,8) *)
+val xLoc = 5;  (* lower-left x coordinate of figure *)
+val zLoc = 8;  (* lower-left z coordinate of figure *)
+put2D (6,4) BLUE   (xLoc    , zLoc    );  (* place blue block *)
+put2D (4,2) YELLOW (xLoc + 1, zLoc + 1);  (* place yellow block *)
+
+(* Figure at (2,14) *)
+val xLoc = 2;  (* lower-left x coordinate of figure *)
+val zLoc = 14;  (* lower-left z coordinate of figure *)
+put2D (6,4) BLUE   (xLoc    , zLoc    );  (* place blue block *)
+put2D (4,2) YELLOW (xLoc + 1, zLoc + 1);  (* place yellow block *)
+
+(* Figure at (8,1) *)
+val xLoc = 8;  (* lower-left x coordinate of figure *)
+val zLoc = 1;  (* lower-left z coordinate of figure *)
+put2D (6,4) BLUE   (xLoc    , zLoc    );  (* place blue block *)
+put2D (4,2) YELLOW (xLoc + 1, zLoc + 1);  (* place yellow block *)
+
+(* Figure at (0,3 *)
+val xLoc = 0;  (* lower-left x coordinate of figure *)
+val zLoc = 3;  (* lower-left z coordinate of figure *)
+put2D (6,4) BLUE   (xLoc    , zLoc    );  (* place blue block *)
+put2D (4,2) YELLOW (xLoc + 1, zLoc + 1);  (* place yellow block *)
+
+
+show ""

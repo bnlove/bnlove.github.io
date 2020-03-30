@@ -1,10 +1,26 @@
 [
   
     {
-      "title"    : "Getting Started with Variables",
+      "title"    : "Getting Started with Functions",
       "category" : "",
       "tags"     : "functions",
-      "url"      : "/intro-to-variables/",
+      "url"      : "/variables-numbers02/",
+      "date"     : "2020-03-30 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Getting Started with Variables to Represent Numbers",
+      "category" : "",
+      "tags"     : "functions",
+      "url"      : "/variables-numbers01/",
+      "date"     : "2020-03-29 00:00:00 -0500"
+    } ,
+  
+    {
+      "title"    : "Getting Started with Variables to Represent Colors",
+      "category" : "",
+      "tags"     : "functions",
+      "url"      : "/variables-colors/",
       "date"     : "2020-03-29 00:00:00 -0500"
     } ,
   
@@ -44,7 +60,7 @@
       "title"    : "Getting Started with Functions",
       "category" : "",
       "tags"     : "functions",
-      "url"      : "/intro-to-functions/",
+      "url"      : "/getting-started-with-functions/",
       "date"     : "2019-03-25 00:00:00 -0500"
     } ,
   

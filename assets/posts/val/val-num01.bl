@@ -1,0 +1,11 @@
+open Level_3;
+
+build2D (20,20);
+
+val xLoc = 5;  (* lower-left x coordinate of figure *)
+val zLoc = 8;  (* lower-left z coordinate of figure *)
+
+put2D (6,4) BLUE   (xLoc    , zLoc    );  (* place blue block *)
+put2D (4,2) YELLOW (xLoc + 1, zLoc + 1);  (* place yellow block *)
+
+show ""

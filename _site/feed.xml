@@ -1,4 +1,214 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-29T15:50:21-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Getting Started with Variables</title><link href="http://localhost:4000/intro-to-variables/" rel="alternate" type="text/html" title="Getting Started with Variables" /><published>2020-03-29T00:00:00-05:00</published><updated>2020-03-29T00:00:00-05:00</updated><id>http://localhost:4000/intro-to-variables</id><content type="html" xml:base="http://localhost:4000/intro-to-variables/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-30T11:43:06-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Getting Started with Functions</title><link href="http://localhost:4000/variables-numbers02/" rel="alternate" type="text/html" title="Getting Started with Functions" /><published>2020-03-30T00:00:00-05:00</published><updated>2020-03-30T00:00:00-05:00</updated><id>http://localhost:4000/variables-numbers02</id><content type="html" xml:base="http://localhost:4000/variables-numbers02/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#placing-the-same-figure-in-multiple-locations&quot; id=&quot;markdown-toc-placing-the-same-figure-in-multiple-locations&quot;&gt;Placing the same figure in multiple locations&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this post we’ll explore how to create our own functions. So far we’ve used functions that come with Bricklayer.  These include &lt;em&gt;put2D&lt;/em&gt;, &lt;em&gt;put&lt;/em&gt;, &lt;em&gt;lineXZ&lt;/em&gt;, &lt;em&gt;circleXZ&lt;/em&gt;, and &lt;em&gt;sphere&lt;/em&gt;. These are referred to as &lt;em&gt;built-in&lt;/em&gt; functions.  We’ll learn how to create our own functions which are known as &lt;em&gt;user-defined&lt;/em&gt; functions (we are &lt;em&gt;users&lt;/em&gt; and &lt;em&gt;defining&lt;/em&gt; our own functions).&lt;/p&gt;
+
+&lt;p&gt;The primary reason to create your own functions is so that you can use that code multiple times without having to rewrite it each time.  Suppose there was no &lt;em&gt;circleXZ&lt;/em&gt; function. To create a circle, you’d have to write a lot of &lt;em&gt;put&lt;/em&gt; function calls and it would get complicated quickly.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;placing-the-same-figure-in-multiple-locations&quot;&gt;Placing the same figure in multiple locations&lt;/h3&gt;
+
+&lt;p&gt;Suppose we want to write a bricklayer program to create the following figure.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/functions01.png&quot; alt=&quot;Functions01&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The Level_3 code to create the figure at (0,0) is as follows.
+&lt;a href=&quot; http://localhost:4000/assets/posts/functions/functions01.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D  (2,4)  BLUE    (0,0);
+put2D  (3,3)  RED     (2,0);
+put2D  (2,3)  YELLOW  (0,4);
+put2D  (3,4)  GREEN   (2,3);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now let’s write the code to place the other figures.  One way to do this is to look at the grid and use the labels on the rows and columns to get the coordinates for each of the blue, red, yellow, and green blocks.  For the figure at (14,0), the blue one is at (14,0), the red at (16,0), yellow at (14,4), and green at (16,3). For the figure at (7,6), the blue one is at (7,6), the red at (9,6), yellow at (7,10), and green at (9,9).  We could do this for each of the figures.  Following is the code to create all six figures.
+ &lt;a href=&quot; http://localhost:4000/assets/posts/functions/functions02.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(* Figure at (0,0) *)
+put2D  (2,4)  BLUE    (  0 ,  0 );
+put2D  (3,3)  RED     (  2 ,  0 );
+put2D  (2,3)  YELLOW  (  0 ,  4 );
+put2D  (3,4)  GREEN   (  2 ,  3 );
+
+(* Figure at (14,0) *)
+put2D  (2,4)  BLUE    ( 14 ,  0 );
+put2D  (3,3)  RED     ( 16 ,  0 );
+put2D  (2,3)  YELLOW  ( 14 ,  4 );
+put2D  (3,4)  GREEN   ( 16 ,  3 );
+
+(* Figure at (7,6) *)
+put2D  (2,4)  BLUE    (  7 ,  6 );
+put2D  (3,3)  RED     (  9 ,  6 );
+put2D  (2,3)  YELLOW  (  7 , 10 );
+put2D  (3,4)  GREEN   (  9 ,  9 );
+
+(* Figure at (4,15) *)
+put2D  (2,4)  BLUE    (  4 , 15 );
+put2D  (3,3)  RED     (  6 , 15 );
+put2D  (2,3)  YELLOW  (  4 , 19 );
+put2D  (3,4)  GREEN   (  6 , 18 );
+
+(* Figure at (13,13) *)
+put2D  (2,4)  BLUE    ( 13 , 13 );
+put2D  (3,3)  RED     ( 15 , 13 );
+put2D  (2,3)  YELLOW  ( 13 , 17 );
+put2D  (3,4)  GREEN   ( 15 , 16 );
+
+(* Figure at (20,11) *)
+put2D  (2,4)  BLUE    ( 20 , 11 );
+put2D  (3,3)  RED     ( 22 , 11 );
+put2D  (2,3)  YELLOW  ( 20 , 15 );
+put2D  (3,4)  GREEN   ( 22 , 14 );
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;That gets tedious fast!  Suppose that instead of six of these figures, you wanted to place 20? Or 100? You’d want an easier way!  The key is to notice that the relative position of the red block to the blue block and the green block to the blue block, etc. does not change.  So if the blue block moves over 4 and up 15, so does the red block and the green block and the yellow block.  So whatever we add to the coordinates of the blue block, we do the same to the coordinates of the other blocks.  Take a look at the following graphic to understand this better.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/functions02.jpg&quot; alt=&quot;Functions02&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Based on this analysis, we can rewrite our program as follows (yes, it looks even more tedious, but it will be worth it!).&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/functions03.png&quot; alt=&quot;Functions03&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Now that we can see the patterns in the code, we can create a function that does the work for us.  The following function places a copy of the figure at location (x,z).
+ &lt;a href=&quot; http://localhost:4000/assets/posts/functions/functions03.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_3;
+
+fun myfigure ( x, z ) =
+(
+    put2D  (2,4)  BLUE    (  x + 0,  z + 0 );
+    put2D  (3,3)  RED     (  x + 2,  z + 0 );
+    put2D  (2,3)  YELLOW  (  x + 0,  z + 4 );
+    put2D  (3,4)  GREEN   (  x + 2,  z + 3 )
+);
+ 
+build2D (30,30);
+
+myfigure ( 0,  0);      (* figure at ( 0,  0) *)
+myfigure (14,  0);      (* figure at (14,  0) *)
+myfigure ( 7,  6);      (* figure at ( 7,  6) *)
+myfigure ( 4, 15);      (* figure at ( 4, 15) *)
+myfigure (13, 13);      (* figure at (13, 13) *)
+myfigure (20, 11);      (* figure at (20, 11) *)
+
+show2D &quot;my blocks&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Betty Love</name></author><category term="functions" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Variables to Represent Numbers</title><link href="http://localhost:4000/variables-numbers01/" rel="alternate" type="text/html" title="Getting Started with Variables to Represent Numbers" /><published>2020-03-29T00:00:00-05:00</published><updated>2020-03-29T00:00:00-05:00</updated><id>http://localhost:4000/variables-numbers01</id><content type="html" xml:base="http://localhost:4000/variables-numbers01/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#placing-the-same-figure-in-multiple-locations&quot; id=&quot;markdown-toc-placing-the-same-figure-in-multiple-locations&quot;&gt;Placing the same figure in multiple locations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#why-would-we-do-this&quot; id=&quot;markdown-toc-why-would-we-do-this&quot;&gt;Why would we do this?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#how-do-a-i-change-variable-values&quot; id=&quot;markdown-toc-how-do-a-i-change-variable-values&quot;&gt;How do a I change variable values?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#still-seems-like-a-lot-of-work&quot; id=&quot;markdown-toc-still-seems-like-a-lot-of-work&quot;&gt;Still seems like a lot of work…&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this post we’ll explore how to use variables to represent numbers. Variables are handy when you’d like to use the same code, but with different values.  If you haven’t read about using variables to represent colors, I recommend you do that before proceeding.  You can find it [here] (/variables-colors).&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;placing-the-same-figure-in-multiple-locations&quot;&gt;Placing the same figure in multiple locations&lt;/h3&gt;
+
+&lt;p&gt;Suppose we want to write a bricklayer program to create the following figure (just the blue and yellow part).&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/val/val-num01.png&quot; alt=&quot;val-num01&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Your might wonder where to put it.  I didn’t say.  What I’d like is to have code that would work for any location that I specify. Think back to the post referenced above in which we wrote code to create a particular figure and specified the colors to use in &lt;em&gt;val&lt;/em&gt; statements.  To switch to different colors, we only needed to change the values defined in the &lt;em&gt;val&lt;/em&gt; statements.&lt;/p&gt;
+
+&lt;p&gt;That’s the idea for what we want to do here.  Let’s use &lt;em&gt;val&lt;/em&gt; statements to define the location (lower-left corner) of the figure and write the code using the variables defined in the &lt;em&gt;val&lt;/em&gt; statements. Here’s a visual of this idea.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/val/val-num02.png&quot; alt=&quot;val-num02&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;So let’s assume that we start with the following (question marks to be replaced with numbers when we decide where we want the figure to go):&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;val xLoc = ?;  (* lower-left x coordinate of figure *)
+val zLoc = ?;  (* lower-left z coordinate of figure *)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We can start by writing the code to place a 6x4 blue block (then we’ll overwrite it to put the yellow part in).  Since &lt;em&gt;xLoc&lt;/em&gt; and &lt;em&gt;zLoc&lt;/em&gt; will already have been defined (assigned values) when we get to this part of our program, we can use them just like we would any numbers.&lt;/p&gt;
+
+&lt;p&gt;If we weren’t using variables and we wanted to put the blue block at (5,8), the code would be:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (6,4) BLUE (5,8);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;So we write the same code, except substitute &lt;em&gt;(xLoc, zLoc)&lt;/em&gt; for the location, as follows:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (6,4) BLUE (xLoc, zLoc);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;When you run your program, the computer automatically plugs in whatever values you’ve specified for &lt;em&gt;xLoc&lt;/em&gt; and &lt;em&gt;zLoc&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ok, we still need to place the yellow block.  This is a little trickier because we have to base its position on the location of the blue block.  Now, if you had placed the blue block at (5,8), the yellow block would go…..where?  One space to the right in the &lt;em&gt;x&lt;/em&gt; direction and one up in the &lt;em&gt;z&lt;/em&gt; direction.  So (5+1,8+1)  (which we’d just write as (6,9)).&lt;/p&gt;
+
+&lt;p&gt;But if the blue block is at &lt;em&gt;(xLoc, zLoc)&lt;/em&gt;, then where does the yellow block go?  The same logic applies: one space to the right and one space up.  So how do we write that? Same way I did in the previous paragraph, namely, &lt;em&gt;(xLoc + 1, zLoc + 1)&lt;/em&gt;! That’s it!
+Here’s the code to create the whole figure:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (6,4) BLUE   (xLoc    , zLoc    );
+put2D (4,2) YELLOW (xLoc + 1, zLoc + 1);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The complete program to make the figure at (5,8) is as follows:
+&lt;a href=&quot; http://localhost:4000/assets/posts/val/val-num01.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_3;
+
+build2D (20,20);
+
+val xLoc = 5;  (* lower-left x coordinate of figure *)
+val zLoc = 8;  (* lower-left z coordinate of figure *)
+
+put2D (6,4) BLUE   (xLoc    , zLoc    );  (* place blue block *)
+put2D (4,2) YELLOW (xLoc + 1, zLoc + 1);  (* place yellow block *)
+
+show &quot;&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;why-would-we-do-this&quot;&gt;Why would we do this?&lt;/h3&gt;
+
+&lt;p&gt;At this point some of you may be thinking that this seems to be a lot of trouble for nothing.  In particular, the program above could be written much more easily as follows.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (6,4) BLUE   (5,8);  (* place blue block *)
+put2D (4,2) YELLOW (6,9);  (* place yellow block *)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Much more straightforward, right?  Half the lines of code!  So what is the point?&lt;/p&gt;
+
+&lt;p&gt;Good question!  The primary answer is that being able to write the code using variables allows us to reuse the main part of the program (the put statements) without changing them at all.  To put the figure in a different place, we only need to change the val statements.  We’ve done the hard work (figuring out the locations of the blocks) and we don’t need to ever do that again, no matter where we want to place that figure.  Soon we’ll learn about writing our own functions and will see how this can really streamline our programs.  We’re not quite ready for that yet though.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-do-a-i-change-variable-values&quot;&gt;How do a I change variable values?&lt;/h3&gt;
+
+&lt;p&gt;Suppose we wanted to put our figure in multiple locations, say, at (5,8), (2,12), (8,1), and (0,3).  Since we’ve done the hard part (figured out the code to create the figure anywhere we want), all we need to do is change the values defined for &lt;em&gt;xLoc&lt;/em&gt; and &lt;em&gt;zLoc&lt;/em&gt; in the val statements, once for each location.  The code for this is below.  Note that the only part of the program that changes is the &lt;em&gt;val&lt;/em&gt; statements.  The &lt;em&gt;put2D&lt;/em&gt; statements are all the same.
+&lt;a href=&quot; http://localhost:4000/assets/posts/val/val-num02.bl &quot;&gt;
+&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/val/val-num03.png&quot; alt=&quot;val-num03&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;still-seems-like-a-lot-of-work&quot;&gt;Still seems like a lot of work…&lt;/h3&gt;
+
+&lt;p&gt;For this simple program, it may not be a big deal to do the arithmetic to place the figure at different locations.  So how about a more complicated program? Continue  [here] (/variables-numbers02).&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="functions" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Variables to Represent Colors</title><link href="http://localhost:4000/variables-colors/" rel="alternate" type="text/html" title="Getting Started with Variables to Represent Colors" /><published>2020-03-29T00:00:00-05:00</published><updated>2020-03-29T00:00:00-05:00</updated><id>http://localhost:4000/variables-colors</id><content type="html" xml:base="http://localhost:4000/variables-colors/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#creating-the-same-figure-with-different-sets-of-colors&quot; id=&quot;markdown-toc-creating-the-same-figure-with-different-sets-of-colors&quot;&gt;Creating the same figure with different sets of colors&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -975,7 +1185,7 @@ crissCrossSquare ( 2, 12, RED , WHITE ,  7);
 
 &lt;h3 id=&quot;patterns-and-symmetry-in-the-put-calls&quot;&gt;Patterns and symmetry in the &lt;em&gt;put&lt;/em&gt; calls&lt;/h3&gt;
 
-&lt;p&gt;Spend a few minutes studying the final version of the function.  Pay particular attention to the patterns that you see in both the size and the locations of the EMPTY blocks.  For example, each horizontal &lt;em&gt;size&lt;/em&gt; parameter is either &lt;em&gt;xSize&lt;/em&gt; or &lt;em&gt;xSize-2&lt;/em&gt; (same for the other two &lt;em&gt;size&lt;/em&gt; parameters).  Each horizontal location coordinate is either &lt;em&gt;x&lt;/em&gt; or &lt;em&gt;x+1&lt;/em&gt; (and same for the other two location parameters).  Many times you can eliminate a little of the work in writing a function like this simply by taking note of such patterns.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="functions" /><summary type="html">Topics on this page Topics on this page</summary></entry><entry><title type="html">Getting Started with Functions</title><link href="http://localhost:4000/intro-to-functions/" rel="alternate" type="text/html" title="Getting Started with Functions" /><published>2019-03-25T00:00:00-05:00</published><updated>2019-03-25T00:00:00-05:00</updated><id>http://localhost:4000/intro-to-functions</id><content type="html" xml:base="http://localhost:4000/intro-to-functions/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;p&gt;Spend a few minutes studying the final version of the function.  Pay particular attention to the patterns that you see in both the size and the locations of the EMPTY blocks.  For example, each horizontal &lt;em&gt;size&lt;/em&gt; parameter is either &lt;em&gt;xSize&lt;/em&gt; or &lt;em&gt;xSize-2&lt;/em&gt; (same for the other two &lt;em&gt;size&lt;/em&gt; parameters).  Each horizontal location coordinate is either &lt;em&gt;x&lt;/em&gt; or &lt;em&gt;x+1&lt;/em&gt; (and same for the other two location parameters).  Many times you can eliminate a little of the work in writing a function like this simply by taking note of such patterns.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="functions" /><summary type="html">Topics on this page Topics on this page</summary></entry><entry><title type="html">Getting Started with Functions</title><link href="http://localhost:4000/getting-started-with-functions/" rel="alternate" type="text/html" title="Getting Started with Functions" /><published>2019-03-25T00:00:00-05:00</published><updated>2019-03-25T00:00:00-05:00</updated><id>http://localhost:4000/getting-started-with-functions</id><content type="html" xml:base="http://localhost:4000/getting-started-with-functions/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#placing-the-same-figure-in-multiple-locations&quot; id=&quot;markdown-toc-placing-the-same-figure-in-multiple-locations&quot;&gt;Placing the same figure in multiple locations&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -1290,314 +1500,4 @@ sphere 15 [PINK, VIOLET] (60,20,20);
     
 &lt;/figure&gt;
 
-&lt;p&gt;As the thickness decreases, the number of visible bricks on the outside of the sphere also decreases.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D," /><category term="sphere" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Slicing Spheres in Bricklayer to See Inside!</title><link href="http://localhost:4000/slicing-spheres/" rel="alternate" type="text/html" title="Slicing Spheres in Bricklayer to See Inside!" /><published>2019-03-01T00:00:00-06:00</published><updated>2019-03-01T00:00:00-06:00</updated><id>http://localhost:4000/slicing-spheres</id><content type="html" xml:base="http://localhost:4000/slicing-spheres/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#spheres-inside-spheres&quot; id=&quot;markdown-toc-spheres-inside-spheres&quot;&gt;Spheres inside spheres&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#circles-inside-circles&quot; id=&quot;markdown-toc-circles-inside-circles&quot;&gt;Circles inside circles&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#back-to-spheres-inside-spheres&quot; id=&quot;markdown-toc-back-to-spheres-inside-spheres&quot;&gt;Back to spheres inside spheres&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#slice-horizontally-perpendicular-to-y-axis&quot; id=&quot;markdown-toc-slice-horizontally-perpendicular-to-y-axis&quot;&gt;Slice horizontally (perpendicular to &lt;em&gt;y&lt;/em&gt; axis)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#slice-perpendicular-to-the-z-axis&quot; id=&quot;markdown-toc-slice-perpendicular-to-the-z-axis&quot;&gt;Slice perpendicular to the &lt;em&gt;z&lt;/em&gt; axis&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In this post we’ll explore slicing spheres in order to see inside them.  For an introduction to spheres, check out &lt;a href=&quot;/spheres&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Where you see this icon,&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl icon&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;click on it to download the associated bricklayer program.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;spheres-inside-spheres&quot;&gt;Spheres inside spheres&lt;/h3&gt;
-
-&lt;p&gt;What happens if we create a sphere inside a sphere in bricklayer?  Well, let’s find out!
-Let’s start with a single sphere with radius 10.
-&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere08.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10 [BLUE] (15,15,15);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere10.png&quot; alt=&quot;Blue sphere with radius 10&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Now let’s put a smaller sphere at the same location (having the same center).  I’ll give this one a radius of 7 and make it red.
-&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere09.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10 [BLUE]  (15,15,15);
-sphere  7 [RED]  (15,15,15);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere10.png&quot; alt=&quot;Blue sphere with radius 10&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Hmmm…where’s the white sphere???&lt;/p&gt;
-
-&lt;h3 id=&quot;circles-inside-circles&quot;&gt;Circles inside circles&lt;/h3&gt;
-
-&lt;p&gt;We can’t see it because it’s inside the blue sphere.  I’m going to slice this artifact in half so we can see the middle.  How can I do that? First we need to understand the location of the boundaries of the sphere. The image below shows a cross section of the sphere at its center. I created this in the bricklayer &lt;a href=&quot;https://bricklayer.org/apps/grid_lite/grid.html&quot;&gt;Grid app&lt;/a&gt;, then marked it up on my ipad.  (I highly recommend using the Grid app to map out artifacts.) I did this analysis so that I could  come up with the coordinates of the yellow bounding square (which we’ll use to create a yellow bounding box).  Note that I could have used trial and error, but some times it’s difficult to know if you cut off part of a circle.  I also wanted to demonstrate this process.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere11.jpg&quot; alt=&quot;Blue sphere with radius 10&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Based on these calculations, we can write a Level_3 bricklayer program to create this.  You should look at each of the following commands and make sure you understand how to come up with the parameters used in each.
-&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere10.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (23,23) YELLOW (4,4);
-put2D (21,21) EMPTY  (5,5);
-
-circleXZ 10  BLUE  (15,15);
-circleXZ  6  RED   (15,15);
-
-put2D (1,1)   BLACK (15,15);
-put2D (10,1)  WHITE (16,15);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Here’s a look at the real artifact.  I put the white blocks in so that it’s easier to confirm that the radius of the blue circle is 10 and the red circle is 6.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere12.jpg&quot; alt=&quot;Blue sphere with radius 10&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;If I wanted to slice the circle in half and only see half of it, say the right half, then I can place a big empty block to cover the part that I don’t want to be visible.  There’s a bit of a problem with slicing the circle in &lt;em&gt;half&lt;/em&gt;.  Can you think about what that problem is?  Hint: is the diameter of a circle even or odd?&lt;/p&gt;
-
-&lt;p&gt;Take a closer look at our artifact.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere13.jpg&quot; alt=&quot;Radius 10, diameter 21&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Our blue circle has radius 10, but its diameter is 21 because of the center block.  In general, we have the following relationship between the radius and diameter of a circle artifact:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;diameter = (2 x radius) + 1&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Since 2 times any number is always even, adding 1 makes it odd, so the diameter of a circle in bricklayer is always odd.  What is half an odd number?  Not a whole number!  So what does half a circle mean?  One half will include the center point and one half will not.  For our purposes, I’ll leave the center point in the half that will be displayed.&lt;/p&gt;
-
-&lt;p&gt;The following image shows my calculations for what size EMPTY block I need and where it needs to go.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere14.jpg&quot; alt=&quot;Calculate dimensions and location of EMPTY block&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;I’ll edit the code to remove the yellow frame and the left “half” of the circle. 
-&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere11.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;circleXZ 10  BLUE  (15,15);
-circleXZ  6  RED   (15,15);
-
-put2D (1,1)   BLACK (15,15);
-put2D (10,1)  WHITE (16,15);
-
-put2D (10,21) EMPTY (5,5);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Here’s the artifact produced by this code.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere15.png&quot; alt=&quot;Half a circle&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;h3 id=&quot;back-to-spheres-inside-spheres&quot;&gt;Back to spheres inside spheres&lt;/h3&gt;
-
-&lt;p&gt;Now that we understand slicing a circle, we can extend that knowledge to slicing a sphere.  Let’s go back to our red sphere inside a blue sphere. I’m going to add a set of axes to our artifact so that it’s easier to get our bearings.  The following code generates the axes and our red sphere inside a blue sphere.&lt;br /&gt;
-&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere12.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put (30,1,1) WHITE  (0,0,0);   (* x axis *)
-put (1,30,1) PINK   (0,0,0);   (* y axis *)
-put (1,1,30) BLACK  (0,0,0);   (* z axis *)
-put (1,1,1)  YELLOW (0,0,0);   (* origin *)
-
-
-sphere 10  [BLUE]  (15,15,15);
-sphere  7  [RED]   (15,15,15);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The resulting artifact is the following.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere16.png&quot; alt=&quot;3D axes and spheres&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;There are many ways that we could slice the sphere in (almost) half (recall that the diameter of a sphere, just like that of a circle, is an odd number, so half of it is not a whole number). Let’s first figure out how to chop off the left side. You can envision this as a knife slicing through the middle of the sphere from &lt;em&gt;z=0&lt;/em&gt; to &lt;em&gt;z=30&lt;/em&gt;.  Although our sphere is not that big, we won’t worry about that right now.  We’ll just slice through some air!! The following image illustrates this idea.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere17.jpg&quot; alt=&quot;Slice sphere&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Our approach will be to place a giant EMPTY block on the left side.  The center of the sphere in the &lt;em&gt;x&lt;/em&gt; direction (white axis) is at &lt;em&gt;x=15&lt;/em&gt;. We need to back up one unit so that we don’t chop off the layer of the sphere here.  Since our sphere is the only artifact we’re working with, we don’t have to be precise in determining the size of the EMPTY block.  The easy way is to locate the block at (0,0,0) and make it go to the build-space size in the &lt;em&gt;y&lt;/em&gt; and &lt;em&gt;z&lt;/em&gt; directions.  The only hard part is to figure out how far to go in the &lt;em&gt;x&lt;/em&gt; direction. Given our analysis above, we want to zap through &lt;em&gt;x=14&lt;/em&gt; which means our EMPTY block should be of size 15 in the &lt;em&gt;x&lt;/em&gt; direction.  Following is code that puts a giant YELLOW block there instead of EMPTY just to give a visual on what this block really looks like. 
-&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere13.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10  [BLUE]  (15,15,15);
-sphere  7  [RED]   (15,15,15);
-
-put (15,30,30) YELLOW (0,0,0);  (* giant yellow block *)
-
-(* place axes last *)
-put (30,1,1) WHITE  (0,0,0);   (* x axis *)
-put (1,30,1) PINK   (0,0,0);   (* y axis *)
-put (1,1,30) BLACK  (0,0,0);   (* z axis *)
-put (1,1,1)  YELLOW (0,0,0);   (* origin *)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The output is shown in the following image.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere18.jpg&quot; alt=&quot;Slice sphere with giant yellow block&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Note that we sliced it correctly since the sphere has radius 10 and we can see the 10 layers plus the center layer.  So now…let’s put an EMPTY block there instead of YELLOW.  I also put a 1x1x1 white block at the center of the sphere just to make sure I wasn’t chopping that layer off. 
-&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere14.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10  [BLUE]  (15,15,15);
-sphere  7  [RED]   (15,15,15);
-
-put (1,1,1) WHITE (15,15,15);  (* white block at center *)
-
-put (15,30,30) EMPTY (0,0,0);  (* giant empty block *)
-
-(* place axes last *)
-put (30,1,1) WHITE  (0,0,0);   (* x axis *)
-put (1,30,1) PINK   (0,0,0);   (* y axis *)
-put (1,1,30) BLACK  (0,0,0);   (* z axis *)
-put (1,1,1)  YELLOW (0,0,0);   (* origin *)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The output is shown in the following image where we can see the cross-section of the red sphere inside the blue one as well as the white center block.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere19.png&quot; alt=&quot;Slice sphere with giant empty block&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;h3 id=&quot;slice-horizontally-perpendicular-to-y-axis&quot;&gt;Slice horizontally (perpendicular to &lt;em&gt;y&lt;/em&gt; axis)&lt;/h3&gt;
-
-&lt;p&gt;Suppose that instead of slicing vertically across the &lt;em&gt;x&lt;/em&gt; axis as we just did, we want to slice horizontally so that we can look down into the remaining “half”.  Let’s think about how to do that.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere20.jpg&quot; alt=&quot;Slice sphere perpendicular to y axis&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;As the figure above shows, we want to empty out everything above the &lt;em&gt;y=15&lt;/em&gt; plane, i.e., everything above and including the &lt;em&gt;y=16&lt;/em&gt; plane. This means we need an EMPTY block that is size &lt;em&gt;(30,14,30)&lt;/em&gt; to go at location &lt;em&gt;(0,16,0)&lt;/em&gt;.  Let’s think about these values.  As shown in the image, we start the EMPTY block at &lt;em&gt;y=16&lt;/em&gt; and if we extend it to the maximum value of &lt;em&gt;y&lt;/em&gt;, which is 29, then the EMPTY block needs to have height &lt;em&gt;14 = 29-16+1&lt;/em&gt;.  The code is as follows. 
-&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere15.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10  [BLUE]  (15,15,15);
-sphere  7  [RED]   (15,15,15);
-
-put (1,1,1) WHITE (15,15,15);  (* white block at center *)
-
-put (30,14,30) EMPTY (0,16,0);  (* giant empty block *)
-
-(* place axes last *)
-put (30,1,1) WHITE  (0,0,0);   (* x axis *)
-put (1,30,1) PINK   (0,0,0);   (* y axis *)
-put (1,1,30) BLACK  (0,0,0);   (* z axis *)
-put (1,1,1)  YELLOW (0,0,0);   (* origin *)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The resulting artifact follows.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere21.png&quot; alt=&quot;Sliced sphere perpendicular to y axis&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;h3 id=&quot;slice-perpendicular-to-the-z-axis&quot;&gt;Slice perpendicular to the &lt;em&gt;z&lt;/em&gt; axis&lt;/h3&gt;
-&lt;p&gt;Now suppose we want to slice the sphere so that we can see the center when looking from the front (across the &lt;em&gt;x&lt;/em&gt; axis).  Consider the following image and think about what the size and location of the EMPTY block should be.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere22.jpg&quot; alt=&quot;How to slic perpendicular to z axis&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;This is analogous to our first slice which took away the left part of the sphere when viewing from across the &lt;em&gt;x&lt;/em&gt; axis.  The code is as follows (compare it to the first slice).
-&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere16.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10  [BLUE]  (15,15,15);
-sphere  7  [RED]   (15,15,15);
-
-put (1,1,1) WHITE (15,15,15);  (* white block at center *)
-
-put (30,30,15) EMPTY (0,0,0);  (* giant empty block *)
-
-(* place axes last *)
-put (30,1,1) WHITE  (0,0,0);   (* x axis *)
-put (1,30,1) PINK   (0,0,0);   (* y axis *)
-put (1,1,30) BLACK  (0,0,0);   (* z axis *)
-put (1,1,1)  YELLOW (0,0,0);   (* origin *)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The artifact produced is as follows.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere23.png&quot; alt=&quot;Sliced sphere perpendicular to z axis&quot; /&gt;
-    
-&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D," /><category term="sphere" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Bricklayer Level 4</title><link href="http://localhost:4000/getting-started-with-level4/" rel="alternate" type="text/html" title="Getting Started with Bricklayer Level 4" /><published>2019-02-21T00:00:00-06:00</published><updated>2019-02-21T00:00:00-06:00</updated><id>http://localhost:4000/getting-started-with-level4</id><content type="html" xml:base="http://localhost:4000/getting-started-with-level4/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#coordinates-in-3d-space&quot; id=&quot;markdown-toc-coordinates-in-3d-space&quot;&gt;Coordinates in 3D space&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Level 4 in Bricklayer opens up the world of 3D artifacts!  To create and run a Level_4 program, you must use the Bricklayer app (not Bricklayer-Lite).  For an introduction to programming in the Bricklayer app, check out &lt;a href=&quot;/getting-started-with-bricklayer&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;coordinates-in-3d-space&quot;&gt;Coordinates in 3D space&lt;/h3&gt;
-
-&lt;p&gt;Let’s start with a review of 2D coordinates in Bricklayer.  When programming in 2D, artifacts are placed in the x-z plane.  The point (x,z) is x units in the horizontal direction from 0 and z units in the vertical direction from 0.  Consider the figure below.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-01.jpg&quot; alt=&quot;Horizontal and vertical coordinates&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;As we move to 3D, we (visually) lay the x-z plane flat, so the above artifact would be viewed as follows.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-02.jpg&quot; alt=&quot;x-z plane laid flat&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;We think of x as the &lt;em&gt;width&lt;/em&gt; of the artifact and z as the &lt;em&gt;depth&lt;/em&gt;.  The third dimension, which we’ll label as &lt;em&gt;y&lt;/em&gt;, is the height.  In the artifact above, the height is one.  Below is the same artifact with second layer the same size as the first added.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-03.jpg&quot; alt=&quot;3D artifact&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;The code to create this artifact is shown below.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/level4-04.png&quot; alt=&quot;Code for 3D artifact&quot; /&gt;
-    
-&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D" /><summary type="html">Topics on this page</summary></entry></feed>
+&lt;p&gt;As the thickness decreases, the number of visible bricks on the outside of the sphere also decreases.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D," /><category term="sphere" /><summary type="html">Topics on this page</summary></entry></feed>
