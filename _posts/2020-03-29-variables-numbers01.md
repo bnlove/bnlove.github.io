@@ -11,7 +11,7 @@ author: Betty Love
 * TOC
 {:toc}
 
-In this post we'll explore how to use variables to represent numbers. Variables are handy when you'd like to use the same code, but with different values.  If you haven't read about using variables to represent colors, I recommend you do that before proceeding.  You can find it [here] (/variables-colors).
+In this post we'll explore how to use variables to represent numbers. Variables are handy when you'd like to use the same code, but with different values.  If you haven't read about using variables to represent colors, I recommend you do that before proceeding.  You can find it [here](/variables-colors).
 
 ***
 

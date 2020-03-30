@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-30T11:43:06-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Getting Started with Functions</title><link href="http://localhost:4000/variables-numbers02/" rel="alternate" type="text/html" title="Getting Started with Functions" /><published>2020-03-30T00:00:00-05:00</published><updated>2020-03-30T00:00:00-05:00</updated><id>http://localhost:4000/variables-numbers02</id><content type="html" xml:base="http://localhost:4000/variables-numbers02/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-30T13:42:16-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Using Numeric Variables to Represent Coordinates</title><link href="http://localhost:4000/variables-numbers02/" rel="alternate" type="text/html" title="Using Numeric Variables to Represent Coordinates" /><published>2020-03-30T00:00:00-05:00</published><updated>2020-03-30T00:00:00-05:00</updated><id>http://localhost:4000/variables-numbers02</id><content type="html" xml:base="http://localhost:4000/variables-numbers02/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#placing-the-same-figure-in-multiple-locations&quot; id=&quot;markdown-toc-placing-the-same-figure-in-multiple-locations&quot;&gt;Placing the same figure in multiple locations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#code-for-just-one-figure&quot; id=&quot;markdown-toc-code-for-just-one-figure&quot;&gt;Code for just one figure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#create-the-original-figure&quot; id=&quot;markdown-toc-create-the-original-figure&quot;&gt;Create the original figure&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;In this post we’ll explore how to create our own functions. So far we’ve used functions that come with Bricklayer.  These include &lt;em&gt;put2D&lt;/em&gt;, &lt;em&gt;put&lt;/em&gt;, &lt;em&gt;lineXZ&lt;/em&gt;, &lt;em&gt;circleXZ&lt;/em&gt;, and &lt;em&gt;sphere&lt;/em&gt;. These are referred to as &lt;em&gt;built-in&lt;/em&gt; functions.  We’ll learn how to create our own functions which are known as &lt;em&gt;user-defined&lt;/em&gt; functions (we are &lt;em&gt;users&lt;/em&gt; and &lt;em&gt;defining&lt;/em&gt; our own functions).&lt;/p&gt;
-
-&lt;p&gt;The primary reason to create your own functions is so that you can use that code multiple times without having to rewrite it each time.  Suppose there was no &lt;em&gt;circleXZ&lt;/em&gt; function. To create a circle, you’d have to write a lot of &lt;em&gt;put&lt;/em&gt; function calls and it would get complicated quickly.&lt;/p&gt;
+&lt;p&gt;In the last &lt;a href=&quot;/variables-numbers01&quot;&gt;post&lt;/a&gt; we explored using variables to represent numbers, specifically coordinates defining the location that we wanted to place a figure.  The figure we used was fairly simple and so perhaps did not convince you that all this extra work was worthwhile.  So in this post, we’ll look at a slightly more complicated figure.  The example that I’m using is the same one used in my post on &lt;a href=&quot;/getting-started-with-functions&quot;&gt;Getting Started with Functions&lt;/a&gt; so if you want to peek ahead, that’s a good place to look.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -14,103 +14,56 @@
 &lt;p&gt;Suppose we want to write a bricklayer program to create the following figure.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/functions01.png&quot; alt=&quot;Functions01&quot; /&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/val/functions01.png&quot; alt=&quot;Functions01&quot; /&gt;
     
 &lt;/figure&gt;
 
-&lt;p&gt;The Level_3 code to create the figure at (0,0) is as follows.
-&lt;a href=&quot; http://localhost:4000/assets/posts/functions/functions01.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We could take the brute-force approach and ignore the fact that we’re creating the same figure in six different places.  But that is a beginner’s approach and we’re not beginners at this point.  Also, suppose you wanted to place the figure in ten places, or 20 or 100?  You certainly wouldn’t want to use the brute-force approach then.  So let’s use our brains.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D  (2,4)  BLUE    (0,0);
-put2D  (3,3)  RED     (2,0);
-put2D  (2,3)  YELLOW  (0,4);
-put2D  (3,4)  GREEN   (2,3);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;code-for-just-one-figure&quot;&gt;Code for just one figure&lt;/h3&gt;
 
-&lt;p&gt;Now let’s write the code to place the other figures.  One way to do this is to look at the grid and use the labels on the rows and columns to get the coordinates for each of the blue, red, yellow, and green blocks.  For the figure at (14,0), the blue one is at (14,0), the red at (16,0), yellow at (14,4), and green at (16,3). For the figure at (7,6), the blue one is at (7,6), the red at (9,6), yellow at (7,10), and green at (9,9).  We could do this for each of the figures.  Following is the code to create all six figures.
- &lt;a href=&quot; http://localhost:4000/assets/posts/functions/functions02.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Let’s start by looking at just one of the figures and write the code to place it at an arbitrary location.&lt;br /&gt;
+We need variables to represent that location, which is the lower-left corner of the figure.  We will use &lt;em&gt;(xLoc, zLoc)&lt;/em&gt; for this.  So that means the blue block will be placed at &lt;em&gt;(xLoc, zLoc)&lt;/em&gt;.  The values for &lt;em&gt;xLoc&lt;/em&gt; and &lt;em&gt;zLoc&lt;/em&gt; will need to be specified in &lt;em&gt;val&lt;/em&gt; statements.  But our code should work for any valid values for these variables.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(* Figure at (0,0) *)
-put2D  (2,4)  BLUE    (  0 ,  0 );
-put2D  (3,3)  RED     (  2 ,  0 );
-put2D  (2,3)  YELLOW  (  0 ,  4 );
-put2D  (3,4)  GREEN   (  2 ,  3 );
-
-(* Figure at (14,0) *)
-put2D  (2,4)  BLUE    ( 14 ,  0 );
-put2D  (3,3)  RED     ( 16 ,  0 );
-put2D  (2,3)  YELLOW  ( 14 ,  4 );
-put2D  (3,4)  GREEN   ( 16 ,  3 );
-
-(* Figure at (7,6) *)
-put2D  (2,4)  BLUE    (  7 ,  6 );
-put2D  (3,3)  RED     (  9 ,  6 );
-put2D  (2,3)  YELLOW  (  7 , 10 );
-put2D  (3,4)  GREEN   (  9 ,  9 );
-
-(* Figure at (4,15) *)
-put2D  (2,4)  BLUE    (  4 , 15 );
-put2D  (3,3)  RED     (  6 , 15 );
-put2D  (2,3)  YELLOW  (  4 , 19 );
-put2D  (3,4)  GREEN   (  6 , 18 );
-
-(* Figure at (13,13) *)
-put2D  (2,4)  BLUE    ( 13 , 13 );
-put2D  (3,3)  RED     ( 15 , 13 );
-put2D  (2,3)  YELLOW  ( 13 , 17 );
-put2D  (3,4)  GREEN   ( 15 , 16 );
-
-(* Figure at (20,11) *)
-put2D  (2,4)  BLUE    ( 20 , 11 );
-put2D  (3,3)  RED     ( 22 , 11 );
-put2D  (2,3)  YELLOW  ( 20 , 15 );
-put2D  (3,4)  GREEN   ( 22 , 14 );
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;That gets tedious fast!  Suppose that instead of six of these figures, you wanted to place 20? Or 100? You’d want an easier way!  The key is to notice that the relative position of the red block to the blue block and the green block to the blue block, etc. does not change.  So if the blue block moves over 4 and up 15, so does the red block and the green block and the yellow block.  So whatever we add to the coordinates of the blue block, we do the same to the coordinates of the other blocks.  Take a look at the following graphic to understand this better.&lt;/p&gt;
+&lt;p&gt;Given that the lower left blue block is at &lt;em&gt;(xLoc, zLoc)&lt;/em&gt;, where is the lower left red block?  Notice in the image below that the lower-left red block has the same &lt;em&gt;z&lt;/em&gt; coordinate as the blue block.  What about the &lt;em&gt;x&lt;/em&gt; coordinate?  As shown below, it’s two places to the right of the lower-left blue block, so would be at &lt;em&gt;xLoc + 2&lt;/em&gt;.  Therefore the location of the red block is &lt;em&gt;(xLoc + 2, zLoc)&lt;/em&gt;&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/functions02.jpg&quot; alt=&quot;Functions02&quot; /&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/val/val-num04.png&quot; alt=&quot;val-num04&quot; /&gt;
     
 &lt;/figure&gt;
 
-&lt;p&gt;Based on this analysis, we can rewrite our program as follows (yes, it looks even more tedious, but it will be worth it!).&lt;/p&gt;
+&lt;p&gt;Take a look at the image below and see if you an figure out the coordinates of the yellow and green blocks.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/functions03.png&quot; alt=&quot;Functions03&quot; /&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/val/val-num06.png&quot; alt=&quot;val-num06&quot; /&gt;
     
 &lt;/figure&gt;
 
-&lt;p&gt;Now that we can see the patterns in the code, we can create a function that does the work for us.  The following function places a copy of the figure at location (x,z).
- &lt;a href=&quot; http://localhost:4000/assets/posts/functions/functions03.bl &quot;&gt;
+&lt;p&gt;The yellow block has the same &lt;em&gt;x&lt;/em&gt; coordinate as the blue block, but is four spaces up, so we need to add 4 to &lt;em&gt;zLoc&lt;/em&gt;.  This gives us &lt;em&gt;(xLoc, zLoc + 4)&lt;/em&gt;.  For the green block we go over two spaces and up three, so it’s location is &lt;em&gt;(xLoc + 2, zLoc + 3)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The code will look like the following (before running, we’ll need to plug in numbers where the question marks are!):&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;val xLoc = ?;  (* lower-left x coordinate of figure *)
+val zLoc = ?;  (* lower-left z coordinate of figure *)
+
+put2D  (2,4)  BLUE    ( xLoc     , zLoc     );
+put2D  (3,3)  RED     ( xLoc + 2 , zLoc     );
+put2D  (2,3)  YELLOW  ( xLoc     , zLoc + 4 );
+put2D  (3,4)  GREEN   ( xLoc + 2 , zLoc + 3 );
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The important thing to note is that we can now place the figure anywhere we want just by changing the &lt;em&gt;val&lt;/em&gt; statements.  No changes to the &lt;em&gt;put2D&lt;/em&gt; statements are required at all!&lt;/p&gt;
+
+&lt;h3 id=&quot;create-the-original-figure&quot;&gt;Create the original figure&lt;/h3&gt;
+
+&lt;p&gt;Now let’s write the code to create the original image which consists of six copies of our figure.  Scroll up a bit and note that the the copies appear at the following coordinates (0,0), (14,0), (7,5), (4,15), (13,13), and (20,11). We just make a copy of the code above for each figure and for each, set &lt;em&gt;xLoc&lt;/em&gt; and &lt;em&gt;zLoc&lt;/em&gt; in the &lt;em&gt;val&lt;/em&gt; statements.  The result is shown in the figure below.  Note that the green sections of code are all identical; only the yellow sections with the &lt;em&gt;val&lt;/em&gt; statements changes. This distinction is critical since we’ll soon learn that we only need to include the green section of code once in our programs (in our own function).
+&lt;a href=&quot; http://localhost:4000/assets/posts/val/val-num03.bl &quot;&gt;
 &lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
 &lt;/a&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_3;
-
-fun myfigure ( x, z ) =
-(
-    put2D  (2,4)  BLUE    (  x + 0,  z + 0 );
-    put2D  (3,3)  RED     (  x + 2,  z + 0 );
-    put2D  (2,3)  YELLOW  (  x + 0,  z + 4 );
-    put2D  (3,4)  GREEN   (  x + 2,  z + 3 )
-);
- 
-build2D (30,30);
-
-myfigure ( 0,  0);      (* figure at ( 0,  0) *)
-myfigure (14,  0);      (* figure at (14,  0) *)
-myfigure ( 7,  6);      (* figure at ( 7,  6) *)
-myfigure ( 4, 15);      (* figure at ( 4, 15) *)
-myfigure (13, 13);      (* figure at (13, 13) *)
-myfigure (20, 11);      (* figure at (20, 11) *)
-
-show2D &quot;my blocks&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Betty Love</name></author><category term="functions" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Variables to Represent Numbers</title><link href="http://localhost:4000/variables-numbers01/" rel="alternate" type="text/html" title="Getting Started with Variables to Represent Numbers" /><published>2020-03-29T00:00:00-05:00</published><updated>2020-03-29T00:00:00-05:00</updated><id>http://localhost:4000/variables-numbers01</id><content type="html" xml:base="http://localhost:4000/variables-numbers01/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/val/val-num07.png&quot; alt=&quot;val-num07&quot; /&gt;
+    
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="Variables" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Getting Started with Variables to Represent Numbers</title><link href="http://localhost:4000/variables-numbers01/" rel="alternate" type="text/html" title="Getting Started with Variables to Represent Numbers" /><published>2020-03-29T00:00:00-05:00</published><updated>2020-03-29T00:00:00-05:00</updated><id>http://localhost:4000/variables-numbers01</id><content type="html" xml:base="http://localhost:4000/variables-numbers01/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#placing-the-same-figure-in-multiple-locations&quot; id=&quot;markdown-toc-placing-the-same-figure-in-multiple-locations&quot;&gt;Placing the same figure in multiple locations&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#why-would-we-do-this&quot; id=&quot;markdown-toc-why-would-we-do-this&quot;&gt;Why would we do this?&lt;/a&gt;&lt;/li&gt;
@@ -118,7 +71,7 @@ show2D &quot;my blocks&quot;
   &lt;li&gt;&lt;a href=&quot;#still-seems-like-a-lot-of-work&quot; id=&quot;markdown-toc-still-seems-like-a-lot-of-work&quot;&gt;Still seems like a lot of work…&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;In this post we’ll explore how to use variables to represent numbers. Variables are handy when you’d like to use the same code, but with different values.  If you haven’t read about using variables to represent colors, I recommend you do that before proceeding.  You can find it [here] (/variables-colors).&lt;/p&gt;
+&lt;p&gt;In this post we’ll explore how to use variables to represent numbers. Variables are handy when you’d like to use the same code, but with different values.  If you haven’t read about using variables to represent colors, I recommend you do that before proceeding.  You can find it &lt;a href=&quot;/variables-colors&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;hr /&gt;
 

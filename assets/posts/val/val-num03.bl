@@ -1,0 +1,53 @@
+open Level_3;
+
+build2D (40,40);
+
+(* Figure at (0,0) *)
+val xLoc = 0;  (* lower-left x coordinate of figure *)
+val zLoc = 0;  (* lower-left z coordinate of figure *)
+put2D  (2,4)  BLUE    ( xLoc     , zLoc     );
+put2D  (3,3)  RED     ( xLoc + 2 , zLoc     );
+put2D  (2,3)  YELLOW  ( xLoc     , zLoc + 4 );
+put2D  (3,4)  GREEN   ( xLoc + 2 , zLoc + 3 );
+
+(* Figure at (14,0) *)
+val xLoc = 14;  (* lower-left x coordinate of figure *)
+val zLoc =  0;  (* lower-left z coordinate of figure *)
+put2D  (2,4)  BLUE    ( xLoc     , zLoc     );
+put2D  (3,3)  RED     ( xLoc + 2 , zLoc     );
+put2D  (2,3)  YELLOW  ( xLoc     , zLoc + 4 );
+put2D  (3,4)  GREEN   ( xLoc + 2 , zLoc + 3 );
+
+(* Figure at (7,5) *)
+val xLoc = 7;  (* lower-left x coordinate of figure *)
+val zLoc = 5;  (* lower-left z coordinate of figure *)
+put2D  (2,4)  BLUE    ( xLoc     , zLoc     );
+put2D  (3,3)  RED     ( xLoc + 2 , zLoc     );
+put2D  (2,3)  YELLOW  ( xLoc     , zLoc + 4 );
+put2D  (3,4)  GREEN   ( xLoc + 2 , zLoc + 3 );
+
+(* Figure at (4,15) *)
+val xLoc =  4;  (* lower-left x coordinate of figure *)
+val zLoc = 15;  (* lower-left z coordinate of figure *)
+put2D  (2,4)  BLUE    ( xLoc     , zLoc     );
+put2D  (3,3)  RED     ( xLoc + 2 , zLoc     );
+put2D  (2,3)  YELLOW  ( xLoc     , zLoc + 4 );
+put2D  (3,4)  GREEN   ( xLoc + 2 , zLoc + 3 );
+
+(* Figure at (13,13) *)
+val xLoc = 13;  (* lower-left x coordinate of figure *)
+val zLoc = 13;  (* lower-left z coordinate of figure *)
+put2D  (2,4)  BLUE    ( xLoc     , zLoc     );
+put2D  (3,3)  RED     ( xLoc + 2 , zLoc     );
+put2D  (2,3)  YELLOW  ( xLoc     , zLoc + 4 );
+put2D  (3,4)  GREEN   ( xLoc + 2 , zLoc + 3 );
+
+(* Figure at (20,11) *)
+val xLoc = 20;  (* lower-left x coordinate of figure *)
+val zLoc = 11;  (* lower-left z coordinate of figure *)
+put2D  (2,4)  BLUE    ( xLoc     , zLoc     );
+put2D  (3,3)  RED     ( xLoc + 2 , zLoc     );
+put2D  (2,3)  YELLOW  ( xLoc     , zLoc + 4 );
+put2D  (3,4)  GREEN   ( xLoc + 2 , zLoc + 3 );
+
+show ""
