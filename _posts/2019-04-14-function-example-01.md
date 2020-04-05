@@ -2,7 +2,7 @@
 layout: post
 title: User-Defined Function Example
 categories: [Functions]
-tags: functions
+tags: functions, featured
 author: Betty Love
 ---
 

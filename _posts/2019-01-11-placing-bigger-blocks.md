@@ -2,7 +2,7 @@
 layout: post
 title: Placing blocks that are bigger than 1x1 (Vitruvia Concept 3)
 categories: [Getting Started]
-tags: featured
+tags: 
 author: Betty Love
 ---
 

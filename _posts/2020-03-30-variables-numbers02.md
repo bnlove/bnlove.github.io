@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Using Numeric Variables to Represent Coordinates
-categories: [Getting Started, Functions]
-tags: Variables
+title: Variables - Using Numeric Variables to Represent Coordinates
+categories: [Variable and Functions]
+tags: variables, featured
 author: Betty Love
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: Counting items in a list
 categories: [Getting Started]
-tags: featured counting
+tags:  counting
 author: Betty Love
 ---
 

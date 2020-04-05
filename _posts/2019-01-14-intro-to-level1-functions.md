@@ -2,7 +2,7 @@
 layout: post
 title: Bricklayer Level 1 functions (Vitruvia Concept 5)
 categories: [Getting Started]
-tags: featured
+tags: 
 author: Betty Love
 ---
 

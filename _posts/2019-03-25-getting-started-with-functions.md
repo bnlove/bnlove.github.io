@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting Started with Functions
-categories: [Getting Started, Functions]
-tags: functions
+title: Functions - An Introduction
+categories: [Variables and Functions]
+tags: functions, featured
 author: Betty Love
 ---
 

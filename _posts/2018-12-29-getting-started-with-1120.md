@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with MATH 1120
 categories: [Getting Started]
-tags: featured
+tags: 
 author: Betty Love
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting Started with Variables to Represent Numbers
-categories: [Getting Started, Functions]
-tags: functions
+title: Variables - Using Variables to Represent Numbers
+categories: [Variables and Functions]
+tags: functions, featured
 author: Betty Love
 ---
 
@@ -90,4 +90,4 @@ Suppose we wanted to put our figure in multiple locations, say, at (5,8), (2,12)
 
 ### Still seems like a lot of work...
 
-For this simple program, it may not be a big deal to do the arithmetic to place the figure at different locations.  So how about a more complicated program? Continue  [here] (/variables-numbers02).
+For this simple program, it may not be a big deal to do the arithmetic to place the figure at different locations.  So how about a more complicated program? Continue  [here](/variables-numbers02).

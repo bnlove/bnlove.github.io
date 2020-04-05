@@ -2,7 +2,7 @@
 layout: post
 title: A function to create a wire-frame box
 categories: [Functions]
-tags: level4, functions
+tags: level4, functions, featured
 author: Betty Love
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: help
-title: MATH/STEM 1120
-subtitle: Get started and get help!
+title: MATH 1120
+subtitle: A resource for students at the University of Nebraska at Omaha
 hero:
     background: "#663399"
     image: header.jpg
@@ -11,7 +11,7 @@ hero:
     search: true
 category:
 featured:
-    title: Getting Started
+    title: Featured
     tag: featured
 cta:
     title: Didn't find an answer to your question?

@@ -1,25 +1,25 @@
 [
   
     {
-      "title"    : "Using Numeric Variables to Represent Coordinates",
+      "title"    : "Variables - Using Numeric Variables to Represent Coordinates",
       "category" : "",
-      "tags"     : "Variables",
+      "tags"     : "variables,, featured",
       "url"      : "/variables-numbers02/",
       "date"     : "2020-03-30 00:00:00 -0500"
     } ,
   
     {
-      "title"    : "Getting Started with Variables to Represent Numbers",
+      "title"    : "Variables - Using Variables to Represent Numbers",
       "category" : "",
-      "tags"     : "functions",
+      "tags"     : "functions,, featured",
       "url"      : "/variables-numbers01/",
       "date"     : "2020-03-29 00:00:00 -0500"
     } ,
   
     {
-      "title"    : "Getting Started with Variables to Represent Colors",
+      "title"    : "Variables - Using Variables to Represent Colors",
       "category" : "",
-      "tags"     : "functions",
+      "tags"     : "functions,, featured",
       "url"      : "/variables-colors/",
       "date"     : "2020-03-29 00:00:00 -0500"
     } ,
@@ -43,7 +43,7 @@
     {
       "title"    : "User-Defined Function Example",
       "category" : "",
-      "tags"     : "functions",
+      "tags"     : "functions,, featured",
       "url"      : "/function-example-01/",
       "date"     : "2019-04-14 00:00:00 -0500"
     } ,
@@ -51,15 +51,15 @@
     {
       "title"    : "A function to create a wire-frame box",
       "category" : "",
-      "tags"     : "level4,, functions",
+      "tags"     : "level4,, functions,, featured",
       "url"      : "/wire-frame-box/",
       "date"     : "2019-04-12 00:00:00 -0500"
     } ,
   
     {
-      "title"    : "Getting Started with Functions",
+      "title"    : "Functions - An Introduction",
       "category" : "",
-      "tags"     : "functions",
+      "tags"     : "functions,, featured",
       "url"      : "/getting-started-with-functions/",
       "date"     : "2019-03-25 00:00:00 -0500"
     } ,
@@ -99,7 +99,7 @@
     {
       "title"    : "Getting Started with Programming in the Bricklayer App",
       "category" : "",
-      "tags"     : "featured",
+      "tags"     : "",
       "url"      : "/getting-started-with-bricklayer/",
       "date"     : "2019-02-21 00:00:00 -0600"
     } ,
@@ -107,7 +107,7 @@
     {
       "title"    : "Getting Started with Bricklayer-Lite",
       "category" : "",
-      "tags"     : "featured",
+      "tags"     : "",
       "url"      : "/getting-started-with-bricklayer-lite-level-1/",
       "date"     : "2019-01-26 00:00:00 -0600"
     } ,
@@ -115,7 +115,7 @@
     {
       "title"    : "Overwriting--placing blocks on top of blocks (Vitruvia Concept 7)",
       "category" : "",
-      "tags"     : "featured",
+      "tags"     : "",
       "url"      : "/overwriting-blocks/",
       "date"     : "2019-01-17 00:00:00 -0600"
     } ,
@@ -123,7 +123,7 @@
     {
       "title"    : "Bricklayer Level 1 functions (Vitruvia Concept 5)",
       "category" : "",
-      "tags"     : "featured",
+      "tags"     : "",
       "url"      : "/intro-to-level1-functions/",
       "date"     : "2019-01-14 00:00:00 -0600"
     } ,
@@ -139,7 +139,7 @@
     {
       "title"    : "Counting items in a list",
       "category" : "",
-      "tags"     : "featured, counting",
+      "tags"     : "counting",
       "url"      : "/counting-list-items/",
       "date"     : "2019-01-13 00:00:00 -0600"
     } ,
@@ -147,7 +147,7 @@
     {
       "title"    : "Placing blocks that are bigger than 1x1 (Vitruvia Concept 3)",
       "category" : "",
-      "tags"     : "featured",
+      "tags"     : "",
       "url"      : "/placing-bigger-blocks/",
       "date"     : "2019-01-11 00:00:00 -0600"
     } ,
@@ -155,7 +155,7 @@
     {
       "title"    : "How to take a Vitruvia test",
       "category" : "",
-      "tags"     : "featured",
+      "tags"     : "",
       "url"      : "/vitruvia-tests/",
       "date"     : "2019-01-09 00:00:00 -0600"
     } ,
@@ -163,7 +163,7 @@
     {
       "title"    : "Getting Started with Vitruvia Exercises",
       "category" : "",
-      "tags"     : "featured",
+      "tags"     : "",
       "url"      : "/getting-started-with-vitruvia/",
       "date"     : "2018-12-29 00:00:00 -0600"
     } ,
@@ -171,7 +171,7 @@
     {
       "title"    : "Getting Started with MATH 1120",
       "category" : "",
-      "tags"     : "featured",
+      "tags"     : "",
       "url"      : "/getting-started-with-1120/",
       "date"     : "2018-12-29 00:00:00 -0600"
     } 

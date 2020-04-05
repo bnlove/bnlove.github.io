@@ -2,7 +2,7 @@
 layout: post
 title: How to take a Vitruvia test
 categories: [Getting Started]
-tags: featured
+tags: 
 author: Betty Love
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting Started with Variables to Represent Colors
-categories: [Getting Started, Functions]
-tags: functions
+title: Variables - Using Variables to Represent Colors
+categories: [Variables and Functions]
+tags: functions, featured
 author: Betty Love
 ---
 

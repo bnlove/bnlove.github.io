@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with Vitruvia Exercises
 categories: [Getting Started]
-tags: featured
+tags: 
 author: Betty Love
 ---
 

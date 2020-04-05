@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with Bricklayer-Lite
 categories: [Getting Started]
-tags: featured
+tags: 
 author: Betty Love
 ---
 

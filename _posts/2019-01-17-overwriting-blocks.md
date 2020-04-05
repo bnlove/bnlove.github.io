@@ -2,7 +2,7 @@
 layout: post
 title: Overwriting--placing blocks on top of blocks (Vitruvia Concept 7)
 categories: [Getting Started]
-tags: featured
+tags: 
 author: Betty Love
 ---
 

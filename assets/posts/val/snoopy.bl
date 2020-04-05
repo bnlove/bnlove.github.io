@@ -1,0 +1,208 @@
+open Level_3;
+
+build2D (200,200);
+
+val backgroundColor   = LIGHTBLUE;
+val typewriterColor   = PINK;
+val snoopyColor       = WHITE;
+val outlineColor      = BLACK;
+val bottomColor       = RED;
+val paperColor        = WHITE;
+val paperRollerColor  = GRAY;
+
+val xLoc = 0;
+val zLoc = 0;
+
+put2D (36,36) backgroundColor (xLoc,zLoc);
+(* rows 0 and 1 *)
+put2D (36,2) bottomColor  (xLoc, zLoc); 
+put2D (13,1) outlineColor (xLoc + 23, zLoc + 1);
+
+(* row 2 *)
+put2D (32,1) outlineColor (xLoc+3,  zLoc+2);
+put2D (9,1)  snoopyColor  (xLoc+23, zLoc+2);
+
+(* row 3 *)
+put2D (31,1) outlineColor    (xLoc+3,  zLoc+3);
+put2D (18,1) typewriterColor (xLoc+4,  zLoc+3);
+put2D (9,1)  snoopyColor     (xLoc+23, zLoc+3);
+
+(* row 4 *)
+put2D (31,1) outlineColor    (xLoc+3,  zLoc+4);
+put2D (18,1) typewriterColor (xLoc+4,  zLoc+4);
+put2D (5,1)  snoopyColor     (xLoc+23, zLoc+4);
+put2D (1,1)  snoopyColor     (xLoc+32, zLoc+4);
+
+(* row 5 *)
+put2D (31,1) outlineColor    (xLoc+3,  zLoc+5);
+put2D (16,1) typewriterColor (xLoc+4,  zLoc+5);
+put2D (4,1)  snoopyColor     (xLoc+24, zLoc+5);
+put2D (4,1)  snoopyColor     (xLoc+29, zLoc+5);
+
+(* row 6 *)
+put2D (17,1)  outlineColor    (xLoc+3,  zLoc+6);
+put2D ( 6,1)  typewriterColor (xLoc+12, zLoc+6);
+put2D (11,1)  outlineColor    (xLoc+23, zLoc+6);
+put2D ( 5,1)  snoopyColor     (xLoc+24, zLoc+6);
+put2D ( 3,1)  snoopyColor     (xLoc+30, zLoc+6);
+
+(* row 7 *)
+put2D (15,1)  outlineColor    (xLoc+ 3, zLoc+7);
+put2D ( 8,1)  typewriterColor (xLoc+ 4, zLoc+7);
+put2D ( 2,1)  typewriterColor (xLoc+13, zLoc+7);
+put2D (11,1)  outlineColor    (xLoc+23, zLoc+7);
+put2D ( 5,1)  snoopyColor     (xLoc+24, zLoc+7);
+put2D ( 2,1)  snoopyColor     (xLoc+30, zLoc+7);
+
+(* row 8 *)
+put2D (14,1)  outlineColor    (xLoc+ 1, zLoc+8);
+put2D ( 4,1)  typewriterColor (xLoc+ 8, zLoc+8);
+put2D (11,1)  outlineColor    (xLoc+23, zLoc+8);
+put2D ( 4,1)  snoopyColor     (xLoc+25, zLoc+8);
+put2D ( 2,1)  snoopyColor     (xLoc+30, zLoc+8);
+
+(* row 9 *)
+put2D (13,1)  outlineColor      (xLoc+ 0, zLoc+9);
+put2D ( 3,1)  paperColor        (xLoc+ 1, zLoc+9);
+put2D ( 3,1)  paperRollerColor  (xLoc+ 5, zLoc+9);
+put2D ( 3,1)  typewriterColor   (xLoc+ 9, zLoc+8);
+put2D (13,1)  outlineColor      (xLoc+21, zLoc+9);
+put2D ( 3,1)  snoopyColor       (xLoc+26, zLoc+9);
+put2D ( 2,1)  snoopyColor       (xLoc+30, zLoc+9);
+
+(* row 10 *)
+put2D (13,1)  outlineColor      (xLoc+ 0, zLoc+10);
+put2D ( 3,1)  paperRollerColor  (xLoc+ 5, zLoc+10);
+put2D ( 1,1)  outlineColor      (xLoc+ 6, zLoc+10);
+put2D (15,1)  outlineColor      (xLoc+19, zLoc+10);
+put2D ( 1,1)  snoopyColor       (xLoc+22, zLoc+10);
+put2D ( 1,1)  snoopyColor       (xLoc+24, zLoc+10);
+put2D ( 2,1)  snoopyColor       (xLoc+27, zLoc+10);
+put2D ( 2,1)  snoopyColor       (xLoc+30, zLoc+10);
+
+(* row 11 *)
+put2D ( 5,1)  outlineColor      (xLoc+ 4, zLoc+11);
+put2D ( 3,1)  paperRollerColor  (xLoc+ 5, zLoc+11);
+put2D (15,1)  outlineColor      (xLoc+19, zLoc+11);
+put2D ( 2,1)  snoopyColor       (xLoc+20, zLoc+11);
+put2D ( 3,1)  snoopyColor       (xLoc+23, zLoc+11);
+put2D ( 3,1)  snoopyColor       (xLoc+29, zLoc+11);
+
+(* row 12 *)
+put2D ( 8,1)  outlineColor      (xLoc+ 4, zLoc+12);
+put2D (14,1)  outlineColor      (xLoc+19, zLoc+12);
+put2D (12,1)  snoopyColor       (xLoc+20, zLoc+12);
+
+(* row 13 *)
+put2D ( 3,1)  outlineColor      (xLoc+ 6, zLoc+13);
+put2D ( 1,1)  paperColor        (xLoc+ 7, zLoc+13);
+put2D ( 2,1)  outlineColor      (xLoc+10, zLoc+13);
+put2D (13,1)  outlineColor      (xLoc+20, zLoc+13);
+put2D ( 4,1)  snoopyColor       (xLoc+28, zLoc+13);
+
+(* row 14 *)
+put2D ( 2,1)  outlineColor      (xLoc+ 2, zLoc+14);
+put2D ( 4,1)  outlineColor      (xLoc+ 5, zLoc+14);
+put2D ( 1,1)  paperColor        (xLoc+ 6, zLoc+14);
+put2D ( 2,1)  outlineColor      (xLoc+17, zLoc+14);
+put2D ( 5,1)  outlineColor      (xLoc+28, zLoc+14);
+put2D ( 2,1)  snoopyColor       (xLoc+29, zLoc+14);
+
+(* row 15 *)
+put2D ( 5,1)  outlineColor      (xLoc+ 2, zLoc+15);
+put2D ( 1,1)  paperColor        (xLoc+ 3, zLoc+15);
+put2D ( 1,1)  paperColor        (xLoc+ 5, zLoc+15);
+put2D ( 7,1)  outlineColor      (xLoc+16, zLoc+15);
+put2D ( 5,1)  outlineColor      (xLoc+27, zLoc+15);
+put2D ( 3,1)  snoopyColor       (xLoc+28, zLoc+15);
+
+(* row 16 *)
+put2D ( 3,1)  outlineColor      (xLoc+ 3, zLoc+16);
+put2D ( 1,1)  paperColor        (xLoc+ 4, zLoc+16);
+put2D ( 8,1)  outlineColor      (xLoc+17, zLoc+16);
+put2D ( 5,1)  snoopyColor       (xLoc+18, zLoc+16);
+put2D ( 5,1)  outlineColor      (xLoc+27, zLoc+16);
+put2D ( 1,1)  snoopyColor       (xLoc+29, zLoc+16);
+
+(* row 17 *)
+put2D ( 1,1)  outlineColor      (xLoc+ 4, zLoc+17);
+put2D (15,1)  outlineColor      (xLoc+16, zLoc+17);
+put2D ( 8,1)  snoopyColor       (xLoc+17, zLoc+17);
+put2D ( 1,1)  snoopyColor       (xLoc+28, zLoc+17);
+
+(* row 18 *)
+put2D (15,1)  outlineColor      (xLoc+16, zLoc+18);
+put2D (13,1)  snoopyColor       (xLoc+17, zLoc+18);
+
+(* row 19 *)
+put2D (15,1)  outlineColor      (xLoc+15, zLoc+19);
+put2D (13,1)  snoopyColor       (xLoc+16, zLoc+19);
+
+(* row 20 *)
+put2D (15,1)  outlineColor      (xLoc+15, zLoc+20);
+put2D (13,1)  snoopyColor       (xLoc+16, zLoc+20);
+
+(* row 21 *)
+put2D (14,1)  outlineColor      (xLoc+16, zLoc+21);
+put2D (12,1)  snoopyColor       (xLoc+17, zLoc+21);
+
+(* row 22 *)
+put2D (18,1)  outlineColor      (xLoc+16, zLoc+22);
+put2D (13,1)  snoopyColor       (xLoc+17, zLoc+22);
+
+(* row 23 *)
+put2D (19,1)  outlineColor      (xLoc+16, zLoc+23);
+put2D (17,1)  snoopyColor       (xLoc+17, zLoc+23);
+
+(* row 24 *)
+put2D (18,1)  outlineColor      (xLoc+17, zLoc+24);
+put2D ( 3,1)  snoopyColor       (xLoc+18, zLoc+24);
+put2D ( 8,1)  snoopyColor       (xLoc+23, zLoc+24);
+
+(* row 25 *)
+put2D (18,1)  outlineColor      (xLoc+18, zLoc+25);
+put2D ( 2,1)  snoopyColor       (xLoc+19, zLoc+25);
+put2D ( 8,1)  snoopyColor       (xLoc+22, zLoc+25);
+
+(* row 26 *)
+put2D (18,1)  outlineColor      (xLoc+18, zLoc+26);
+put2D (10,1)  snoopyColor       (xLoc+19, zLoc+26);
+
+(* row 27 *)
+put2D (17,1)  outlineColor      (xLoc+19, zLoc+27);
+put2D ( 8,1)  snoopyColor       (xLoc+20, zLoc+27);
+put2D ( 1,1)  snoopyColor       (xLoc+29, zLoc+27);
+
+(* row 28 *)
+put2D (17,1)  outlineColor      (xLoc+19, zLoc+28);
+put2D ( 8,1)  snoopyColor       (xLoc+20, zLoc+28);
+
+(* row 29 *)
+put2D (16,1)  outlineColor      (xLoc+19, zLoc+29);
+put2D ( 8,1)  snoopyColor       (xLoc+20, zLoc+29);
+put2D ( 1,1)  snoopyColor       (xLoc+33, zLoc+29);
+
+(* row 30 *)
+put2D (16,1)  outlineColor      (xLoc+19, zLoc+30);
+put2D ( 8,1)  snoopyColor       (xLoc+20, zLoc+30);
+put2D ( 1,1)  snoopyColor       (xLoc+33, zLoc+30);
+
+(* row 31 *)
+put2D (15,1)  outlineColor      (xLoc+19, zLoc+31);
+put2D ( 8,1)  snoopyColor       (xLoc+20, zLoc+31);
+put2D ( 1,1)  snoopyColor       (xLoc+32, zLoc+31);
+
+(* row 32 *)
+put2D (13,1)  outlineColor      (xLoc+20, zLoc+32);
+put2D ( 8,1)  snoopyColor       (xLoc+21, zLoc+32);
+put2D ( 2,1)  snoopyColor       (xLoc+30, zLoc+32);
+
+(* row 33 *)
+put2D (11,1)  outlineColor      (xLoc+21, zLoc+33);
+put2D ( 7,1)  snoopyColor       (xLoc+22, zLoc+33);
+
+(* row 34 *)
+put2D (7,1)  outlineColor      (xLoc+22, zLoc+34);
+
+
+show ""

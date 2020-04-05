@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with Programming in the Bricklayer App
 categories: [Getting Started]
-tags: featured
+tags: 
 author: Betty Love
 ---
 
