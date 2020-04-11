@@ -152,7 +152,7 @@
 
 <p>The following code will create this artifact.
 <a href=" http://localhost:4000/assets/posts/functions/crissCrossSquare01.bl ">
-<img src="http://localhost:4000/assets/posts/dot-bl.png" alt=".bl file" />
+[Download .bl]
 </a></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>put2D (10,10) BLUE (0,0);
@@ -189,7 +189,7 @@ lineXZ (0,9) (9,0) YELLOW;
 
 <p>Therefore my function to place a copy of the artifact at (xLoc,zLoc) would be as follows.
 <a href=" http://localhost:4000/assets/posts/functions/crissCrossSquare02.bl ">
-<img src="http://localhost:4000/assets/posts/dot-bl.png" alt=".bl file" />
+[Download .bl]
 </a></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fun crissCrossSquare (xLoc,zLoc) = 
@@ -213,7 +213,7 @@ lineXZ (0,9) (9,0) YELLOW;
 
 <p>Now suppose we’d like to create the criss-cross square artifact in different colors.  We need to specify a color for the square and a color for the lines.  Let’s call the color for the square <em>squareColor</em> and the color for the lines <em>lineColor</em>.  We’ll add these parameters to our function and substitute <em>squareColor</em> for BLUE and <em>lineColor</em> for YELLOW.  Now our function is as follows.
 <a href=" http://localhost:4000/assets/posts/functions/crissCrossSquare03.bl ">
-<img src="http://localhost:4000/assets/posts/dot-bl.png" alt=".bl file" />
+[Download .bl]
 </a></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fun crissCrossSquare (xLoc,zLoc,squareColor,lineColor) = 
@@ -271,7 +271,7 @@ For a square of size 10 placed at (0,0), the endpoints of the two lines are:</p>
 
 <p>Incorporating this into our function with a new parameter <em>squareSize</em> yields the following.
 <a href=" http://localhost:4000/assets/posts/functions/crissCrossSquare03.bl ">
-<img src="http://localhost:4000/assets/posts/dot-bl.png" alt=".bl file" />
+[Download .bl]
 </a></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fun crissCrossSquare (xLoc,zLoc,squareColor,lineColor,squareSize) = 
@@ -321,6 +321,15 @@ crissCrossSquare ( 2, 12, RED , WHITE ,  7);
     
 
     <ul class="uk-list uk-list-large link-icon-right">
+    
+
+    
+    
+
+    
+
+    
+
     
 
     

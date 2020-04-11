@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Functions - An Introduction
+title: Functions - Introduction Assuming No Knowledge of Variables
 categories: [Variables and Functions]
 tags: functions, featured
 author: Betty Love
@@ -11,7 +11,9 @@ author: Betty Love
 * TOC
 {:toc}
 
-In this post we'll explore how to create our own functions. So far we've used functions that come with Bricklayer.  These include _put2D_, _put_, _lineXZ_, _circleXZ_, and _sphere_. These are referred to as _built-in_ functions.  We'll learn how to create our own functions which are known as _user-defined_ functions (we are _users_ and _defining_ our own functions).
+In this post we'll explore how to create our own functions. This post is similar to the one [here](/functions01) except that one assumes that you're familiar with the _val_ statement.  This one does not. 
+
+So far we've used functions that come with Bricklayer.  These include _put2D_, _put_, _lineXZ_, _circleXZ_, and _sphere_. These are referred to as _built-in_ functions.  We'll learn how to create our own functions which are known as _user-defined_ functions (we are _users_ and _defining_ our own functions).
 
 The primary reason to create your own functions is so that you can use that code multiple times without having to rewrite it each time.  Suppose there was no _circleXZ_ function. To create a circle, you'd have to write a lot of _put_ function calls and it would get complicated quickly. 
 

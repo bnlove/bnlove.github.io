@@ -11,7 +11,7 @@ author: Betty Love
 * TOC
 {:toc}
 
-In the last [post](/variables-numbers01) we explored using variables to represent numbers, specifically coordinates defining the location that we wanted to place a figure.  The figure we used was fairly simple and so perhaps did not convince you that all this extra work was worthwhile.  So in this post, we'll look at a slightly more complicated figure.  The example that I'm using is the same one used in my post on [Getting Started with Functions](/getting-started-with-functions) so if you want to peek ahead, that's a good place to look.
+In the last [post](/variables-numbers01) we explored using variables to represent numbers, specifically coordinates defining the location that we wanted to place a figure.  The figure we used was fairly simple and so perhaps did not convince you that all this extra work was worthwhile.  So in this post, we'll look at a slightly more complicated figure.  
 
 ***
 
@@ -54,3 +54,6 @@ The important thing to note is that we can now place the figure anywhere we want
 Now let's write the code to create the original image which consists of six copies of our figure.  Scroll up a bit and note that the the copies appear at the following coordinates (0,0), (14,0), (7,5), (4,15), (13,13), and (20,11). We just make a copy of the code above for each figure and for each, set _xLoc_ and _zLoc_ in the _val_ statements.  The result is shown in the figure below.  Note that the green sections of code are all identical; only the yellow sections with the _val_ statements changes. This distinction is critical since we'll soon learn that we only need to include the green section of code once in our programs (in our own function).
 {% include dotbl.html blfile="val/val-num03.bl"  %}
 {% include image.html img="val/val-num07.png"  alt="val-num07"  %}
+
+The graphic below shows the equivalent segments of code.
+{% include image.html img="val/val-diagram.png"  alt="val-diagram"  %}

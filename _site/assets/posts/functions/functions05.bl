@@ -1,0 +1,21 @@
+open Level_3;
+
+build2D (40,40);
+
+fun blocks (xLoc,zLoc) =
+(
+    (* Figure at (xLoc,zLoc) *)
+    put2D  (2,4)  BLUE    ( xLoc     , zLoc     );
+    put2D  (3,3)  RED     ( xLoc + 2 , zLoc     );
+    put2D  (2,3)  YELLOW  ( xLoc     , zLoc + 4 );
+    put2D  (3,4)  GREEN   ( xLoc + 2 , zLoc + 3 )
+);
+
+blocks (0,0);
+blocks (14,0);
+blocks (7,5);
+blocks (4,15);
+blocks (13,13);
+blocks (20,11);
+
+show ""

@@ -123,7 +123,7 @@
   <li><a href="#create-the-original-figure" id="markdown-toc-create-the-original-figure">Create the original figure</a></li>
 </ul>
 
-<p>In the last <a href="/variables-numbers01">post</a> we explored using variables to represent numbers, specifically coordinates defining the location that we wanted to place a figure.  The figure we used was fairly simple and so perhaps did not convince you that all this extra work was worthwhile.  So in this post, we’ll look at a slightly more complicated figure.  The example that I’m using is the same one used in my post on <a href="/getting-started-with-functions">Getting Started with Functions</a> so if you want to peek ahead, that’s a good place to look.</p>
+<p>In the last <a href="/variables-numbers01">post</a> we explored using variables to represent numbers, specifically coordinates defining the location that we wanted to place a figure.  The figure we used was fairly simple and so perhaps did not convince you that all this extra work was worthwhile.  So in this post, we’ll look at a slightly more complicated figure.</p>
 
 <hr />
 
@@ -175,11 +175,18 @@ put2D  (3,4)  GREEN   ( xLoc + 2 , zLoc + 3 );
 
 <p>Now let’s write the code to create the original image which consists of six copies of our figure.  Scroll up a bit and note that the the copies appear at the following coordinates (0,0), (14,0), (7,5), (4,15), (13,13), and (20,11). We just make a copy of the code above for each figure and for each, set <em>xLoc</em> and <em>zLoc</em> in the <em>val</em> statements.  The result is shown in the figure below.  Note that the green sections of code are all identical; only the yellow sections with the <em>val</em> statements changes. This distinction is critical since we’ll soon learn that we only need to include the green section of code once in our programs (in our own function).
 <a href=" http://localhost:4000/assets/posts/val/val-num03.bl ">
-<img src="http://localhost:4000/assets/posts/dot-bl.png" alt=".bl file" />
+[Download .bl]
 </a></p>
 
 <figure>
     <img src="http://localhost:4000/assets/posts/val/val-num07.png" alt="val-num07" />
+    
+</figure>
+
+<p>The graphic below shows the equivalent segments of code.</p>
+
+<figure>
+    <img src="http://localhost:4000/assets/posts/val/val-diagram.png" alt="val-diagram" />
     
 </figure>
 
@@ -211,6 +218,15 @@ put2D  (3,4)  GREEN   ( xLoc + 2 , zLoc + 3 );
     
 
     <ul class="uk-list uk-list-large link-icon-right">
+    
+
+    
+    
+
+    
+
+    
+
     
 
     

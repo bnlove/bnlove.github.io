@@ -1,11 +1,126 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-04T15:49:48-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Variables - Using Numeric Variables to Represent Coordinates</title><link href="http://localhost:4000/variables-numbers02/" rel="alternate" type="text/html" title="Variables - Using Numeric Variables to Represent Coordinates" /><published>2020-03-30T00:00:00-05:00</published><updated>2020-03-30T00:00:00-05:00</updated><id>http://localhost:4000/variables-numbers02</id><content type="html" xml:base="http://localhost:4000/variables-numbers02/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-11T18:19:05-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Functions - Introduction Based on Variables</title><link href="http://localhost:4000/functions01/" rel="alternate" type="text/html" title="Functions - Introduction Based on Variables" /><published>2020-04-08T00:00:00-05:00</published><updated>2020-04-08T00:00:00-05:00</updated><id>http://localhost:4000/functions01</id><content type="html" xml:base="http://localhost:4000/functions01/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#functions&quot; id=&quot;markdown-toc-functions&quot;&gt;Functions!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#revisit-an-example&quot; id=&quot;markdown-toc-revisit-an-example&quot;&gt;Revisit an example&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-happens-when-this-program-is-executed&quot; id=&quot;markdown-toc-what-happens-when-this-program-is-executed&quot;&gt;What happens when this program is executed?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the last &lt;a href=&quot;/variables-numbers02&quot;&gt;post&lt;/a&gt; we explored using variables to represent  coordinates that define the location that we wanted to place a figure.  As you recall, we used the same block of code over and over with the only changes being in the &lt;em&gt;val_statements&lt;/em&gt;.  You may have wondered if there was a better way.  Why do we have to copy and past the same code over and over?  Isn’t there a way to put it in our program once and just used it multiple times?&lt;/p&gt;
+
+&lt;h3 id=&quot;functions&quot;&gt;Functions!&lt;/h3&gt;
+
+&lt;p&gt;YES!!!  The answer is a &lt;em&gt;function&lt;/em&gt;.  Specifically, a &lt;em&gt;user-defined function&lt;/em&gt;.  This means a function that you (the user) writes as opposed to one that comes with the language (which is a called a &lt;em&gt;built-in&lt;/em&gt; function).  We know a lot of built-in functions. Among these are &lt;em&gt;put&lt;/em&gt;, &lt;em&gt;put2D&lt;/em&gt;, &lt;em&gt;circleXZ&lt;/em&gt;, &lt;em&gt;sphere&lt;/em&gt;, &lt;em&gt;ringX&lt;/em&gt;, etc.  If you think about any of these build-in functions, when we learned how to use them, we had to know what their parameters were and in what order they should be listed.  For example, the parameters of the &lt;em&gt;put2D&lt;/em&gt; function are, in order, &lt;em&gt;size&lt;/em&gt;, &lt;em&gt;color&lt;/em&gt;, and &lt;em&gt;location&lt;/em&gt;.  This is why we write&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (5,8) BLUE (2,3)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;to place a 5x8 blue block at location (2,3).  If, instead, we wrote,&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D BLUE (5,8)  (2,3);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;we’d get an error when we ran our program.  What if we wrote the following?&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D  (2,3) BLUE (5,8);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This time the program runs, but we don’t get the output that we wanted (we get a 2x3 block at (5,8) instead of a 5x8 block at (2,3)).&lt;/p&gt;
+
+&lt;p&gt;So knowing the parameters that are required for a built-in function and knowing the order in which to list them is critical. The same is true for functions that we write.  When we create a function, we state what parameters are required and specify the order they should be given, then we provide the commands that make up the function.&lt;/p&gt;
+
+&lt;h3 id=&quot;revisit-an-example&quot;&gt;Revisit an example&lt;/h3&gt;
+
+&lt;p&gt;Let’s revisit the example we worked on in the previous &lt;a href=&quot;/variables-numbers02&quot;&gt;post&lt;/a&gt;. There we wrote a  program to create the following figure.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/val/functions01.png&quot; alt=&quot;Functions01&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Our code looked like this.
+&lt;a href=&quot; http://localhost:4000/assets/posts/val/val-num03.bl &quot;&gt;
+[Download .bl]
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/val/val-num07.png&quot; alt=&quot;val-num07&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Notice that all the green blocks of code are identical.  Doesn’t it seem like a pain to copy and paste (or worse, type) the same code over and over? It clutters up our program and possibly introduces errors because we may mistype something or when we copy and paste, we may mess something up.  The answer is to just have the code appear once and be able to use it as many times as we want.&lt;/p&gt;
+
+&lt;p&gt;To do that we create a function that consists of the green block of code, that is, the following:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D  (2,4)  BLUE    ( xLoc     , zLoc     );
+put2D  (3,3)  RED     ( xLoc + 2 , zLoc     );
+put2D  (2,3)  YELLOW  ( xLoc     , zLoc + 4 );
+put2D  (3,4)  GREEN   ( xLoc + 2 , zLoc + 3 );
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To use this code, the values of &lt;em&gt;xLoc&lt;/em&gt; and &lt;em&gt;zLoc&lt;/em&gt; must be specified.  Therefore they will be &lt;em&gt;parameters&lt;/em&gt; of our function. Following is how we write our function in bricklayer:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun blocks (xLoc,zLoc) =
+(
+    (* Figure at (xLoc,zLoc) *)
+    put2D  (2,4)  BLUE    ( xLoc     , zLoc     );
+    put2D  (3,3)  RED     ( xLoc + 2 , zLoc     );
+    put2D  (2,3)  YELLOW  ( xLoc     , zLoc + 4 );
+    put2D  (3,4)  GREEN   ( xLoc + 2 , zLoc + 3 )
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The figure below explains what all the parts of the functions are and points out some important things to remember.  Study it very carefully.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/functions05.png&quot; alt=&quot;functions05&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;One of the things that is noted in the previous graphic is that the functions needs values for the parameters in order to run.  This is the same idea as we discussed earlier about the &lt;em&gt;put&lt;/em&gt; function needing parameters to indicate size, color, and location.  Just running the &lt;em&gt;put&lt;/em&gt; command with no parameters accomplishes nothing.&lt;/p&gt;
+
+&lt;p&gt;To &lt;em&gt;call&lt;/em&gt; or &lt;em&gt;invoke&lt;/em&gt; a function, we use the name of the function along with its parameters, e.g.,&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (5,8) BLUE (2,3)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;So to use our function, we do the same.  To put our figure at (0,0), we use the command&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;blocks (0,0)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;blocks&lt;/em&gt; is the name of the function and we want &lt;em&gt;xLoc&lt;/em&gt; to be 0 and &lt;em&gt;zLoc&lt;/em&gt; to be 0.&lt;/p&gt;
+
+&lt;p&gt;Following is the entire program that places the figure at (0,0), (14,0), (7,5), (4,15), (13,13), and (20,11). &lt;a href=&quot; http://localhost:4000/assets/posts/functions/functions05.bl &quot;&gt;
+[Download .bl]
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_3;
+
+build2D (40,40);
+
+fun blocks (xLoc,zLoc) =
+(
+    (* Figure at (xLoc,zLoc) *)
+    put2D  (2,4)  BLUE    ( xLoc     , zLoc     );
+    put2D  (3,3)  RED     ( xLoc + 2 , zLoc     );
+    put2D  (2,3)  YELLOW  ( xLoc     , zLoc + 4 );
+    put2D  (3,4)  GREEN   ( xLoc + 2 , zLoc + 3 )
+);
+
+blocks (0,0);
+blocks (14,0);
+blocks (7,5);
+blocks (4,15);
+blocks (13,13);
+blocks (20,11);
+
+show &quot;&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;what-happens-when-this-program-is-executed&quot;&gt;What happens when this program is executed?&lt;/h3&gt;
+
+&lt;p&gt;There are many built-in bricklayer functions, but they don’t do anything unless we use them in our programs.  The same applies to functions we create; they do nothing until you &lt;em&gt;call&lt;/em&gt; (&lt;em&gt;invoke&lt;/em&gt;) them.  The graphic below shows what happens when we run the program above. Each function call is converted into code in which the values of the parameters are substituted for those in the function. Study this and make sure you understand it.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/functions-diagram.png&quot; alt=&quot;functions-diagram&quot; /&gt;
+    
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="functions," /><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Variables - Using Numeric Variables to Represent Coordinates</title><link href="http://localhost:4000/variables-numbers02/" rel="alternate" type="text/html" title="Variables - Using Numeric Variables to Represent Coordinates" /><published>2020-03-30T00:00:00-05:00</published><updated>2020-03-30T00:00:00-05:00</updated><id>http://localhost:4000/variables-numbers02</id><content type="html" xml:base="http://localhost:4000/variables-numbers02/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#placing-the-same-figure-in-multiple-locations&quot; id=&quot;markdown-toc-placing-the-same-figure-in-multiple-locations&quot;&gt;Placing the same figure in multiple locations&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#code-for-just-one-figure&quot; id=&quot;markdown-toc-code-for-just-one-figure&quot;&gt;Code for just one figure&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#create-the-original-figure&quot; id=&quot;markdown-toc-create-the-original-figure&quot;&gt;Create the original figure&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;In the last &lt;a href=&quot;/variables-numbers01&quot;&gt;post&lt;/a&gt; we explored using variables to represent numbers, specifically coordinates defining the location that we wanted to place a figure.  The figure we used was fairly simple and so perhaps did not convince you that all this extra work was worthwhile.  So in this post, we’ll look at a slightly more complicated figure.  The example that I’m using is the same one used in my post on &lt;a href=&quot;/getting-started-with-functions&quot;&gt;Getting Started with Functions&lt;/a&gt; so if you want to peek ahead, that’s a good place to look.&lt;/p&gt;
+&lt;p&gt;In the last &lt;a href=&quot;/variables-numbers01&quot;&gt;post&lt;/a&gt; we explored using variables to represent numbers, specifically coordinates defining the location that we wanted to place a figure.  The figure we used was fairly simple and so perhaps did not convince you that all this extra work was worthwhile.  So in this post, we’ll look at a slightly more complicated figure.&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -57,11 +172,18 @@ put2D  (3,4)  GREEN   ( xLoc + 2 , zLoc + 3 );
 
 &lt;p&gt;Now let’s write the code to create the original image which consists of six copies of our figure.  Scroll up a bit and note that the the copies appear at the following coordinates (0,0), (14,0), (7,5), (4,15), (13,13), and (20,11). We just make a copy of the code above for each figure and for each, set &lt;em&gt;xLoc&lt;/em&gt; and &lt;em&gt;zLoc&lt;/em&gt; in the &lt;em&gt;val&lt;/em&gt; statements.  The result is shown in the figure below.  Note that the green sections of code are all identical; only the yellow sections with the &lt;em&gt;val&lt;/em&gt; statements changes. This distinction is critical since we’ll soon learn that we only need to include the green section of code once in our programs (in our own function).
 &lt;a href=&quot; http://localhost:4000/assets/posts/val/val-num03.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;img src=&quot;http://localhost:4000/assets/posts/val/val-num07.png&quot; alt=&quot;val-num07&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The graphic below shows the equivalent segments of code.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/val/val-diagram.png&quot; alt=&quot;val-diagram&quot; /&gt;
     
 &lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="variables," /><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Variables - Using Variables to Represent Numbers</title><link href="http://localhost:4000/variables-numbers01/" rel="alternate" type="text/html" title="Variables - Using Variables to Represent Numbers" /><published>2020-03-29T00:00:00-05:00</published><updated>2020-03-29T00:00:00-05:00</updated><id>http://localhost:4000/variables-numbers01</id><content type="html" xml:base="http://localhost:4000/variables-numbers01/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
@@ -120,7 +242,7 @@ put2D (4,2) YELLOW (xLoc + 1, zLoc + 1);
 
 &lt;p&gt;The complete program to make the figure at (5,8) is as follows:
 &lt;a href=&quot; http://localhost:4000/assets/posts/val/val-num01.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_3;
@@ -151,7 +273,7 @@ put2D (4,2) YELLOW (6,9);  (* place yellow block *)
 
 &lt;p&gt;Suppose we wanted to put our figure in multiple locations, say, at (5,8), (2,12), (8,1), and (0,3).  Since we’ve done the hard part (figured out the code to create the figure anywhere we want), all we need to do is change the values defined for &lt;em&gt;xLoc&lt;/em&gt; and &lt;em&gt;zLoc&lt;/em&gt; in the val statements, once for each location.  The code for this is below.  Note that the only part of the program that changes is the &lt;em&gt;val&lt;/em&gt; statements.  The &lt;em&gt;put2D&lt;/em&gt; statements are all the same.
 &lt;a href=&quot; http://localhost:4000/assets/posts/val/val-num02.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;figure&gt;
@@ -181,7 +303,7 @@ put2D (4,2) YELLOW (6,9);  (* place yellow block *)
 
 &lt;p&gt;The Level_3 code to create the figure at (0,0) is as follows.
 &lt;a href=&quot; http://localhost:4000/assets/posts/val/love01.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(* Outline *)
@@ -254,7 +376,7 @@ put2D ( 1,  6)  YELLOW  (10,  2);
 
 &lt;p&gt;That code produces the following figure. 
 &lt;a href=&quot; http://localhost:4000/assets/posts/val/love02.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;figure&gt;
@@ -310,7 +432,7 @@ val letterColor = BLACK;
 
 &lt;p&gt;Makes sense, right?  Ok, make sure that you put these three statements at the beginning of your code (after the build2D statement) since you have to define the values of the variables before the variables appear in the code.  Whole program: 
 &lt;a href=&quot; http://localhost:4000/assets/posts/val/love03.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;The output is the same as the original code:&lt;/p&gt;
@@ -481,7 +603,7 @@ val letterColor = YELLOW;
 
 &lt;p&gt;The following code will create this artifact.
 &lt;a href=&quot; http://localhost:4000/assets/posts/functions/crissCrossSquare01.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (10,10) BLUE (0,0);
@@ -518,7 +640,7 @@ lineXZ (0,9) (9,0) YELLOW;
 
 &lt;p&gt;Therefore my function to place a copy of the artifact at (xLoc,zLoc) would be as follows.
 &lt;a href=&quot; http://localhost:4000/assets/posts/functions/crissCrossSquare02.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun crissCrossSquare (xLoc,zLoc) = 
@@ -542,7 +664,7 @@ lineXZ (0,9) (9,0) YELLOW;
 
 &lt;p&gt;Now suppose we’d like to create the criss-cross square artifact in different colors.  We need to specify a color for the square and a color for the lines.  Let’s call the color for the square &lt;em&gt;squareColor&lt;/em&gt; and the color for the lines &lt;em&gt;lineColor&lt;/em&gt;.  We’ll add these parameters to our function and substitute &lt;em&gt;squareColor&lt;/em&gt; for BLUE and &lt;em&gt;lineColor&lt;/em&gt; for YELLOW.  Now our function is as follows.
 &lt;a href=&quot; http://localhost:4000/assets/posts/functions/crissCrossSquare03.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun crissCrossSquare (xLoc,zLoc,squareColor,lineColor) = 
@@ -600,7 +722,7 @@ For a square of size 10 placed at (0,0), the endpoints of the two lines are:&lt;
 
 &lt;p&gt;Incorporating this into our function with a new parameter &lt;em&gt;squareSize&lt;/em&gt; yields the following.
 &lt;a href=&quot; http://localhost:4000/assets/posts/functions/crissCrossSquare03.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun crissCrossSquare (xLoc,zLoc,squareColor,lineColor,squareSize) = 
@@ -636,7 +758,7 @@ crissCrossSquare ( 2, 12, RED , WHITE ,  7);
 
 &lt;p&gt;Let’s start with a small example.  Consider the program below.
 &lt;a href=&quot; http://localhost:4000/assets/posts/level5/traverseWithin01.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_5;
@@ -709,7 +831,7 @@ show &quot;&quot;
 
 &lt;p&gt;Let’s look at another example using the same starting and ending locations, but with a different function.  Specifically, take a look at the code below.
 &lt;a href=&quot; http://localhost:4000/assets/posts/level5/traverseWithin02.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_5;
@@ -753,7 +875,7 @@ show &quot;&quot;
 
 &lt;p&gt;Our circle function will be very basic.  It will create a blue circle of radius 10 with center (12,15).  The part of the region outside circle will be yellow. 
 &lt;a href=&quot; http://localhost:4000/assets/posts/level5/traverseWithin03.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_5;
@@ -816,7 +938,7 @@ show &quot;&quot;
 
 &lt;p&gt;The following code will create this artifact.
 &lt;a href=&quot; http://localhost:4000/assets/posts/functions/crissCrossSquare01.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (10,10) BLUE (0,0);
@@ -853,7 +975,7 @@ lineXZ (0,9) (9,0) YELLOW;
 
 &lt;p&gt;Therefore my function to place a copy of the artifact at (xLoc,zLoc) would be as follows.
 &lt;a href=&quot; http://localhost:4000/assets/posts/functions/crissCrossSquare02.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun crissCrossSquare (xLoc,zLoc) = 
@@ -877,7 +999,7 @@ lineXZ (0,9) (9,0) YELLOW;
 
 &lt;p&gt;Now suppose we’d like to create the criss-cross square artifact in different colors.  We need to specify a color for the square and a color for the lines.  Let’s call the color for the square &lt;em&gt;squareColor&lt;/em&gt; and the color for the lines &lt;em&gt;lineColor&lt;/em&gt;.  We’ll add these parameters to our function and substitute &lt;em&gt;squareColor&lt;/em&gt; for BLUE and &lt;em&gt;lineColor&lt;/em&gt; for YELLOW.  Now our function is as follows.
 &lt;a href=&quot; http://localhost:4000/assets/posts/functions/crissCrossSquare03.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun crissCrossSquare (xLoc,zLoc,squareColor,lineColor) = 
@@ -935,7 +1057,7 @@ For a square of size 10 placed at (0,0), the endpoints of the two lines are:&lt;
 
 &lt;p&gt;Incorporating this into our function with a new parameter &lt;em&gt;squareSize&lt;/em&gt; yields the following.
 &lt;a href=&quot; http://localhost:4000/assets/posts/functions/crissCrossSquare03.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun crissCrossSquare (xLoc,zLoc,squareColor,lineColor,squareSize) = 
@@ -1018,7 +1140,7 @@ crissCrossSquare ( 2, 12, RED , WHITE ,  7);
 
 &lt;p&gt;Creating the initial solid box is the easiest step since we are given all the parameters we need for the corresponding &lt;em&gt;put&lt;/em&gt; function call. 
 &lt;a href=&quot; http://localhost:4000/assets/posts/functions/wireFrameBox01.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun wireFrameBox (xSize,ySize,zSize,x,y,z,color) = 
@@ -1115,7 +1237,7 @@ crissCrossSquare ( 2, 12, RED , WHITE ,  7);
 
 &lt;p&gt;The following completed wireFrameBox function is as follows. 
 &lt;a href=&quot; http://localhost:4000/assets/posts/functions/wireFrameBox04.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun wireFrameBox (xSize,ySize,zSize,x,y,z,color) = 
@@ -1138,12 +1260,14 @@ crissCrossSquare ( 2, 12, RED , WHITE ,  7);
 
 &lt;h3 id=&quot;patterns-and-symmetry-in-the-put-calls&quot;&gt;Patterns and symmetry in the &lt;em&gt;put&lt;/em&gt; calls&lt;/h3&gt;
 
-&lt;p&gt;Spend a few minutes studying the final version of the function.  Pay particular attention to the patterns that you see in both the size and the locations of the EMPTY blocks.  For example, each horizontal &lt;em&gt;size&lt;/em&gt; parameter is either &lt;em&gt;xSize&lt;/em&gt; or &lt;em&gt;xSize-2&lt;/em&gt; (same for the other two &lt;em&gt;size&lt;/em&gt; parameters).  Each horizontal location coordinate is either &lt;em&gt;x&lt;/em&gt; or &lt;em&gt;x+1&lt;/em&gt; (and same for the other two location parameters).  Many times you can eliminate a little of the work in writing a function like this simply by taking note of such patterns.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="functions," /><category term="featured" /><summary type="html">Topics on this page Topics on this page</summary></entry><entry><title type="html">Functions - An Introduction</title><link href="http://localhost:4000/getting-started-with-functions/" rel="alternate" type="text/html" title="Functions - An Introduction" /><published>2019-03-25T00:00:00-05:00</published><updated>2019-03-25T00:00:00-05:00</updated><id>http://localhost:4000/getting-started-with-functions</id><content type="html" xml:base="http://localhost:4000/getting-started-with-functions/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;p&gt;Spend a few minutes studying the final version of the function.  Pay particular attention to the patterns that you see in both the size and the locations of the EMPTY blocks.  For example, each horizontal &lt;em&gt;size&lt;/em&gt; parameter is either &lt;em&gt;xSize&lt;/em&gt; or &lt;em&gt;xSize-2&lt;/em&gt; (same for the other two &lt;em&gt;size&lt;/em&gt; parameters).  Each horizontal location coordinate is either &lt;em&gt;x&lt;/em&gt; or &lt;em&gt;x+1&lt;/em&gt; (and same for the other two location parameters).  Many times you can eliminate a little of the work in writing a function like this simply by taking note of such patterns.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="functions," /><category term="featured" /><summary type="html">Topics on this page Topics on this page</summary></entry><entry><title type="html">Functions - Introduction Assuming No Knowledge of Variables</title><link href="http://localhost:4000/getting-started-with-functions/" rel="alternate" type="text/html" title="Functions - Introduction Assuming No Knowledge of Variables" /><published>2019-03-25T00:00:00-05:00</published><updated>2019-03-25T00:00:00-05:00</updated><id>http://localhost:4000/getting-started-with-functions</id><content type="html" xml:base="http://localhost:4000/getting-started-with-functions/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#placing-the-same-figure-in-multiple-locations&quot; id=&quot;markdown-toc-placing-the-same-figure-in-multiple-locations&quot;&gt;Placing the same figure in multiple locations&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;In this post we’ll explore how to create our own functions. So far we’ve used functions that come with Bricklayer.  These include &lt;em&gt;put2D&lt;/em&gt;, &lt;em&gt;put&lt;/em&gt;, &lt;em&gt;lineXZ&lt;/em&gt;, &lt;em&gt;circleXZ&lt;/em&gt;, and &lt;em&gt;sphere&lt;/em&gt;. These are referred to as &lt;em&gt;built-in&lt;/em&gt; functions.  We’ll learn how to create our own functions which are known as &lt;em&gt;user-defined&lt;/em&gt; functions (we are &lt;em&gt;users&lt;/em&gt; and &lt;em&gt;defining&lt;/em&gt; our own functions).&lt;/p&gt;
+&lt;p&gt;In this post we’ll explore how to create our own functions. This post is similar to the one &lt;a href=&quot;/functions01&quot;&gt;here&lt;/a&gt; except that one assumes that you’re familiar with the &lt;em&gt;val&lt;/em&gt; statement.  This one does not.&lt;/p&gt;
+
+&lt;p&gt;So far we’ve used functions that come with Bricklayer.  These include &lt;em&gt;put2D&lt;/em&gt;, &lt;em&gt;put&lt;/em&gt;, &lt;em&gt;lineXZ&lt;/em&gt;, &lt;em&gt;circleXZ&lt;/em&gt;, and &lt;em&gt;sphere&lt;/em&gt;. These are referred to as &lt;em&gt;built-in&lt;/em&gt; functions.  We’ll learn how to create our own functions which are known as &lt;em&gt;user-defined&lt;/em&gt; functions (we are &lt;em&gt;users&lt;/em&gt; and &lt;em&gt;defining&lt;/em&gt; our own functions).&lt;/p&gt;
 
 &lt;p&gt;The primary reason to create your own functions is so that you can use that code multiple times without having to rewrite it each time.  Suppose there was no &lt;em&gt;circleXZ&lt;/em&gt; function. To create a circle, you’d have to write a lot of &lt;em&gt;put&lt;/em&gt; function calls and it would get complicated quickly.&lt;/p&gt;
 
@@ -1160,7 +1284,7 @@ crissCrossSquare ( 2, 12, RED , WHITE ,  7);
 
 &lt;p&gt;The Level_3 code to create the figure at (0,0) is as follows.
 &lt;a href=&quot; http://localhost:4000/assets/posts/functions/functions01.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D  (2,4)  BLUE    (0,0);
@@ -1171,7 +1295,7 @@ put2D  (3,4)  GREEN   (2,3);
 
 &lt;p&gt;Now let’s write the code to place the other figures.  One way to do this is to look at the grid and use the labels on the rows and columns to get the coordinates for each of the blue, red, yellow, and green blocks.  For the figure at (14,0), the blue one is at (14,0), the red at (16,0), yellow at (14,4), and green at (16,3). For the figure at (7,6), the blue one is at (7,6), the red at (9,6), yellow at (7,10), and green at (9,9).  We could do this for each of the figures.  Following is the code to create all six figures.
  &lt;a href=&quot; http://localhost:4000/assets/posts/functions/functions02.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(* Figure at (0,0) *)
@@ -1227,7 +1351,7 @@ put2D  (3,4)  GREEN   ( 22 , 14 );
 
 &lt;p&gt;Now that we can see the patterns in the code, we can create a function that does the work for us.  The following function places a copy of the figure at location (x,z).
  &lt;a href=&quot; http://localhost:4000/assets/posts/functions/functions03.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_3;
@@ -1277,7 +1401,7 @@ show2D &quot;my blocks&quot;
 &lt;h3 id=&quot;rings-in-2d&quot;&gt;Rings in 2D&lt;/h3&gt;
 &lt;p&gt;Before discussing 3D rings, let’s review the idea of a ring in 2D. A ring is defined by its radius, thickness, color, and location.  These are the parameters for the &lt;em&gt;ringXZ&lt;/em&gt; function. Consider the following code in Level_3 and its output.
 &lt;a href=&quot; http://localhost:4000/assets/posts/level4/ringX01.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
+[Download .bl]
 &lt;/a&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(* ringXZ radius thickness color location *)
@@ -1292,165 +1416,4 @@ ringXZ 20 10  GREEN (75,25);
 &lt;/figure&gt;
 
 &lt;h3 id=&quot;rings-in-3d&quot;&gt;Rings in 3D&lt;/h3&gt;
-&lt;p&gt;Rings in 3D are analogous to rings in 2D with one exception: the length of the ring.  Essentially rings in 3D are cylinders.  To create a cylinder, we need to know its radius, thickness (of its walls), color, and location.  But we also need to know its orientation: is it standing up?  laying down? laying down front to back or side to side?&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D," /><category term="cylinder," /><category term="ring," /><category term="ringX," /><category term="ringY," /><category term="ringZ," /><category term="level" /><category term="4," /><category term="level_4," /><category term="hollowCylinder" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Spheres in Bricklayer</title><link href="http://localhost:4000/spheres/" rel="alternate" type="text/html" title="Spheres in Bricklayer" /><published>2019-03-01T00:00:00-06:00</published><updated>2019-03-01T00:00:00-06:00</updated><id>http://localhost:4000/spheres</id><content type="html" xml:base="http://localhost:4000/spheres/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#sphere-functions-in-bricklayer-level-4&quot; id=&quot;markdown-toc-sphere-functions-in-bricklayer-level-4&quot;&gt;Sphere functions in Bricklayer Level 4&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#bricklayer-sphere-function&quot; id=&quot;markdown-toc-bricklayer-sphere-function&quot;&gt;Bricklayer &lt;em&gt;sphere&lt;/em&gt; function&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#list-of-colors&quot; id=&quot;markdown-toc-list-of-colors&quot;&gt;List of colors?&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#bricklayer-hollowsphere-function&quot; id=&quot;markdown-toc-bricklayer-hollowsphere-function&quot;&gt;Bricklayer &lt;em&gt;hollowSphere&lt;/em&gt; function&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In this post we’ll explore spheres in Bricklayer Level 4.  For an introduction to programming in the  Level 4, check out &lt;a href=&quot;/getting-started-with-level4&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Where you see this icon,&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl icon&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;click on it to download the associated bricklayer program.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;sphere-functions-in-bricklayer-level-4&quot;&gt;Sphere functions in Bricklayer Level 4&lt;/h3&gt;
-
-&lt;p&gt;Bricklayer has two sphere functions: &lt;em&gt;sphere&lt;/em&gt; and &lt;em&gt;hollowSphere&lt;/em&gt;. Official documentation on these and other Level-4 functions is available at &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer.org&lt;/a&gt; (Apps -&amp;gt; Bricklayer -&amp;gt; Level 4 - Document).  In this post, we’ll start with the &lt;em&gt;sphere&lt;/em&gt; function.&lt;/p&gt;
-
-&lt;h4 id=&quot;bricklayer-sphere-function&quot;&gt;Bricklayer &lt;em&gt;sphere&lt;/em&gt; function&lt;/h4&gt;
-
-&lt;p&gt;The &lt;em&gt;sphere&lt;/em&gt; function produces a sphere (duh!), i.e., a ball.  This is a 3D artifact. To create a sphere, we need to know three things:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;how big it should be&lt;/li&gt;
-  &lt;li&gt;what color(s) it should be&lt;/li&gt;
-  &lt;li&gt;where it should be&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;These three things define the parameters for the &lt;em&gt;sphere&lt;/em&gt; function. Specifically, the parameters are:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;radius&lt;/li&gt;
-  &lt;li&gt;a list of colors, written as [color1,color2,etc]&lt;/li&gt;
-  &lt;li&gt;the center, written as a location in 3D space&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The &lt;em&gt;sphere&lt;/em&gt; command looks like:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere radius [color1,color2,etc] (x,y,z)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The following command creates a blue sphere with radius 10 with center (15,15,15):
-&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere01.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10 [BLUE] (15,15,15);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere01.png&quot; alt=&quot;Blue sphere&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Let’s put three side-by-side (radii 5, 10, and 15) for perspective.
-&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere02.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 5  [BLUE] (10,20,20);
-sphere 10 [BLUE] (30,20,20);
-sphere 15 [BLUE] (60,20,20);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere02.png&quot; alt=&quot;Three blue spheres&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;h4 id=&quot;list-of-colors&quot;&gt;List of colors?&lt;/h4&gt;
-&lt;p&gt;Let’s explore what happens when we have more than one color in our list of colors. I’ll change up our three spheres as follows. &lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere03.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 5  [BLUE,YELLOW] (10,20,20);
-sphere 10 [RED, GREEN] (30,20,20);
-sphere 15 [PINK, VIOLET] (60,20,20);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere03.png&quot; alt=&quot;Three bi-color spheres&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;But we’re not limited to just two colors.  You can include as many as you’d like.  Here’s one with three colors. &lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere04.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sphere 10 [RED,ORANGE,YELLOW] (15,15,15);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere04.png&quot; alt=&quot;A red, orange, and yellow sphere&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;At this point if you’ve been running the .bl files yourself, you may have noticed that as your artifacts include more bricks, it can take longer for your computer to display them. It is easy to generate a lot of bricks when creating spheres.  In fact, we can look at the output in the bricklayer console window to see how many bricks are in an artifact.  The screenshot below shows how to look for this (first scroll to the bottom of the console window, then up until you see this part).  Notice that our red, orange, and yellow sphere is made up of 4,945 bricks!&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere05.png&quot; alt=&quot;A red, orange, and yellow sphere&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;h4 id=&quot;bricklayer-hollowsphere-function&quot;&gt;Bricklayer &lt;em&gt;hollowSphere&lt;/em&gt; function&lt;/h4&gt;
-&lt;p&gt;The &lt;em&gt;hollowSphere&lt;/em&gt; function provides a way to create the same look as the &lt;em&gt;sphere&lt;/em&gt; command without all the inner bricks that one cannot see.  The parameters are the same except for one additional parameter for &lt;em&gt;hollowSphere&lt;/em&gt; to indicate the thickness of the surface of the sphere.  The maximum value for this is 10 and it yields a sphere that looks exactly like the output from the &lt;em&gt;sphere&lt;/em&gt; command, but with the unseen bricks deleted.  This allows us to create larger spheres without slowing down the computer too much.&lt;/p&gt;
-
-&lt;p&gt;The general form of the &lt;em&gt;hollowSphere&lt;/em&gt; command is:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollowSphere radius thickness [colors] location;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;I’ll create a sphere that looks like the previous one using &lt;em&gt;hollowSphere&lt;/em&gt; with a thickness of 10. 
-&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere05.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollowSphere 10 10 [RED,ORANGE,YELLOW] (15,15,15);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere06.png&quot; alt=&quot;Hollow sphere with thickness 10&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Now let’s check the bricklayer console to see how many bricks are in this one.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere07.png&quot; alt=&quot;A red, orange, and yellow sphere&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;2392 bricks in the hollow sphere vs. 4945 in the solid sphere.  Using &lt;em&gt;hollowSphere&lt;/em&gt; allows us to create larger spheres with no change in appearance from the outside of the sphere.&lt;/p&gt;
-
-&lt;p&gt;What if we used a smaller value for the thickness?  Let’s try 5! &lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere06.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollowSphere 10 5 [RED,ORANGE,YELLOW] (15,15,15);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere08.png&quot; alt=&quot;Hollow sphere with thickness 5&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;The outside of the sphere is not solid now.  Let’s try thickness = 1. 
-&lt;a href=&quot; http://localhost:4000/assets/posts/level4/sphere07.bl &quot;&gt;
-&lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl file&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollowSphere 10 1 [RED,ORANGE,YELLOW] (15,15,15);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/sphere09.png&quot; alt=&quot;Hollow sphere with thickness 5&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;As the thickness decreases, the number of visible bricks on the outside of the sphere also decreases.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D," /><category term="sphere" /><summary type="html">Topics on this page</summary></entry></feed>
+&lt;p&gt;Rings in 3D are analogous to rings in 2D with one exception: the length of the ring.  Essentially rings in 3D are cylinders.  To create a cylinder, we need to know its radius, thickness (of its walls), color, and location.  But we also need to know its orientation: is it standing up?  laying down? laying down front to back or side to side?&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D," /><category term="cylinder," /><category term="ring," /><category term="ringX," /><category term="ringY," /><category term="ringZ," /><category term="level" /><category term="4," /><category term="level_4," /><category term="hollowCylinder" /><summary type="html">Topics on this page</summary></entry></feed>

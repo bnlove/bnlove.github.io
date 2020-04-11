@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Functions - Introduction Based on Variables",
+      "category" : "",
+      "tags"     : "functions,, featured",
+      "url"      : "/functions01/",
+      "date"     : "2020-04-08 00:00:00 -0500"
+    } ,
+  
+    {
       "title"    : "Variables - Using Numeric Variables to Represent Coordinates",
       "category" : "",
       "tags"     : "variables,, featured",
@@ -57,7 +65,7 @@
     } ,
   
     {
-      "title"    : "Functions - An Introduction",
+      "title"    : "Functions - Introduction Assuming No Knowledge of Variables",
       "category" : "",
       "tags"     : "functions,, featured",
       "url"      : "/getting-started-with-functions/",

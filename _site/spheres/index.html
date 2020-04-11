@@ -164,7 +164,7 @@
 </code></pre></div></div>
 <p>The following command creates a blue sphere with radius 10 with center (15,15,15):
 <a href=" http://localhost:4000/assets/posts/level4/sphere01.bl ">
-<img src="http://localhost:4000/assets/posts/dot-bl.png" alt=".bl file" />
+[Download .bl]
 </a></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sphere 10 [BLUE] (15,15,15);
@@ -177,7 +177,7 @@
 
 <p>Let’s put three side-by-side (radii 5, 10, and 15) for perspective.
 <a href=" http://localhost:4000/assets/posts/level4/sphere02.bl ">
-<img src="http://localhost:4000/assets/posts/dot-bl.png" alt=".bl file" />
+[Download .bl]
 </a></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sphere 5  [BLUE] (10,20,20);
@@ -192,7 +192,7 @@ sphere 15 [BLUE] (60,20,20);
 
 <h4 id="list-of-colors">List of colors?</h4>
 <p>Let’s explore what happens when we have more than one color in our list of colors. I’ll change up our three spheres as follows. <a href=" http://localhost:4000/assets/posts/level4/sphere03.bl ">
-<img src="http://localhost:4000/assets/posts/dot-bl.png" alt=".bl file" />
+[Download .bl]
 </a></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sphere 5  [BLUE,YELLOW] (10,20,20);
@@ -206,7 +206,7 @@ sphere 15 [PINK, VIOLET] (60,20,20);
 </figure>
 
 <p>But we’re not limited to just two colors.  You can include as many as you’d like.  Here’s one with three colors. <a href=" http://localhost:4000/assets/posts/level4/sphere04.bl ">
-<img src="http://localhost:4000/assets/posts/dot-bl.png" alt=".bl file" />
+[Download .bl]
 </a></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sphere 10 [RED,ORANGE,YELLOW] (15,15,15);
@@ -232,7 +232,7 @@ sphere 15 [PINK, VIOLET] (60,20,20);
 </code></pre></div></div>
 <p>I’ll create a sphere that looks like the previous one using <em>hollowSphere</em> with a thickness of 10. 
 <a href=" http://localhost:4000/assets/posts/level4/sphere05.bl ">
-<img src="http://localhost:4000/assets/posts/dot-bl.png" alt=".bl file" />
+[Download .bl]
 </a></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hollowSphere 10 10 [RED,ORANGE,YELLOW] (15,15,15);
@@ -253,7 +253,7 @@ sphere 15 [PINK, VIOLET] (60,20,20);
 <p>2392 bricks in the hollow sphere vs. 4945 in the solid sphere.  Using <em>hollowSphere</em> allows us to create larger spheres with no change in appearance from the outside of the sphere.</p>
 
 <p>What if we used a smaller value for the thickness?  Let’s try 5! <a href=" http://localhost:4000/assets/posts/level4/sphere06.bl ">
-<img src="http://localhost:4000/assets/posts/dot-bl.png" alt=".bl file" />
+[Download .bl]
 </a></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hollowSphere 10 5 [RED,ORANGE,YELLOW] (15,15,15);
@@ -266,7 +266,7 @@ sphere 15 [PINK, VIOLET] (60,20,20);
 
 <p>The outside of the sphere is not solid now.  Let’s try thickness = 1. 
 <a href=" http://localhost:4000/assets/posts/level4/sphere07.bl ">
-<img src="http://localhost:4000/assets/posts/dot-bl.png" alt=".bl file" />
+[Download .bl]
 </a></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hollowSphere 10 1 [RED,ORANGE,YELLOW] (15,15,15);
@@ -307,6 +307,15 @@ sphere 15 [PINK, VIOLET] (60,20,20);
     
 
     <ul class="uk-list uk-list-large link-icon-right">
+    
+
+    
+    
+
+    
+
+    
+
     
 
     
