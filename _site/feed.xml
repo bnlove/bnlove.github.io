@@ -1,4 +1,106 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-13T10:08:08-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Functions - Introduction Based on Variables</title><link href="http://localhost:4000/functions01/" rel="alternate" type="text/html" title="Functions - Introduction Based on Variables" /><published>2020-04-08T00:00:00-05:00</published><updated>2020-04-08T00:00:00-05:00</updated><id>http://localhost:4000/functions01</id><content type="html" xml:base="http://localhost:4000/functions01/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-17T17:35:59-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MATH 1120</title><subtitle>A guide for students.</subtitle><author><name>Betty Love</name><email>blove@unomaha.edu</email></author><entry><title type="html">Functions - Adding More Parameters</title><link href="http://localhost:4000/functions02/" rel="alternate" type="text/html" title="Functions - Adding More Parameters" /><published>2020-04-17T00:00:00-05:00</published><updated>2020-04-17T00:00:00-05:00</updated><id>http://localhost:4000/functions02</id><content type="html" xml:base="http://localhost:4000/functions02/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#parameters&quot; id=&quot;markdown-toc-parameters&quot;&gt;Parameters&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#example&quot; id=&quot;markdown-toc-example&quot;&gt;Example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the last &lt;a href=&quot;/functions01&quot;&gt;post&lt;/a&gt; we learned how to write a function that had parameters that defined the location of a figure.  In this post we’ll expand on that and add parameters for color also.&lt;/p&gt;
+
+&lt;h3 id=&quot;parameters&quot;&gt;Parameters&lt;/h3&gt;
+
+&lt;p&gt;There is no limit to the number of parameters a function can have.  Basically we use parameters to represent anything that we use within the function that we might like to vary.  Location of a figure is an obvious thing we vary because otherwise it would always go in the same place.  But we frequently like to vary color and even the size of blocks within our figure.&lt;/p&gt;
+
+&lt;p&gt;There are two main things to remember:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;List all parameters when you define your function.&lt;/li&gt;
+  &lt;li&gt;List values for all parameters when you call your function and make sure the order that you list them is the same order as they are listed in the function definition.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So if my function definition starts out like the following:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun figure (xLoc,zLoc) backgroundColor blockColor =
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then when I call the function that should look something like this:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;figure (4,8) BLUE RED
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;instead of&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;figure BLUE RED (4,8)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;example&quot;&gt;Example&lt;/h3&gt;
+
+&lt;p&gt;Let’s look at the example we worked on previously.  We wrote code to create the figure below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/val/functions01.png&quot; alt=&quot;Functions01&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The code included a function that created one of the elements of the figure at a specified location.  It is shown below. &lt;a href=&quot; http://localhost:4000/assets/posts/functions/functions05.bl &quot;&gt;
+[Download .bl]
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_3;
+
+build2D (40,40);
+
+fun blocks (xLoc,zLoc) =
+(
+    (* Figure at (xLoc,zLoc) *)
+    put2D  (2,4)  BLUE    ( xLoc     , zLoc     );
+    put2D  (3,3)  RED     ( xLoc + 2 , zLoc     );
+    put2D  (2,3)  YELLOW  ( xLoc     , zLoc + 4 );
+    put2D  (3,4)  GREEN   ( xLoc + 2 , zLoc + 3 )
+);
+
+blocks (0,0);
+blocks (14,0);
+blocks (7,5);
+blocks (4,15);
+blocks (13,13);
+blocks (20,11);
+
+show &quot;&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Let’s rewrite this so that we can add parameters for the colors used.  How can we rewrite our code in order to produce the following figure:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/functions/functions06.png&quot; alt=&quot;Functions06&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;The elements are in the same locations as before; they’re just different colors now. Since there are four colors used, we need four more parameters.  I’m going to call them &lt;em&gt;llColor&lt;/em&gt;, &lt;em&gt;lrColor&lt;/em&gt;, &lt;em&gt;ulColor&lt;/em&gt;, and &lt;em&gt;urColor&lt;/em&gt; to indicate the colors, respectively, for the lower left part, the lower right part, the upper left part and the upper right part of each element. So, for the element at (0,0):&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;llColor = BLUE
+lrColor = RED
+ulColor = YELLOW
+urColor = GREEN
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We add these parameters to the function definition, so we have:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fun blocks (xLoc,zLoc) llColor lrColor ulColor urColor =
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now this won’t do us any good unless we use these new parameters inside the function!  So we change the body of the function as follows:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D  (2,4)  llColor     ( xLoc     , zLoc     );
+put2D  (3,3)  lrColor     ( xLoc + 2 , zLoc     );
+put2D  (2,3)  ulColor     ( xLoc     , zLoc + 4 );
+put2D  (3,4)  urColor     ( xLoc + 2 , zLoc + 3 )
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now the 2x4 block at (xLoc,zLoc) will be whatever color we use for llColor when we call the function.  Same for the other blocks.  This means that we have to change our function calls to include the colors.  To create the figure above, I used the following function calls:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;blocks (0,0)   BLUE         RED           YELLOW     GREEN;
+blocks (14,0)  VIOLET       YELLOW        PINK       GREEN;
+blocks (7,5)   DARKRED      DARKLAVENDER  LIGHTGRAY  LIGHTROYALBLUE;
+blocks (4,15)  LIGHTBROWN   BRICKYELLOW   DARKGREEN  LIGHTPINK;
+blocks (13,13) BRIGHTGREEN  LAVENDER      STONEGRAY  CLEARBLUE;
+blocks (20,11) NOUGAT       SPRING        SILVER     AQUA;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To download the entire program, click here: &lt;a href=&quot; http://localhost:4000/assets/posts/functions/functions06.bl &quot;&gt;
+[Download .bl]
+&lt;/a&gt;&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="functions," /><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Functions - Introduction Based on Variables</title><link href="http://localhost:4000/functions01/" rel="alternate" type="text/html" title="Functions - Introduction Based on Variables" /><published>2020-04-08T00:00:00-05:00</published><updated>2020-04-08T00:00:00-05:00</updated><id>http://localhost:4000/functions01</id><content type="html" xml:base="http://localhost:4000/functions01/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#functions&quot; id=&quot;markdown-toc-functions&quot;&gt;Functions!&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#revisit-an-example&quot; id=&quot;markdown-toc-revisit-an-example&quot;&gt;Revisit an example&lt;/a&gt;&lt;/li&gt;
@@ -185,105 +287,7 @@ put2D  (3,4)  GREEN   ( xLoc + 2 , zLoc + 3 );
 &lt;figure&gt;
     &lt;img src=&quot;http://localhost:4000/assets/posts/val/val-diagram.png&quot; alt=&quot;val-diagram&quot; /&gt;
     
-&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="variables," /><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Variables - Using Variables to Represent Numbers</title><link href="http://localhost:4000/variables-numbers01/" rel="alternate" type="text/html" title="Variables - Using Variables to Represent Numbers" /><published>2020-03-29T00:00:00-05:00</published><updated>2020-03-29T00:00:00-05:00</updated><id>http://localhost:4000/variables-numbers01</id><content type="html" xml:base="http://localhost:4000/variables-numbers01/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#placing-the-same-figure-in-multiple-locations&quot; id=&quot;markdown-toc-placing-the-same-figure-in-multiple-locations&quot;&gt;Placing the same figure in multiple locations&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#why-would-we-do-this&quot; id=&quot;markdown-toc-why-would-we-do-this&quot;&gt;Why would we do this?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#how-do-a-i-change-variable-values&quot; id=&quot;markdown-toc-how-do-a-i-change-variable-values&quot;&gt;How do a I change variable values?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#still-seems-like-a-lot-of-work&quot; id=&quot;markdown-toc-still-seems-like-a-lot-of-work&quot;&gt;Still seems like a lot of work…&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In this post we’ll explore how to use variables to represent numbers. Variables are handy when you’d like to use the same code, but with different values.  If you haven’t read about using variables to represent colors, I recommend you do that before proceeding.  You can find it &lt;a href=&quot;/variables-colors&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;placing-the-same-figure-in-multiple-locations&quot;&gt;Placing the same figure in multiple locations&lt;/h3&gt;
-
-&lt;p&gt;Suppose we want to write a bricklayer program to create the following figure (just the blue and yellow part).&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/val/val-num01.png&quot; alt=&quot;val-num01&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Your might wonder where to put it.  I didn’t say.  What I’d like is to have code that would work for any location that I specify. Think back to the post referenced above in which we wrote code to create a particular figure and specified the colors to use in &lt;em&gt;val&lt;/em&gt; statements.  To switch to different colors, we only needed to change the values defined in the &lt;em&gt;val&lt;/em&gt; statements.&lt;/p&gt;
-
-&lt;p&gt;That’s the idea for what we want to do here.  Let’s use &lt;em&gt;val&lt;/em&gt; statements to define the location (lower-left corner) of the figure and write the code using the variables defined in the &lt;em&gt;val&lt;/em&gt; statements. Here’s a visual of this idea.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/val/val-num02.png&quot; alt=&quot;val-num02&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;So let’s assume that we start with the following (question marks to be replaced with numbers when we decide where we want the figure to go):&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;val xLoc = ?;  (* lower-left x coordinate of figure *)
-val zLoc = ?;  (* lower-left z coordinate of figure *)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We can start by writing the code to place a 6x4 blue block (then we’ll overwrite it to put the yellow part in).  Since &lt;em&gt;xLoc&lt;/em&gt; and &lt;em&gt;zLoc&lt;/em&gt; will already have been defined (assigned values) when we get to this part of our program, we can use them just like we would any numbers.&lt;/p&gt;
-
-&lt;p&gt;If we weren’t using variables and we wanted to put the blue block at (5,8), the code would be:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (6,4) BLUE (5,8);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;So we write the same code, except substitute &lt;em&gt;(xLoc, zLoc)&lt;/em&gt; for the location, as follows:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (6,4) BLUE (xLoc, zLoc);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;When you run your program, the computer automatically plugs in whatever values you’ve specified for &lt;em&gt;xLoc&lt;/em&gt; and &lt;em&gt;zLoc&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Ok, we still need to place the yellow block.  This is a little trickier because we have to base its position on the location of the blue block.  Now, if you had placed the blue block at (5,8), the yellow block would go…..where?  One space to the right in the &lt;em&gt;x&lt;/em&gt; direction and one up in the &lt;em&gt;z&lt;/em&gt; direction.  So (5+1,8+1)  (which we’d just write as (6,9)).&lt;/p&gt;
-
-&lt;p&gt;But if the blue block is at &lt;em&gt;(xLoc, zLoc)&lt;/em&gt;, then where does the yellow block go?  The same logic applies: one space to the right and one space up.  So how do we write that? Same way I did in the previous paragraph, namely, &lt;em&gt;(xLoc + 1, zLoc + 1)&lt;/em&gt;! That’s it!
-Here’s the code to create the whole figure:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (6,4) BLUE   (xLoc    , zLoc    );
-put2D (4,2) YELLOW (xLoc + 1, zLoc + 1);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The complete program to make the figure at (5,8) is as follows:
-&lt;a href=&quot; http://localhost:4000/assets/posts/val/val-num01.bl &quot;&gt;
-[Download .bl]
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_3;
-
-build2D (20,20);
-
-val xLoc = 5;  (* lower-left x coordinate of figure *)
-val zLoc = 8;  (* lower-left z coordinate of figure *)
-
-put2D (6,4) BLUE   (xLoc    , zLoc    );  (* place blue block *)
-put2D (4,2) YELLOW (xLoc + 1, zLoc + 1);  (* place yellow block *)
-
-show &quot;&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;why-would-we-do-this&quot;&gt;Why would we do this?&lt;/h3&gt;
-
-&lt;p&gt;At this point some of you may be thinking that this seems to be a lot of trouble for nothing.  In particular, the program above could be written much more easily as follows.&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (6,4) BLUE   (5,8);  (* place blue block *)
-put2D (4,2) YELLOW (6,9);  (* place yellow block *)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Much more straightforward, right?  Half the lines of code!  So what is the point?&lt;/p&gt;
-
-&lt;p&gt;Good question!  The primary answer is that being able to write the code using variables allows us to reuse the main part of the program (the put statements) without changing them at all.  To put the figure in a different place, we only need to change the val statements.  We’ve done the hard work (figuring out the locations of the blocks) and we don’t need to ever do that again, no matter where we want to place that figure.  Soon we’ll learn about writing our own functions and will see how this can really streamline our programs.  We’re not quite ready for that yet though.&lt;/p&gt;
-
-&lt;h3 id=&quot;how-do-a-i-change-variable-values&quot;&gt;How do a I change variable values?&lt;/h3&gt;
-
-&lt;p&gt;Suppose we wanted to put our figure in multiple locations, say, at (5,8), (2,12), (8,1), and (0,3).  Since we’ve done the hard part (figured out the code to create the figure anywhere we want), all we need to do is change the values defined for &lt;em&gt;xLoc&lt;/em&gt; and &lt;em&gt;zLoc&lt;/em&gt; in the val statements, once for each location.  The code for this is below.  Note that the only part of the program that changes is the &lt;em&gt;val&lt;/em&gt; statements.  The &lt;em&gt;put2D&lt;/em&gt; statements are all the same.
-&lt;a href=&quot; http://localhost:4000/assets/posts/val/val-num02.bl &quot;&gt;
-[Download .bl]
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/val/val-num03.png&quot; alt=&quot;val-num03&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;h3 id=&quot;still-seems-like-a-lot-of-work&quot;&gt;Still seems like a lot of work…&lt;/h3&gt;
-
-&lt;p&gt;For this simple program, it may not be a big deal to do the arithmetic to place the figure at different locations.  So how about a more complicated program? Continue  &lt;a href=&quot;/variables-numbers02&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="functions," /><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Variables - Using Variables to Represent Colors</title><link href="http://localhost:4000/variables-colors/" rel="alternate" type="text/html" title="Variables - Using Variables to Represent Colors" /><published>2020-03-29T00:00:00-05:00</published><updated>2020-03-29T00:00:00-05:00</updated><id>http://localhost:4000/variables-colors</id><content type="html" xml:base="http://localhost:4000/variables-colors/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;/figure&gt;</content><author><name>Betty Love</name></author><category term="variables," /><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Variables - Using Variables to Represent Colors</title><link href="http://localhost:4000/variables-colors/" rel="alternate" type="text/html" title="Variables - Using Variables to Represent Colors" /><published>2020-03-29T00:00:00-05:00</published><updated>2020-03-29T00:00:00-05:00</updated><id>http://localhost:4000/variables-colors</id><content type="html" xml:base="http://localhost:4000/variables-colors/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#creating-the-same-figure-with-different-sets-of-colors&quot; id=&quot;markdown-toc-creating-the-same-figure-with-different-sets-of-colors&quot;&gt;Creating the same figure with different sets of colors&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -451,7 +455,105 @@ val letterColor = YELLOW;
 
 &lt;p&gt;NONE OF THE OTHER CODE NEEDS TO CHANGE!!&lt;/p&gt;
 
-&lt;p&gt;Try it out!  Put in your own combination of colors and see what happens!  Explore!!&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="functions," /><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Creating an arbitrary element of a visual sequence</title><link href="http://localhost:4000/val-sequences01/" rel="alternate" type="text/html" title="Creating an arbitrary element of a visual sequence" /><published>2019-10-07T00:00:00-05:00</published><updated>2019-10-07T00:00:00-05:00</updated><id>http://localhost:4000/val-sequences01</id><content type="html" xml:base="http://localhost:4000/val-sequences01/">&lt;h4 class=&quot;notoc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;p&gt;Try it out!  Put in your own combination of colors and see what happens!  Explore!!&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="functions," /><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Variables - Using Variables to Represent Numbers</title><link href="http://localhost:4000/variables-numbers01/" rel="alternate" type="text/html" title="Variables - Using Variables to Represent Numbers" /><published>2020-03-29T00:00:00-05:00</published><updated>2020-03-29T00:00:00-05:00</updated><id>http://localhost:4000/variables-numbers01</id><content type="html" xml:base="http://localhost:4000/variables-numbers01/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#placing-the-same-figure-in-multiple-locations&quot; id=&quot;markdown-toc-placing-the-same-figure-in-multiple-locations&quot;&gt;Placing the same figure in multiple locations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#why-would-we-do-this&quot; id=&quot;markdown-toc-why-would-we-do-this&quot;&gt;Why would we do this?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#how-do-a-i-change-variable-values&quot; id=&quot;markdown-toc-how-do-a-i-change-variable-values&quot;&gt;How do a I change variable values?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#still-seems-like-a-lot-of-work&quot; id=&quot;markdown-toc-still-seems-like-a-lot-of-work&quot;&gt;Still seems like a lot of work…&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this post we’ll explore how to use variables to represent numbers. Variables are handy when you’d like to use the same code, but with different values.  If you haven’t read about using variables to represent colors, I recommend you do that before proceeding.  You can find it &lt;a href=&quot;/variables-colors&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;placing-the-same-figure-in-multiple-locations&quot;&gt;Placing the same figure in multiple locations&lt;/h3&gt;
+
+&lt;p&gt;Suppose we want to write a bricklayer program to create the following figure (just the blue and yellow part).&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/val/val-num01.png&quot; alt=&quot;val-num01&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;Your might wonder where to put it.  I didn’t say.  What I’d like is to have code that would work for any location that I specify. Think back to the post referenced above in which we wrote code to create a particular figure and specified the colors to use in &lt;em&gt;val&lt;/em&gt; statements.  To switch to different colors, we only needed to change the values defined in the &lt;em&gt;val&lt;/em&gt; statements.&lt;/p&gt;
+
+&lt;p&gt;That’s the idea for what we want to do here.  Let’s use &lt;em&gt;val&lt;/em&gt; statements to define the location (lower-left corner) of the figure and write the code using the variables defined in the &lt;em&gt;val&lt;/em&gt; statements. Here’s a visual of this idea.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/val/val-num02.png&quot; alt=&quot;val-num02&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;p&gt;So let’s assume that we start with the following (question marks to be replaced with numbers when we decide where we want the figure to go):&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;val xLoc = ?;  (* lower-left x coordinate of figure *)
+val zLoc = ?;  (* lower-left z coordinate of figure *)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We can start by writing the code to place a 6x4 blue block (then we’ll overwrite it to put the yellow part in).  Since &lt;em&gt;xLoc&lt;/em&gt; and &lt;em&gt;zLoc&lt;/em&gt; will already have been defined (assigned values) when we get to this part of our program, we can use them just like we would any numbers.&lt;/p&gt;
+
+&lt;p&gt;If we weren’t using variables and we wanted to put the blue block at (5,8), the code would be:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (6,4) BLUE (5,8);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;So we write the same code, except substitute &lt;em&gt;(xLoc, zLoc)&lt;/em&gt; for the location, as follows:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (6,4) BLUE (xLoc, zLoc);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;When you run your program, the computer automatically plugs in whatever values you’ve specified for &lt;em&gt;xLoc&lt;/em&gt; and &lt;em&gt;zLoc&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ok, we still need to place the yellow block.  This is a little trickier because we have to base its position on the location of the blue block.  Now, if you had placed the blue block at (5,8), the yellow block would go…..where?  One space to the right in the &lt;em&gt;x&lt;/em&gt; direction and one up in the &lt;em&gt;z&lt;/em&gt; direction.  So (5+1,8+1)  (which we’d just write as (6,9)).&lt;/p&gt;
+
+&lt;p&gt;But if the blue block is at &lt;em&gt;(xLoc, zLoc)&lt;/em&gt;, then where does the yellow block go?  The same logic applies: one space to the right and one space up.  So how do we write that? Same way I did in the previous paragraph, namely, &lt;em&gt;(xLoc + 1, zLoc + 1)&lt;/em&gt;! That’s it!
+Here’s the code to create the whole figure:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (6,4) BLUE   (xLoc    , zLoc    );
+put2D (4,2) YELLOW (xLoc + 1, zLoc + 1);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The complete program to make the figure at (5,8) is as follows:
+&lt;a href=&quot; http://localhost:4000/assets/posts/val/val-num01.bl &quot;&gt;
+[Download .bl]
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;open Level_3;
+
+build2D (20,20);
+
+val xLoc = 5;  (* lower-left x coordinate of figure *)
+val zLoc = 8;  (* lower-left z coordinate of figure *)
+
+put2D (6,4) BLUE   (xLoc    , zLoc    );  (* place blue block *)
+put2D (4,2) YELLOW (xLoc + 1, zLoc + 1);  (* place yellow block *)
+
+show &quot;&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;why-would-we-do-this&quot;&gt;Why would we do this?&lt;/h3&gt;
+
+&lt;p&gt;At this point some of you may be thinking that this seems to be a lot of trouble for nothing.  In particular, the program above could be written much more easily as follows.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;put2D (6,4) BLUE   (5,8);  (* place blue block *)
+put2D (4,2) YELLOW (6,9);  (* place yellow block *)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Much more straightforward, right?  Half the lines of code!  So what is the point?&lt;/p&gt;
+
+&lt;p&gt;Good question!  The primary answer is that being able to write the code using variables allows us to reuse the main part of the program (the put statements) without changing them at all.  To put the figure in a different place, we only need to change the val statements.  We’ve done the hard work (figuring out the locations of the blocks) and we don’t need to ever do that again, no matter where we want to place that figure.  Soon we’ll learn about writing our own functions and will see how this can really streamline our programs.  We’re not quite ready for that yet though.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-do-a-i-change-variable-values&quot;&gt;How do a I change variable values?&lt;/h3&gt;
+
+&lt;p&gt;Suppose we wanted to put our figure in multiple locations, say, at (5,8), (2,12), (8,1), and (0,3).  Since we’ve done the hard part (figured out the code to create the figure anywhere we want), all we need to do is change the values defined for &lt;em&gt;xLoc&lt;/em&gt; and &lt;em&gt;zLoc&lt;/em&gt; in the val statements, once for each location.  The code for this is below.  Note that the only part of the program that changes is the &lt;em&gt;val&lt;/em&gt; statements.  The &lt;em&gt;put2D&lt;/em&gt; statements are all the same.
+&lt;a href=&quot; http://localhost:4000/assets/posts/val/val-num02.bl &quot;&gt;
+[Download .bl]
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img src=&quot;http://localhost:4000/assets/posts/val/val-num03.png&quot; alt=&quot;val-num03&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;h3 id=&quot;still-seems-like-a-lot-of-work&quot;&gt;Still seems like a lot of work…&lt;/h3&gt;
+
+&lt;p&gt;For this simple program, it may not be a big deal to do the arithmetic to place the figure at different locations.  So how about a more complicated program? Continue  &lt;a href=&quot;/variables-numbers02&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="functions," /><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Creating an arbitrary element of a visual sequence</title><link href="http://localhost:4000/val-sequences01/" rel="alternate" type="text/html" title="Creating an arbitrary element of a visual sequence" /><published>2019-10-07T00:00:00-05:00</published><updated>2019-10-07T00:00:00-05:00</updated><id>http://localhost:4000/val-sequences01</id><content type="html" xml:base="http://localhost:4000/val-sequences01/">&lt;h4 class=&quot;notoc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#topics-on-this-page&quot; id=&quot;markdown-toc-topics-on-this-page&quot;&gt;Topics on this page&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#step-1---code-to-create-one-artifact-at-00&quot; id=&quot;markdown-toc-step-1---code-to-create-one-artifact-at-00&quot;&gt;Step 1 - code to create one artifact at (0,0)&lt;/a&gt;&lt;/li&gt;
@@ -1374,46 +1476,4 @@ myfigure (13, 13);      (* figure at (13, 13) *)
 myfigure (20, 11);      (* figure at (20, 11) *)
 
 show2D &quot;my blocks&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Betty Love</name></author><category term="functions," /><category term="featured" /><summary type="html">Topics on this page</summary></entry><entry><title type="html">Rings and Cylinders</title><link href="http://localhost:4000/rings-cylinders/" rel="alternate" type="text/html" title="Rings and Cylinders" /><published>2019-03-11T00:00:00-05:00</published><updated>2019-03-11T00:00:00-05:00</updated><id>http://localhost:4000/rings-cylinders</id><content type="html" xml:base="http://localhost:4000/rings-cylinders/">&lt;h4 class=&quot;no_toc&quot; id=&quot;topics-on-this-page&quot;&gt;Topics on this page&lt;/h4&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#level_4-documentation&quot; id=&quot;markdown-toc-level_4-documentation&quot;&gt;Level_4 Documentation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#rings-in-2d&quot; id=&quot;markdown-toc-rings-in-2d&quot;&gt;Rings in 2D&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#rings-in-3d&quot; id=&quot;markdown-toc-rings-in-3d&quot;&gt;Rings in 3D&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In this post we’ll investigate how to create rings and cylinders in Bricklayer Level_4.  For an introduction to Level_4 programming, check out &lt;a href=&quot;/getting-started-with-level4&quot;&gt;this post&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Where you see this icon,&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/dot-bl.png&quot; alt=&quot;.bl icon&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;click on it to download the associated bricklayer program.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;level_4-documentation&quot;&gt;Level_4 Documentation&lt;/h3&gt;
-
-&lt;p&gt;The official documentation for Level_4 functions is found on the &lt;a href=&quot;https://bricklayer.org&quot;&gt;bricklayer website&lt;/a&gt; by selecting Apps -&amp;gt; Bricklayer -&amp;gt; Level 4 Document or through this &lt;a href=&quot;https://bricklayer.org/level-4-document/&quot;&gt;direct link&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;rings-in-2d&quot;&gt;Rings in 2D&lt;/h3&gt;
-&lt;p&gt;Before discussing 3D rings, let’s review the idea of a ring in 2D. A ring is defined by its radius, thickness, color, and location.  These are the parameters for the &lt;em&gt;ringXZ&lt;/em&gt; function. Consider the following code in Level_3 and its output.
-&lt;a href=&quot; http://localhost:4000/assets/posts/level4/ringX01.bl &quot;&gt;
-[Download .bl]
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(* ringXZ radius thickness color location *)
-ringXZ 10  1  BLUE  (15,25);
-ringXZ 10  4  RED   (40,25);
-ringXZ 20 10  GREEN (75,25);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;figure&gt;
-    &lt;img src=&quot;http://localhost:4000/assets/posts/level4/ring01.png&quot; alt=&quot;Rings in Level_3&quot; /&gt;
-    
-&lt;/figure&gt;
-
-&lt;h3 id=&quot;rings-in-3d&quot;&gt;Rings in 3D&lt;/h3&gt;
-&lt;p&gt;Rings in 3D are analogous to rings in 2D with one exception: the length of the ring.  Essentially rings in 3D are cylinders.  To create a cylinder, we need to know its radius, thickness (of its walls), color, and location.  But we also need to know its orientation: is it standing up?  laying down? laying down front to back or side to side?&lt;/p&gt;</content><author><name>Betty Love</name></author><category term="level4," /><category term="3D," /><category term="cylinder," /><category term="ring," /><category term="ringX," /><category term="ringY," /><category term="ringZ," /><category term="level" /><category term="4," /><category term="level_4," /><category term="hollowCylinder" /><summary type="html">Topics on this page</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Betty Love</name></author><category term="functions," /><category term="featured" /><summary type="html">Topics on this page</summary></entry></feed>

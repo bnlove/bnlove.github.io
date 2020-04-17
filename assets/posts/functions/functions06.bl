@@ -1,0 +1,21 @@
+open Level_3;
+
+build2D (40,40);
+
+fun blocks (xLoc,zLoc) llColor lrColor ulColor urColor =
+(
+    (* Figure at (xLoc,zLoc) *)
+    put2D  (2,4)  llColor     ( xLoc     , zLoc     );
+    put2D  (3,3)  lrColor     ( xLoc + 2 , zLoc     );
+    put2D  (2,3)  ulColor     ( xLoc     , zLoc + 4 );
+    put2D  (3,4)  urColor     ( xLoc + 2 , zLoc + 3 )
+);
+
+blocks (0,0)   BLUE         RED           YELLOW     GREEN;
+blocks (14,0)  VIOLET       YELLOW        PINK       GREEN;
+blocks (7,5)   DARKRED      DARKLAVENDER  LIGHTGRAY  LIGHTROYALBLUE;
+blocks (4,15)  LIGHTBROWN   BRICKYELLOW   DARKGREEN  LIGHTPINK;
+blocks (13,13) BRIGHTGREEN  LAVENDER      STONEGRAY  CLEARBLUE;
+blocks (20,11) NOUGAT       SPRING        SILVER     AQUA;
+
+show ""
